@@ -1,0 +1,120 @@
+analysis_id: cross_disease_validation_v1
+dataset: MIMIC-IV-ED
+population: adult emergency-department encounters
+care_setting: emergency department
+
+split:
+  group_column: subject_id
+  learning_fraction: 0.70
+  seed: 2026
+  algorithm: sorted unique patient identifiers followed by a fixed NumPy RandomState permutation
+
+module2:
+  overrides: {}
+
+bootstrap:
+  enabled: true
+  n_bootstrap: 200
+  group_column: subject_id
+  seed: 42
+  n_jobs: 1
+
+heldout_operating_bootstrap:
+  enabled: true
+  n_bootstrap: 200
+  group_column: subject_id
+  seed: 42
+
+module3a:
+  capacity_fractions: [0.01, 0.02, 0.05, 0.10, 0.20, 0.30]
+
+module3b:
+  enabled: true
+  scenario:
+    primary_R: 10
+    plausible_range: [3, 20]
+    sensitivity_grid: [3, 5, 10, 15, 20]
+    confidence: low
+    provenance: prespecified shared cross-disease scenario; not a disease-specific valuation
+  safeguards:
+    monetary_interpretation: false
+    prevalence_used_to_select_R: false
+    threshold_tuning_used_to_select_R: false
+
+diseases:
+  aki:
+    display_name: AKI
+    source_notebook: autoscore_aki_final_universal.ipynb
+    score: score_aki_auto_0_100
+    outcome: outcome_aki
+    encounter_id: stay_id
+    components:
+      repeat_creatinine: repeat_creatinine_6h
+      icu_fluid: icu_fluid_flag
+      lactate: lactate_flag
+      vasopressor: vasopressor_flag
+    responses:
+      primary:
+        stored_column: response_aki_strict
+        any_of: [repeat_creatinine, icu_fluid]
+        role: primary
+        definition: repeat creatinine within 6 hours of the first creatinine OR fluid in the audited 12-hour window
+      broad_sensitivity:
+        stored_column: response_aki_broad
+        any_of: [repeat_creatinine, icu_fluid, lactate, vasopressor]
+        role: predefined_sensitivity
+        definition: primary response OR lactate OR vasopressor; nonspecific sensitivity only
+    intended_use: component-specific diagnostic or management response review
+    triggered_action: clinical review of repeat kidney testing or supportive management
+    outcome_horizon: diagnosis-coded during the index encounter; exact ascertainment window remains a lineage limitation
+
+  copd:
+    display_name: COPD
+    source_notebook: autoscore_copd_final_universal_fixed.ipynb
+    score: score_COPD_AutoScore
+    outcome: outcome_copd_exac
+    encounter_id: stay_id
+    components:
+      bronchodilator_24h: bronchodilator_flag_24h
+      steroid: steroid_flag
+    responses:
+      primary:
+        stored_column: response_copd_directed
+        any_of: [bronchodilator_24h, steroid]
+        role: primary
+        definition: bronchodilator within 24 hours OR steroid
+    intended_use: COPD-directed treatment review
+    triggered_action: clinical review of bronchodilator or steroid treatment
+    outcome_horizon: diagnosis-coded during the index encounter; exact ascertainment window remains a lineage limitation
+
+  pneumonia:
+    display_name: Pneumonia
+    source_notebook: autoscore_pneumonia_final_universal.ipynb
+    score: score_pneumonia_auto
+    outcome: outcome_all_pne
+    encounter_id: stay_id
+    components:
+      antibiotic: antibiotic_flag
+      blood_culture: blood_culture_flag
+      lactate: lactate_flag
+      vasopressor: vasopressor_flag
+      icu_fluid: icu_fluid_flag
+    responses:
+      primary:
+        stored_column: response_pneumonia_strict
+        any_of: [antibiotic, blood_culture]
+        role: primary
+        definition: antibiotic OR blood culture
+      broad_sensitivity:
+        stored_column: response_pneumonia_broad
+        any_of: [antibiotic, blood_culture, lactate, vasopressor, icu_fluid]
+        role: predefined_sensitivity
+        definition: primary response OR lactate OR vasopressor OR ICU fluid
+      circularity_reduced_ablation:
+        any_of: [lactate, vasopressor, icu_fluid]
+        role: prespecified_reduced_overlap_ablation
+        definition: lactate OR vasopressor OR ICU fluid after removing antibiotic and blood culture
+        limitation: reduces direct diagnostic overlap but remains nonspecific and is not fully circularity-free
+    intended_use: pneumonia diagnostic or management response review
+    triggered_action: clinical review of diagnostic testing or supportive management
+    outcome_horizon: diagnosis-coded during the index encounter; exact ascertainment window remains a lineage limitation

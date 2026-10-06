@@ -1,0 +1,42 @@
+disease: sepsis
+population: adult emergency-department encounters
+care_setting: emergency department
+intended_user: triage and response clinicians
+intended_use: resource activation
+target_outcome:
+  definition: Sepsis-3
+  time_horizon: 6 hours
+  severity: high
+  reversibility: variable
+  preventability_by_action: plausible but uncertain
+false_negative:
+  components: [treatment delay, morbidity, downstream utilization, mortality]
+  source: expert and published evidence
+  confidence: moderate
+false_positive:
+  components: [alert burden, testing, clinician time, patient burden, opportunity cost]
+  source: workflow evidence and stakeholder elicitation
+  confidence: moderate
+actionability:
+  triggered_action: clinical reassessment and protocol-appropriate workup
+  expected_effectiveness: context dependent
+  evidence_strength: moderate
+  intervention_risks: [overtesting, unnecessary treatment]
+capacity:
+  K: 40
+  operational_period: daily ED encounters
+  expected_to_bind: true
+R:
+  primary: 15
+  plausible_range: [3, 20]
+  sensitivity_grid: [3, 5, 10, 15, 20]
+  status: scenario_based
+provenance:
+  source_type: scenario_assumption
+  confidence: low
+  review_date: null
+safeguards:
+  prevalence_used: false
+  preferred_threshold_tuning_used: false
+  currency_claim: false
+

@@ -1,0 +1,11 @@
+disease,partition,component,column,positive_encounters,rate,missing
+pneumonia,learning,antibiotic,antibiotic_flag,47909,0.15227140536949868,0
+pneumonia,learning,blood_culture,blood_culture_flag,69454,0.22074888201659731,0
+pneumonia,learning,lactate,lactate_flag,83754,0.2661992378324948,0
+pneumonia,learning,vasopressor,vasopressor_flag,2479,0.007879121123609075,0
+pneumonia,learning,icu_fluid,icu_fluid_flag,14484,0.04603517158303907,0
+pneumonia,heldout,antibiotic,antibiotic_flag,20394,0.15199552822806037,0
+pneumonia,heldout,blood_culture,blood_culture_flag,29740,0.22165082914104714,0
+pneumonia,heldout,lactate,lactate_flag,36048,0.26866405813303523,0
+pneumonia,heldout,vasopressor,vasopressor_flag,1030,0.007676541829700019,0
+pneumonia,heldout,icu_fluid,icu_fluid_flag,6226,0.046402086826905165,0

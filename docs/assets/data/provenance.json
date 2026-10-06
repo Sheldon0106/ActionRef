@@ -1,0 +1,23 @@
+{
+  "scope": "Aggregate figure inputs only; no patient rows",
+  "files": {
+    "sepsis_learning_curve.csv": {
+      "source_filename": "semantic_response_curve.csv",
+      "source_run": "run_20260901T114212647018Z_7a68fbe37684",
+      "sha256": "993328c6412c0552a9df0df05ad9035deda0e343f9b4f98203e7ff150ac42b86",
+      "role": "learning curve"
+    },
+    "sepsis_action_points.json": {
+      "source_filename": "sepsis_action_points.json",
+      "source_run": "run_20261002T082847Z_history_action_calibration",
+      "sha256": "235102fa2c29bd91fe6504b5fa071de3dc8079c0dfa17de09a4b7d0d1ea06d13",
+      "role": "held-out action evaluation"
+    },
+    "sepsis_action_reliability.json": {
+      "source_filename": "sepsis_action_reliability.json",
+      "source_run": "run_20261002T082847Z_history_action_calibration",
+      "sha256": "37281661bdc525e508929e0a77bcbf66f95fb95562afe8ace9530cfb5b7b8254",
+      "role": "held-out action evaluation"
+    }
+  }
+}

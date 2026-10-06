@@ -1,0 +1,68 @@
+{
+  "disease": "COPD",
+  "dataset": "MIMIC-IV-ED",
+  "source_notebook": "autoscore_copd_final_universal_fixed.ipynb",
+  "columns": {
+    "score": "score_COPD_AutoScore",
+    "outcome": "outcome_copd_exac",
+    "response": "response_copd_directed"
+  },
+  "rows_loaded": 448804,
+  "module2_overrides_used": false,
+  "module3b": {
+    "status": "unavailable",
+    "reason": "No COPD-specific and use-case-specific R has been elicited or costed. The sepsis R=15 scenario is not transferable to a bronchodilator or steroid decision, so the cost audit stays unavailable rather than borrowing a number."
+  },
+  "bootstrap": {
+    "enabled": false,
+    "reason": "Compatibility run. Formal disease-specific bootstrap runs separately."
+  },
+  "module1": {
+    "N_input": 448804.0,
+    "N_valid_score": 448804.0,
+    "N_missing_score": 0.0,
+    "N_outcome_complete": 448804.0,
+    "prevalence": 0.010443311556937996,
+    "AUROC": 0.9042910178507556,
+    "AUPRC": 0.14238403434155872,
+    "Brier": 0.009462399105213548,
+    "calibration_intercept": 0.0030846382854839366,
+    "calibration_slope": 1.0013677273687072,
+    "calibration_role": "apparent_in_sample"
+  },
+  "module2": {
+    "primary": {
+      "response_column": "response_copd_directed",
+      "N_complete": 448804,
+      "response_prevalence": 0.06104000855607348,
+      "bin_width": 2.5,
+      "valid_bins": 29,
+      "evidence_gate_passed": true,
+      "evidence_gate_reason": "supported monotone response structure",
+      "isotonic_dynamic_range": 0.5177727596333541,
+      "supported_changepoints": 2,
+      "thresholds": {
+        "Low": 17.779760509763356,
+        "Mid": 55.04068978963481,
+        "High": null
+      },
+      "selected_types": {
+        "Low": "semantic-only",
+        "Mid": "semantic-only",
+        "High": "abstention"
+      }
+    }
+  },
+  "module3a": {
+    "status": "run",
+    "policy_N": 448804,
+    "capacity_fractions": [
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ]
+  }
+}

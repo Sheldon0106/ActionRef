@@ -1,0 +1,127 @@
+{
+  "disease": "copd",
+  "display_name": "COPD",
+  "source_data": "<restricted-data>/mimic_all_with_copd_autoscore_bronchodilator_steroid.csv",
+  "source_sha256": "2773F862CBE6967505CF2CAD60C5B4D4A64BC1D78B1A2EF8269DF79A84E8667A",
+  "score": "score_COPD_AutoScore",
+  "outcome": "outcome_copd_exac",
+  "split": {
+    "group_column": "subject_id",
+    "learning_fraction": 0.7,
+    "seed": 2026,
+    "algorithm": "sorted unique patient identifiers followed by a fixed NumPy RandomState permutation"
+  },
+  "patient_overlap": 0,
+  "response_definition_checks": [
+    {
+      "response_definition": "primary",
+      "stored_column": "response_copd_directed",
+      "derived_column": "_response_primary",
+      "stored_column_present": true,
+      "mismatches": 0,
+      "definition": "bronchodilator within 24 hours OR steroid",
+      "role": "primary",
+      "limitation": null
+    }
+  ],
+  "analyses": {
+    "primary": {
+      "role": "primary",
+      "definition": "bronchodilator within 24 hours OR steroid",
+      "limitation": null,
+      "learning_response_prevalence": 0.061278521687447754,
+      "evidence_gate": {
+        "status": "supported",
+        "passed": true,
+        "reason": "supported monotone response structure",
+        "n_valid_bins": 28,
+        "isotonic_dynamic_range": 0.5093792717351611,
+        "logistic_slope": 0.06339633476374057,
+        "logistic_bic_improvement": 12688.985589336284
+      },
+      "thresholds": [
+        {
+          "level": "Low",
+          "selection_priority": 2,
+          "anchor_name": "T_pi_response",
+          "anchor_family": "absolute",
+          "absolute_target": 0.061278521687447754,
+          "target_probability": 0.061278521687447754,
+          "attainability_status": "absolute_attainable",
+          "semantic_threshold_raw": 17.5,
+          "semantic_threshold_operational": 17.779760509763356,
+          "selected_threshold": 17.779760509763356,
+          "selected_type": "semantic-only",
+          "structural_status": "not_corroborated",
+          "cp_corroborated": false,
+          "corroborating_cp": null,
+          "provenance_tier": "A",
+          "provenance_label": "local_behavioral_absolute",
+          "reason": "semantic threshold retained; changepoints are corroborative only",
+          "operational_representative": true
+        },
+        {
+          "level": "Mid",
+          "selection_priority": 1,
+          "anchor_name": "T50_response",
+          "anchor_family": "absolute",
+          "absolute_target": 0.5,
+          "target_probability": 0.5,
+          "attainability_status": "absolute_attainable",
+          "semantic_threshold_raw": 55.0,
+          "semantic_threshold_operational": 55.07187581853598,
+          "selected_threshold": 55.07187581853598,
+          "selected_type": "semantic-only",
+          "structural_status": "not_corroborated",
+          "cp_corroborated": false,
+          "corroborating_cp": null,
+          "provenance_tier": "A",
+          "provenance_label": "local_behavioral_absolute",
+          "reason": "semantic threshold retained; changepoints are corroborative only",
+          "operational_representative": true
+        },
+        {
+          "level": "High",
+          "selection_priority": 3,
+          "anchor_name": "T80_relative_response",
+          "anchor_family": "relative",
+          "absolute_target": 0.8,
+          "target_probability": 0.4386646861935084,
+          "attainability_status": "unavailable_ordering",
+          "semantic_threshold_raw": 50.0,
+          "semantic_threshold_operational": null,
+          "selected_threshold": null,
+          "selected_type": "abstention",
+          "structural_status": "not_corroborated",
+          "cp_corroborated": false,
+          "corroborating_cp": null,
+          "provenance_tier": "E",
+          "provenance_label": "explicit_abstention",
+          "reason": "semantic ordering inversion; no replacement permitted",
+          "operational_representative": false
+        }
+      ],
+      "bootstrap_status": "completed",
+      "bootstrap_joint_summary": {
+        "requested_replicates": 200,
+        "evaluated_replicates": 200,
+        "failed_replicates": 0,
+        "complete_three_tier_probability": 0.31,
+        "strict_ordering_probability": 0.08,
+        "adjacent_tier_collision_probability": 0.23
+      },
+      "heldout_patients": 65015,
+      "heldout_encounters": 134175,
+      "module3b_status": "scenario_based",
+      "module3b_confidence": "low",
+      "module3b_R_grid": [
+        3.0,
+        5.0,
+        10.0,
+        15.0,
+        20.0
+      ]
+    }
+  },
+  "interpretation": "Patient-disjoint threshold-level validation within one MIMIC-IV-ED population; not external validation of the underlying score."
+}

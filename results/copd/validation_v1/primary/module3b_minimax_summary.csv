@@ -1,0 +1,3 @@
+level,behavior_threshold,max_alert_count,selected_threshold,selected_alert_count,maximum_regret_FAE,maximum_regret_FAE_per_1000,status,interpretation_guard
+Low,17.779760509763356,25627,36.824174840904725,3151,1097.0,8.175889696292156,secondary_minimax_regret_comparator,"Secondary Module 3B comparator only; cannot define, relabel, or replace Low/Mid/High."
+Mid,55.07187581853598,432,55.25039352369625,428,23.0,0.17141792435252468,secondary_minimax_regret_comparator,"Secondary Module 3B comparator only; cannot define, relabel, or replace Low/Mid/High."

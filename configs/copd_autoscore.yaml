@@ -1,0 +1,33 @@
+# COPD compatibility run, frozen v0.3 package.
+# Definitions taken unchanged from the source notebook. Dataset path is a CLI argument.
+
+disease: COPD
+disease_slug: copd
+dataset: MIMIC-IV-ED
+cohort: all ED encounters with a valid AutoScore value
+source_notebook: autoscore_copd_final_universal_fixed.ipynb
+
+columns:
+  score: score_COPD_AutoScore
+  outcome: outcome_copd_exac
+  response: response_copd_directed   # bronchodilator_flag_24h OR steroid_flag
+  subject_id: subject_id
+  encounter_id: stay_id
+
+module2:
+  # Must stay empty. Frozen defaults apply. An evidence-gate abstention is a valid
+  # finding and must not be resolved by adding overrides here.
+  overrides: {}
+
+module3a:
+  capacity_fractions: [0.01, 0.02, 0.05, 0.10, 0.20, 0.30]
+
+module3b:
+  enabled: false
+  reason: >
+    No COPD-specific R has been elicited or costed. The sepsis R=15 scenario
+    applies to a different action and outcome.
+
+bootstrap:
+  enabled: false
+  reason: Compatibility run. Formal disease-specific bootstrap runs separately.

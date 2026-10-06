@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+/data/
+*.csv
+!configs/*.yaml
+# Aggregate run outputs only. Files under results/ must be threshold-level or
+# bin-level. No row may correspond to a single encounter.
+!results/**/*.csv
+
+# Notebook-cell extraction scratch files. They contain absolute clinical-data paths.
+_ALL_CELLS.py
+_extract_*.py
+site/
+output/
+.DS_Store
+!docs/assets/data/
+!docs/assets/data/*.csv

@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, cite the repository and the commit or release used."
+type: software
+title: "ActionRef: Clinical Score Cutoff"
+authors:
+  - name: "Universal Cutoff Framework contributors"
+version: 0.1.0
+repository-code: "https://github.com/Sheldon0106/ActionRef"
+license: MIT

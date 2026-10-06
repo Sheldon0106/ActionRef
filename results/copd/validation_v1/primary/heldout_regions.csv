@@ -1,0 +1,4 @@
+region_order,region,encounters,encounter_fraction,outcome_events,outcome_prevalence,response_events,response_rate,workload_interpretation,bronchodilator_24h_rate,steroid_rate
+0,below Low,108548,0.8090031675051239,227,0.0020912407414231493,4231,0.03897814791612927,descriptive region volume; not a causal treatment effect,0.012897519991155987,0.02899178243726278
+1,Low to below Mid,25195,0.18777715669834172,1051,0.04171462591784084,3658,0.14518753720976385,descriptive region volume; not a causal treatment effect,0.10081365350267911,0.07358602897400278
+2,at or above Mid,432,0.0032196757965343766,132,0.3055555555555556,226,0.5231481481481481,descriptive region volume; not a causal treatment effect,0.3611111111111111,0.33564814814814814

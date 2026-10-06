@@ -1,0 +1,16 @@
+2026-09-09 21:32:30,289 INFO loading aki
+2026-09-09 21:32:37,040 INFO loading copd
+2026-09-09 21:32:42,813 INFO loading pneumonia
+2026-09-09 21:32:50,479 INFO aki/primary: fitting frozen Module 2
+2026-09-09 21:32:51,308 INFO aki/primary: running 200 grouped grouped Module 2 bootstraps
+2026-09-09 21:36:11,586 INFO aki/broad_sensitivity: fitting frozen Module 2
+2026-09-09 21:36:12,285 INFO aki/broad_sensitivity: running 200 grouped grouped Module 2 bootstraps
+2026-09-09 21:39:18,998 INFO copd/primary: fitting frozen Module 2
+2026-09-09 21:39:19,736 INFO copd/primary: running 200 grouped grouped Module 2 bootstraps
+2026-09-09 21:42:25,612 INFO pneumonia/primary: fitting frozen Module 2
+2026-09-09 21:42:26,239 INFO pneumonia/primary: running 200 grouped grouped Module 2 bootstraps
+2026-09-09 21:45:15,149 INFO pneumonia/broad_sensitivity: fitting frozen Module 2
+2026-09-09 21:45:15,629 INFO pneumonia/broad_sensitivity: running 200 grouped grouped Module 2 bootstraps
+2026-09-09 21:47:33,720 INFO pneumonia/circularity_reduced_ablation: fitting frozen Module 2
+2026-09-09 21:47:34,360 INFO pneumonia/circularity_reduced_ablation: running 200 grouped grouped Module 2 bootstraps
+2026-09-09 21:50:25,205 INFO validation completed successfully

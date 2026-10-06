@@ -1,0 +1,90 @@
+{
+  "disease": "AKI",
+  "dataset": "MIMIC-IV-ED",
+  "source_notebook": "autoscore_aki_final_universal.ipynb",
+  "columns": {
+    "score": "score_aki_auto_0_100",
+    "outcome": "outcome_aki",
+    "response": "response_aki_strict"
+  },
+  "rows_loaded": 448804,
+  "module2_overrides_used": false,
+  "module3b": {
+    "status": "unavailable",
+    "reason": "No AKI-specific R has been elicited or costed. The sepsis R=15 scenario applies to a different action and outcome."
+  },
+  "bootstrap": {
+    "enabled": false,
+    "reason": "Compatibility run. Formal disease-specific bootstrap runs separately."
+  },
+  "circularity_note": "The primary bundle is a component-specific diagnostic/management response: repeat creatinine within 6 hours of the first creatinine or fluid within the audited 12-hour fluid window. Repeat testing may contribute to recognition and diagnosis coding of AKI. The broad bundle additionally includes lactate and vasopressor use and is retained only as a nonspecific sensitivity analysis.",
+  "module1": {
+    "N_input": 448804.0,
+    "N_valid_score": 448804.0,
+    "N_missing_score": 0.0,
+    "N_outcome_complete": 448804.0,
+    "prevalence": 0.07045168937888253,
+    "AUROC": 0.8111788982830732,
+    "AUPRC": 0.22356644825596544,
+    "Brier": 0.05884201811359821,
+    "calibration_intercept": 0.0017366320486856034,
+    "calibration_slope": 1.000939553026785,
+    "calibration_role": "apparent_in_sample"
+  },
+  "module2": {
+    "primary": {
+      "response_column": "response_aki_strict",
+      "N_complete": 448804,
+      "response_prevalence": 0.05627623639718006,
+      "bin_width": 2.5,
+      "valid_bins": 22,
+      "evidence_gate_passed": true,
+      "evidence_gate_reason": "supported monotone response structure",
+      "isotonic_dynamic_range": 0.3194029850746269,
+      "supported_changepoints": 2,
+      "thresholds": {
+        "Low": 39.130434782608695,
+        "Mid": 73.91304347826087,
+        "High": 86.95652173913044
+      },
+      "selected_types": {
+        "Low": "semantic-only",
+        "Mid": "relative-anchor",
+        "High": "relative-anchor"
+      }
+    },
+    "sensitivity": {
+      "response_column": "response_aki_broad",
+      "N_complete": 448804,
+      "response_prevalence": 0.2873303268241816,
+      "bin_width": 2.5,
+      "valid_bins": 22,
+      "evidence_gate_passed": true,
+      "evidence_gate_reason": "supported monotone response structure",
+      "isotonic_dynamic_range": 0.81909590801971,
+      "supported_changepoints": 0,
+      "thresholds": {
+        "Low": 34.78260869565217,
+        "Mid": 56.52173913043478,
+        "High": 86.95652173913044
+      },
+      "selected_types": {
+        "Low": "semantic-only",
+        "Mid": "semantic-only",
+        "High": "semantic-only"
+      }
+    }
+  },
+  "module3a": {
+    "status": "run",
+    "policy_N": 448804,
+    "capacity_fractions": [
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ]
+  }
+}

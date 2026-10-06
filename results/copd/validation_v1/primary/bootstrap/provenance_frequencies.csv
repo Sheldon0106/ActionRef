@@ -1,0 +1,6 @@
+level,provenance_tier,selected_type,structural_status,count,probability
+High,B,relative-anchor,not_corroborated,62,0.31
+High,E,abstention,not_corroborated,138,0.69
+Low,A,semantic-only,not_corroborated,200,1.0
+Mid,A,semantic-only,not_corroborated,195,0.975
+Mid,B,relative-anchor,not_corroborated,5,0.025

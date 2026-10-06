@@ -1,0 +1,2 @@
+response_definition,stored_column,derived_column,stored_column_present,mismatches,definition,role,limitation
+primary,response_copd_directed,_response_primary,True,0,bronchodilator within 24 hours OR steroid,primary,

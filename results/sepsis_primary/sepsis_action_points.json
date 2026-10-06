@@ -1,0 +1,34 @@
+[
+  {
+    "prediction": "continuous_interpolation",
+    "N": 126332,
+    "action_rate": 0.32452585251559385,
+    "mean_predicted": 0.3337022727847737,
+    "calibration_gap": 0.009176420269179942,
+    "action_Brier": 0.19432522507282848,
+    "constant_development_rate_Brier": 0.2192133355462546,
+    "delta_Brier_vs_constant": -0.024888110473426123,
+    "Brier_skill": 0.11353374287840556,
+    "action_log_loss": 0.5732316218263558,
+    "calibration_intercept": -0.08610446631060067,
+    "calibration_slope": 0.9406578974292618,
+    "diagnostic_role": "diagnostic_fit_of_frozen_predictions_not_recalibration",
+    "diagnostic_status": "estimated_descriptive_only"
+  },
+  {
+    "prediction": "bin_assignment_sensitivity",
+    "N": 126332,
+    "action_rate": 0.32452585251559385,
+    "mean_predicted": 0.32444985852469316,
+    "calibration_gap": -7.599399090071863e-05,
+    "action_Brier": 0.1945371562758168,
+    "constant_development_rate_Brier": 0.2192133355462546,
+    "delta_Brier_vs_constant": -0.024676179270437804,
+    "Brier_skill": 0.11256696226508112,
+    "action_log_loss": 0.5737115972335703,
+    "calibration_intercept": -0.018274383044881323,
+    "calibration_slope": 0.9733176932131196,
+    "diagnostic_role": "diagnostic_fit_of_frozen_predictions_not_recalibration",
+    "diagnostic_status": "estimated_descriptive_only"
+  }
+]

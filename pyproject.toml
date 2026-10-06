@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "universal-cutoff"
+version = "0.1.0"
+description = "Evidence-gated, behavior-informed clinical score cutoff framework"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+dependencies = [
+  "numpy>=1.23",
+  "pandas>=1.2",
+  "scipy>=1.10",
+  "scikit-learn>=1.3",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+research = ["pyyaml>=6", "matplotlib>=3.7"]
+
+[project.urls]
+Repository = "https://github.com/Sheldon0106/ActionRef"
+Issues = "https://github.com/Sheldon0106/ActionRef/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"universal_cutoff.data" = ["*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

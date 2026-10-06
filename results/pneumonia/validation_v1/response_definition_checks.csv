@@ -1,0 +1,4 @@
+response_definition,stored_column,derived_column,stored_column_present,mismatches,definition,role,limitation
+primary,response_pneumonia_strict,_response_primary,True,0.0,antibiotic OR blood culture,primary,
+broad_sensitivity,response_pneumonia_broad,_response_broad_sensitivity,True,0.0,primary response OR lactate OR vasopressor OR ICU fluid,predefined_sensitivity,
+circularity_reduced_ablation,,_response_circularity_reduced_ablation,False,,lactate OR vasopressor OR ICU fluid after removing antibiotic and blood culture,prespecified_reduced_overlap_ablation,reduces direct diagnostic overlap but remains nonspecific and is not fully circularity-free

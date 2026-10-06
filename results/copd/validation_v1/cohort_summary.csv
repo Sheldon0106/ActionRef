@@ -1,0 +1,3 @@
+disease,partition,response_definition,patients,encounters,outcome_events,outcome_prevalence,response_events,response_prevalence,missing_score,missing_outcome,missing_response,patient_overlap
+copd,learning,primary,151699,314629,3277,0.010415441678929787,19280,0.061278521687447754,0,0,0,0
+copd,heldout,primary,65015,134175,1410,0.010508664058133036,8115,0.06048071548351034,0,0,0,0

@@ -1,0 +1,9 @@
+disease,partition,component,column,positive_encounters,rate,missing
+aki,learning,repeat_creatinine,repeat_creatinine_6h,6545,0.020802278238814604,0
+aki,learning,icu_fluid,icu_fluid_flag,14484,0.04603517158303907,0
+aki,learning,lactate,lactate_flag,83754,0.2661992378324948,0
+aki,learning,vasopressor,vasopressor_flag,2479,0.007879121123609075,0
+aki,heldout,repeat_creatinine,repeat_creatinine_6h,2837,0.021144028321222284,0
+aki,heldout,icu_fluid,icu_fluid_flag,6226,0.046402086826905165,0
+aki,heldout,lactate,lactate_flag,36048,0.26866405813303523,0
+aki,heldout,vasopressor,vasopressor_flag,1030,0.007676541829700019,0

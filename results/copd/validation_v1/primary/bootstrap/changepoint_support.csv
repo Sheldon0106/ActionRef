@@ -1,0 +1,3 @@
+cp,bootstrap_support,matching_replicates,evaluated_replicates,isotonic_rate_at_cp,status
+15.0,0.985,197,200,0.05929919137466307,supported
+35.0,1.0,200,200,0.2819548872180451,supported

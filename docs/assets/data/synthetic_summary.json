@@ -1,0 +1,38 @@
+{
+  "data_kind": "synthetic",
+  "seed": 719,
+  "split_seed": 2026,
+  "learning_N": 8400,
+  "evaluation_N": 3600,
+  "learning_action_rate": 0.5603571428571429,
+  "evidence_gate": {
+    "status": "supported",
+    "passed": true,
+    "reason": "supported monotone response structure",
+    "n_valid_bins": 34,
+    "isotonic_dynamic_range": 0.9137020566981656,
+    "logistic_slope": 0.08733601567994985,
+    "logistic_bic_improvement": 5573.197763146925
+  },
+  "module2_config": {
+    "min_bin_n": 40,
+    "min_valid_bins": 8,
+    "target_valid_bins": 30,
+    "max_valid_bins": 40,
+    "min_isotonic_dynamic_range": 0.08,
+    "min_logistic_bic_improvement": 6.0,
+    "max_selected_changepoints": 2,
+    "min_bins_per_segment": 5,
+    "cp_candidate_stride": 2,
+    "min_structural_bic_improvement": 6.0,
+    "smooth_null_alpha": 0.1,
+    "min_standardized_slope_change": 0.12,
+    "min_cp_bootstrap_support": 0.5,
+    "cp_support_tolerance_bins": 2.0,
+    "max_alignment_bins": 1.0,
+    "bin_width": null
+  },
+  "capacity_K": 1680,
+  "capacity_fraction_learning": 0.2,
+  "evaluation_role": "fixed thresholds; no refitting on evaluation data"
+}

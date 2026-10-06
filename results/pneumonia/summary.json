@@ -1,0 +1,90 @@
+{
+  "disease": "Pneumonia",
+  "dataset": "MIMIC-IV-ED",
+  "source_notebook": "autoscore_pneumonia_final_universal.ipynb",
+  "columns": {
+    "score": "score_pneumonia_auto",
+    "outcome": "outcome_all_pne",
+    "response": "response_pneumonia_strict"
+  },
+  "rows_loaded": 448804,
+  "module2_overrides_used": false,
+  "module3b": {
+    "status": "unavailable",
+    "reason": "No pneumonia-specific and use-case-specific R has been elicited or costed. The sepsis R=15 scenario is not transferable, so the cost audit stays unavailable rather than borrowing a number."
+  },
+  "bootstrap": {
+    "enabled": false,
+    "reason": "Compatibility run. Formal disease-specific bootstrap runs separately."
+  },
+  "circularity_note": "The primary bundle is built from antibiotics and blood cultures, which are also the actions used to establish a pneumonia diagnosis. The V7 sepsis analysis deliberately excluded antibiotics and cultures from its primary bundle for this reason and called the remainder circularity-aware. No circularity-aware bundle is available in this dataset, so the notebook's own primary bundle is used as specified and the concern is reported rather than resolved by substitution.",
+  "module1": {
+    "N_input": 448804.0,
+    "N_valid_score": 448804.0,
+    "N_missing_score": 0.0,
+    "N_outcome_complete": 448804.0,
+    "prevalence": 0.03931114695947451,
+    "AUROC": 0.802244259237709,
+    "AUPRC": 0.1990251850320231,
+    "Brier": 0.034190087018725196,
+    "calibration_intercept": 0.0021907705684928447,
+    "calibration_slope": 1.001004997097235,
+    "calibration_role": "apparent_in_sample"
+  },
+  "module2": {
+    "primary": {
+      "response_column": "response_pneumonia_strict",
+      "N_complete": 448804,
+      "response_prevalence": 0.27149936275077763,
+      "bin_width": 1.0,
+      "valid_bins": 34,
+      "evidence_gate_passed": true,
+      "evidence_gate_reason": "supported monotone response structure",
+      "isotonic_dynamic_range": 0.7508778067529343,
+      "supported_changepoints": 0,
+      "thresholds": {
+        "Low": 5.0,
+        "Mid": 14.0,
+        "High": 24.0
+      },
+      "selected_types": {
+        "Low": "semantic-only",
+        "Mid": "semantic-only",
+        "High": "semantic-only"
+      }
+    },
+    "sensitivity": {
+      "response_column": "response_pneumonia_broad",
+      "N_complete": 448804,
+      "response_prevalence": 0.35483195336939954,
+      "bin_width": 1.0,
+      "valid_bins": 34,
+      "evidence_gate_passed": true,
+      "evidence_gate_reason": "supported monotone response structure",
+      "isotonic_dynamic_range": 0.7097490417553496,
+      "supported_changepoints": 0,
+      "thresholds": {
+        "Low": 5.0,
+        "Mid": 11.0,
+        "High": 24.0
+      },
+      "selected_types": {
+        "Low": "semantic-only",
+        "Mid": "semantic-only",
+        "High": "semantic-only"
+      }
+    }
+  },
+  "module3a": {
+    "status": "run",
+    "policy_N": 448804,
+    "capacity_fractions": [
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+disease,partition,response_definition,patients,encounters,outcome_events,outcome_prevalence,response_events,response_prevalence,missing_score,missing_outcome,missing_response,patient_overlap
+pneumonia,learning,primary,151699,314629,12468,0.0396276249169657,85374,0.27134815926058947,0,0,0,0
+pneumonia,learning,broad_sensitivity,151699,314629,12468,0.0396276249169657,111513,0.35442696000686524,0,0,0,0
+pneumonia,learning,circularity_reduced_ablation,151699,314629,12468,0.0396276249169657,88818,0.28229438481513147,0,0,0,0
+pneumonia,heldout,primary,65015,134175,5175,0.03856903297931805,36476,0.2718539221166387,0,0,0,0
+pneumonia,heldout,broad_sensitivity,65015,134175,5175,0.03856903297931805,47737,0.35578162847028133,0,0,0,0
+pneumonia,heldout,circularity_reduced_ablation,65015,134175,5175,0.03856903297931805,38156,0.28437488354760576,0,0,0,0

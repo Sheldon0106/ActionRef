@@ -1,0 +1,5 @@
+disease,partition,component,column,positive_encounters,rate,missing
+copd,learning,bronchodilator_24h,bronchodilator_flag_24h,9829,0.031239968343668257,0
+copd,learning,steroid,steroid_flag,12112,0.038496133541409086,0
+copd,heldout,bronchodilator_24h,bronchodilator_flag_24h,4096,0.03052729644121483,0
+copd,heldout,steroid,steroid_flag,5146,0.03835289733556922,0

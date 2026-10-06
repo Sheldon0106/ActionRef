@@ -1,0 +1,56 @@
+{
+  "recommended_R_primary": 10.0,
+  "recommended_R_range": [
+    3.0,
+    20.0
+  ],
+  "recommended_R_grid": [
+    3.0,
+    5.0,
+    10.0,
+    15.0,
+    20.0
+  ],
+  "status": "scenario_based",
+  "provenance": {
+    "source_type": "scenario_assumption",
+    "stakeholders": [
+      "emergency-department clinical team"
+    ],
+    "date": "2026-09-09",
+    "citations": [],
+    "notes": "prespecified shared cross-disease scenario; not a disease-specific valuation",
+    "confidence": "low"
+  },
+  "confidence": "low",
+  "warnings": [
+    "FAE is nonmonetary because C_FP and C_FN lack independent monetary definitions",
+    "missing evidence: formal consequence valuation or structured elicitation was not supplied",
+    "actionability evidence is weak"
+  ],
+  "rationale_machine": {
+    "elicitation_frame": null,
+    "point_estimate_is_not_an_estimate_of_true_R": true,
+    "basis": "user-stated consequence scenario",
+    "independently_costed": false,
+    "capacity_K": 13417,
+    "capacity_period": "held-out analysis cohort",
+    "expected_capacity_binding": null,
+    "action": "clinical review of diagnostic testing or supportive management",
+    "uncertainty_review_date": "2026-09-09",
+    "prevalence_used": false,
+    "preferred_threshold_tuning_used": false,
+    "decision_transition_Rs_used_for_grid_only": [],
+    "equation": "R = C_FN / C_FP",
+    "decision_threshold_equation": "R = (1 - p_t) / p_t",
+    "component_derivation": null,
+    "decision_threshold_derivation": null,
+    "natural_frequency_derivation": null,
+    "capacity_role": "context and binding audit only; K does not identify R",
+    "module1_role": "optional calibration and score-to-risk translation only; Module 1 does not identify R",
+    "module2_role": "not used to identify R; observed clinician behavior is descriptive and cannot set preferences"
+  },
+  "rationale_human": "R=10.0 is a scenario_based scenario for pneumonia diagnostic or management response review in adult emergency-department encounters. The plausible range is (3.0, 20.0) and all Module 3B comparators should be reported across grid [3.0, 5.0, 10.0, 15.0, 20.0]. This is not a prevalence-derived or threshold-tuned value.",
+  "point_estimate_basis": "R=10 was entered directly as a prespecified value; the range and grid carry the sensitivity analysis.",
+  "module2_separation_guard": "R guidance is an optional Module 3B input and cannot define, relabel, or replace Low/Mid/High."
+}

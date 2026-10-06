@@ -1,0 +1,3 @@
+response_definition,stored_column,derived_column,stored_column_present,mismatches,definition,role,limitation
+primary,response_aki_strict,_response_primary,True,0,repeat creatinine within 6 hours of the first creatinine OR fluid in the audited 12-hour window,primary,
+broad_sensitivity,response_aki_broad,_response_broad_sensitivity,True,0,primary response OR lactate OR vasopressor; nonspecific sensitivity only,predefined_sensitivity,

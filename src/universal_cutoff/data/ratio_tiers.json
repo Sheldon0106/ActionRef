@@ -1,0 +1,65 @@
+[
+  {
+    "key": "A",
+    "label": "time-critical illness, cheap and safe response",
+    "miss_profile": "the patient deteriorates within hours, and the window to act closes fast",
+    "response_profile": "little more than staff time -- bloods, a scan, fluids, or an early drug dose",
+    "pick_if": "missing this for a few hours changes the outcome, and acting on a patient who turns out to be well costs you a test and some clinician time, not harm",
+    "examples": [
+      "ED sepsis alert -> lactate, cultures, fluids, empiric antibiotics",
+      "suspected pulmonary embolism -> D-dimer or CT pulmonary angiogram",
+      "possible ACS in chest pain -> troponin and serial ECG",
+      "stroke code activation -> urgent imaging and specialist review",
+      "deterioration or early-warning-score alert -> rapid response team review"
+    ],
+    "not_this_tier_if": "the response itself is invasive or risky (that is Tier C), or the illness unfolds over days rather than hours (Tier B)",
+    "pt_low": 0.02,
+    "pt_high": 0.0625,
+    "default_ratio": 20.0,
+    "conservative_ratio": 15.0,
+    "aggressive_ratio": 40.0,
+    "anchor": "Pulmonary embolism testing threshold ~1.8-2% (Pauker-Kassirer method); the ED sepsis literature cost build in this framework lands at pt ~6.25%, i.e. R=15"
+  },
+  {
+    "key": "B",
+    "label": "serious but not hour-critical, moderate response",
+    "miss_profile": "the patient gets worse over days -- an avoidable admission, organ injury, or a readmission -- but a few hours either way is not decisive",
+    "response_profile": "a real but bounded commitment -- a drug course, extra monitoring, an observation bed, or a specialist referral",
+    "pick_if": "you would be uncomfortable missing it, but you would also not want to start treatment in ten well patients to catch one case",
+    "examples": [
+      "COPD exacerbation -> bronchodilator or steroid course",
+      "community-acquired pneumonia -> antibiotics and blood cultures",
+      "AKI risk flag -> repeat creatinine, fluid review, nephrotoxin hold",
+      "heart-failure decompensation -> diuresis and observation",
+      "statin or antihypertensive initiation from a risk score"
+    ],
+    "not_this_tier_if": "hours matter and the workup is cheap (Tier A), or acting means a procedure with its own complication rate (Tier C)",
+    "pt_low": 0.07,
+    "pt_high": 0.15,
+    "default_ratio": 10.0,
+    "conservative_ratio": 7.0,
+    "aggressive_ratio": 13.0,
+    "anchor": "Statin primary prevention at 7.5% 10-year ASCVD risk (2018 ACC/AHA guideline)"
+  },
+  {
+    "key": "C",
+    "label": "not time-critical, invasive or expensive response",
+    "miss_profile": "important, but slow-moving -- a delay of days to weeks is usually recoverable because the next visit or test will catch it",
+    "response_profile": "something with its own risk or a large cost -- a biopsy, an operation, an ICU bed, or long-term therapy the patient may not need",
+    "pick_if": "acting on a well patient does real harm, so you want reasonable confidence before pulling the trigger",
+    "examples": [
+      "prostate or breast biopsy after a risk calculator",
+      "ICU transfer or step-up from a deterioration score",
+      "starting long-term anticoagulation",
+      "elective surgical referral from a screening pathway",
+      "genetic or specialist workup with a long, costly tail"
+    ],
+    "not_this_tier_if": "the response is a cheap test rather than a procedure -- that is Tier A or B even when the underlying disease is serious",
+    "pt_low": 0.20,
+    "pt_high": 0.30,
+    "default_ratio": 3.0,
+    "conservative_ratio": 2.5,
+    "aggressive_ratio": 4.0,
+    "anchor": "Prostate biopsy decision curves commonly evaluate 10-30%; this tier prespecifies 20-30%"
+  }
+]

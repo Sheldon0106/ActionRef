@@ -1,0 +1,80 @@
+{
+  "analysis": "Primary sepsis illustration",
+  "data_role": "aggregate source data; no patient rows",
+  "mimic_split": {
+    "method": "GroupShuffleSplit",
+    "train_size": 0.7,
+    "random_state": 2026,
+    "stage": "all 425011 source rows before score/action complete-case filtering"
+  },
+  "mimic_response": {
+    "components": [
+      "lactate_flag",
+      "icu_fluid_flag",
+      "vasopressor_flag",
+      "steroid_flag"
+    ],
+    "rule": "positive if any observed 1; negative if all four observed 0; otherwise missing",
+    "nonbinary_components": "treated as missing in this analysis",
+    "eligibility": "response is missing unless legacy_v7_primary_eligible equals 1"
+  },
+  "eligibility_derivation": "(legacy_data_available == 1) & (legacy_subject_id_discordant == 0) & (legacy_hadm_id_discordant == 0)",
+  "reference_thresholds": {
+    "Low": 27,
+    "Mid": 36,
+    "High": 51
+  },
+  "stanford_local_references": {
+    "Low": 26,
+    "Mid": 36,
+    "High": 50
+  },
+  "candidate": {
+    "reference": "Low",
+    "reference_threshold": 27,
+    "threshold": 31,
+    "R_numerator": 11299,
+    "R_denominator": 804,
+    "learning_workload_ceiling": 109888,
+    "capacity_role": "Low reference alert count; not measured hospital capacity"
+  },
+  "action_probability": {
+    "prediction": "linear interpolation at the observed score with endpoint clipping",
+    "sensitivity": "assign to development-origin width-3 bins before interpolation",
+    "constant_rate_numerator": 96268,
+    "constant_rate_denominator": 294713,
+    "bootstrap_replicates": 200,
+    "bootstrap_seed": 2026100288,
+    "bootstrap_unit": "patient cluster, all eligible encounters per sampled patient",
+    "bootstrap_conditioning": "learning curve and comparator predictions fixed",
+    "reliability_bin_width": 0.1,
+    "probability_clip_epsilon": 1e-06,
+    "calibration_min_N": 100,
+    "calibration_min_each_class": 20,
+    "calibration_min_unique_probabilities": 3
+  },
+  "expected": {
+    "source_N": 425011,
+    "learning_N": 297478,
+    "heldout_N": 127533,
+    "learning_score_N": 297476,
+    "heldout_score_N": 127528,
+    "learning_action_N": 294713,
+    "learning_actions": 96268,
+    "heldout_action_N": 126332,
+    "heldout_action_patients": 60903,
+    "stanford_N": 118385,
+    "supported_bin_N": 26,
+    "supported_encounters": 294659
+  },
+  "R_grid": [
+    5,
+    10,
+    14.053482587064677,
+    15,
+    20,
+    25,
+    30
+  ],
+  "analysis_id": "sepsis_primary"
+}

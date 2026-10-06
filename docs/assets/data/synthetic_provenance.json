@@ -1,0 +1,14 @@
+{
+  "source": "examples/synthetic_walkthrough.py",
+  "kind": "synthetic aggregate data",
+  "seed": 719,
+  "split_seed": 2026,
+  "sha256": {
+    "synthetic_learning_curve.csv": "e88616bf88c58957c5ec47d979af1c2fc4f69b820830eb868c0e68be8bf93a7b",
+    "synthetic_alert_curve.csv": "35435239ff35f80f964065dbdd43fcad3e2d2df172230fc988d8eb2cfbb3bee2",
+    "synthetic_references.csv": "e296cbad037525b79e808b3601444eb2b67aa2f7141588fb378f57bda88f4650",
+    "synthetic_capacity.csv": "cd2e9f938d7f15640eb9bdd24529e1e4001c32d5f792d376b19868cb6a874d37",
+    "synthetic_heldout.csv": "ceec05a42a59bce41dad2d8ac828bb0a2d51de9a22d6e4a2e4a48ef7d368d51f",
+    "synthetic_summary.json": "f05f9ed4e331bb7f1ff86f0de8ff00778527421b3ebf88aa599fd202e9f62833"
+  }
+}

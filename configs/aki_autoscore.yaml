@@ -1,0 +1,41 @@
+# AKI compatibility run, frozen v0.3 package.
+# Definitions taken unchanged from the source notebook. Dataset path is a CLI argument.
+
+disease: AKI
+disease_slug: aki
+dataset: MIMIC-IV-ED
+cohort: all ED encounters with a valid AutoScore value
+source_notebook: autoscore_aki_final_universal.ipynb
+
+columns:
+  score: score_aki_auto_0_100
+  outcome: outcome_aki
+  response: response_aki_strict       # repeat_creatinine_6h OR icu_fluid_flag
+  response_sensitivity: response_aki_broad  # plus lactate_flag OR vasopressor_flag
+  subject_id: subject_id
+  encounter_id: stay_id
+
+circularity_note: >
+  The primary bundle is a component-specific diagnostic/management response:
+  repeat creatinine within 6 hours of the first creatinine or fluid within the
+  audited 12-hour fluid window. Repeat testing may contribute to recognition and
+  diagnosis coding of AKI. The broad bundle additionally includes lactate and
+  vasopressor use and is retained only as a nonspecific sensitivity analysis.
+
+module2:
+  # Must stay empty. Frozen defaults apply. An evidence-gate abstention is a valid
+  # finding and must not be resolved by adding overrides here.
+  overrides: {}
+
+module3a:
+  capacity_fractions: [0.01, 0.02, 0.05, 0.10, 0.20, 0.30]
+
+module3b:
+  enabled: false
+  reason: >
+    No AKI-specific R has been elicited or costed. The sepsis R=15 scenario
+    applies to a different action and outcome.
+
+bootstrap:
+  enabled: false
+  reason: Compatibility run. Formal disease-specific bootstrap runs separately.

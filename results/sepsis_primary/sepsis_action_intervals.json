@@ -1,0 +1,82 @@
+[
+  {
+    "metric": "N",
+    "point": 126332,
+    "B": 200,
+    "unit": "patient_cluster",
+    "finite_replicates": 200,
+    "lower_025": 124681.0,
+    "median": 126227.5,
+    "upper_975": 128150.65
+  },
+  {
+    "metric": "action_rate",
+    "point": 0.32452585251559385,
+    "B": 200,
+    "unit": "patient_cluster",
+    "finite_replicates": 200,
+    "lower_025": 0.3205935356781984,
+    "median": 0.32458150570337463,
+    "upper_975": 0.32873187573489104
+  },
+  {
+    "metric": "mean_predicted",
+    "point": 0.3337022727847737,
+    "B": 200,
+    "unit": "patient_cluster",
+    "finite_replicates": 200,
+    "lower_025": 0.33141977609211215,
+    "median": 0.3336792304999314,
+    "upper_975": 0.336373208682836
+  },
+  {
+    "metric": "calibration_gap",
+    "point": 0.009176420269179942,
+    "B": 200,
+    "unit": "patient_cluster",
+    "finite_replicates": 200,
+    "lower_025": 0.005378439164592165,
+    "median": 0.009033860319634296,
+    "upper_975": 0.013689317360926281
+  },
+  {
+    "metric": "action_Brier",
+    "point": 0.19432522507282848,
+    "B": 200,
+    "unit": "patient_cluster",
+    "finite_replicates": 200,
+    "lower_025": 0.19298676730614078,
+    "median": 0.1943412014840251,
+    "upper_975": 0.1956276431369328
+  },
+  {
+    "metric": "constant_development_rate_Brier",
+    "point": 0.2192133355462546,
+    "B": 200,
+    "unit": "patient_cluster",
+    "finite_replicates": 200,
+    "lower_025": 0.2178500012600053,
+    "median": 0.21923263050697764,
+    "upper_975": 0.22067156383774447
+  },
+  {
+    "metric": "delta_Brier_vs_constant",
+    "point": -0.024888110473426123,
+    "B": 200,
+    "unit": "patient_cluster",
+    "finite_replicates": 200,
+    "lower_025": -0.02643614249499045,
+    "median": -0.024885383569132065,
+    "upper_975": -0.02339550583674305
+  },
+  {
+    "metric": "Brier_skill",
+    "point": 0.11353374287840556,
+    "B": 200,
+    "unit": "patient_cluster",
+    "finite_replicates": 200,
+    "lower_025": 0.10696206063298411,
+    "median": 0.11350039747250057,
+    "upper_975": 0.11987872056366496
+  }
+]

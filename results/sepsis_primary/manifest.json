@@ -1,0 +1,45 @@
+{
+  "patient_data_included": false,
+  "files": {
+    "observed_action_yield.csv": {
+      "source": "observed_action_yield.csv",
+      "role": "reported aggregate research output",
+      "sha256": "0e4fabcb86d2fae1ee1b06b223866ee88271cc280d9354c8875538acccb5e9d0"
+    },
+    "fixed_candidate_R_sensitivity.csv": {
+      "source": "fixed_candidate_R_sensitivity.csv",
+      "role": "reported aggregate research output",
+      "sha256": "fcf9cf62e491997f9749a1ba6a11842c57fdff9ac9632cb6697487513685e8f2"
+    },
+    "sepsis_action_points.json": {
+      "source": "sepsis_action_points.json",
+      "role": "reported aggregate research output",
+      "sha256": "235102fa2c29bd91fe6504b5fa071de3dc8079c0dfa17de09a4b7d0d1ea06d13"
+    },
+    "sepsis_action_intervals.json": {
+      "source": "sepsis_action_intervals.json",
+      "role": "reported aggregate research output",
+      "sha256": "06879557166b11c874b09c3d2224b9e9da0d842fdb65b3d5ec5b8356610b224e"
+    },
+    "sepsis_action_reliability.json": {
+      "source": "sepsis_action_reliability.json",
+      "role": "reported aggregate research output",
+      "sha256": "37281661bdc525e508929e0a77bcbf66f95fb95562afe8ace9530cfb5b7b8254"
+    },
+    "semantic_response_curve.csv": {
+      "source": "semantic_response_curve.csv",
+      "role": "reported aggregate research output",
+      "sha256": "993328c6412c0552a9df0df05ad9035deda0e343f9b4f98203e7ff150ac42b86"
+    },
+    "operating_counts.csv": {
+      "source": "Supplement eTable 4, 2026-10-02",
+      "role": "reported confusion counts, transcribed without rounding",
+      "sha256": "c64d8b09969ed7845fc86110e341f7c1d8920465a11b1ee4d64c17a262467366"
+    }
+  },
+  "config": {
+    "path": "configs/sepsis_primary.json",
+    "sha256": "1281c4edf7946b56f5167fcc4ac130a826d4455bc10798db1269903e92093bc7"
+  },
+  "analysis_id": "sepsis_primary"
+}

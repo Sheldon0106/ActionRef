@@ -1,0 +1,40 @@
+# Pneumonia compatibility run, frozen v0.3 package.
+# Definitions taken unchanged from the source notebook. Dataset path is a CLI argument.
+
+disease: Pneumonia
+disease_slug: pneumonia
+dataset: MIMIC-IV-ED
+cohort: all ED encounters with a valid AutoScore value
+source_notebook: autoscore_pneumonia_final_universal.ipynb
+
+columns:
+  score: score_pneumonia_auto
+  outcome: outcome_all_pne
+  response: response_pneumonia_strict          # antibiotic_flag OR blood_culture_flag
+  response_sensitivity: response_pneumonia_broad  # plus lactate, vasopressor, icu_fluid
+  subject_id: subject_id
+  encounter_id: stay_id
+
+circularity_note: >
+  The primary bundle is built from antibiotics and blood cultures, which also
+  establish the pneumonia diagnosis. V7 excluded both from the sepsis primary
+  bundle for this reason. No circularity-aware bundle exists in this dataset, so
+  the notebook bundle is used as specified and the concern is recorded here.
+
+module2:
+  # Must stay empty. Frozen defaults apply. An evidence-gate abstention is a valid
+  # finding and must not be resolved by adding overrides here.
+  overrides: {}
+
+module3a:
+  capacity_fractions: [0.01, 0.02, 0.05, 0.10, 0.20, 0.30]
+
+module3b:
+  enabled: false
+  reason: >
+    No pneumonia-specific R has been elicited or costed. The sepsis R=15 scenario
+    applies to a different action and outcome.
+
+bootstrap:
+  enabled: false
+  reason: Compatibility run. Formal disease-specific bootstrap runs separately.

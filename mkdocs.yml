@@ -1,0 +1,66 @@
+site_name: ActionRef
+site_description: Behavioral references and explicit trade-offs for clinical score thresholds
+site_url: https://Sheldon0106.github.io/ActionRef/
+repo_url: https://github.com/Sheldon0106/ActionRef
+repo_name: Sheldon0106/ActionRef
+edit_uri: ""
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  palette:
+    primary: custom
+    accent: teal
+  font: false
+  features:
+    - navigation.sections
+    - navigation.footer
+    - content.code.copy
+    - search.highlight
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Overview: index.md
+  - Get started:
+      - Installation: installation.md
+      - Synthetic walkthrough: quickstart.md
+      - Prepare your data: data.md
+  - Understand the workflow:
+      - Behavioral references: references.md
+      - Output-state examples: output-states.md
+      - Capacity and consequences: operating-candidates.md
+      - Independent evaluation: evaluation.md
+  - Paper and evidence:
+      - Reproduce the paper: paper-reproduction.md
+      - Primary result tables: paper-results.md
+      - Clinical data contract: paper-data.md
+      - Sepsis illustration: clinical-example.md
+      - Evidence and analysis roles: evidence.md
+      - Figure sources: figures.md
+  - Reference:
+      - Python API: API_REFERENCE.md
+      - R elicitation: R_GUIDANCE.md
+      - Optional R scenarios: RATIO_RECOMMENDER_FINDINGS.md
+      - Subgroups, time, and transport: GOVERNANCE_DIAGNOSTICS.md
+      - Reproducing this site: development.md
+      - Reference regression record: CONTROLLED_REGRESSION_REPORT.md
+      - Earlier compatibility settings: DISEASE_COMPATIBILITY_REPORT.md
+validation:
+  links:
+    not_found: warn
+    unrecognized_links: warn
+    anchors: warn
+copyright: ActionRef · Universal Cutoff Framework contributors

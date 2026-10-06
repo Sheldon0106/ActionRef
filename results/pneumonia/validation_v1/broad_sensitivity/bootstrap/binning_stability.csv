@@ -1,0 +1,5 @@
+bin_width,valid_bin_count,count,probability
+1.0,32,2,0.01
+1.0,33,52,0.26
+1.0,34,144,0.72
+1.0,35,2,0.01

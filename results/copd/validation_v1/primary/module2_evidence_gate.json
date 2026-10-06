@@ -1,0 +1,9 @@
+{
+  "status": "supported",
+  "passed": true,
+  "reason": "supported monotone response structure",
+  "n_valid_bins": 28,
+  "isotonic_dynamic_range": 0.5093792717351611,
+  "logistic_slope": 0.06339633476374057,
+  "logistic_bic_improvement": 12688.985589336284
+}

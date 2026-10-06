@@ -1,0 +1,82 @@
+[
+  {
+    "lower": 0.0,
+    "upper": 0.1,
+    "N": 0,
+    "actions": 0,
+    "observed": null,
+    "predicted": null
+  },
+  {
+    "lower": 0.1,
+    "upper": 0.2,
+    "N": 39042,
+    "actions": 6693,
+    "observed": 0.1714307668664515,
+    "predicted": 0.16793934249110715
+  },
+  {
+    "lower": 0.2,
+    "upper": 0.3,
+    "N": 19567,
+    "actions": 5212,
+    "observed": 0.2663668421321613,
+    "predicted": 0.26552021055603253
+  },
+  {
+    "lower": 0.3,
+    "upper": 0.4,
+    "N": 32749,
+    "actions": 10624,
+    "observed": 0.32440685211762194,
+    "predicted": 0.34095897996075786
+  },
+  {
+    "lower": 0.4,
+    "upper": 0.5,
+    "N": 15044,
+    "actions": 6407,
+    "observed": 0.4258840733847381,
+    "predicted": 0.44435281633542517
+  },
+  {
+    "lower": 0.5,
+    "upper": 0.6,
+    "N": 11511,
+    "actions": 5917,
+    "observed": 0.514030058205195,
+    "predicted": 0.5361698800098138
+  },
+  {
+    "lower": 0.6,
+    "upper": 0.7,
+    "N": 2704,
+    "actions": 1648,
+    "observed": 0.6094674556213018,
+    "predicted": 0.6453035094878595
+  },
+  {
+    "lower": 0.7,
+    "upper": 0.8,
+    "N": 2976,
+    "actions": 2071,
+    "observed": 0.6959005376344086,
+    "predicted": 0.7383263280776702
+  },
+  {
+    "lower": 0.8,
+    "upper": 0.9,
+    "N": 1643,
+    "actions": 1401,
+    "observed": 0.8527084601339014,
+    "predicted": 0.857888081172836
+  },
+  {
+    "lower": 0.9,
+    "upper": 1.0,
+    "N": 1096,
+    "actions": 1025,
+    "observed": 0.9352189781021898,
+    "predicted": 0.9404406059298315
+  }
+]

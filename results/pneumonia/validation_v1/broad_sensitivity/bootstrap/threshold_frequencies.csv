@@ -1,0 +1,7 @@
+level,threshold,count,probability
+Low,5.0,200,1.0
+Mid,11.0,200,1.0
+High,21.0,31,0.155
+High,22.0,39,0.195
+High,23.0,74,0.37
+High,24.0,56,0.28

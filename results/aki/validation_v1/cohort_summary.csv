@@ -1,0 +1,5 @@
+disease,partition,response_definition,patients,encounters,outcome_events,outcome_prevalence,response_events,response_prevalence,missing_score,missing_outcome,missing_response,patient_overlap
+aki,learning,primary,151699,314629,22251,0.07072138931884855,17676,0.05618045380432191,0,0,0,0
+aki,learning,broad_sensitivity,151699,314629,22251,0.07072138931884855,90216,0.28673771330678355,0,0,0,0
+aki,heldout,primary,65015,134175,9368,0.06981926588410657,7581,0.05650083845723868,0,0,0,0
+aki,heldout,broad_sensitivity,65015,134175,9368,0.06981926588410657,38739,0.2887199552822806,0,0,0,0

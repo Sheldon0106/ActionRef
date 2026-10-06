@@ -1,0 +1,18 @@
+{
+  "min_bin_n": 40,
+  "min_valid_bins": 8,
+  "target_valid_bins": 30,
+  "max_valid_bins": 40,
+  "min_isotonic_dynamic_range": 0.08,
+  "min_logistic_bic_improvement": 6.0,
+  "max_selected_changepoints": 2,
+  "min_bins_per_segment": 5,
+  "cp_candidate_stride": 2,
+  "min_structural_bic_improvement": 6.0,
+  "smooth_null_alpha": 0.1,
+  "min_standardized_slope_change": 0.12,
+  "min_cp_bootstrap_support": 0.5,
+  "cp_support_tolerance_bins": 2.0,
+  "max_alignment_bins": 1.0,
+  "bin_width": null
+}

@@ -1,0 +1,4 @@
+level,provenance_tier,selected_type,structural_status,count,probability
+High,B,relative-anchor,not_corroborated,200,1.0
+Low,A,semantic-only,not_corroborated,200,1.0
+Mid,B,relative-anchor,not_corroborated,200,1.0
