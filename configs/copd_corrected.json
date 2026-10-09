@@ -1,0 +1,95 @@
+{
+  "analysis": "copd_response_nonoverlap_addendum",
+  "score": "score_COPD_AutoScore",
+  "outcome": "outcome_copd_exac",
+  "score_refitted": false,
+  "score_fit_split": {
+    "test_size": 0.3,
+    "random_state": 42,
+    "stratify": "outcome_copd_exac",
+    "unit": "encounter",
+    "source": "<analysis-workspace>\\cutoff_validation_mimic\\Autoscore\\autoscore_copd.ipynb",
+    "cell": 0
+  },
+  "reference_split": {
+    "learning_fraction": 0.7,
+    "seed": 2026,
+    "unit": "patient",
+    "ordered_unique_patients": "sorted mergesort"
+  },
+  "reference_bootstrap": {
+    "B": 500,
+    "seed": 42,
+    "group": "subject_id",
+    "n_jobs": 1
+  },
+  "operating_bootstrap": {
+    "B": 200,
+    "seed": 42,
+    "group": "subject_id",
+    "stream": "historical sequential per-level stream, Low then Mid"
+  },
+  "predictive_bootstrap": {
+    "B": 200,
+    "seed": 42,
+    "group": "subject_id",
+    "score_and_references": "fixed; no model or calibration fitting"
+  },
+  "bronchodilator": {
+    "keywords": "albuterol|ipratropium|duoneb|levalbuterol|combivent|atrovent|ventolin|proair|xopenex",
+    "window_hours": [
+      0,
+      24
+    ],
+    "time_origin": "ED intime",
+    "linkage": [
+      "subject_id",
+      "hadm_id"
+    ],
+    "positive_event_txt": [
+      "administered",
+      "administered in other location",
+      "delayed administered",
+      "started"
+    ],
+    "explicit_nonadministration_event_txt": [
+      "hold dose",
+      "not confirmed",
+      "not given"
+    ],
+    "other_status": "not qualifying for documented administration/start",
+    "missing_hadm_linkage": "preserve historical pandas null-key join; audit separately",
+    "zero": "no qualifying record, not proven absence of clinical treatment"
+  },
+  "steroid": {
+    "source": "stored historical ED Pyxis record proxy; kept unchanged",
+    "keywords": "methylpred|solu-medrol|solumedrol|prednisone|prednisolone|hydrocortisone|hydrocort|dexamethasone|dexame|decadron|medrol",
+    "exclude": "ophth|oph|ophthalmic",
+    "time_origin": "ED intime",
+    "historical_rule": "first matching record, 0 through 24h",
+    "missing": "historical missing-to-zero convention retained; report counts separately",
+    "route_dose_indication_actual_administration": "not established"
+  },
+  "response": "documented bronchodilator administration/start within 24h OR stored steroid proxy",
+  "strict_subset": "original heldout patients excluding every subject ever in score-fitting rows",
+  "interpretation": "supplemental within-existing-data evaluation, not external validation",
+  "interval": "2.5th and 97.5th percentile, conditional fixed-score/fixed-reference evaluation",
+  "module2_config": {
+    "min_bin_n": 40,
+    "min_valid_bins": 8,
+    "target_valid_bins": 30,
+    "max_valid_bins": 40,
+    "min_isotonic_dynamic_range": 0.08,
+    "min_logistic_bic_improvement": 6.0,
+    "max_selected_changepoints": 2,
+    "min_bins_per_segment": 5,
+    "cp_candidate_stride": 2,
+    "min_structural_bic_improvement": 6.0,
+    "smooth_null_alpha": 0.1,
+    "min_standardized_slope_change": 0.12,
+    "min_cp_bootstrap_support": 0.5,
+    "cp_support_tolerance_bins": 2.0,
+    "max_alignment_bins": 1.0,
+    "bin_width": null
+  }
+}

@@ -1,0 +1,5 @@
+cohort,patients,encounters,outcome_positive_encounters,outcome_positive_patients,legacy_response_positive,corrected_response_positive,bronchodilator_legacy_positive,bronchodilator_corrected_positive,steroid_proxy_positive,steroid_flag_missing,score_fitting_patients,score_fitting_encounters,encounters_per_patient
+learning,151699,314629,3277,1911,19280,18997,9829,9501,12112,5169,119192,220540,2.074034766214675
+heldout_full,65015,134175,1410,807,8115,8007,4096,3980,5146,2198,51037,93622,2.0637545181881105
+heldout_score_fit_excluded,13978,15221,91,89,693,687,297,290,465,427,0,0,1.0889254542853055
+heldout_score_fit_exposed,51037,118954,1319,718,7422,7320,3799,3690,4681,1771,51037,93622,2.3307404432078687

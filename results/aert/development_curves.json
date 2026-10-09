@@ -1,0 +1,3666 @@
+[
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.6809605488850772,
+        "target_probability": 0.6809605488850772,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": 2.0,
+        "selected_threshold": 2.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 1.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 243,
+        "observed_rate": 0.2757201646090535,
+        "isotonic_rate": 0.2757201646090535
+      },
+      {
+        "score": 1.0,
+        "count": 597,
+        "observed_rate": 0.5644891122278057,
+        "isotonic_rate": 0.5644891122278057
+      },
+      {
+        "score": 2.0,
+        "count": 581,
+        "observed_rate": 0.6970740103270223,
+        "isotonic_rate": 0.6970740103270223
+      },
+      {
+        "score": 3.0,
+        "count": 423,
+        "observed_rate": 0.8203309692671394,
+        "isotonic_rate": 0.8203309692671394
+      },
+      {
+        "score": 4.0,
+        "count": 248,
+        "observed_rate": 0.842741935483871,
+        "isotonic_rate": 0.842741935483871
+      },
+      {
+        "score": 5.0,
+        "count": 155,
+        "observed_rate": 0.9225806451612903,
+        "isotonic_rate": 0.9225806451612903
+      },
+      {
+        "score": 6.0,
+        "count": 50,
+        "observed_rate": 0.94,
+        "isotonic_rate": 0.94
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.6809605488850772,
+        "target_probability": 0.6809605488850772,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 243,
+        "observed_rate": 0.2757201646090535,
+        "isotonic_rate": 0.2757201646090535
+      },
+      {
+        "score": 2.0,
+        "count": 597,
+        "observed_rate": 0.5644891122278057,
+        "isotonic_rate": 0.5644891122278057
+      },
+      {
+        "score": 3.0,
+        "count": 581,
+        "observed_rate": 0.6970740103270223,
+        "isotonic_rate": 0.6970740103270223
+      },
+      {
+        "score": 4.0,
+        "count": 423,
+        "observed_rate": 0.8203309692671394,
+        "isotonic_rate": 0.8203309692671394
+      },
+      {
+        "score": 5.0,
+        "count": 248,
+        "observed_rate": 0.842741935483871,
+        "isotonic_rate": 0.842741935483871
+      },
+      {
+        "score": 6.0,
+        "count": 155,
+        "observed_rate": 0.9225806451612903,
+        "isotonic_rate": 0.9225806451612903
+      },
+      {
+        "score": 7.0,
+        "count": 50,
+        "observed_rate": 0.94,
+        "isotonic_rate": 0.94
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3826239578762615,
+        "target_probability": 0.3826239578762615,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 6.0,
+        "semantic_threshold_operational": 6.0,
+        "selected_threshold": 6.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 238,
+        "observed_rate": 0.08403361344537816,
+        "isotonic_rate": 0.08403361344537816
+      },
+      {
+        "score": 1.0,
+        "count": 580,
+        "observed_rate": 0.15,
+        "isotonic_rate": 0.15
+      },
+      {
+        "score": 2.0,
+        "count": 568,
+        "observed_rate": 0.3257042253521127,
+        "isotonic_rate": 0.3257042253521127
+      },
+      {
+        "score": 3.0,
+        "count": 413,
+        "observed_rate": 0.5423728813559322,
+        "isotonic_rate": 0.5423728813559322
+      },
+      {
+        "score": 4.0,
+        "count": 248,
+        "observed_rate": 0.657258064516129,
+        "isotonic_rate": 0.657258064516129
+      },
+      {
+        "score": 5.0,
+        "count": 148,
+        "observed_rate": 0.7837837837837838,
+        "isotonic_rate": 0.7837837837837838
+      },
+      {
+        "score": 6.0,
+        "count": 49,
+        "observed_rate": 0.9183673469387755,
+        "isotonic_rate": 0.9183673469387755
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3826239578762615,
+        "target_probability": 0.3826239578762615,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 7.0,
+        "semantic_threshold_operational": 7.0,
+        "selected_threshold": 7.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 238,
+        "observed_rate": 0.08403361344537816,
+        "isotonic_rate": 0.08403361344537816
+      },
+      {
+        "score": 2.0,
+        "count": 580,
+        "observed_rate": 0.15,
+        "isotonic_rate": 0.15
+      },
+      {
+        "score": 3.0,
+        "count": 568,
+        "observed_rate": 0.3257042253521127,
+        "isotonic_rate": 0.3257042253521127
+      },
+      {
+        "score": 4.0,
+        "count": 413,
+        "observed_rate": 0.5423728813559322,
+        "isotonic_rate": 0.5423728813559322
+      },
+      {
+        "score": 5.0,
+        "count": 248,
+        "observed_rate": 0.657258064516129,
+        "isotonic_rate": 0.657258064516129
+      },
+      {
+        "score": 6.0,
+        "count": 148,
+        "observed_rate": 0.7837837837837838,
+        "isotonic_rate": 0.7837837837837838
+      },
+      {
+        "score": 7.0,
+        "count": 49,
+        "observed_rate": 0.9183673469387755,
+        "isotonic_rate": 0.9183673469387755
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.6809605488850772,
+        "target_probability": 0.6809605488850772,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": 2.0,
+        "selected_threshold": 2.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 1.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 243,
+        "observed_rate": 0.2757201646090535,
+        "isotonic_rate": 0.2757201646090535
+      },
+      {
+        "score": 1.0,
+        "count": 575,
+        "observed_rate": 0.5634782608695652,
+        "isotonic_rate": 0.5634782608695652
+      },
+      {
+        "score": 2.0,
+        "count": 553,
+        "observed_rate": 0.6889692585895117,
+        "isotonic_rate": 0.6889692585895117
+      },
+      {
+        "score": 3.0,
+        "count": 390,
+        "observed_rate": 0.8179487179487179,
+        "isotonic_rate": 0.8161648177496038
+      },
+      {
+        "score": 4.0,
+        "count": 241,
+        "observed_rate": 0.8132780082987552,
+        "isotonic_rate": 0.8161648177496038
+      },
+      {
+        "score": 5.0,
+        "count": 221,
+        "observed_rate": 0.8914027149321267,
+        "isotonic_rate": 0.8914027149321267
+      },
+      {
+        "score": 6.0,
+        "count": 54,
+        "observed_rate": 0.9629629629629629,
+        "isotonic_rate": 0.9541284403669725
+      },
+      {
+        "score": 7.0,
+        "count": 55,
+        "observed_rate": 0.9454545454545454,
+        "isotonic_rate": 0.9541284403669725
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.6809605488850772,
+        "target_probability": 0.6809605488850772,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 243,
+        "observed_rate": 0.2757201646090535,
+        "isotonic_rate": 0.2757201646090535
+      },
+      {
+        "score": 2.0,
+        "count": 575,
+        "observed_rate": 0.5634782608695652,
+        "isotonic_rate": 0.5634782608695652
+      },
+      {
+        "score": 3.0,
+        "count": 553,
+        "observed_rate": 0.6889692585895117,
+        "isotonic_rate": 0.6889692585895117
+      },
+      {
+        "score": 4.0,
+        "count": 390,
+        "observed_rate": 0.8179487179487179,
+        "isotonic_rate": 0.8161648177496038
+      },
+      {
+        "score": 5.0,
+        "count": 241,
+        "observed_rate": 0.8132780082987552,
+        "isotonic_rate": 0.8161648177496038
+      },
+      {
+        "score": 6.0,
+        "count": 221,
+        "observed_rate": 0.8914027149321267,
+        "isotonic_rate": 0.8914027149321267
+      },
+      {
+        "score": 7.0,
+        "count": 54,
+        "observed_rate": 0.9629629629629629,
+        "isotonic_rate": 0.9541284403669725
+      },
+      {
+        "score": 8.0,
+        "count": 55,
+        "observed_rate": 0.9454545454545454,
+        "isotonic_rate": 0.9541284403669725
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3826239578762615,
+        "target_probability": 0.3826239578762615,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 6.0,
+        "semantic_threshold_operational": 6.0,
+        "selected_threshold": 6.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 238,
+        "observed_rate": 0.08403361344537816,
+        "isotonic_rate": 0.08403361344537816
+      },
+      {
+        "score": 1.0,
+        "count": 559,
+        "observed_rate": 0.1413237924865832,
+        "isotonic_rate": 0.1413237924865832
+      },
+      {
+        "score": 2.0,
+        "count": 539,
+        "observed_rate": 0.3228200371057514,
+        "isotonic_rate": 0.3228200371057514
+      },
+      {
+        "score": 3.0,
+        "count": 383,
+        "observed_rate": 0.5169712793733682,
+        "isotonic_rate": 0.5169712793733682
+      },
+      {
+        "score": 4.0,
+        "count": 238,
+        "observed_rate": 0.6218487394957983,
+        "isotonic_rate": 0.6218487394957983
+      },
+      {
+        "score": 5.0,
+        "count": 214,
+        "observed_rate": 0.7289719626168224,
+        "isotonic_rate": 0.7289719626168224
+      },
+      {
+        "score": 6.0,
+        "count": 53,
+        "observed_rate": 0.8867924528301887,
+        "isotonic_rate": 0.8867924528301887
+      },
+      {
+        "score": 7.0,
+        "count": 55,
+        "observed_rate": 0.9090909090909091,
+        "isotonic_rate": 0.9090909090909091
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3826239578762615,
+        "target_probability": 0.3826239578762615,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 7.0,
+        "semantic_threshold_operational": 7.0,
+        "selected_threshold": 7.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 238,
+        "observed_rate": 0.08403361344537816,
+        "isotonic_rate": 0.08403361344537816
+      },
+      {
+        "score": 2.0,
+        "count": 559,
+        "observed_rate": 0.1413237924865832,
+        "isotonic_rate": 0.1413237924865832
+      },
+      {
+        "score": 3.0,
+        "count": 539,
+        "observed_rate": 0.3228200371057514,
+        "isotonic_rate": 0.3228200371057514
+      },
+      {
+        "score": 4.0,
+        "count": 383,
+        "observed_rate": 0.5169712793733682,
+        "isotonic_rate": 0.5169712793733682
+      },
+      {
+        "score": 5.0,
+        "count": 238,
+        "observed_rate": 0.6218487394957983,
+        "isotonic_rate": 0.6218487394957983
+      },
+      {
+        "score": 6.0,
+        "count": 214,
+        "observed_rate": 0.7289719626168224,
+        "isotonic_rate": 0.7289719626168224
+      },
+      {
+        "score": 7.0,
+        "count": 53,
+        "observed_rate": 0.8867924528301887,
+        "isotonic_rate": 0.8867924528301887
+      },
+      {
+        "score": 8.0,
+        "count": 55,
+        "observed_rate": 0.9090909090909091,
+        "isotonic_rate": 0.9090909090909091
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.7593896713615024,
+        "target_probability": 0.7593896713615024,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 1.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 113,
+        "observed_rate": 0.40707964601769914,
+        "isotonic_rate": 0.40707964601769914
+      },
+      {
+        "score": 1.0,
+        "count": 360,
+        "observed_rate": 0.6722222222222223,
+        "isotonic_rate": 0.6722222222222223
+      },
+      {
+        "score": 2.0,
+        "count": 424,
+        "observed_rate": 0.7382075471698113,
+        "isotonic_rate": 0.7382075471698113
+      },
+      {
+        "score": 3.0,
+        "count": 353,
+        "observed_rate": 0.830028328611898,
+        "isotonic_rate": 0.830028328611898
+      },
+      {
+        "score": 4.0,
+        "count": 222,
+        "observed_rate": 0.8333333333333334,
+        "isotonic_rate": 0.8333333333333334
+      },
+      {
+        "score": 5.0,
+        "count": 148,
+        "observed_rate": 0.918918918918919,
+        "isotonic_rate": 0.918918918918919
+      },
+      {
+        "score": 6.0,
+        "count": 49,
+        "observed_rate": 0.9387755102040817,
+        "isotonic_rate": 0.9387755102040817
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.7593896713615024,
+        "target_probability": 0.7593896713615024,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 113,
+        "observed_rate": 0.40707964601769914,
+        "isotonic_rate": 0.40707964601769914
+      },
+      {
+        "score": 2.0,
+        "count": 360,
+        "observed_rate": 0.6722222222222223,
+        "isotonic_rate": 0.6722222222222223
+      },
+      {
+        "score": 3.0,
+        "count": 424,
+        "observed_rate": 0.7382075471698113,
+        "isotonic_rate": 0.7382075471698113
+      },
+      {
+        "score": 4.0,
+        "count": 353,
+        "observed_rate": 0.830028328611898,
+        "isotonic_rate": 0.830028328611898
+      },
+      {
+        "score": 5.0,
+        "count": 222,
+        "observed_rate": 0.8333333333333334,
+        "isotonic_rate": 0.8333333333333334
+      },
+      {
+        "score": 6.0,
+        "count": 148,
+        "observed_rate": 0.918918918918919,
+        "isotonic_rate": 0.918918918918919
+      },
+      {
+        "score": 7.0,
+        "count": 49,
+        "observed_rate": 0.9387755102040817,
+        "isotonic_rate": 0.9387755102040817
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.41420830824804333,
+        "target_probability": 0.41420830824804333,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 6.0,
+        "semantic_threshold_operational": 6.0,
+        "selected_threshold": 6.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 109,
+        "observed_rate": 0.08256880733944955,
+        "isotonic_rate": 0.08256880733944955
+      },
+      {
+        "score": 1.0,
+        "count": 347,
+        "observed_rate": 0.11527377521613832,
+        "isotonic_rate": 0.11527377521613832
+      },
+      {
+        "score": 2.0,
+        "count": 414,
+        "observed_rate": 0.30917874396135264,
+        "isotonic_rate": 0.30917874396135264
+      },
+      {
+        "score": 3.0,
+        "count": 345,
+        "observed_rate": 0.5362318840579711,
+        "isotonic_rate": 0.5362318840579711
+      },
+      {
+        "score": 4.0,
+        "count": 222,
+        "observed_rate": 0.6351351351351351,
+        "isotonic_rate": 0.6351351351351351
+      },
+      {
+        "score": 5.0,
+        "count": 141,
+        "observed_rate": 0.7730496453900709,
+        "isotonic_rate": 0.7730496453900709
+      },
+      {
+        "score": 6.0,
+        "count": 48,
+        "observed_rate": 0.9166666666666666,
+        "isotonic_rate": 0.9166666666666666
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.41420830824804333,
+        "target_probability": 0.41420830824804333,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 7.0,
+        "semantic_threshold_operational": 7.0,
+        "selected_threshold": 7.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 109,
+        "observed_rate": 0.08256880733944955,
+        "isotonic_rate": 0.08256880733944955
+      },
+      {
+        "score": 2.0,
+        "count": 347,
+        "observed_rate": 0.11527377521613832,
+        "isotonic_rate": 0.11527377521613832
+      },
+      {
+        "score": 3.0,
+        "count": 414,
+        "observed_rate": 0.30917874396135264,
+        "isotonic_rate": 0.30917874396135264
+      },
+      {
+        "score": 4.0,
+        "count": 345,
+        "observed_rate": 0.5362318840579711,
+        "isotonic_rate": 0.5362318840579711
+      },
+      {
+        "score": 5.0,
+        "count": 222,
+        "observed_rate": 0.6351351351351351,
+        "isotonic_rate": 0.6351351351351351
+      },
+      {
+        "score": 6.0,
+        "count": 141,
+        "observed_rate": 0.7730496453900709,
+        "isotonic_rate": 0.7730496453900709
+      },
+      {
+        "score": 7.0,
+        "count": 48,
+        "observed_rate": 0.9166666666666666,
+        "isotonic_rate": 0.9166666666666666
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.7593896713615024,
+        "target_probability": 0.7593896713615024,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 1.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 113,
+        "observed_rate": 0.40707964601769914,
+        "isotonic_rate": 0.40707964601769914
+      },
+      {
+        "score": 1.0,
+        "count": 349,
+        "observed_rate": 0.670487106017192,
+        "isotonic_rate": 0.670487106017192
+      },
+      {
+        "score": 2.0,
+        "count": 406,
+        "observed_rate": 0.7339901477832512,
+        "isotonic_rate": 0.7339901477832512
+      },
+      {
+        "score": 3.0,
+        "count": 316,
+        "observed_rate": 0.8386075949367089,
+        "isotonic_rate": 0.8239845261121856
+      },
+      {
+        "score": 4.0,
+        "count": 201,
+        "observed_rate": 0.8009950248756219,
+        "isotonic_rate": 0.8239845261121856
+      },
+      {
+        "score": 5.0,
+        "count": 213,
+        "observed_rate": 0.8873239436619719,
+        "isotonic_rate": 0.8873239436619719
+      },
+      {
+        "score": 6.0,
+        "count": 51,
+        "observed_rate": 0.9607843137254902,
+        "isotonic_rate": 0.9528301886792453
+      },
+      {
+        "score": 7.0,
+        "count": 55,
+        "observed_rate": 0.9454545454545454,
+        "isotonic_rate": 0.9528301886792453
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.7593896713615024,
+        "target_probability": 0.7593896713615024,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 113,
+        "observed_rate": 0.40707964601769914,
+        "isotonic_rate": 0.40707964601769914
+      },
+      {
+        "score": 2.0,
+        "count": 349,
+        "observed_rate": 0.670487106017192,
+        "isotonic_rate": 0.670487106017192
+      },
+      {
+        "score": 3.0,
+        "count": 406,
+        "observed_rate": 0.7339901477832512,
+        "isotonic_rate": 0.7339901477832512
+      },
+      {
+        "score": 4.0,
+        "count": 316,
+        "observed_rate": 0.8386075949367089,
+        "isotonic_rate": 0.8239845261121856
+      },
+      {
+        "score": 5.0,
+        "count": 201,
+        "observed_rate": 0.8009950248756219,
+        "isotonic_rate": 0.8239845261121856
+      },
+      {
+        "score": 6.0,
+        "count": 213,
+        "observed_rate": 0.8873239436619719,
+        "isotonic_rate": 0.8873239436619719
+      },
+      {
+        "score": 7.0,
+        "count": 51,
+        "observed_rate": 0.9607843137254902,
+        "isotonic_rate": 0.9528301886792453
+      },
+      {
+        "score": 8.0,
+        "count": 55,
+        "observed_rate": 0.9454545454545454,
+        "isotonic_rate": 0.9528301886792453
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.41420830824804333,
+        "target_probability": 0.41420830824804333,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 6.0,
+        "semantic_threshold_operational": 6.0,
+        "selected_threshold": 6.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 109,
+        "observed_rate": 0.08256880733944955,
+        "isotonic_rate": 0.08256880733944955
+      },
+      {
+        "score": 1.0,
+        "count": 337,
+        "observed_rate": 0.10089020771513353,
+        "isotonic_rate": 0.10089020771513353
+      },
+      {
+        "score": 2.0,
+        "count": 395,
+        "observed_rate": 0.31139240506329113,
+        "isotonic_rate": 0.31139240506329113
+      },
+      {
+        "score": 3.0,
+        "count": 311,
+        "observed_rate": 0.5144694533762058,
+        "isotonic_rate": 0.5144694533762058
+      },
+      {
+        "score": 4.0,
+        "count": 198,
+        "observed_rate": 0.6060606060606061,
+        "isotonic_rate": 0.6060606060606061
+      },
+      {
+        "score": 5.0,
+        "count": 206,
+        "observed_rate": 0.7184466019417476,
+        "isotonic_rate": 0.7184466019417476
+      },
+      {
+        "score": 6.0,
+        "count": 50,
+        "observed_rate": 0.88,
+        "isotonic_rate": 0.88
+      },
+      {
+        "score": 7.0,
+        "count": 55,
+        "observed_rate": 0.9090909090909091,
+        "isotonic_rate": 0.9090909090909091
+      }
+    ]
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.41420830824804333,
+        "target_probability": 0.41420830824804333,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 7.0,
+        "semantic_threshold_operational": 7.0,
+        "selected_threshold": 7.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 109,
+        "observed_rate": 0.08256880733944955,
+        "isotonic_rate": 0.08256880733944955
+      },
+      {
+        "score": 2.0,
+        "count": 337,
+        "observed_rate": 0.10089020771513353,
+        "isotonic_rate": 0.10089020771513353
+      },
+      {
+        "score": 3.0,
+        "count": 395,
+        "observed_rate": 0.31139240506329113,
+        "isotonic_rate": 0.31139240506329113
+      },
+      {
+        "score": 4.0,
+        "count": 311,
+        "observed_rate": 0.5144694533762058,
+        "isotonic_rate": 0.5144694533762058
+      },
+      {
+        "score": 5.0,
+        "count": 198,
+        "observed_rate": 0.6060606060606061,
+        "isotonic_rate": 0.6060606060606061
+      },
+      {
+        "score": 6.0,
+        "count": 206,
+        "observed_rate": 0.7184466019417476,
+        "isotonic_rate": 0.7184466019417476
+      },
+      {
+        "score": 7.0,
+        "count": 50,
+        "observed_rate": 0.88,
+        "isotonic_rate": 0.88
+      },
+      {
+        "score": 8.0,
+        "count": 55,
+        "observed_rate": 0.9090909090909091,
+        "isotonic_rate": 0.9090909090909091
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.638911788953009,
+        "target_probability": 0.638911788953009,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": 2.0,
+        "selected_threshold": 2.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 1.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 501,
+        "observed_rate": 0.2694610778443114,
+        "isotonic_rate": 0.2694610778443114
+      },
+      {
+        "score": 1.0,
+        "count": 979,
+        "observed_rate": 0.5383043922369765,
+        "isotonic_rate": 0.5383043922369765
+      },
+      {
+        "score": 2.0,
+        "count": 886,
+        "observed_rate": 0.6738148984198645,
+        "isotonic_rate": 0.6738148984198645
+      },
+      {
+        "score": 3.0,
+        "count": 636,
+        "observed_rate": 0.8034591194968553,
+        "isotonic_rate": 0.8034591194968553
+      },
+      {
+        "score": 4.0,
+        "count": 324,
+        "observed_rate": 0.8271604938271605,
+        "isotonic_rate": 0.8271604938271605
+      },
+      {
+        "score": 5.0,
+        "count": 201,
+        "observed_rate": 0.9104477611940298,
+        "isotonic_rate": 0.9101123595505618
+      },
+      {
+        "score": 6.0,
+        "count": 66,
+        "observed_rate": 0.9090909090909091,
+        "isotonic_rate": 0.9101123595505618
+      },
+      {
+        "score": 7.0,
+        "count": 46,
+        "observed_rate": 0.9565217391304348,
+        "isotonic_rate": 0.9565217391304348
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.638911788953009,
+        "target_probability": 0.638911788953009,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 501,
+        "observed_rate": 0.2694610778443114,
+        "isotonic_rate": 0.2694610778443114
+      },
+      {
+        "score": 2.0,
+        "count": 979,
+        "observed_rate": 0.5383043922369765,
+        "isotonic_rate": 0.5383043922369765
+      },
+      {
+        "score": 3.0,
+        "count": 886,
+        "observed_rate": 0.6738148984198645,
+        "isotonic_rate": 0.6738148984198645
+      },
+      {
+        "score": 4.0,
+        "count": 636,
+        "observed_rate": 0.8034591194968553,
+        "isotonic_rate": 0.8034591194968553
+      },
+      {
+        "score": 5.0,
+        "count": 324,
+        "observed_rate": 0.8271604938271605,
+        "isotonic_rate": 0.8271604938271605
+      },
+      {
+        "score": 6.0,
+        "count": 201,
+        "observed_rate": 0.9104477611940298,
+        "isotonic_rate": 0.9101123595505618
+      },
+      {
+        "score": 7.0,
+        "count": 66,
+        "observed_rate": 0.9090909090909091,
+        "isotonic_rate": 0.9101123595505618
+      },
+      {
+        "score": 8.0,
+        "count": 46,
+        "observed_rate": 0.9565217391304348,
+        "isotonic_rate": 0.9565217391304348
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3415184871577759,
+        "target_probability": 0.3415184871577759,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 6.0,
+        "semantic_threshold_operational": 6.0,
+        "selected_threshold": 6.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 489,
+        "observed_rate": 0.09406952965235174,
+        "isotonic_rate": 0.09406952965235174
+      },
+      {
+        "score": 1.0,
+        "count": 951,
+        "observed_rate": 0.14616193480546794,
+        "isotonic_rate": 0.14616193480546794
+      },
+      {
+        "score": 2.0,
+        "count": 859,
+        "observed_rate": 0.3108265424912689,
+        "isotonic_rate": 0.3108265424912689
+      },
+      {
+        "score": 3.0,
+        "count": 622,
+        "observed_rate": 0.5048231511254019,
+        "isotonic_rate": 0.5048231511254019
+      },
+      {
+        "score": 4.0,
+        "count": 321,
+        "observed_rate": 0.6137071651090342,
+        "isotonic_rate": 0.6137071651090342
+      },
+      {
+        "score": 5.0,
+        "count": 190,
+        "observed_rate": 0.7736842105263158,
+        "isotonic_rate": 0.7736842105263158
+      },
+      {
+        "score": 6.0,
+        "count": 65,
+        "observed_rate": 0.8923076923076924,
+        "isotonic_rate": 0.8923076923076924
+      },
+      {
+        "score": 7.0,
+        "count": 46,
+        "observed_rate": 0.9130434782608695,
+        "isotonic_rate": 0.9130434782608695
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3415184871577759,
+        "target_probability": 0.3415184871577759,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 7.0,
+        "semantic_threshold_operational": 7.0,
+        "selected_threshold": 7.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 489,
+        "observed_rate": 0.09406952965235174,
+        "isotonic_rate": 0.09406952965235174
+      },
+      {
+        "score": 2.0,
+        "count": 951,
+        "observed_rate": 0.14616193480546794,
+        "isotonic_rate": 0.14616193480546794
+      },
+      {
+        "score": 3.0,
+        "count": 859,
+        "observed_rate": 0.3108265424912689,
+        "isotonic_rate": 0.3108265424912689
+      },
+      {
+        "score": 4.0,
+        "count": 622,
+        "observed_rate": 0.5048231511254019,
+        "isotonic_rate": 0.5048231511254019
+      },
+      {
+        "score": 5.0,
+        "count": 321,
+        "observed_rate": 0.6137071651090342,
+        "isotonic_rate": 0.6137071651090342
+      },
+      {
+        "score": 6.0,
+        "count": 190,
+        "observed_rate": 0.7736842105263158,
+        "isotonic_rate": 0.7736842105263158
+      },
+      {
+        "score": 7.0,
+        "count": 65,
+        "observed_rate": 0.8923076923076924,
+        "isotonic_rate": 0.8923076923076924
+      },
+      {
+        "score": 8.0,
+        "count": 46,
+        "observed_rate": 0.9130434782608695,
+        "isotonic_rate": 0.9130434782608695
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.638911788953009,
+        "target_probability": 0.638911788953009,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": 2.0,
+        "selected_threshold": 2.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 1.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 500,
+        "observed_rate": 0.27,
+        "isotonic_rate": 0.27
+      },
+      {
+        "score": 1.0,
+        "count": 953,
+        "observed_rate": 0.5362014690451207,
+        "isotonic_rate": 0.5362014690451207
+      },
+      {
+        "score": 2.0,
+        "count": 841,
+        "observed_rate": 0.667063020214031,
+        "isotonic_rate": 0.667063020214031
+      },
+      {
+        "score": 3.0,
+        "count": 580,
+        "observed_rate": 0.803448275862069,
+        "isotonic_rate": 0.8021739130434783
+      },
+      {
+        "score": 4.0,
+        "count": 340,
+        "observed_rate": 0.8,
+        "isotonic_rate": 0.8021739130434783
+      },
+      {
+        "score": 5.0,
+        "count": 286,
+        "observed_rate": 0.8706293706293706,
+        "isotonic_rate": 0.8706293706293706
+      },
+      {
+        "score": 6.0,
+        "count": 68,
+        "observed_rate": 0.9411764705882353,
+        "isotonic_rate": 0.9411764705882353
+      },
+      {
+        "score": 7.0,
+        "count": 71,
+        "observed_rate": 0.9436619718309859,
+        "isotonic_rate": 0.9436619718309859
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.638911788953009,
+        "target_probability": 0.638911788953009,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 500,
+        "observed_rate": 0.27,
+        "isotonic_rate": 0.27
+      },
+      {
+        "score": 2.0,
+        "count": 953,
+        "observed_rate": 0.5362014690451207,
+        "isotonic_rate": 0.5362014690451207
+      },
+      {
+        "score": 3.0,
+        "count": 841,
+        "observed_rate": 0.667063020214031,
+        "isotonic_rate": 0.667063020214031
+      },
+      {
+        "score": 4.0,
+        "count": 580,
+        "observed_rate": 0.803448275862069,
+        "isotonic_rate": 0.8021739130434783
+      },
+      {
+        "score": 5.0,
+        "count": 340,
+        "observed_rate": 0.8,
+        "isotonic_rate": 0.8021739130434783
+      },
+      {
+        "score": 6.0,
+        "count": 286,
+        "observed_rate": 0.8706293706293706,
+        "isotonic_rate": 0.8706293706293706
+      },
+      {
+        "score": 7.0,
+        "count": 68,
+        "observed_rate": 0.9411764705882353,
+        "isotonic_rate": 0.9411764705882353
+      },
+      {
+        "score": 8.0,
+        "count": 71,
+        "observed_rate": 0.9436619718309859,
+        "isotonic_rate": 0.9436619718309859
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3415184871577759,
+        "target_probability": 0.3415184871577759,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 6.0,
+        "semantic_threshold_operational": 6.0,
+        "selected_threshold": 6.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 488,
+        "observed_rate": 0.0942622950819672,
+        "isotonic_rate": 0.0942622950819672
+      },
+      {
+        "score": 1.0,
+        "count": 926,
+        "observed_rate": 0.13930885529157666,
+        "isotonic_rate": 0.13930885529157666
+      },
+      {
+        "score": 2.0,
+        "count": 814,
+        "observed_rate": 0.3046683046683047,
+        "isotonic_rate": 0.3046683046683047
+      },
+      {
+        "score": 3.0,
+        "count": 570,
+        "observed_rate": 0.48947368421052634,
+        "isotonic_rate": 0.48947368421052634
+      },
+      {
+        "score": 4.0,
+        "count": 333,
+        "observed_rate": 0.5705705705705706,
+        "isotonic_rate": 0.5705705705705706
+      },
+      {
+        "score": 5.0,
+        "count": 274,
+        "observed_rate": 0.7116788321167883,
+        "isotonic_rate": 0.7116788321167883
+      },
+      {
+        "score": 6.0,
+        "count": 67,
+        "observed_rate": 0.8805970149253731,
+        "isotonic_rate": 0.8805970149253731
+      },
+      {
+        "score": 7.0,
+        "count": 71,
+        "observed_rate": 0.9014084507042254,
+        "isotonic_rate": 0.9014084507042254
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3415184871577759,
+        "target_probability": 0.3415184871577759,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 5.0,
+        "semantic_threshold_operational": 5.0,
+        "selected_threshold": 5.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 7.0,
+        "semantic_threshold_operational": 7.0,
+        "selected_threshold": 7.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 488,
+        "observed_rate": 0.0942622950819672,
+        "isotonic_rate": 0.0942622950819672
+      },
+      {
+        "score": 2.0,
+        "count": 926,
+        "observed_rate": 0.13930885529157666,
+        "isotonic_rate": 0.13930885529157666
+      },
+      {
+        "score": 3.0,
+        "count": 814,
+        "observed_rate": 0.3046683046683047,
+        "isotonic_rate": 0.3046683046683047
+      },
+      {
+        "score": 4.0,
+        "count": 570,
+        "observed_rate": 0.48947368421052634,
+        "isotonic_rate": 0.48947368421052634
+      },
+      {
+        "score": 5.0,
+        "count": 333,
+        "observed_rate": 0.5705705705705706,
+        "isotonic_rate": 0.5705705705705706
+      },
+      {
+        "score": 6.0,
+        "count": 274,
+        "observed_rate": 0.7116788321167883,
+        "isotonic_rate": 0.7116788321167883
+      },
+      {
+        "score": 7.0,
+        "count": 67,
+        "observed_rate": 0.8805970149253731,
+        "isotonic_rate": 0.8805970149253731
+      },
+      {
+        "score": 8.0,
+        "count": 71,
+        "observed_rate": 0.9014084507042254,
+        "isotonic_rate": 0.9014084507042254
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.7276029055690073,
+        "target_probability": 0.7276029055690073,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 1.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 200,
+        "observed_rate": 0.395,
+        "isotonic_rate": 0.395
+      },
+      {
+        "score": 1.0,
+        "count": 544,
+        "observed_rate": 0.6433823529411765,
+        "isotonic_rate": 0.6433823529411765
+      },
+      {
+        "score": 2.0,
+        "count": 616,
+        "observed_rate": 0.7094155844155844,
+        "isotonic_rate": 0.7094155844155844
+      },
+      {
+        "score": 3.0,
+        "count": 527,
+        "observed_rate": 0.8064516129032258,
+        "isotonic_rate": 0.8064516129032258
+      },
+      {
+        "score": 4.0,
+        "count": 289,
+        "observed_rate": 0.8166089965397924,
+        "isotonic_rate": 0.8166089965397924
+      },
+      {
+        "score": 5.0,
+        "count": 191,
+        "observed_rate": 0.9057591623036649,
+        "isotonic_rate": 0.9057591623036649
+      },
+      {
+        "score": 6.0,
+        "count": 65,
+        "observed_rate": 0.9076923076923077,
+        "isotonic_rate": 0.9076923076923077
+      },
+      {
+        "score": 7.0,
+        "count": 46,
+        "observed_rate": 0.9565217391304348,
+        "isotonic_rate": 0.9565217391304348
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.7276029055690073,
+        "target_probability": 0.7276029055690073,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 200,
+        "observed_rate": 0.395,
+        "isotonic_rate": 0.395
+      },
+      {
+        "score": 2.0,
+        "count": 544,
+        "observed_rate": 0.6433823529411765,
+        "isotonic_rate": 0.6433823529411765
+      },
+      {
+        "score": 3.0,
+        "count": 616,
+        "observed_rate": 0.7094155844155844,
+        "isotonic_rate": 0.7094155844155844
+      },
+      {
+        "score": 4.0,
+        "count": 527,
+        "observed_rate": 0.8064516129032258,
+        "isotonic_rate": 0.8064516129032258
+      },
+      {
+        "score": 5.0,
+        "count": 289,
+        "observed_rate": 0.8166089965397924,
+        "isotonic_rate": 0.8166089965397924
+      },
+      {
+        "score": 6.0,
+        "count": 191,
+        "observed_rate": 0.9057591623036649,
+        "isotonic_rate": 0.9057591623036649
+      },
+      {
+        "score": 7.0,
+        "count": 65,
+        "observed_rate": 0.9076923076923077,
+        "isotonic_rate": 0.9076923076923077
+      },
+      {
+        "score": 8.0,
+        "count": 46,
+        "observed_rate": 0.9565217391304348,
+        "isotonic_rate": 0.9565217391304348
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3812292358803987,
+        "target_probability": 0.3812292358803987,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 6.0,
+        "semantic_threshold_operational": 6.0,
+        "selected_threshold": 6.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 195,
+        "observed_rate": 0.08717948717948718,
+        "isotonic_rate": 0.08717948717948718
+      },
+      {
+        "score": 1.0,
+        "count": 525,
+        "observed_rate": 0.12571428571428572,
+        "isotonic_rate": 0.12571428571428572
+      },
+      {
+        "score": 2.0,
+        "count": 596,
+        "observed_rate": 0.2953020134228188,
+        "isotonic_rate": 0.2953020134228188
+      },
+      {
+        "score": 3.0,
+        "count": 516,
+        "observed_rate": 0.49224806201550386,
+        "isotonic_rate": 0.49224806201550386
+      },
+      {
+        "score": 4.0,
+        "count": 286,
+        "observed_rate": 0.5909090909090909,
+        "isotonic_rate": 0.5909090909090909
+      },
+      {
+        "score": 5.0,
+        "count": 180,
+        "observed_rate": 0.7611111111111111,
+        "isotonic_rate": 0.7611111111111111
+      },
+      {
+        "score": 6.0,
+        "count": 64,
+        "observed_rate": 0.890625,
+        "isotonic_rate": 0.890625
+      },
+      {
+        "score": 7.0,
+        "count": 46,
+        "observed_rate": 0.9130434782608695,
+        "isotonic_rate": 0.9130434782608695
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3812292358803987,
+        "target_probability": 0.3812292358803987,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 5.0,
+        "semantic_threshold_operational": 5.0,
+        "selected_threshold": 5.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 7.0,
+        "semantic_threshold_operational": 7.0,
+        "selected_threshold": 7.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 195,
+        "observed_rate": 0.08717948717948718,
+        "isotonic_rate": 0.08717948717948718
+      },
+      {
+        "score": 2.0,
+        "count": 525,
+        "observed_rate": 0.12571428571428572,
+        "isotonic_rate": 0.12571428571428572
+      },
+      {
+        "score": 3.0,
+        "count": 596,
+        "observed_rate": 0.2953020134228188,
+        "isotonic_rate": 0.2953020134228188
+      },
+      {
+        "score": 4.0,
+        "count": 516,
+        "observed_rate": 0.49224806201550386,
+        "isotonic_rate": 0.49224806201550386
+      },
+      {
+        "score": 5.0,
+        "count": 286,
+        "observed_rate": 0.5909090909090909,
+        "isotonic_rate": 0.5909090909090909
+      },
+      {
+        "score": 6.0,
+        "count": 180,
+        "observed_rate": 0.7611111111111111,
+        "isotonic_rate": 0.7611111111111111
+      },
+      {
+        "score": 7.0,
+        "count": 64,
+        "observed_rate": 0.890625,
+        "isotonic_rate": 0.890625
+      },
+      {
+        "score": 8.0,
+        "count": 46,
+        "observed_rate": 0.9130434782608695,
+        "isotonic_rate": 0.9130434782608695
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.7276029055690073,
+        "target_probability": 0.7276029055690073,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 1.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 200,
+        "observed_rate": 0.395,
+        "isotonic_rate": 0.395
+      },
+      {
+        "score": 1.0,
+        "count": 530,
+        "observed_rate": 0.6415094339622641,
+        "isotonic_rate": 0.6415094339622641
+      },
+      {
+        "score": 2.0,
+        "count": 588,
+        "observed_rate": 0.7023809523809523,
+        "isotonic_rate": 0.7023809523809523
+      },
+      {
+        "score": 3.0,
+        "count": 469,
+        "observed_rate": 0.8208955223880597,
+        "isotonic_rate": 0.807743658210948
+      },
+      {
+        "score": 4.0,
+        "count": 280,
+        "observed_rate": 0.7857142857142857,
+        "isotonic_rate": 0.807743658210948
+      },
+      {
+        "score": 5.0,
+        "count": 275,
+        "observed_rate": 0.8654545454545455,
+        "isotonic_rate": 0.8654545454545455
+      },
+      {
+        "score": 6.0,
+        "count": 65,
+        "observed_rate": 0.9384615384615385,
+        "isotonic_rate": 0.9384615384615385
+      },
+      {
+        "score": 7.0,
+        "count": 71,
+        "observed_rate": 0.9436619718309859,
+        "isotonic_rate": 0.9436619718309859
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.7276029055690073,
+        "target_probability": 0.7276029055690073,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "unavailable_ordering",
+        "semantic_threshold_raw": 2.0,
+        "semantic_threshold_operational": null,
+        "selected_threshold": null,
+        "selected_type": "abstention",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "E",
+        "provenance_label": "explicit_abstention",
+        "reason": "semantic ordering inversion; no replacement permitted",
+        "operational_representative": false
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": false
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 200,
+        "observed_rate": 0.395,
+        "isotonic_rate": 0.395
+      },
+      {
+        "score": 2.0,
+        "count": 530,
+        "observed_rate": 0.6415094339622641,
+        "isotonic_rate": 0.6415094339622641
+      },
+      {
+        "score": 3.0,
+        "count": 588,
+        "observed_rate": 0.7023809523809523,
+        "isotonic_rate": 0.7023809523809523
+      },
+      {
+        "score": 4.0,
+        "count": 469,
+        "observed_rate": 0.8208955223880597,
+        "isotonic_rate": 0.807743658210948
+      },
+      {
+        "score": 5.0,
+        "count": 280,
+        "observed_rate": 0.7857142857142857,
+        "isotonic_rate": 0.807743658210948
+      },
+      {
+        "score": 6.0,
+        "count": 275,
+        "observed_rate": 0.8654545454545455,
+        "isotonic_rate": 0.8654545454545455
+      },
+      {
+        "score": 7.0,
+        "count": 65,
+        "observed_rate": 0.9384615384615385,
+        "isotonic_rate": 0.9384615384615385
+      },
+      {
+        "score": 8.0,
+        "count": 71,
+        "observed_rate": 0.9436619718309859,
+        "isotonic_rate": 0.9436619718309859
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3812292358803987,
+        "target_probability": 0.3812292358803987,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 3.0,
+        "semantic_threshold_operational": 3.0,
+        "selected_threshold": 3.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 6.0,
+        "semantic_threshold_operational": 6.0,
+        "selected_threshold": 6.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 0.0,
+        "count": 195,
+        "observed_rate": 0.08717948717948718,
+        "isotonic_rate": 0.08717948717948718
+      },
+      {
+        "score": 1.0,
+        "count": 512,
+        "observed_rate": 0.11328125,
+        "isotonic_rate": 0.11328125
+      },
+      {
+        "score": 2.0,
+        "count": 567,
+        "observed_rate": 0.2945326278659612,
+        "isotonic_rate": 0.2945326278659612
+      },
+      {
+        "score": 3.0,
+        "count": 462,
+        "observed_rate": 0.4805194805194805,
+        "isotonic_rate": 0.4805194805194805
+      },
+      {
+        "score": 4.0,
+        "count": 274,
+        "observed_rate": 0.5474452554744526,
+        "isotonic_rate": 0.5474452554744526
+      },
+      {
+        "score": 5.0,
+        "count": 263,
+        "observed_rate": 0.6996197718631179,
+        "isotonic_rate": 0.6996197718631179
+      },
+      {
+        "score": 6.0,
+        "count": 64,
+        "observed_rate": 0.875,
+        "isotonic_rate": 0.875
+      },
+      {
+        "score": 7.0,
+        "count": 71,
+        "observed_rate": 0.9014084507042254,
+        "isotonic_rate": 0.9014084507042254
+      }
+    ]
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "raw_anchors": [
+      {
+        "level": "Low",
+        "selection_priority": 2,
+        "anchor_name": "T_pi_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.3812292358803987,
+        "target_probability": 0.3812292358803987,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 4.0,
+        "semantic_threshold_operational": 4.0,
+        "selected_threshold": 4.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "Mid",
+        "selection_priority": 1,
+        "anchor_name": "T50_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.5,
+        "target_probability": 0.5,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 5.0,
+        "semantic_threshold_operational": 5.0,
+        "selected_threshold": 5.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      },
+      {
+        "level": "High",
+        "selection_priority": 3,
+        "anchor_name": "T80_response",
+        "anchor_family": "absolute",
+        "absolute_target": 0.8,
+        "target_probability": 0.8,
+        "attainability_status": "absolute_attainable",
+        "semantic_threshold_raw": 7.0,
+        "semantic_threshold_operational": 7.0,
+        "selected_threshold": 7.0,
+        "selected_type": "semantic-only",
+        "structural_status": "not_corroborated",
+        "cp_corroborated": false,
+        "corroborating_cp": null,
+        "provenance_tier": "A",
+        "provenance_label": "local_behavioral_absolute",
+        "reason": "semantic threshold retained; changepoints are corroborative only",
+        "operational_representative": true
+      }
+    ],
+    "response_curve": [
+      {
+        "score": 1.0,
+        "count": 195,
+        "observed_rate": 0.08717948717948718,
+        "isotonic_rate": 0.08717948717948718
+      },
+      {
+        "score": 2.0,
+        "count": 512,
+        "observed_rate": 0.11328125,
+        "isotonic_rate": 0.11328125
+      },
+      {
+        "score": 3.0,
+        "count": 567,
+        "observed_rate": 0.2945326278659612,
+        "isotonic_rate": 0.2945326278659612
+      },
+      {
+        "score": 4.0,
+        "count": 462,
+        "observed_rate": 0.4805194805194805,
+        "isotonic_rate": 0.4805194805194805
+      },
+      {
+        "score": 5.0,
+        "count": 274,
+        "observed_rate": 0.5474452554744526,
+        "isotonic_rate": 0.5474452554744526
+      },
+      {
+        "score": 6.0,
+        "count": 263,
+        "observed_rate": 0.6996197718631179,
+        "isotonic_rate": 0.6996197718631179
+      },
+      {
+        "score": 7.0,
+        "count": 64,
+        "observed_rate": 0.875,
+        "isotonic_rate": 0.875
+      },
+      {
+        "score": 8.0,
+        "count": 71,
+        "observed_rate": 0.9014084507042254,
+        "isotonic_rate": 0.9014084507042254
+      }
+    ]
+  }
+]

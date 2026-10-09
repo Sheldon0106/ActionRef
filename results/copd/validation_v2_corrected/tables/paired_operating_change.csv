@@ -1,0 +1,21 @@
+cohort,level,metric,paired_B,median_change,change_CI_2_5,change_CI_97_5,comparison
+heldout_full,Low,alert_fraction,200,2.7755575615628914e-17,0.0,8.326672684688674e-17,same patients/draw stream; both response and learning-derived reference can change
+heldout_full,Low,response_rate_among_alerts,200,-0.002858040812850099,-0.0035857374810335262,-0.0022505961782813663,same patients/draw stream; both response and learning-derived reference can change
+heldout_full,Low,recall,200,0.0,0.0,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_full,Low,specificity,200,0.0,0.0,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_full,Low,PPV,200,4.163336342344337e-17,0.0,9.71445146547012e-17,same patients/draw stream; both response and learning-derived reference can change
+heldout_full,Mid,alert_fraction,200,4.87890977618477e-17,2.1467203015212992e-18,9.542063320044925e-17,same patients/draw stream; both response and learning-derived reference can change
+heldout_full,Mid,response_rate_among_alerts,200,-0.004474272930648782,-0.011467889908256871,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_full,Mid,recall,200,4.163336342344337e-17,0.0,9.71445146547012e-17,same patients/draw stream; both response and learning-derived reference can change
+heldout_full,Mid,specificity,200,0.0,-1.1102230246251565e-16,1.1102230246251565e-16,same patients/draw stream; both response and learning-derived reference can change
+heldout_full,Mid,PPV,200,4.163336342344337e-17,0.0,5.551115123125783e-17,same patients/draw stream; both response and learning-derived reference can change
+heldout_score_fit_excluded,Low,alert_fraction,200,0.0,0.0,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_score_fit_excluded,Low,response_rate_among_alerts,200,-0.0014519058174256166,-0.004262588166144183,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_score_fit_excluded,Low,recall,200,0.0,0.0,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_score_fit_excluded,Low,specificity,200,0.0,0.0,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_score_fit_excluded,Low,PPV,200,0.0,0.0,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_score_fit_excluded,Mid,alert_fraction,200,0.0,0.0,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_score_fit_excluded,Mid,response_rate_among_alerts,200,-0.09090909090909088,-0.3014285714285714,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_score_fit_excluded,Mid,recall,200,0.0,0.0,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_score_fit_excluded,Mid,specificity,200,0.0,0.0,0.0,same patients/draw stream; both response and learning-derived reference can change
+heldout_score_fit_excluded,Mid,PPV,200,0.0,0.0,0.0,same patients/draw stream; both response and learning-derived reference can change

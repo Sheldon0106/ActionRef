@@ -1,4 +1,4 @@
-# Primary sepsis results
+# Reported paper results
 
 These tables summarize the primary sepsis analysis. Behavioral references
 were learned from recorded actions. Candidate 31 was selected on MIMIC learning
@@ -71,9 +71,71 @@ Equality occurs at R = 17.18699 in MIMIC and 22.50785 in Stanford.
 Candidates are not reselected on evaluation data. These crossings describe
 this pair, not an optimum over all possible thresholds.
 
+eTable 37 contains this fixed comparison only. Learning-data re-selection and
+R-setting are described in Supplement eMethods 3 and the [R guide](R_GUIDANCE.md).
+
+## COPD: additional main-text application (eTable 22)
+
+COPD is evaluated conditional on the supplied score. Application definition,
+references and operating results are documented in eTables 20–22.
+
+| Level | Threshold | Encounters | Alerts /1,000 | Action yield | Outcome recall |
+|---|---:|---:|---:|---:|---:|
+| Low | 17.7798 | 134,175 | 191.0 | 14.9% | 83.9% |
+| Mid | 55.0719 | 134,175 | 3.2 | 51.9% | 9.4% |
+
+COPD action is documented bronchodilator administration/start within 24 hours
+OR the legacy Pyxis steroid-record proxy. Its High reference is unavailable:
+relative target 0.4278 reaches bin 50 below Mid bin 55, and ordering allows no
+replacement. Reference uncertainty is in eTables 21 and 39; operating intervals
+are in eTable 22 and the corrected source bundle.
+
+### COPD evaluation excluding score-fitting patients (eTable 41)
+
+The subset contains **13,978 patients / 15,221 encounters**, after excluding
+every patient represented in score-fitting rows. AUROC is **0.894**
+(95% patient-cluster interval, 0.864–0.921). The score, full-learning
+references and historical preprocessing/rescaling remain fixed; this is a
+supplemental evaluation conditional on the supplied score.
+
+| Level | Threshold | Flagged / total | Outcome-positive flagged / total | Action yield |
+|---|---:|---:|---:|---:|
+| Low | 17.7798 | 1,369 / 15,221 | 55 / 91 | 12.1% |
+| Mid | 55.0719 | 11 / 15,221 | 3 / 91 | 54.5% |
+
+## AERT: supplementary exploratory example (eTables 33–34)
+
+The ADMITTED/HOME setting H02 uses the previously inspected patient-disjoint
+test partition. Other or missing dispositions are excluded.
+
+| Level | Threshold | Encounters | Alerts /1,000 | Action yield | Outcome recall |
+|---|---:|---:|---:|---:|---:|
+| Mid | 3 | 756 | 449.7 | 61.5% | 81.5% |
+| High | 6 | 756 | 46.3 | 82.9% | 15.7% |
+
+In H02, Low and Mid coincide at score 3: their targets are 41.42% and 50%,
+and fitted action probability is 30.92% at score 2 and 53.62% at score 3.
+The shared-threshold rule retains Mid = 3 as the operational representative,
+with High = 6 and no distinct Low operating point. Low is attainable and
+shares Mid's threshold. The separate hospitalization-linkage setting retains
+Low 3 in 785 test encounters. The unchanged eight-bin policy abstains in both
+strict three-hour baseline settings; the reported references use the separate
+short-discrete research extension described in eMethods 1–2.
+eTables 32–34 and 38 and Supplementary Data 1–2 retain all 16 settings and
+their conditional patient-bootstrap summaries. No K, R or FAE is applied to AERT.
+
+See the [evidence guide](evidence.md) for the analysis roles and source-file
+mapping. AKI and pneumonia remain development records and are not reported
+in the paper.
+
 ## Reproduction
 
 Run `python examples/reproduce_paper.py` from the repository root.
 It recomputes operating rates, action yields and R sensitivity from shared counts.
 The action-probability estimates and intervals are restored from the reported
 aggregate outputs; recomputing them requires encounter-level action and score data.
+
+Run `python examples/reproduce_additional.py` for corrected COPD tables and
+`python examples/reproduce_aert.py` for the AERT aggregate replay, eTables
+32–34 and 38 and Supplementary Data 1–2. Their saved bootstrap intervals are
+assembled without reading patient records.

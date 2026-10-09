@@ -15,6 +15,7 @@ source("scripts/figures/style.R",encoding="UTF-8")
 source("scripts/figures/workflow.R",encoding="UTF-8")
 source("scripts/figures/synthetic.R",encoding="UTF-8")
 source("scripts/figures/clinical.R",encoding="UTF-8")
+source("scripts/figures/copd.R",encoding="UTF-8")
 apply_figure_style(preferred_family="Arial")
 
 data_dir <- "docs/assets/data"
@@ -27,6 +28,8 @@ d <- list(clinical=csv("sepsis_learning_curve.csv"),
           synthetic_curve=csv("synthetic_learning_curve.csv"),
           alert_curve=csv("synthetic_alert_curve.csv"),
           synthetic_heldout=csv("synthetic_heldout.csv"))
+d$copd_curve <- read.csv("results/copd/validation_v2_corrected/reference/module2_response_curve.csv",check.names=FALSE)
+d$copd_anchors <- read.csv("results/copd/validation_v2_corrected/reference/module2_point_anchors.csv",check.names=FALSE)
 # Assertions tie visual annotations to saved evidence and fail on stale data.
 stopifnot(nrow(d$clinical)==26,sum(d$clinical$count)==294659,
           sum(d$reliability$N)==126332,d$metrics$N==126332,
@@ -57,7 +60,8 @@ render <- function(draw,bounds,path,ext,dpi=300) {
 
 figs <- list(workflow=list(draw=draw_workflow,parts=workflow_parts),
              `synthetic-example`=list(draw=draw_synthetic,parts=synthetic_parts),
-             `clinical-action`=list(draw=draw_clinical,parts=clinical_parts))
+             `clinical-action`=list(draw=draw_clinical,parts=clinical_parts),
+             `copd-partial-output`=list(draw=draw_copd,parts=copd_parts,bounds=c(0,0,850,550)))
 for(name in names(figs)) {
   f <- figs[[name]]
   # Each scientific region is also exported separately at its final physical size.
@@ -68,8 +72,9 @@ for(name in names(figs)) {
     for(ext in c("svg","pdf","png"))
       render(part$draw,part$bounds,file.path(part_dir,paste0(part_name,".",ext)),ext)
   }
+  bounds <- if(is.null(f$bounds)) c(0,0,1600,1070) else f$bounds
   for(ext in c("svg","pdf","png"))
-    render(f$draw,c(0,0,1600,1070),file.path(out,paste0(name,".",ext)),ext)
+    render(f$draw,bounds,file.path(out,paste0(name,".",ext)),ext)
   message("Exported ",name," (R / SVG, PDF, 300-dpi PNG + separate panels)")
 }
 source("scripts/figures/layout.R",encoding="UTF-8")

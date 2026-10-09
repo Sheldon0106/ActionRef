@@ -1,9 +1,88 @@
-# R guidance schema
+# Setting R for a specified workflow
 
 `R = C_FN / C_FP` — modeled relative consequence of one missed outcome-positive case versus one false alert.
 
 - Never estimated from prevalence.
 - Never selected to favor a preferred cutoff.
+
+## Five-step workflow (Supplement eMethods 3)
+
+1. **Define the decision.** Specify the triggered action, target outcome,
+   stakeholder perspective and time horizon. Distinguish the proposed workflow
+   from the recorded-action label used to learn behavioral references. Specify
+   K separately, with its task, team and period.
+2. **Choose a defensible source.** Use commensurate, independently valued FN/FP
+   consequences, structured stakeholder elicitation, or a comparable published
+   decision threshold. The optional tier recommender supplies a low-confidence
+   scenario when a setting-specific basis is unavailable. Capacity mapping alone
+   requires no R.
+3. **Record the reference value and range.** Preserve sources, assumptions and
+   uncertainty. R is a consequence ratio, not an outcome prevalence or a score
+   cutoff. Do not choose its value to obtain a preferred candidate.
+4. **Evaluate sensitivity on learning data.** For each prespecified R, minimize
+   `FAE = FP + R * FN` over thresholds using `score >= t`, both without a capacity
+   constraint and under the stated K. Module 3B resolves loss ties in favor of
+   more alerts, then the lower threshold. Report the selected thresholds, grid
+   stability, workload and outcome coverage. A grid stability band is neither a
+   continuous analytical interval nor a statistical confidence interval.
+5. **Evaluate the chosen candidate unchanged.** Apply the learning choice to
+   evaluation data and present benefits and costs together. A fixed pair's loss
+   crossing is a different question from threshold re-selection. Document the
+   workflow and review the trade-off with its stakeholders.
+
+```mermaid
+flowchart TD
+    A[Define action, outcome, perspective and horizon] --> B[Choose a justified R source]
+    B --> C[Record reference value and uncertainty range]
+    C --> D[Compare thresholds on learning data across R and K]
+    D --> E[Evaluate the chosen candidate unchanged and review trade-offs]
+```
+
+### Reported primary sepsis example
+
+The reference value is **R = 11,299/804 = 14.0534825870647** for the proposed
+diagnostic/short-course antibiotic workflow. The Low-27 comparison ceiling is
+**K = 109,888 alerts in 297,476 score-complete learning encounters**. It is a
+reference workload ceiling, not measured staffing capacity. The observed action
+composite used in Module 2 has a different definition.
+
+| R | Unconstrained learning optimum | Optimum under the Low workload ceiling |
+|---:|---:|---:|
+| 1 | 66 | 66 |
+| 5 | 43 | 43 |
+| 10 | 34 | 34 |
+| 11–14.05 (evaluated grid nodes) | 31 | 31 |
+| 15 | 28 | 28 |
+| 20 | 26 | 28 |
+| 30 | 26 | 27 |
+| 100 | 17 | 27 |
+
+The exact reference value is included in the grid. `ratio_invariance()` returns
+31 at the reference value in both capacity conditions, with a contiguous matching
+grid run from 11 to 14.0534825870647. The next evaluated value, 15, selects 28;
+these results do not locate the exact continuous transition. The full selection
+grid and the two invariance rows are shared in `results/sepsis_primary/` and
+described in **Supplement eMethods 3**. **eTable 37** contains only the fixed
+31-versus-27 evaluation comparison.
+
+For prepared learning data, the package call is:
+
+```python
+from universal_cutoff import build_threshold_table, ratio_invariance
+
+table = build_threshold_table(learning_df, "score", outcome_col="outcome")
+grid = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 14.05348,
+        15, 16, 17, 18, 19, 20, 22, 25, 30, 40, 50, 75, 100]
+result = ratio_invariance(
+    table, 11299 / 804,
+    k_fracs=[None, 109888 / 297476], ratio_grid=grid,
+)
+print(result.to_string(index=False))
+```
+
+Use the primary partition and its separately constructed outcome labels; source
+columns from another export can have a different outcome definition. The
+[paper data contract](paper-data.md) describes the required analysis inputs.
 
 ## Primary route: natural-frequency elicitation
 
@@ -97,7 +176,9 @@ R_high = (1 - p_low) / p_low
 - `p_t = 0.10` implies `R = 9`.
 - This is an action threshold probability. Not a score threshold. Not a Low/Mid/High candidate.
 
-**Direct R entry.** Available for prespecified analyses such as the sepsis `R=15` scenario.
+**Direct R entry.** Available for prespecified analyses such as the primary sepsis
+`R=11299/804` scenario. Historical development reports also contain an `R=15`
+scenario; it is separate from the current primary paper value.
 
 ## Outputs
 

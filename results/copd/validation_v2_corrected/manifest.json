@@ -1,0 +1,332 @@
+{
+  "status": "completed",
+  "created_utc": "2026-10-09T08:48:53.243254+00:00",
+  "bundle": "<analysis-workspace>\\copd_response_nonoverlap_outputs\\run_20261009T084853240631Z_09ca50799c0f",
+  "config_hash": "09ca50799c0fc19d352555bef4f62c116fb87edde8aad6fb5223fdac563822cb",
+  "configuration": {
+    "analysis": "copd_response_nonoverlap_addendum",
+    "score": "score_COPD_AutoScore",
+    "outcome": "outcome_copd_exac",
+    "score_refitted": false,
+    "score_fit_split": {
+      "test_size": 0.3,
+      "random_state": 42,
+      "stratify": "outcome_copd_exac",
+      "unit": "encounter",
+      "source": "<analysis-workspace>\\cutoff_validation_mimic\\Autoscore\\autoscore_copd.ipynb",
+      "cell": 0
+    },
+    "reference_split": {
+      "learning_fraction": 0.7,
+      "seed": 2026,
+      "unit": "patient",
+      "ordered_unique_patients": "sorted mergesort"
+    },
+    "reference_bootstrap": {
+      "B": 500,
+      "seed": 42,
+      "group": "subject_id",
+      "n_jobs": 1
+    },
+    "operating_bootstrap": {
+      "B": 200,
+      "seed": 42,
+      "group": "subject_id",
+      "stream": "historical sequential per-level stream, Low then Mid"
+    },
+    "predictive_bootstrap": {
+      "B": 200,
+      "seed": 42,
+      "group": "subject_id",
+      "score_and_references": "fixed; no model or calibration fitting"
+    },
+    "bronchodilator": {
+      "keywords": "albuterol|ipratropium|duoneb|levalbuterol|combivent|atrovent|ventolin|proair|xopenex",
+      "window_hours": [
+        0,
+        24
+      ],
+      "time_origin": "ED intime",
+      "linkage": [
+        "subject_id",
+        "hadm_id"
+      ],
+      "positive_event_txt": [
+        "administered",
+        "administered in other location",
+        "delayed administered",
+        "started"
+      ],
+      "explicit_nonadministration_event_txt": [
+        "hold dose",
+        "not confirmed",
+        "not given"
+      ],
+      "other_status": "not qualifying for documented administration/start",
+      "missing_hadm_linkage": "preserve historical pandas null-key join; audit separately",
+      "zero": "no qualifying record, not proven absence of clinical treatment"
+    },
+    "steroid": {
+      "source": "stored historical ED Pyxis record proxy; kept unchanged",
+      "keywords": "methylpred|solu-medrol|solumedrol|prednisone|prednisolone|hydrocortisone|hydrocort|dexamethasone|dexame|decadron|medrol",
+      "exclude": "ophth|oph|ophthalmic",
+      "time_origin": "ED intime",
+      "historical_rule": "first matching record, 0 through 24h",
+      "missing": "historical missing-to-zero convention retained; report counts separately",
+      "route_dose_indication_actual_administration": "not established"
+    },
+    "response": "documented bronchodilator administration/start within 24h OR stored steroid proxy",
+    "strict_subset": "original heldout patients excluding every subject ever in score-fitting rows",
+    "interpretation": "supplemental within-existing-data evaluation, not external validation",
+    "interval": "2.5th and 97.5th percentile, conditional fixed-score/fixed-reference evaluation",
+    "module2_config": {
+      "min_bin_n": 40,
+      "min_valid_bins": 8,
+      "target_valid_bins": 30,
+      "max_valid_bins": 40,
+      "min_isotonic_dynamic_range": 0.08,
+      "min_logistic_bic_improvement": 6.0,
+      "max_selected_changepoints": 2,
+      "min_bins_per_segment": 5,
+      "cp_candidate_stride": 2,
+      "min_structural_bic_improvement": 6.0,
+      "smooth_null_alpha": 0.1,
+      "min_standardized_slope_change": 0.12,
+      "min_cp_bootstrap_support": 0.5,
+      "cp_support_tolerance_bins": 2.0,
+      "max_alignment_bins": 1.0,
+      "bin_width": null
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "execution_command": "<local-workspace>/run_copd_response_nonoverlap_addendum.py",
+  "code_path": "<local-workspace>/run_copd_response_nonoverlap_addendum.py",
+  "forbidden_operations": {
+    "score_refit": false,
+    "other_disease_analysis": false,
+    "absolute_cost": false,
+    "source_or_package_edit": false,
+    "historical_output_overwrite": false
+  },
+  "completed_utc": "2026-10-09T08:53:22.741981+00:00",
+  "reference_run": {
+    "B": 500,
+    "seed": 42,
+    "seconds": 175.0376995000006
+  },
+  "bronchodilator_audit": {
+    "raw_rows": 27464367,
+    "matched_medication_rows": 557268,
+    "linked_window_records": 36523,
+    "legacy_positive_encounters": 13925,
+    "corrected_positive_encounters": 13481,
+    "negative_only_encounters": 424,
+    "composite_positives_removed": 391,
+    "composite_explicit_negative_only_removed": 376,
+    "composite_ambiguous_only_removed": 15,
+    "legacy_positive_missing_hadm": 3904,
+    "corrected_positive_missing_hadm": 3869
+  },
+  "steroid_audit": {
+    "source": "stored historical steroid proxy",
+    "positive_encounters": 17258,
+    "missing_stored_flag": 7367,
+    "supported_stored_positives": 17258,
+    "full_current_raw_reconstruction_positive": 18375,
+    "raw_positive_stored_zero": 914,
+    "raw_positive_stored_missing": 203,
+    "raw_matching_records": 49080,
+    "definition": "legacy Pyxis record proxy; first matching record 0-24h; ophthalmic-keyword exclusion",
+    "action": "retain stored field unchanged; missing-to-zero retained and disclosed",
+    "limitation": "legacy field undercovers full current raw extraction; no validated dose, route, indication or actual administration"
+  },
+  "frozen_references": {
+    "Low": 17.779760509763356,
+    "Mid": 55.07187581853598,
+    "High": null
+  },
+  "invariants_passed": true,
+  "supersedes": "COPD legacy response-derived references/operating/bootstrap only; predictive score and all other diseases unchanged",
+  "warnings": [
+    "Steroid is a legacy Pyxis record proxy, not confirmed administration; undercoverage/missing-to-zero retained.",
+    "Bronchodilator subject+hadm linkage preserves historical null-hadm matching; outpatient/ED medication coverage is incomplete.",
+    "Strict subset retrospectively excludes score-fit patients, but historical full-cohort preprocessing/rescaling remains; not external or full-pipeline independent validation.",
+    "Operating B200 intervals fix both score and learning-derived references, not combined development uncertainty."
+  ],
+  "output_sha256": {
+    "cohort_lineage.json": "98fe176437287d183c55e76f8e6564ffe76e2c213a60c52c75742b143d68a457",
+    "final_invariant_audit.csv": "11ee6710147161be62080461a9abd8a99fae3f9f7011bff2972af06992b750be",
+    "operating\\predictive_replicates.csv": "d0c93021a58b501df69ee14fd875529fb61594332b6141666dfaee686783606b",
+    "operating\\replicate_metrics.csv": "6db3cb9581ea21ba6ac7274beb64fc65ab6dbddbaa8851efd8a396abb0c10e74",
+    "reference\\adjacent_gap_package.csv": "b2c543b9960743a2a724446aa2ee3eec736bb7ba8c0286288026a464231ef4f0",
+    "reference\\binning_stability.csv": "a06aff82d6eb6655338162bf044cd421ca793e93a5d5518cd0578a82afdb3b40",
+    "reference\\bootstrap_config.json": "a7eb7ba13212b565645203322d8fee13d1363c1588fd18b31b84c3a5d804c18d",
+    "reference\\changepoint_support.csv": "c719ec5aaca575b283e691ddaacc1d16a953e2666826cddbbb11fa3eda691838",
+    "reference\\failures.csv": "7703741f562b3f2c276fc35a9aba6f2de114df21e80f56ebf257cdb5ea03115c",
+    "reference\\joint_summary_package.json": "17519639b46244162c752e4beb4b02cc937c642983cdb242d8876a0e25b3f538",
+    "reference\\joint_tier_audit_package.csv": "452881f471d78c672233002013893e5bfe3e69ca0206f3c6f093ff14029240f1",
+    "reference\\module2_config.json": "eddaa1529fd5d3614c35cbecfb1e426ba727a40be112cb7452b6091fbbb5d846",
+    "reference\\module2_evidence_gate.json": "c1912f3960ed0ab5a8236d113301d5b2d9b514bee99ab8f892c82f0ee34d0428",
+    "reference\\module2_frozen_anchors.csv": "49ac0130338907befc3fa6088fd5c403ba0082f5db0180c85a72471714150909",
+    "reference\\module2_point_anchors.csv": "49ac0130338907befc3fa6088fd5c403ba0082f5db0180c85a72471714150909",
+    "reference\\module2_point_changepoints.csv": "40ce9b5a7e66543211f78c53dce5fb3f91810fc1f6c6eb229e83838a2cc3a43c",
+    "reference\\module2_response_curve.csv": "60b699a65ce6a2a9b64cf9f83c51bd394cd5703ee45e8e23155e6abd1dff10e8",
+    "reference\\module2_structural_candidates.csv": "563c53b7ac0e6115682a3294bc5a0f25e91bfa6ad8bf8d0c1ff7f6826e04223c",
+    "reference\\paired_reference_change.csv": "307511b0580514e2942dc958ed869eb0d475465aa2d19f35eb96a98dd997d656",
+    "reference\\provenance_frequencies.csv": "5371a0040a7a140fcf7199b52c575c8609e5eee07cd1274fd86d2ae498e60784",
+    "reference\\replicate_anchors.csv": "b03b32bf873014353b1096c677c578928ff25a5878fde6e94e40b4f5eaf19d7c",
+    "reference\\stability_summary_package.csv": "7c117a15afd7dc0553f148a9f2680f79b4165850e153c1fdffb886349cf3a33c",
+    "reference\\threshold_frequencies.csv": "4ab0c99c02cb79229a38b34113ab757dc0bb0e50783e325920700f132a70d753",
+    "source_registry.csv": "e62c0e89862a1df2e1dc693bfb1ee9587f0d162fb7b1f44951aa2f3988aa3d58",
+    "tables\\bronchodilator_status_audit.csv": "60c7d9d0613bd98a9ce40388c2dfeed44bef868ce8fb3134863181e625bbfcad",
+    "tables\\cohort_characteristics.csv": "6ac8c8eafa015c61b1308fa28674de6c425f5d353188e61a3a6513be506785c3",
+    "tables\\cohort_summary.csv": "0a389d22987129ca023ae64e55fefe97ce032688e6ec965acb50e24071b88bbd",
+    "tables\\operating_comparison.csv": "8529f9b3804e88c71cc756f51aaa1a128a9de98986812f3b64730a541516c8ef",
+    "tables\\operating_intervals.csv": "22b9bebbf7513d2f6fdf7a2435c6286d7920e7815f76d4e252a898d4a777e8d8",
+    "tables\\paired_operating_change.csv": "a3ab81a7f09ad265d24ba3a50b9553193a52b05f8dbaecd924da6bced21f8ac0",
+    "tables\\predictive_intervals.csv": "a67769824079acbf0b7d445b87c49357b772b75f0b0d736c578e72afb4074b54",
+    "tables\\predictive_point.csv": "50ab3f9ba4817053c2536235ba5d3c2afc21646eab1538eb028c9bfca5b4057e",
+    "tables\\reference_mc_precision.csv": "d3c64b9b1fb0b7b36f91eca3ee6ad679558ffa053c78170a9a358419b0463411",
+    "tables\\reference_pair_stability_comparison.csv": "ed87d29b26e49ca9b7d62370d8de1653d4e2ff561497d9d80ec362933d4ecb10",
+    "tables\\reference_stability_comparison.csv": "2bd95dfd9d2c8f306c2ee97457509595c8e7f7826c7755bf71f211d51f4500cf",
+    "tables\\response_correction_by_cohort.csv": "1a207adc79c2093eee8a7152e8bc4c3a609486fd20228c9684e42e6dc4812355",
+    "tables\\steroid_proxy_audit.csv": "0ae0008b0d86daa32a44078ee49a86174a1ce01393b4ff39fb344e8f5599367d"
+  },
+  "public_files": {
+    "reference/module2_point_anchors.csv": {
+      "sha256": "49ac0130338907befc3fa6088fd5c403ba0082f5db0180c85a72471714150909",
+      "source_sha256": "49ac0130338907befc3fa6088fd5c403ba0082f5db0180c85a72471714150909"
+    },
+    "reference/module2_frozen_anchors.csv": {
+      "sha256": "49ac0130338907befc3fa6088fd5c403ba0082f5db0180c85a72471714150909",
+      "source_sha256": "49ac0130338907befc3fa6088fd5c403ba0082f5db0180c85a72471714150909"
+    },
+    "reference/module2_response_curve.csv": {
+      "sha256": "60b699a65ce6a2a9b64cf9f83c51bd394cd5703ee45e8e23155e6abd1dff10e8",
+      "source_sha256": "60b699a65ce6a2a9b64cf9f83c51bd394cd5703ee45e8e23155e6abd1dff10e8"
+    },
+    "reference/module2_point_changepoints.csv": {
+      "sha256": "40ce9b5a7e66543211f78c53dce5fb3f91810fc1f6c6eb229e83838a2cc3a43c",
+      "source_sha256": "40ce9b5a7e66543211f78c53dce5fb3f91810fc1f6c6eb229e83838a2cc3a43c"
+    },
+    "reference/module2_structural_candidates.csv": {
+      "sha256": "563c53b7ac0e6115682a3294bc5a0f25e91bfa6ad8bf8d0c1ff7f6826e04223c",
+      "source_sha256": "563c53b7ac0e6115682a3294bc5a0f25e91bfa6ad8bf8d0c1ff7f6826e04223c"
+    },
+    "reference/module2_evidence_gate.json": {
+      "sha256": "c1912f3960ed0ab5a8236d113301d5b2d9b514bee99ab8f892c82f0ee34d0428",
+      "source_sha256": "c1912f3960ed0ab5a8236d113301d5b2d9b514bee99ab8f892c82f0ee34d0428"
+    },
+    "reference/module2_config.json": {
+      "sha256": "eddaa1529fd5d3614c35cbecfb1e426ba727a40be112cb7452b6091fbbb5d846",
+      "source_sha256": "eddaa1529fd5d3614c35cbecfb1e426ba727a40be112cb7452b6091fbbb5d846"
+    },
+    "reference/bootstrap_config.json": {
+      "sha256": "a7eb7ba13212b565645203322d8fee13d1363c1588fd18b31b84c3a5d804c18d",
+      "source_sha256": "a7eb7ba13212b565645203322d8fee13d1363c1588fd18b31b84c3a5d804c18d"
+    },
+    "reference/stability_summary_package.csv": {
+      "sha256": "7c117a15afd7dc0553f148a9f2680f79b4165850e153c1fdffb886349cf3a33c",
+      "source_sha256": "7c117a15afd7dc0553f148a9f2680f79b4165850e153c1fdffb886349cf3a33c"
+    },
+    "reference/joint_summary_package.json": {
+      "sha256": "17519639b46244162c752e4beb4b02cc937c642983cdb242d8876a0e25b3f538",
+      "source_sha256": "17519639b46244162c752e4beb4b02cc937c642983cdb242d8876a0e25b3f538"
+    },
+    "reference/joint_tier_audit_package.csv": {
+      "sha256": "452881f471d78c672233002013893e5bfe3e69ca0206f3c6f093ff14029240f1",
+      "source_sha256": "452881f471d78c672233002013893e5bfe3e69ca0206f3c6f093ff14029240f1"
+    },
+    "reference/adjacent_gap_package.csv": {
+      "sha256": "b2c543b9960743a2a724446aa2ee3eec736bb7ba8c0286288026a464231ef4f0",
+      "source_sha256": "b2c543b9960743a2a724446aa2ee3eec736bb7ba8c0286288026a464231ef4f0"
+    },
+    "reference/provenance_frequencies.csv": {
+      "sha256": "5371a0040a7a140fcf7199b52c575c8609e5eee07cd1274fd86d2ae498e60784",
+      "source_sha256": "5371a0040a7a140fcf7199b52c575c8609e5eee07cd1274fd86d2ae498e60784"
+    },
+    "reference/threshold_frequencies.csv": {
+      "sha256": "4ab0c99c02cb79229a38b34113ab757dc0bb0e50783e325920700f132a70d753",
+      "source_sha256": "4ab0c99c02cb79229a38b34113ab757dc0bb0e50783e325920700f132a70d753"
+    },
+    "reference/changepoint_support.csv": {
+      "sha256": "c719ec5aaca575b283e691ddaacc1d16a953e2666826cddbbb11fa3eda691838",
+      "source_sha256": "c719ec5aaca575b283e691ddaacc1d16a953e2666826cddbbb11fa3eda691838"
+    },
+    "reference/binning_stability.csv": {
+      "sha256": "a06aff82d6eb6655338162bf044cd421ca793e93a5d5518cd0578a82afdb3b40",
+      "source_sha256": "a06aff82d6eb6655338162bf044cd421ca793e93a5d5518cd0578a82afdb3b40"
+    },
+    "tables/cohort_summary.csv": {
+      "sha256": "0a389d22987129ca023ae64e55fefe97ce032688e6ec965acb50e24071b88bbd",
+      "source_sha256": "0a389d22987129ca023ae64e55fefe97ce032688e6ec965acb50e24071b88bbd"
+    },
+    "tables/cohort_characteristics.csv": {
+      "sha256": "6ac8c8eafa015c61b1308fa28674de6c425f5d353188e61a3a6513be506785c3",
+      "source_sha256": "6ac8c8eafa015c61b1308fa28674de6c425f5d353188e61a3a6513be506785c3"
+    },
+    "tables/predictive_point.csv": {
+      "sha256": "50ab3f9ba4817053c2536235ba5d3c2afc21646eab1538eb028c9bfca5b4057e",
+      "source_sha256": "50ab3f9ba4817053c2536235ba5d3c2afc21646eab1538eb028c9bfca5b4057e"
+    },
+    "tables/predictive_intervals.csv": {
+      "sha256": "a67769824079acbf0b7d445b87c49357b772b75f0b0d736c578e72afb4074b54",
+      "source_sha256": "a67769824079acbf0b7d445b87c49357b772b75f0b0d736c578e72afb4074b54"
+    },
+    "tables/operating_comparison.csv": {
+      "sha256": "8529f9b3804e88c71cc756f51aaa1a128a9de98986812f3b64730a541516c8ef",
+      "source_sha256": "8529f9b3804e88c71cc756f51aaa1a128a9de98986812f3b64730a541516c8ef"
+    },
+    "tables/operating_intervals.csv": {
+      "sha256": "22b9bebbf7513d2f6fdf7a2435c6286d7920e7815f76d4e252a898d4a777e8d8",
+      "source_sha256": "22b9bebbf7513d2f6fdf7a2435c6286d7920e7815f76d4e252a898d4a777e8d8"
+    },
+    "tables/paired_operating_change.csv": {
+      "sha256": "a3ab81a7f09ad265d24ba3a50b9553193a52b05f8dbaecd924da6bced21f8ac0",
+      "source_sha256": "a3ab81a7f09ad265d24ba3a50b9553193a52b05f8dbaecd924da6bced21f8ac0"
+    },
+    "tables/response_correction_by_cohort.csv": {
+      "sha256": "1a207adc79c2093eee8a7152e8bc4c3a609486fd20228c9684e42e6dc4812355",
+      "source_sha256": "1a207adc79c2093eee8a7152e8bc4c3a609486fd20228c9684e42e6dc4812355"
+    },
+    "tables/bronchodilator_status_audit.csv": {
+      "sha256": "60c7d9d0613bd98a9ce40388c2dfeed44bef868ce8fb3134863181e625bbfcad",
+      "source_sha256": "60c7d9d0613bd98a9ce40388c2dfeed44bef868ce8fb3134863181e625bbfcad"
+    },
+    "tables/steroid_proxy_audit.csv": {
+      "sha256": "0ae0008b0d86daa32a44078ee49a86174a1ce01393b4ff39fb344e8f5599367d",
+      "source_sha256": "0ae0008b0d86daa32a44078ee49a86174a1ce01393b4ff39fb344e8f5599367d"
+    },
+    "tables/reference_stability_comparison.csv": {
+      "sha256": "2bd95dfd9d2c8f306c2ee97457509595c8e7f7826c7755bf71f211d51f4500cf",
+      "source_sha256": "2bd95dfd9d2c8f306c2ee97457509595c8e7f7826c7755bf71f211d51f4500cf"
+    },
+    "tables/reference_pair_stability_comparison.csv": {
+      "sha256": "ed87d29b26e49ca9b7d62370d8de1653d4e2ff561497d9d80ec362933d4ecb10",
+      "source_sha256": "ed87d29b26e49ca9b7d62370d8de1653d4e2ff561497d9d80ec362933d4ecb10"
+    },
+    "tables/reference_mc_precision.csv": {
+      "sha256": "d3c64b9b1fb0b7b36f91eca3ee6ad679558ffa053c78170a9a358419b0463411",
+      "source_sha256": "d3c64b9b1fb0b7b36f91eca3ee6ad679558ffa053c78170a9a358419b0463411"
+    },
+    "reference/paired_reference_change.csv": {
+      "sha256": "307511b0580514e2942dc958ed869eb0d475465aa2d19f35eb96a98dd997d656",
+      "source_sha256": "307511b0580514e2942dc958ed869eb0d475465aa2d19f35eb96a98dd997d656"
+    },
+    "final_invariant_audit.csv": {
+      "sha256": "11ee6710147161be62080461a9abd8a99fae3f9f7011bff2972af06992b750be",
+      "source_sha256": "11ee6710147161be62080461a9abd8a99fae3f9f7011bff2972af06992b750be"
+    }
+  },
+  "public_config": {
+    "path": "configs/copd_corrected.json",
+    "sha256": "3b19fdfee2502fb018239bd113cd3e778a7063f66a693afdd0cf383c7423c6b3"
+  }
+}

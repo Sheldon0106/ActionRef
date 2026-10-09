@@ -1,0 +1,61 @@
+{
+  "version": "V15_frozen_V13_uncertainty",
+  "source": "Immutable V13 scores/cohorts/maps/references and V14 point-only evidence alignment",
+  "primary_analysis": "3h_report_evidence_strict_baseline_raw",
+  "analyses": "All 16 V13 strict/proxy x baseline/expanded-coded risk x 3h/6h x hadm/raw settings, with no outcome-driven selection",
+  "n_bootstrap": 200,
+  "base_seed": 2026092315,
+  "seed_rule": "Sort unique (window_hours,ecg_variant,response_definition) groups. Development seed=base+1000*group_index; frozen test seed=development+1; paired common-person seed=development+2. Identical subject-order resamples across risk variants",
+  "resampling_unit": "Patient; exactly one selected earliest ED stay per subject; ordinary multinomial patient weights, no outcome stratification",
+  "development_bootstrap": "Refit immutable V9 reference routines using development response only; report both default-eight-bin and short-semantic-tail-guarded policies, all failures, abstentions and duplicate representatives",
+  "test_bootstrap": "Frozen V13 development probability maps and frozen references; do not refit thresholds or probabilities on test resamples",
+  "paired_bootstrap": "Common complete test subjects of each new ECG candidate and old logic_patch, same fixed risk variant; paired AUROC/AUPRC differences on identical patient resamples",
+  "intervals": "Pointwise 2.5th and 97.5th percentile over finite replicates; 200 draws have coarse endpoints; no multiplicity-adjusted or clinical-superiority claim",
+  "score_levels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "policies": [
+    "package_default_8",
+    "short_semantic_tail_guarded_v2"
+  ],
+  "module2_min_development_N": 1000,
+  "module2_min_each_development_response": 100,
+  "full_data_unavailable_reference_promotion": false,
+  "replacement_by_bootstrap_median": false,
+  "capacity_K": false,
+  "module3B": false,
+  "R_FAE": false,
+  "monetary_cost": false,
+  "raw_data_rescan": false,
+  "score_refinement": false,
+  "master_handoff_merge": false,
+  "fresh_test_claim": false,
+  "clinical_adjudication": false,
+  "reference_policy": {
+    "min_N": 1000,
+    "min_each_response": 100,
+    "guarded_min_valid_bins": 4,
+    "guarded_min_supported_mass": 0.95,
+    "maximum_short_score_levels": 12,
+    "directional_pairwise_fisher_alpha_bonferroni": 0.05,
+    "pair_and_tail_joint_family_alpha": 0.05,
+    "native_declared_levels": 9,
+    "fill1_declared_levels": 11
+  },
+  "action_evaluation": {
+    "n_bootstrap": 200,
+    "base_seed": 2026100200,
+    "prediction": "continuous interpolation with endpoint clipping",
+    "curve_refitted_on_test": false
+  },
+  "reported_main_response": "raw ADMITTED/HOME; hospitalization linkage is a separate analysis",
+  "source_primary_analysis": "3h_report_evidence_strict_baseline_hadm"
+}

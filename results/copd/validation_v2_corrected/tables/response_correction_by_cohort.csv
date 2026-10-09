@@ -1,0 +1,5 @@
+cohort,removed_composite_positives,explicit_negative_only,ambiguous_only,removed_outcome_positive
+learning,283,269,14,19
+heldout_full,108,107,1,9
+heldout_score_fit_excluded,6,6,0,1
+heldout_score_fit_exposed,102,101,1,8

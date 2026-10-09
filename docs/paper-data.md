@@ -95,3 +95,29 @@ contain 294,659 encounters; 54 complete rows fall in bins below the support limi
 
 Use the [reproduction guide](paper-reproduction.md) for commands. Record the actual
 source releases and preprocessing versions when preparing new analysis tables.
+
+## COPD and supplementary AERT inputs
+
+COPD uses the supplied balanced-logistic `score_COPD_AutoScore` from
+`autoscore_copd.ipynb`. `AutoScore` is a historical column/configuration label for
+local binned logistic-regression scores, not the published R AutoScore workflow;
+see Supplement eMethods 2. The unweighted `_fixed` score was not stored in the input
+CSV. Existing filenames and column names are retained as data contracts.
+
+The corrected action is documented bronchodilator administration/start within
+24 hours OR the legacy Pyxis steroid-record proxy. Evaluation is conditional on
+the supplied score. The patient-excluded subset and its AUROC 0.894 are reported
+separately from the full threshold-evaluation cohort.
+
+AERT public inputs are score-level counts, component/population summaries, fixed
+probability maps, output states and bootstrap summaries. The supplied score is the
+four-component HEART-derived AERT proxy; fixed H=1 is a separate shift sensitivity.
+ADMITTED/HOME and hospitalization linkage are different action definitions. The
+aggregate runner begins after raw component construction, earliest-encounter
+selection, reserved-patient exclusion and the original patient-disjoint assignment.
+The exact patient-order bootstrap requires restricted analysis records and is
+not reconstructed from these public bins.
+
+No patient records, identifiers, notes, annotation/linkage packs, individual
+predictions or record-identifying source offsets are distributed. See the
+[source mapping](evidence.md) and [AERT scope](https://github.com/Sheldon0106/ActionRef/blob/v1.0.1-jamia-submission/results/aert/README.md).

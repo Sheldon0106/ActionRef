@@ -1,0 +1,60 @@
+{
+  "version": "v13_machine_report_evidence_1",
+  "frozen_after": "Outcome-blind development-only lexical audit of 11975 selected ECG studies",
+  "ECG_variants": [
+    "logic_patch",
+    "conservative",
+    "report_evidence_strict",
+    "report_evidence_proxy"
+  ],
+  "candidate_primary": "report_evidence_strict",
+  "candidate_sensitivity": "report_evidence_proxy; explicit retained sinus-normal assumption, not strict clinical reconstruction",
+  "strict_mapping": {
+    "0": "Explicit affirmative current normal ECG, no recognized abnormality, conflict, unresolved history or summary uncertainty",
+    "1": "Affirmative repolarization abnormality including ST-T/T wave change or flattening wording, or explicit BBB/LVH; digoxin effect only with a repolarization/ST-depression finding. No affirmative ST elevation or unresolved uncertainty/conflict",
+    "2": "Explicit significant current ST depression without recognized secondary context or comparison uncertainty; retain adapted depression-only rubric",
+    "missing": "Sinus-only reports, uncertain or conflicting statements, ungraded ST depression, ST elevation, unresolved historical findings, and outside-rubric findings remain missing"
+  },
+  "proxy_difference": "Same evidence mapping, but permit sinus fallback only without active recognized abnormality, unresolved history or any uncertainty cue. This is explicitly not proof of a normal ECG",
+  "new_recognition": "ST-T changes, ST and T wave changes, T wave changes and T-wave flattening; reuse frozen V5 negation/status/significance engine without mutating it",
+  "secondary_context": "BBB or LVH evidence maps to 1, including accompanying ST depression. ST elevation and pacing remain unclassified; isolated drug mention does not establish ECG effect",
+  "zero_not_normal_rhythm": true,
+  "outcome_response_used_to_design_rules": false,
+  "test_report_used_to_design_rules": false,
+  "test_role": "Previously inspected exploratory test cohort; no new independent validation claim",
+  "windows_hours": [
+    3,
+    6
+  ],
+  "risk_variants": [
+    "baseline",
+    "expanded_coded"
+  ],
+  "risk_primary_for_isolating_ECG_effect": "baseline; expanded_coded is prespecified factorial sensitivity, not selected using test performance",
+  "paired_comparison": "Both full-case results and same-person intersections versus legacy logic_patch; never attribute across-cohort AUC difference solely to score improvement",
+  "module2_policies": [
+    "package_default_8",
+    "short_semantic_tail_guarded_v2"
+  ],
+  "module2_min_development_N": 1000,
+  "module2_min_each_development_response": 100,
+  "module1_min_development_N": 1000,
+  "module1_min_development_events": 100,
+  "bootstrap": false,
+  "capacity_K": false,
+  "module3b": false,
+  "R_FAE": false,
+  "monetary_cost": false,
+  "clinical_adjudication": false,
+  "old_bootstrap_intervals_applicable_to_new_scores": false,
+  "sources": [
+    {
+      "url": "http<local-workspace>/",
+      "role": "Original HEART ECG methods: normal, repolarization, BBB/LVH/digoxin effects and significant ST changes"
+    },
+    {
+      "url": "http<local-workspace>/",
+      "role": "Machine-generated reports and summary schema; unsynchronized acquisition clocks, not report availability"
+    }
+  ]
+}

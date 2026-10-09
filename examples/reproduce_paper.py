@@ -102,8 +102,72 @@ def calculate(source=SOURCE):
             'fixed_candidate_comparison': pd.DataFrame(comparisons)}
 
 
+def additional_report():
+    """COPD eTables 22/41 and supplementary AERT eTables 33/34."""
+    copd_source = ROOT / 'results/copd/validation_v2_corrected'
+    copd = pd.read_csv(copd_source / 'tables/operating_comparison.csv')
+    copd = copd.loc[copd.response_version.eq('corrected') & copd.cohort.eq('heldout_full')]
+    lines = ['', '## COPD: additional main-text application (eTable 22)', '',
+        'COPD is evaluated conditional on the supplied score. Application definition,',
+        'references and operating results are documented in eTables 20–22.', '',
+        '| Level | Threshold | Encounters | Alerts /1,000 | Action yield | Outcome recall |',
+        '|---|---:|---:|---:|---:|---:|']
+    for r in copd.itertuples():
+        lines.append('| {} | {:.4f} | {:,} | {:.1f} | {:.1%} | {:.1%} |'.format(
+            r.level, r.frozen_threshold, r.policy_N, r.alerts_per_1000, r.response_yield, r.recall))
+    lines += ['', 'COPD action is documented bronchodilator administration/start within 24 hours',
+        'OR the legacy Pyxis steroid-record proxy. Its High reference is unavailable:',
+        'relative target 0.4278 reaches bin 50 below Mid bin 55, and ordering allows no',
+        'replacement. Reference uncertainty is in eTables 21 and 39; operating intervals',
+        'are in eTable 22 and the corrected source bundle.', '',
+        '### COPD evaluation excluding score-fitting patients (eTable 41)', '']
+    predictive = pd.read_csv(copd_source / 'tables/predictive_point.csv')
+    p = predictive.loc[predictive.cohort.eq('heldout_score_fit_excluded')].iloc[0]
+    assert int(p.patients) == 13978 and int(p.encounters) == 15221 and round(float(p.AUROC), 3) == .894
+    ci = pd.read_csv(copd_source / 'tables/predictive_intervals.csv')
+    auc = ci.loc[ci.cohort.eq(p.cohort) & ci.metric.eq('AUROC')].iloc[0]
+    lines += ['The subset contains **13,978 patients / 15,221 encounters**, after excluding',
+        'every patient represented in score-fitting rows. AUROC is **0.894**',
+        '(95% patient-cluster interval, {:.3f}–{:.3f}). The score, full-learning'.format(auc.CI_2_5, auc.CI_97_5),
+        'references and historical preprocessing/rescaling remain fixed; this is a',
+        'supplemental evaluation conditional on the supplied score.', '',
+        '| Level | Threshold | Flagged / total | Outcome-positive flagged / total | Action yield |',
+        '|---|---:|---:|---:|---:|']
+    subset = pd.read_csv(copd_source / 'tables/operating_comparison.csv')
+    subset = subset.loc[subset.cohort.eq(p.cohort) & subset.response_version.eq('corrected')]
+    for r in subset.itertuples():
+        lines.append('| {} | {:.4f} | {:,} / {:,} | {} / {} | {:.1%} |'.format(
+            r.level, r.frozen_threshold, r.alert_count, r.policy_N, r.TP, r.TP+r.FN, r.response_yield))
+
+    aert = pd.DataFrame(json.loads((ROOT / 'results/aert/test_operating_point.json').read_text(encoding='utf-8')))
+    aert = aert.loc[aert.analysis.eq('3h_report_evidence_strict_baseline_raw')
+                    & aert.scale.eq('native') & aert.policy.eq('short_semantic_tail_guarded_v2')]
+    lines += ['', '## AERT: supplementary exploratory example (eTables 33–34)', '',
+        'The ADMITTED/HOME setting H02 uses the previously inspected patient-disjoint',
+        'test partition. Other or missing dispositions are excluded.', '',
+        '| Level | Threshold | Encounters | Alerts /1,000 | Action yield | Outcome recall |',
+        '|---|---:|---:|---:|---:|---:|']
+    for r in aert.itertuples():
+        lines.append('| {} | {:g} | {:,} | {:.1f} | {:.1%} | {:.1%} |'.format(
+            r.level, r.threshold, r.N, 1000*r.alert_fraction, r.response_yield, r.recall))
+    lines += ['', 'In H02, Low and Mid coincide at score 3: their targets are 41.42% and 50%,',
+        'and fitted action probability is 30.92% at score 2 and 53.62% at score 3.',
+        'The shared-threshold rule retains Mid = 3 as the operational representative,',
+        'with High = 6 and no distinct Low operating point. Low is attainable and',
+        "shares Mid's threshold. The separate hospitalization-linkage setting retains",
+        'Low 3 in 785 test encounters. The unchanged eight-bin policy abstains in both',
+        'strict three-hour baseline settings; the reported references use the separate',
+        'short-discrete research extension described in eMethods 1–2.',
+        'eTables 32–34 and 38 and Supplementary Data 1–2 retain all 16 settings and',
+        'their conditional patient-bootstrap summaries. No K, R or FAE is applied to AERT.', '',
+        'See the [evidence guide](evidence.md) for the analysis roles and source-file',
+        'mapping. AKI and pneumonia remain development records and are not reported',
+        'in the paper.']
+    return '\n'.join(lines)
+
+
 def report(tables):
-    lines = ['# Primary sepsis results', '',
+    lines = ['# Reported paper results', '',
         'These tables summarize the primary sepsis analysis. Behavioral references',
         'were learned from recorded actions. Candidate 31 was selected on MIMIC learning',
         'data with Low 27 as the workload comparator and R = 11,299/804.', '',
@@ -151,11 +215,19 @@ def report(tables):
         'Equality occurs at R = 17.18699 in MIMIC and 22.50785 in Stanford.',
         'Candidates are not reselected on evaluation data. These crossings describe',
         'this pair, not an optimum over all possible thresholds.', '',
+        'eTable 37 contains this fixed comparison only. Learning-data re-selection and',
+        'R-setting are described in Supplement eMethods 3 and the [R guide](R_GUIDANCE.md).']
+    lines += additional_report().splitlines()
+    lines += ['',
         '## Reproduction', '',
         'Run `python examples/reproduce_paper.py` from the repository root.',
         'It recomputes operating rates, action yields and R sensitivity from shared counts.',
         'The action-probability estimates and intervals are restored from the reported',
-        'aggregate outputs; recomputing them requires encounter-level action and score data.', '']
+        'aggregate outputs; recomputing them requires encounter-level action and score data.', '',
+        'Run `python examples/reproduce_additional.py` for corrected COPD tables and',
+        '`python examples/reproduce_aert.py` for the AERT aggregate replay, eTables',
+        '32–34 and 38 and Supplementary Data 1–2. Their saved bootstrap intervals are',
+        'assembled without reading patient records.', '']
     return '\n'.join(lines)
 
 

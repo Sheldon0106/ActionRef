@@ -1,8 +1,9 @@
 # Reproduce the paper results
 
-Reproduce the primary sepsis results from shared aggregate data, or run the
-analysis on authorized encounter-level tables. The two entry points below cover
-their respective inputs and outputs.
+The paper centers on sepsis ESRP, with corrected COPD as the additional main-text
+application. HEART-derived AERT is an exploratory example in the Supplement. Begin
+with the shared aggregate results; the sepsis analysis also has an entry point for
+authorized encounter-level analysis tables.
 
 ## Start with the aggregate results
 
@@ -21,7 +22,7 @@ report to `output/paper/`. It needs no clinical database. The
 | Table 3 | Confusion counts from eTable 4; action counts from eTable 35 | Recalculates alerts, recall, unflagged outcomes, action yield and FAE |
 | eTable 35 | `observed_action_yield.csv` | Recalculates yields from action-positive and action-known counts |
 | eTable 36 | `sepsis_action_points.json`; `sepsis_action_intervals.json` | Assembles reported point estimates, intervals and bin-assignment sensitivity |
-| eTable 37 | eTable 4 confusion counts; exact R grid | Recalculates the fixed 31-versus-27 loss differences and crossing points |
+| eTable 37 (fixed comparison only) | eTable 4 confusion counts; exact R grid | Recalculates fixed 31-versus-27 loss differences and crossing points |
 | Figure 2 numerical evidence | Learning curve and held-out reliability bins | Supplies the inputs to the R illustration below |
 
 The canonical input files and their provenance are in `results/sepsis_primary/`.
@@ -29,7 +30,36 @@ The protocol is `configs/sepsis_primary.json`. Figure 1 is a conceptual workflow
 the website diagram explains the same sequence for software users. Table 1 cohort
 construction, Table 2 reference-relearning intervals, and the complete Supplement
 require their corresponding source analyses and are not rebuilt by this command.
-Secondary disease analyses have [separate runners](evidence.md).
+COPD and the supplementary AERT example have separate aggregate entry points below.
+
+### COPD and AERT aggregates
+
+```bash
+python examples/reproduce_additional.py
+python examples/reproduce_aert.py
+```
+
+| Paper item | Source | Reproduction scope |
+|---|---|---|
+| COPD main-text operating results; eTable 22 | `results/copd/validation_v2_corrected/tables/operating_comparison.csv` | Corrected held-out action/operating summaries, conditional on the supplied score |
+| eTables 20–22 and 39 | Corrected COPD configuration, cohort, reference, stability, joint/adjacent-gap and operating summaries | Retains the full-learning Low/Mid pair and unavailable High; assembles saved 500-draw reference and 200-draw evaluation intervals |
+| eTable 41 | Corrected COPD predictive, cohort and operating summaries | Exclusion of every score-fitting patient: 13,978 patients / 15,221 encounters; AUROC 0.894 |
+| Supplementary AERT: eMethods 1–2 and eTables 32–34 | `results/aert/` component/population, model, reference and operating summaries | Replays the default and research policies from aggregate score counts and checks all operating counts |
+| eTable 38 and Supplementary Data 2 | AERT action models, point/interval and reliability summaries | Checks frozen-curve action summaries; retains all 16 settings and three support scopes |
+| Supplementary Data 1 | AERT operating points and intervals | Retains 55 native points and their 55 fixed-H=1 counterparts under both policies |
+| Supplement eMethods 3 | `results/sepsis_primary/learning_R_selection.csv` and `learning_R_invariance.csv` | Saved MIMIC-learning R-grid re-selection, separate from the fixed comparison in eTable 37 |
+
+These commands write only aggregate CSV outputs to ignored `output/copd/` and
+`output/aert/`. Supplied patient-bootstrap intervals are assembled from the
+reported summaries, rather than re-estimated from aggregate bins. AERT's exact
+resampling requires authorized patient ordering; raw EHR/ECG score construction
+precedes this aggregate entry point. See the [AERT public scope](https://github.com/Sheldon0106/ActionRef/blob/v1.0.1-jamia-submission/results/aert/README.md).
+
+The Supplement has six eFigures. eFigure 1 displays COPD/AERT references; eFigure 5
+is the output-state matrix for primary sepsis, its one-hour window, COPD, AERT and
+the flat-zero simulation. R-setting and re-selection are in Supplement eMethods 3.
+AKI, pneumonia and the combined historical disease run remain development records,
+with their original configurations and manifest hashes.
 
 ### Redraw the illustrations in R
 
@@ -41,8 +71,8 @@ install.packages(c("jsonlite", "svglite", "ragg"))
 Rscript scripts/build_figures.R --preview
 ```
 
-This draws the website's workflow, synthetic example and clinical action panels
-as editable SVG, PDF and 300-dpi PNG files. The clinical panel uses the same
+This draws the website's workflow, synthetic example, sepsis action panels and
+COPD partial-output curve as editable SVG, PDF and 300-dpi PNG files. The clinical panel uses the same
 learning curve and reliability inputs as the paper. Its layout is designed for
 the website; see the [figure guide](figures.md) for sources and interpretation.
 

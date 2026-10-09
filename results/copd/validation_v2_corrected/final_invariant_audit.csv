@@ -1,0 +1,41 @@
+invariant,passed,detail
+frozen_core_module2.py,True,matches current precision-addendum frozen implementation
+frozen_core_bootstrap.py,True,matches current precision-addendum frozen implementation
+source_hash_matches_historical_manifest,True,unaltered existing COPD analysis input
+source_cohort,True,448804 encounters; unique stay_id; nonmissing subject_id
+fixed_score_outcome_complete,True,no exclusion or imputation of score/outcome
+score_fitting_input_row_order,True,exact subject/stay/outcome sequence matches original score-fitting input
+stored_response_or,True,historical missing-to-zero OR exactly reproduced
+original_learning_partition,True,"151699 learning patients / 314629 encounters, split seed2026"
+strict_subject_exclusion,True,entire score-fitting subject universe excluded
+strict_subset_counts,True,13978 patients / 15221 encounters; not a deletion of training encounters alone
+legacy_bronchodilator_reproduced,True,all raw-status events reproduce 13925 historical positive encounters
+correction_only_removes_unconfirmed_positives,True,administration/start allowlist fixed before fitting; no newly invented action positives
+legacy_bronchodilator_time_reproduced,True,raw original first-event elapsed time reproduced
+corrected_event_window,True,0 <= charttime-intime <= 24h
+steroid_stored_positives_supported,True,all retained steroid positives have matching first Pyxis record and elapsed time
+module2_config_unchanged,True,identical frozen defaults; no tuning
+legacy_point_reference_regression,True,"{'Low': 17.779760509763356, 'Mid': 55.07187581853598, 'High': nan}"
+historical_bootstrap_learning_rows,True,exact original row order and legacy response vector
+historical_bootstrap_patient_order,True,same patient ordering / seed42 stream
+cp_cannot_move_reference,True,"bootstrap CP corroboration did not move, create or rescue any full-data reference"
+reference_bootstrap_complete,True,500 successful patient resamples; seed42
+direct_package_operating_heldout_full_legacy,True,exact >= frozen-threshold arithmetic matches package
+historical_full_operating_reproduced,True,historical full heldout numbers unchanged
+operating_replicates_heldout_full_legacy,True,"B200 per available reference, seed42; references remain fixed"
+direct_package_operating_heldout_full_corrected,True,exact >= frozen-threshold arithmetic matches package
+operating_replicates_heldout_full_corrected,True,"B200 per available reference, seed42; references remain fixed"
+direct_package_operating_heldout_score_fit_excluded_legacy,True,exact >= frozen-threshold arithmetic matches package
+operating_replicates_heldout_score_fit_excluded_legacy,True,"B200 per available reference, seed42; references remain fixed"
+direct_package_operating_heldout_score_fit_excluded_corrected,True,exact >= frozen-threshold arithmetic matches package
+operating_replicates_heldout_score_fit_excluded_corrected,True,"B200 per available reference, seed42; references remain fixed"
+predictive_sufficient_statistics_heldout_full,True,exact tie-aware AUROC and sklearn average precision
+predictive_weighted_replay_heldout_full_0,True,patient multiplicities match weighted encounter metric replay
+predictive_weighted_replay_heldout_full_199,True,patient multiplicities match weighted encounter metric replay
+predictive_bootstrap_complete_heldout_full,True,B200 patient resamples; no excluded single-class replicates
+predictive_sufficient_statistics_heldout_score_fit_excluded,True,exact tie-aware AUROC and sklearn average precision
+predictive_weighted_replay_heldout_score_fit_excluded_0,True,patient multiplicities match weighted encounter metric replay
+predictive_weighted_replay_heldout_score_fit_excluded_199,True,patient multiplicities match weighted encounter metric replay
+predictive_bootstrap_complete_heldout_score_fit_excluded,True,B200 patient resamples; no excluded single-class replicates
+fixed_score_vector_unchanged,True,stored continuous COPD score was never altered or refitted
+all_protected_files_unchanged,True,"582 raw/source/package/historical output files unchanged, including master baseline"

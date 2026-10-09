@@ -1,0 +1,258 @@
+[
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "split": "development",
+    "N": 2332,
+    "events": 323,
+    "response1": 1588,
+    "seed": 2026092315
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "split": "test",
+    "N": 1051,
+    "events": 140,
+    "response1": 734,
+    "seed": 2026092316
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "split": "development",
+    "N": 2279,
+    "events": 313,
+    "response1": 872,
+    "seed": 2026093315
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "split": "test",
+    "N": 1011,
+    "events": 131,
+    "response1": 376,
+    "seed": 2026093316
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "split": "development",
+    "N": 2332,
+    "events": 323,
+    "response1": 1588,
+    "seed": 2026092315
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "split": "test",
+    "N": 1051,
+    "events": 140,
+    "response1": 734,
+    "seed": 2026092316
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "split": "development",
+    "N": 2279,
+    "events": 313,
+    "response1": 872,
+    "seed": 2026093315
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "split": "test",
+    "N": 1011,
+    "events": 131,
+    "response1": 376,
+    "seed": 2026093316
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "split": "development",
+    "N": 1704,
+    "events": 262,
+    "response1": 1294,
+    "seed": 2026094315
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "split": "test",
+    "N": 785,
+    "events": 117,
+    "response1": 603,
+    "seed": 2026094316
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "split": "development",
+    "N": 1661,
+    "events": 255,
+    "response1": 688,
+    "seed": 2026095315
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "split": "test",
+    "N": 756,
+    "events": 108,
+    "response1": 305,
+    "seed": 2026095316
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "split": "development",
+    "N": 1704,
+    "events": 262,
+    "response1": 1294,
+    "seed": 2026094315
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "split": "test",
+    "N": 785,
+    "events": 117,
+    "response1": 603,
+    "seed": 2026094316
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "split": "development",
+    "N": 1661,
+    "events": 255,
+    "response1": 688,
+    "seed": 2026095315
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "split": "test",
+    "N": 756,
+    "events": 108,
+    "response1": 305,
+    "seed": 2026095316
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "split": "development",
+    "N": 3639,
+    "events": 395,
+    "response1": 2325,
+    "seed": 2026096315
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "split": "test",
+    "N": 1600,
+    "events": 166,
+    "response1": 1036,
+    "seed": 2026096316
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "split": "development",
+    "N": 3543,
+    "events": 379,
+    "response1": 1210,
+    "seed": 2026097315
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "split": "test",
+    "N": 1540,
+    "events": 156,
+    "response1": 503,
+    "seed": 2026097316
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "split": "development",
+    "N": 3639,
+    "events": 395,
+    "response1": 2325,
+    "seed": 2026096315
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "split": "test",
+    "N": 1600,
+    "events": 166,
+    "response1": 1036,
+    "seed": 2026096316
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "split": "development",
+    "N": 3543,
+    "events": 379,
+    "response1": 1210,
+    "seed": 2026097315
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "split": "test",
+    "N": 1540,
+    "events": 156,
+    "response1": 503,
+    "seed": 2026097316
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "split": "development",
+    "N": 2478,
+    "events": 315,
+    "response1": 1803,
+    "seed": 2026098315
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "split": "test",
+    "N": 1103,
+    "events": 134,
+    "response1": 811,
+    "seed": 2026098316
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "split": "development",
+    "N": 2408,
+    "events": 302,
+    "response1": 918,
+    "seed": 2026099315
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "split": "test",
+    "N": 1068,
+    "events": 125,
+    "response1": 397,
+    "seed": 2026099316
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "split": "development",
+    "N": 2478,
+    "events": 315,
+    "response1": 1803,
+    "seed": 2026098315
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "split": "test",
+    "N": 1103,
+    "events": 134,
+    "response1": 811,
+    "seed": 2026098316
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "split": "development",
+    "N": 2408,
+    "events": 302,
+    "response1": 918,
+    "seed": 2026099315
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "split": "test",
+    "N": 1068,
+    "events": 125,
+    "response1": 397,
+    "seed": 2026099316
+  }
+]

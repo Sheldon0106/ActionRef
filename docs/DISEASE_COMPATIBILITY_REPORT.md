@@ -1,4 +1,10 @@
-# COPD and pneumonia compatibility run
+# Historical COPD and pneumonia compatibility run
+
+These are software development and compatibility records. Pneumonia is not reported
+in the paper. The COPD results below use the earlier action definition and
+bin-width-2.5 setting; the paper uses the [corrected COPD application](evidence.md#copd),
+with Mid 55.0719 rather than the early Mid 55.04. The historical numbers below are
+retained for regression comparison.
 
 Validation of the frozen v0.3 package on two non-sepsis diseases.
 
@@ -14,13 +20,15 @@ python examples/disease_compatibility.py --config configs/copd_autoscore.yaml --
 
 | | COPD | Pneumonia |
 |---|---|---|
-| Notebook | `autoscore_copd_final_universal_fixed.ipynb` | `autoscore_pneumonia_final_universal.ipynb` |
+| Notebook for the supplied score | `autoscore_copd.ipynb` (balanced logistic version) | `autoscore_pneumonia_final_universal.ipynb` |
 | Score | `score_COPD_AutoScore` | `score_pneumonia_auto` |
 | Outcome | `outcome_copd_exac` | `outcome_all_pne` |
 | Primary response | bronchodilator_flag_24h OR steroid_flag | antibiotic_flag OR blood_culture_flag |
 | Sensitivity response | none | primary plus lactate, vasopressor, ICU fluid |
 
-Cohort: all ED encounters with a valid AutoScore value. N = 448,804 both datasets.
+Cohort: all ED encounters with a valid supplied score. N = 448,804 both datasets.
+`AutoScore` in the legacy column names denotes a local binned logistic-regression
+score; see the [naming explanation](evidence.md#historical-score-names).
 
 ## Module 1
 
@@ -90,7 +98,7 @@ COPD, `score_COPD_AutoScore`, primary bundle:
 
 Data notes:
 
-- Reference headline rows use `score_COPD_AutoScore_fixed`, absent from the dataset. `score_COPD_AutoScore` was used instead, compared against matching reference rows.
+- The input CSV contains `score_COPD_AutoScore`, constructed using balanced logistic regression in `autoscore_copd.ipynb`. The unweighted `score_COPD_AutoScore_fixed` was not stored in that CSV. Historical reference rows with the `_fixed` name therefore do not identify the supplied score.
 - Reference response column is `response_copd_primary`; the dataset provides `response_copd_directed`. Both report prevalence 0.061040.
 
 ## Findings

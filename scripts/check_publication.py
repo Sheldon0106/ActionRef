@@ -31,7 +31,7 @@ def main():
             failures.append('Required package resource is not in the Git file set: ' + required)
     csv_count = 0
     patterns = {
-        'personal absolute path': re.compile(r'(?i)[a-z]:[\\/](?:[\\/])?(?:users|2025summer|home)[\\/]'),
+        'local absolute path': re.compile(r'(?i)\b[a-z]:[\\/]+'),
         'private key': re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),
         'GitHub credential': re.compile(r'\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{50,})\b'),
     }
@@ -95,7 +95,40 @@ def main():
     for primary, figure in pairs:
         if (manifest_path.parent / primary).read_bytes() != (ROOT / 'docs/assets/data' / figure).read_bytes():
             failures.append('Paper and figure source differ: ' + primary)
-    for name in ('workflow', 'synthetic-example', 'clinical-action'):
+    for folder, files_key, config_key in (
+        ('results/copd/validation_v2_corrected', 'public_files', 'public_config'),
+        ('results/aert', 'files', 'config'),
+    ):
+        bundle = ROOT / folder
+        record = json.loads((bundle / 'manifest.json').read_text(encoding='utf-8'))
+        for filename, expected in record[files_key].items():
+            file = bundle / filename
+            if not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest() != expected['sha256']:
+                failures.append('Additional-application source checksum mismatch: ' + folder + '/' + filename)
+        config = record[config_key]
+        if hashlib.sha256((ROOT / config['path']).read_bytes()).hexdigest() != config['sha256']:
+            failures.append('Additional-application configuration checksum mismatch: ' + folder)
+
+    # JSON summaries must not silently carry individual records inside nested lists.
+    forbidden = {'subject_id', 'hadm_id', 'stay_id', 'patient_id', 'encounter_id',
+                 'subject_ids', 'patient_ids', 'stay_ids', 'hadm_ids',
+                 'mrn', 'date_of_birth', 'note_text', 'annotation_linkage'}
+    def record_keys(value):
+        if isinstance(value, dict):
+            for key, child in value.items():
+                yield str(key).lower()
+                yield from record_keys(child)
+        elif isinstance(value, list):
+            for child in value:
+                yield from record_keys(child)
+    for path in paths:
+        if path.suffix == '.json' and 'results' in path.relative_to(ROOT).parts:
+            found = forbidden.intersection(record_keys(json.loads(path.read_text(encoding='utf-8'))))
+            if found:
+                failures.append('{}: possible nested individual-record fields {}'.format(
+                    path.relative_to(ROOT), sorted(found)))
+
+    for name in ('workflow', 'synthetic-example', 'clinical-action', 'copd-partial-output'):
         for suffix in ('png', 'svg', 'pdf'):
             if not (ROOT / 'docs/assets/figures' / (name + '.' + suffix)).is_file():
                 failures.append('Missing figure export: ' + name + '.' + suffix)

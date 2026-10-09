@@ -1,56 +1,104 @@
 # Evidence and analysis roles
 
-Public research outputs are aggregate summaries. Their role depends on the cohort,
-split, action definition, and analysis configuration; sharing a folder does not
-make all outputs one analysis.
+The paper uses sepsis ESRP as the primary application and COPD as an additional
+main-text application. HEART-derived AERT is an exploratory example in the
+Supplement. Public research outputs contain aggregate summaries. Each result belongs to a specified score, cohort, split and
+recorded-action definition.
 
-| Material | Role |
+| Material | Role in the paper |
 |---|---|
-| Sepsis 27 / 36 / 51 | Primary MIMIC behavioral references |
-| Stanford 26 / 36 / 50 | Local diagnostic reference learning |
-| Saved MIMIC action-curve evaluation | Held-out action-probability assessment; see the sepsis illustration |
-| `results/sepsis_primary/` | Primary confusion/action counts, action-probability estimates and intervals, and fixed-candidate R sensitivity |
-| `results/*/validation_v1/` | Patient-disjoint secondary disease analyses, with declared primary and sensitivity response definitions |
-| `results/cross_disease_validation_v1/` | Combined summaries, configuration, and provenance for those secondary analyses |
-| Earlier compatibility and R-tier reports | Software/analysis development records; see their stated settings |
+| MIMIC sepsis 27 / 36 / 51 | Primary behavioral references |
+| Stanford sepsis 26 / 36 / 50 | Local reference re-estimation, separate from transport of MIMIC thresholds |
+| `results/sepsis_primary/` | Primary operating/action counts, action-probability evaluation and fixed 31-versus-27 R sensitivity: Table 3 and eTables 35–37 |
+| `results/copd/validation_v2_corrected/` | Additional main-text COPD application with corrected recorded actions: eTables 20–22, 39 and 41 |
+| `results/aert/` | Supplementary exploratory HEART-derived AERT example: eMethods 1–2, eTables 32–34 and 38, and Supplementary Data 1–2 |
+| `results/copd/validation_v1/` | Earlier COPD action definition; retained for comparison and software regression, not the corrected paper application |
+| `results/aki/` and the corresponding configurations | Software development and compatibility records; not reported in the paper |
+| `results/pneumonia/` and the corresponding configurations | Software development and compatibility records; not reported in the paper |
+| `results/cross_disease_validation_v1/` and its configuration | Historical combined development summaries and provenance; retained for manifest and test compatibility |
+| Earlier compatibility and R-tier reports | Development records under their stated settings; current paper scenarios are identified separately |
 
-The current secondary-disease configuration is
-`configs/cross_disease_validation_v1.yaml`. It declares the split, bootstrap,
-response components, sensitivity analyses, capacity fractions, and a shared
-low-confidence R scenario. Its results support analysis of procedural portability
-and threshold-level performance; clinical utility requires additional evaluation.
+## Primary sepsis application
 
-## Reproduce an analysis
+MIMIC behavioral references retain their recorded-action meanings. Candidate 31
+was selected on learning data under the Low-27 workload ceiling and R = 11,299/804,
+then evaluated unchanged. Stanford transport uses the MIMIC thresholds; the
+26 / 36 / 50 local references answer a separate practice-description question.
+Begin with the [sepsis illustration](clinical-example.md) and
+[reported tables](paper-results.md).
 
-For the primary paper results, begin with the [paper reproduction guide](paper-reproduction.md).
-`python examples/reproduce_paper.py` rebuilds the shared aggregate tables without
-clinical data. `examples/sepsis_paper_analysis.py` provides the explicit Low-based
-selection and held-out evaluation recipe for authorized analysis tables.
+eTable 37 contains the fixed 31-versus-27 comparison only. Learning-data
+re-selection and the R-setting procedure are described in Supplement eMethods 3;
+see the [R guide](R_GUIDANCE.md). The Supplement contains six eFigures: its
+additional-application reference display includes COPD and AERT, and its output
+state matrix includes primary sepsis, the one-hour sepsis window, COPD, AERT and
+the flat-zero simulation.
 
-The synthetic example is fully self-contained. Clinical runners require separately
-authorized datasets with the specified schema:
+## Main-text and supplementary evidence
 
-```bash
-python examples/publication_validation.py --help
-python examples/disease_compatibility.py --help
-python examples/sepsis_v7_integration.py --help
-```
+### COPD
 
-The earlier V7 entry point is a reference-value regression check. It does not
-reproduce the complete primary operating and action-probability analyses.
+The corrected action combines documented bronchodilator administration/start
+within 24 hours with the **legacy Pyxis steroid-record proxy**. The bronchodilator
+definition excludes records without documented administration/start. The steroid
+field retains its historical first-record and missing-to-zero conventions; actual
+administration, dose, route and indication are not established by that proxy.
 
-Review the configuration and data lineage before running an analysis. The repository
-does not distribute patient-level input files.
+The full-learning references are Low 17.7798 and Mid 55.0719. Relative High targets
+0.4278 at bin 50, below Mid's bin 55, so the ordering rule leaves High unavailable
+without replacement. See [the real-data partial-output example](output-states.md#real-data-partial-output-copd).
 
-## Provenance
+The evaluation is **conditional on the supplied score**. The subset excluding all
+score-fitting patients contains 13,978 patients and 15,221 encounters, with AUROC
+0.894 (eTable 41). Earlier preprocessing and score rescaling used the source
+population; this subset is a supplemental within-data evaluation. Sources and
+denominators are documented in [the corrected aggregate bundle](https://github.com/Sheldon0106/ActionRef/blob/v1.0.1-jamia-submission/results/copd/validation_v2_corrected/README.md).
 
-Saved result metadata includes settings and input/output checksums. In the public
-copy, personal filesystem paths have been replaced with portable placeholders.
-The cross-disease manifest retains original output hashes and separately records
-the hashes of the public copies. Clinical result values have not been changed.
+### HEART-derived AERT
 
-Earlier reports retain their historical context. For current API behavior, use the
-[reference guide](references.md) and executable package. For example, an unreachable
-absolute Mid/High target may use a labeled relative target, subject to ordering;
-a historical report describing an unavailable High should not be generalized into
-a rule that every unreachable 80% target must abstain.
+AERT contains age, ECG, coded risk factors and troponin, with a native theoretical
+range of 0–8 and no measured History component. The strict three-hour construction
+has 2,489 complete encounters: 1,704 development and 785 previously inspected,
+patient-disjoint test encounters. The supplementary ADMITTED/HOME setting
+**H02** (eTables 33–34) has 756 test encounters. Low and Mid coincide at score 3:
+respective targets are 41.42% and 50%, and the fitted action probability increases
+from 30.92% at score 2 to 53.62% at score 3. The shared-threshold rule retains
+**Mid = 3** as the operational representative, with **High = 6** and no distinct
+Low operating point. Low is attainable and shares Mid's threshold. The separate
+hospitalization-linkage analysis retains Low 3. These recorded-action definitions
+remain distinct.
+
+The unchanged eight-bin policy abstains in the strict three-hour baseline settings.
+The short-discrete research extension is provided separately and preserves partial
+outputs. The test partition was previously inspected, and the diagnostic endpoint
+is index-encounter ACS/MI rather than 30-day MACE. No K, R, FAE or monetary-cost
+analysis is applied to AERT. [Public materials](https://github.com/Sheldon0106/ActionRef/blob/v1.0.1-jamia-submission/results/aert/README.md) include
+all 16 settings and the native/fixed-H=1 sensitivity.
+
+## Historical score names
+
+`AutoScore` in configuration filenames and column names, such as
+`copd_autoscore.yaml` and `score_COPD_AutoScore`, is a historical label. These
+scores were constructed locally from binned predictors and logistic-regression
+weights; they were not generated by the published R AutoScore workflow. Construction
+details are in Supplement eMethods 2. File and column names are retained to preserve
+the input data contract.
+
+The supplied COPD column is the balanced-logistic score from `autoscore_copd.ipynb`.
+The unweighted `_fixed` score was not stored in the input CSV. The early
+[compatibility report](DISEASE_COMPATIBILITY_REPORT.md) and
+[regression report](CONTROLLED_REGRESSION_REPORT.md) retain their earlier bin-width
+settings and values.
+
+## Reproduction and provenance
+
+Use the [paper reproduction guide](paper-reproduction.md) for commands and the
+mapping from reported tables to source aggregates. Clinical inputs are obtained
+separately under their data agreements; this repository distributes no patient
+records or identifiers.
+
+Saved metadata includes analysis settings and input/output checksums. Personal
+filesystem paths are replaced with portable placeholders. The historical
+cross-disease manifest retains its original and public-copy hashes; its archived
+results and configurations remain unchanged. New COPD and AERT manifests identify
+the aggregate files used for the reported applications.
