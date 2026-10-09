@@ -8,7 +8,7 @@
   "config": {
     "path": "configs/aert.json",
     "sha256": "0eac95f095e0e85a97c237649ac1bc23f17c8d3474c82a2e77757b46ea625a4d",
-    "analysis_role_note": "The original source primary analysis used hospitalization linkage; the reported Table 4 primary analysis uses ADMITTED/HOME. Both settings are explicit in the public configuration."
+    "analysis_role_note": "The original source primary analysis used hospitalization linkage; the supplementary eTables 33-34 setting H02 uses ADMITTED/HOME. Both settings are explicit in the public configuration."
   },
   "files": {
     "models_frozen.json": {
@@ -101,7 +101,7 @@
     }
   },
   "paper_items": [
-    "Table 4",
+    "eMethods 1-2",
     "eTables 32-34",
     "eTable 38",
     "Supplementary Data 1",

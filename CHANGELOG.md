@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.1 - 2026-10-09
+
+- Aligned evidence roles with the manuscript: COPD is the additional main-text
+  application; AERT is a supplementary exploratory example.
+- Replaced the removed Table 4 mappings and reproduction output names with
+  the corresponding supplementary tables. Scientific values and historical
+  result files are unchanged.
+- Clarified H02's attainable, shared Low/Mid threshold at score 3 and the
+  retained Mid operational representative.
+- Updated release links and software citation metadata.
+
 ## 1.0.0 - 2026-10-09
 
 - Aligned the paper-evidence route with primary sepsis ESRP and additional COPD

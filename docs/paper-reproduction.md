@@ -1,8 +1,9 @@
 # Reproduce the paper results
 
-The paper centers on sepsis ESRP, with corrected COPD and exploratory HEART-derived
-AERT as additional applications. Begin with the shared aggregate results; the sepsis
-analysis also has an entry point for authorized encounter-level analysis tables.
+The paper centers on sepsis ESRP, with corrected COPD as the additional main-text
+application. HEART-derived AERT is an exploratory example in the Supplement. Begin
+with the shared aggregate results; the sepsis analysis also has an entry point for
+authorized encounter-level analysis tables.
 
 ## Start with the aggregate results
 
@@ -29,7 +30,7 @@ The protocol is `configs/sepsis_primary.json`. Figure 1 is a conceptual workflow
 the website diagram explains the same sequence for software users. Table 1 cohort
 construction, Table 2 reference-relearning intervals, and the complete Supplement
 require their corresponding source analyses and are not rebuilt by this command.
-The additional applications have the separate aggregate entry points below.
+COPD and the supplementary AERT example have separate aggregate entry points below.
 
 ### COPD and AERT aggregates
 
@@ -40,10 +41,10 @@ python examples/reproduce_aert.py
 
 | Paper item | Source | Reproduction scope |
 |---|---|---|
-| Table 4: COPD | `results/copd/validation_v2_corrected/tables/operating_comparison.csv` | Corrected held-out action/operating summaries, conditional on the supplied score |
-| eTables 21, 22 and 39 | Corrected COPD reference, stability, joint/adjacent-gap and operating summaries | Retains the full-learning Low/Mid pair and unavailable High; assembles saved 500-draw reference and 200-draw evaluation intervals |
+| COPD main-text operating results; eTable 22 | `results/copd/validation_v2_corrected/tables/operating_comparison.csv` | Corrected held-out action/operating summaries, conditional on the supplied score |
+| eTables 20–22 and 39 | Corrected COPD configuration, cohort, reference, stability, joint/adjacent-gap and operating summaries | Retains the full-learning Low/Mid pair and unavailable High; assembles saved 500-draw reference and 200-draw evaluation intervals |
 | eTable 41 | Corrected COPD predictive, cohort and operating summaries | Exclusion of every score-fitting patient: 13,978 patients / 15,221 encounters; AUROC 0.894 |
-| Table 4: AERT; eTables 32–34 | `results/aert/` component/population, model, reference and operating summaries | Replays the default and research policies from aggregate score counts and checks all operating counts |
+| Supplementary AERT: eMethods 1–2 and eTables 32–34 | `results/aert/` component/population, model, reference and operating summaries | Replays the default and research policies from aggregate score counts and checks all operating counts |
 | eTable 38 and Supplementary Data 2 | AERT action models, point/interval and reliability summaries | Checks frozen-curve action summaries; retains all 16 settings and three support scopes |
 | Supplementary Data 1 | AERT operating points and intervals | Retains 55 native points and their 55 fixed-H=1 counterparts under both policies |
 | Supplement eMethods 3 | `results/sepsis_primary/learning_R_selection.csv` and `learning_R_invariance.csv` | Saved MIMIC-learning R-grid re-selection, separate from the fixed comparison in eTable 37 |
@@ -52,7 +53,7 @@ These commands write only aggregate CSV outputs to ignored `output/copd/` and
 `output/aert/`. Supplied patient-bootstrap intervals are assembled from the
 reported summaries, rather than re-estimated from aggregate bins. AERT's exact
 resampling requires authorized patient ordering; raw EHR/ECG score construction
-precedes this aggregate entry point. See the [AERT public scope](https://github.com/Sheldon0106/ActionRef/blob/v1.0.0-jamia-submission/results/aert/README.md).
+precedes this aggregate entry point. See the [AERT public scope](https://github.com/Sheldon0106/ActionRef/blob/v1.0.1-jamia-submission/results/aert/README.md).
 
 The Supplement has six eFigures. eFigure 1 displays COPD/AERT references; eFigure 5
 is the output-state matrix for primary sepsis, its one-hour window, COPD, AERT and

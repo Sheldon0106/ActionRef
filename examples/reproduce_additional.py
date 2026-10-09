@@ -37,7 +37,7 @@ def calculate(source=SOURCE):
     assert int(subset.patients) == 13978 and int(subset.encounters) == 15221
     assert round(float(subset.AUROC), 3) == 0.894
     return {
-        "table4_copd": corrected.loc[corrected.cohort.eq("heldout_full")],
+        "etable22_copd_full_heldout": corrected.loc[corrected.cohort.eq("heldout_full")],
         "etable21_copd_references": anchors,
         "etable22_copd_operating": corrected,
         "etable39_copd_reference_uncertainty": pd.read_csv(source / "reference/stability_summary_package.csv"),

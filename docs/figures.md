@@ -109,7 +109,7 @@ in `configs/figure_palette.json`; all R figures read it.
 ![Corrected COPD references with the rejected relative High crossing.](assets/figures/copd-partial-output.png)
 
 **Message:** a retained Low/Mid pair with an unavailable High is a valid reference
-output. The [corrected curve and anchors](https://github.com/Sheldon0106/ActionRef/blob/v1.0.0-jamia-submission/results/copd/validation_v2_corrected/README.md)
+output. The [corrected curve and anchors](https://github.com/Sheldon0106/ActionRef/blob/v1.0.1-jamia-submission/results/copd/validation_v2_corrected/README.md)
 provide every plotted coordinate. All 28 supported learning bins are shown; point
 area follows bin encounter count. The orange cross identifies the rejected crossing
 at bin 50, and the orange horizontal line identifies its relative target 0.4278.

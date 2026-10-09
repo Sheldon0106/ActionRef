@@ -103,37 +103,24 @@ def calculate(source=SOURCE):
 
 
 def additional_report():
-    """Table 4 and eTable 41 from the corrected, supplied-score aggregates."""
+    """COPD eTables 22/41 and supplementary AERT eTables 33/34."""
     copd_source = ROOT / 'results/copd/validation_v2_corrected'
     copd = pd.read_csv(copd_source / 'tables/operating_comparison.csv')
     copd = copd.loc[copd.response_version.eq('corrected') & copd.cohort.eq('heldout_full')]
-    aert = pd.DataFrame(json.loads((ROOT / 'results/aert/test_operating_point.json').read_text(encoding='utf-8')))
-    aert = aert.loc[aert.analysis.eq('3h_report_evidence_strict_baseline_raw')
-                    & aert.scale.eq('native') & aert.policy.eq('short_semantic_tail_guarded_v2')]
-    lines = ['', '## Additional applications (Table 4)', '',
-        'COPD is evaluated conditional on the supplied score. AERT is an exploratory',
-        'HEART-derived application using the previously inspected patient-disjoint test',
-        'partition. The disease-specific outcomes and recorded actions differ.', '',
-        '| Application / level | Threshold | Encounters | Alerts /1,000 | Action yield | Outcome recall |',
+    lines = ['', '## COPD: additional main-text application (eTable 22)', '',
+        'COPD is evaluated conditional on the supplied score. Application definition,',
+        'references and operating results are documented in eTables 20–22.', '',
+        '| Level | Threshold | Encounters | Alerts /1,000 | Action yield | Outcome recall |',
         '|---|---:|---:|---:|---:|---:|']
     for r in copd.itertuples():
-        lines.append('| COPD / {} | {:.4f} | {:,} | {:.1f} | {:.1%} | {:.1%} |'.format(
+        lines.append('| {} | {:.4f} | {:,} | {:.1f} | {:.1%} | {:.1%} |'.format(
             r.level, r.frozen_threshold, r.policy_N, r.alerts_per_1000, r.response_yield, r.recall))
-    for r in aert.itertuples():
-        lines.append('| AERT ADMITTED/HOME / {} | {:g} | {:,} | {:.1f} | {:.1%} | {:.1%} |'.format(
-            r.level, r.threshold, r.N, 1000*r.alert_fraction, r.response_yield, r.recall))
     lines += ['', 'COPD action is documented bronchodilator administration/start within 24 hours',
         'OR the legacy Pyxis steroid-record proxy. Its High reference is unavailable:',
         'relative target 0.4278 reaches bin 50 below Mid bin 55, and ordering allows no',
         'replacement. Reference uncertainty is in eTables 21 and 39; operating intervals',
         'are in eTable 22 and the corrected source bundle.', '',
-        'AERT Table 4 uses ADMITTED/HOME, with other dispositions excluded. The separate',
-        'hospitalization-linkage analysis retains Low 3 in 785 test encounters. The',
-        'unchanged eight-bin policy abstains in both strict three-hour baseline settings;',
-        'the reported references use the separate short-discrete research extension.',
-        'eTables 32–34 and 38 and Supplementary Data 1–2 retain all 16 settings and',
-        'their conditional patient-bootstrap summaries. No K, R or FAE is applied to AERT.', '',
-        '## COPD evaluation excluding score-fitting patients (eTable 41)', '']
+        '### COPD evaluation excluding score-fitting patients (eTable 41)', '']
     predictive = pd.read_csv(copd_source / 'tables/predictive_point.csv')
     p = predictive.loc[predictive.cohort.eq('heldout_score_fit_excluded')].iloc[0]
     assert int(p.patients) == 13978 and int(p.encounters) == 15221 and round(float(p.AUROC), 3) == .894
@@ -151,7 +138,29 @@ def additional_report():
     for r in subset.itertuples():
         lines.append('| {} | {:.4f} | {:,} / {:,} | {} / {} | {:.1%} |'.format(
             r.level, r.frozen_threshold, r.alert_count, r.policy_N, r.TP, r.TP+r.FN, r.response_yield))
-    lines += ['', 'See the [evidence guide](evidence.md) for the analysis roles and source-file',
+
+    aert = pd.DataFrame(json.loads((ROOT / 'results/aert/test_operating_point.json').read_text(encoding='utf-8')))
+    aert = aert.loc[aert.analysis.eq('3h_report_evidence_strict_baseline_raw')
+                    & aert.scale.eq('native') & aert.policy.eq('short_semantic_tail_guarded_v2')]
+    lines += ['', '## AERT: supplementary exploratory example (eTables 33–34)', '',
+        'The ADMITTED/HOME setting H02 uses the previously inspected patient-disjoint',
+        'test partition. Other or missing dispositions are excluded.', '',
+        '| Level | Threshold | Encounters | Alerts /1,000 | Action yield | Outcome recall |',
+        '|---|---:|---:|---:|---:|---:|']
+    for r in aert.itertuples():
+        lines.append('| {} | {:g} | {:,} | {:.1f} | {:.1%} | {:.1%} |'.format(
+            r.level, r.threshold, r.N, 1000*r.alert_fraction, r.response_yield, r.recall))
+    lines += ['', 'In H02, Low and Mid coincide at score 3: their targets are 41.42% and 50%,',
+        'and fitted action probability is 30.92% at score 2 and 53.62% at score 3.',
+        'The shared-threshold rule retains Mid = 3 as the operational representative,',
+        'with High = 6 and no distinct Low operating point. Low is attainable and',
+        "shares Mid's threshold. The separate hospitalization-linkage setting retains",
+        'Low 3 in 785 test encounters. The unchanged eight-bin policy abstains in both',
+        'strict three-hour baseline settings; the reported references use the separate',
+        'short-discrete research extension described in eMethods 1–2.',
+        'eTables 32–34 and 38 and Supplementary Data 1–2 retain all 16 settings and',
+        'their conditional patient-bootstrap summaries. No K, R or FAE is applied to AERT.', '',
+        'See the [evidence guide](evidence.md) for the analysis roles and source-file',
         'mapping. AKI and pneumonia remain development records and are not reported',
         'in the paper.']
     return '\n'.join(lines)

@@ -1,4 +1,4 @@
-"""Check the reported additional applications and their publication boundaries."""
+"""Check reported COPD and supplementary AERT publication boundaries."""
 import importlib.util
 import json
 import sys
@@ -39,9 +39,19 @@ def test_aert_replays_all_reported_settings_without_promoting_default_abstention
     row = refs.loc[refs.analysis.eq('3h_report_evidence_strict_baseline_raw')
                    & refs.scale.eq('native') & refs.policy.eq('package_default_8')].iloc[0]
     assert row.references == {} and not row.any_anchor
-    main = tables['table4_aert']
-    assert dict(zip(main.level, main.threshold)) == {'Mid': 3., 'High': 6.}
-    assert main.N.eq(756).all()
+    h02 = tables['etable34_h02_native_operating']
+    assert dict(zip(h02.level, h02.threshold)) == {'Mid': 3., 'High': 6.}
+    assert h02.N.eq(756).all()
+    curves = json.loads((ROOT / 'results/aert/development_curves.json').read_text(encoding='utf-8'))
+    saved = next(r for r in curves if r['analysis'] == '3h_report_evidence_strict_baseline_raw'
+                 and r['scale'] == 'native')
+    anchors = {r['level']: r for r in saved['raw_anchors']}
+    assert anchors['Low']['selected_threshold'] == anchors['Mid']['selected_threshold'] == 3
+    assert anchors['Low']['attainability_status'] == anchors['Mid']['attainability_status'] == 'absolute_attainable'
+    assert not anchors['Low']['operational_representative'] and anchors['Mid']['operational_representative']
+    rates = {r['score']: r['isotonic_rate'] for r in saved['response_curve']}
+    assert round(100 * anchors['Low']['target_probability'], 2) == 41.42
+    assert round(100 * rates[2], 2) == 30.92 and round(100 * rates[3], 2) == 53.62
     operating = tables['supplementary_data1_operating']
     native = operating.loc[operating.scale.eq('native')]
     assert len(native) == 55

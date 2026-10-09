@@ -1,8 +1,8 @@
 # Evidence and analysis roles
 
-The paper uses sepsis ESRP as the primary application, followed by COPD and an
-exploratory HEART-derived AERT application. Public research outputs contain
-aggregate summaries. Each result belongs to a specified score, cohort, split and
+The paper uses sepsis ESRP as the primary application and COPD as an additional
+main-text application. HEART-derived AERT is an exploratory example in the
+Supplement. Public research outputs contain aggregate summaries. Each result belongs to a specified score, cohort, split and
 recorded-action definition.
 
 | Material | Role in the paper |
@@ -10,8 +10,8 @@ recorded-action definition.
 | MIMIC sepsis 27 / 36 / 51 | Primary behavioral references |
 | Stanford sepsis 26 / 36 / 50 | Local reference re-estimation, separate from transport of MIMIC thresholds |
 | `results/sepsis_primary/` | Primary operating/action counts, action-probability evaluation and fixed 31-versus-27 R sensitivity: Table 3 and eTables 35–37 |
-| `results/copd/validation_v2_corrected/` | Additional COPD application with corrected recorded actions: Table 4 and eTables 21, 22, 39 and 41 |
-| `results/aert/` | Exploratory HEART-derived AERT application: Table 4, eTables 32–34 and 38, and Supplementary Data 1–2 |
+| `results/copd/validation_v2_corrected/` | Additional main-text COPD application with corrected recorded actions: eTables 20–22, 39 and 41 |
+| `results/aert/` | Supplementary exploratory HEART-derived AERT example: eMethods 1–2, eTables 32–34 and 38, and Supplementary Data 1–2 |
 | `results/copd/validation_v1/` | Earlier COPD action definition; retained for comparison and software regression, not the corrected paper application |
 | `results/aki/` and the corresponding configurations | Software development and compatibility records; not reported in the paper |
 | `results/pneumonia/` and the corresponding configurations | Software development and compatibility records; not reported in the paper |
@@ -34,7 +34,7 @@ additional-application reference display includes COPD and AERT, and its output
 state matrix includes primary sepsis, the one-hour sepsis window, COPD, AERT and
 the flat-zero simulation.
 
-## Additional applications
+## Main-text and supplementary evidence
 
 ### COPD
 
@@ -52,22 +52,27 @@ The evaluation is **conditional on the supplied score**. The subset excluding al
 score-fitting patients contains 13,978 patients and 15,221 encounters, with AUROC
 0.894 (eTable 41). Earlier preprocessing and score rescaling used the source
 population; this subset is a supplemental within-data evaluation. Sources and
-denominators are documented in [the corrected aggregate bundle](https://github.com/Sheldon0106/ActionRef/blob/v1.0.0-jamia-submission/results/copd/validation_v2_corrected/README.md).
+denominators are documented in [the corrected aggregate bundle](https://github.com/Sheldon0106/ActionRef/blob/v1.0.1-jamia-submission/results/copd/validation_v2_corrected/README.md).
 
 ### HEART-derived AERT
 
 AERT contains age, ECG, coded risk factors and troponin, with a native theoretical
 range of 0–8 and no measured History component. The strict three-hour construction
 has 2,489 complete encounters: 1,704 development and 785 previously inspected,
-patient-disjoint test encounters. The ADMITTED/HOME analysis used in Table 4 has
-756 test encounters and retained Mid 3 and High 6; the separate hospitalization-
-linkage analysis retained Low 3. These recorded-action definitions remain distinct.
+patient-disjoint test encounters. The supplementary ADMITTED/HOME setting
+**H02** (eTables 33–34) has 756 test encounters. Low and Mid coincide at score 3:
+respective targets are 41.42% and 50%, and the fitted action probability increases
+from 30.92% at score 2 to 53.62% at score 3. The shared-threshold rule retains
+**Mid = 3** as the operational representative, with **High = 6** and no distinct
+Low operating point. Low is attainable and shares Mid's threshold. The separate
+hospitalization-linkage analysis retains Low 3. These recorded-action definitions
+remain distinct.
 
 The unchanged eight-bin policy abstains in the strict three-hour baseline settings.
 The short-discrete research extension is provided separately and preserves partial
 outputs. The test partition was previously inspected, and the diagnostic endpoint
 is index-encounter ACS/MI rather than 30-day MACE. No K, R, FAE or monetary-cost
-analysis is applied to AERT. [Public materials](https://github.com/Sheldon0106/ActionRef/blob/v1.0.0-jamia-submission/results/aert/README.md) include
+analysis is applied to AERT. [Public materials](https://github.com/Sheldon0106/ActionRef/blob/v1.0.1-jamia-submission/results/aert/README.md) include
 all 16 settings and the native/fixed-H=1 sensitivity.
 
 ## Historical score names

@@ -40,7 +40,7 @@ therefore leaves High unavailable, with no replacement.
 ![The corrected COPD action curve: Low and Mid are retained; the relative High candidate falls below Mid and is rejected by the ordering rule.](assets/figures/copd-partial-output.png)
 
 [Editable SVG](assets/figures/copd-partial-output.svg) ·
-[PDF](assets/figures/copd-partial-output.pdf) · [R source](https://github.com/Sheldon0106/ActionRef/blob/v1.0.0-jamia-submission/scripts/figures/copd.R)
+[PDF](assets/figures/copd-partial-output.pdf) · [R source](https://github.com/Sheldon0106/ActionRef/blob/v1.0.1-jamia-submission/scripts/figures/copd.R)
 
 Points show recorded-action rates in supported learning bins; the neutral line is
 the fitted isotonic curve. Vertical lines locate the two retained operating
@@ -48,7 +48,7 @@ references. The orange cross marks the rejected High crossing at bin 50; the
 horizontal orange line shows its relative probability target. The corrected action
 is documented bronchodilator administration/start within 24 hours OR the legacy
 Pyxis steroid-record proxy. Counts refer to encounters. No uncertainty band is
-plotted. [Source aggregates](https://github.com/Sheldon0106/ActionRef/blob/v1.0.0-jamia-submission/results/copd/validation_v2_corrected/README.md)
+plotted. [Source aggregates](https://github.com/Sheldon0106/ActionRef/blob/v1.0.1-jamia-submission/results/copd/validation_v2_corrected/README.md)
 support eTables 21, 22 and 39.
 
 **Partial output is a valid result.** The 500 reference re-estimations describe

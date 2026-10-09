@@ -96,7 +96,7 @@ contain 294,659 encounters; 54 complete rows fall in bins below the support limi
 Use the [reproduction guide](paper-reproduction.md) for commands. Record the actual
 source releases and preprocessing versions when preparing new analysis tables.
 
-## Additional-application inputs and public scope
+## COPD and supplementary AERT inputs
 
 COPD uses the supplied balanced-logistic `score_COPD_AutoScore` from
 `autoscore_copd.ipynb`. `AutoScore` is a historical column/configuration label for
@@ -120,4 +120,4 @@ not reconstructed from these public bins.
 
 No patient records, identifiers, notes, annotation/linkage packs, individual
 predictions or record-identifying source offsets are distributed. See the
-[source mapping](evidence.md) and [AERT scope](https://github.com/Sheldon0106/ActionRef/blob/v1.0.0-jamia-submission/results/aert/README.md).
+[source mapping](evidence.md) and [AERT scope](https://github.com/Sheldon0106/ActionRef/blob/v1.0.1-jamia-submission/results/aert/README.md).

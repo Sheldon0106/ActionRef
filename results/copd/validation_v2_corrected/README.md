@@ -1,6 +1,7 @@
 # Corrected COPD application
 
-These aggregates support **Table 4 and Supplement eTables 21, 22, 39 and 41**.
+COPD is the paper's additional main-text application. These aggregates support
+**Supplement eTables 20–22, 39 and 41**.
 They use the supplied balanced-logistic `score_COPD_AutoScore` without score
 refitting. Evaluation is **conditional on the supplied score**.
 
@@ -15,8 +16,9 @@ ordering rejects it without replacement.
 
 | Paper item | Aggregate source |
 |---|---|
+| eTable 20 | `configs/copd_corrected.json`, `tables/cohort_summary.csv` and the action-definition audits describe the application and its evaluation role |
 | eTable 21 | `reference/module2_point_anchors.csv`, `reference/stability_summary_package.csv`, `reference/joint_tier_audit_package.csv` and `reference/adjacent_gap_package.csv` |
-| Table 4 and eTable 22 | Corrected rows of `tables/operating_comparison.csv` and `tables/operating_intervals.csv` |
+| COPD main-text operating results and eTable 22 | Corrected rows of `tables/operating_comparison.csv` and `tables/operating_intervals.csv` |
 | eTable 39 | `reference/stability_summary_package.csv`, `reference/joint_summary_package.json` and the joint/adjacent-gap summaries |
 | eTable 41 | `tables/predictive_point.csv`, `tables/predictive_intervals.csv`, `tables/cohort_summary.csv` and corrected score-fit-excluded operating rows |
 | COPD partial-output illustration | `reference/module2_response_curve.csv` and `reference/module2_point_anchors.csv` |

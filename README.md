@@ -8,7 +8,7 @@ understand local practice, examine alert workload, and compare candidate thresho
 under a stated capacity or consequence scenario.
 
 The Python package is `universal-cutoff`; the import is `universal_cutoff`.
-Software version: **1.0.0** · [MIT license](LICENSE).
+Software version: **1.0.1** · [MIT license](LICENSE).
 
 [Get started](docs/quickstart.md) · [Prepare your data](docs/data.md) ·
 [Interpret references](docs/references.md) · [API](docs/API_REFERENCE.md) ·
@@ -109,14 +109,15 @@ belong to that analysis; the software learns references for the supplied data.
 
 ## Documentation and repository
 
-The paper centers on **sepsis ESRP**, with **COPD** and the **HEART-derived AERT
-score** as additional applications:
+The paper centers on **sepsis ESRP**, with **COPD** as an additional main-text
+application. The **HEART-derived AERT score** is an exploratory example in the
+Supplement:
 
 | Application | Evidence and source |
 |---|---|
 | Sepsis ESRP | MIMIC references 27 / 36 / 51; Stanford local re-estimation 26 / 36 / 50; candidate 31 under R = 11,299/804. See the [primary results](docs/paper-results.md). |
-| COPD | Corrected recorded-action definition, references 17.7798 / 55.0719 / unavailable, and evaluation conditional on the supplied score. [Corrected aggregates](results/copd/validation_v2_corrected/README.md) support eTables 21, 22, 39 and 41. |
-| HEART-derived AERT | Exploratory short-discrete application, including response-definition sensitivity and partial outputs. [Aggregate results and executable reproduction](results/aert/README.md) support eTables 32–34 and 38 and Supplementary Data 1–2. |
+| COPD | Additional main-text application, with corrected recorded actions, references 17.7798 / 55.0719 / unavailable, and evaluation conditional on the supplied score. [Corrected aggregates](results/copd/validation_v2_corrected/README.md) support eTables 20–22, 39 and 41. |
+| HEART-derived AERT | Supplementary exploratory example of short-discrete reference learning, response-definition sensitivity and shared thresholds. [Aggregate results and executable reproduction](results/aert/README.md) support eMethods 1–2, eTables 32–34 and 38, and Supplementary Data 1–2. |
 
 AKI and pneumonia materials remain as software development and compatibility
 records; they are not reported in the paper. The [evidence guide](docs/evidence.md)

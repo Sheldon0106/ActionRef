@@ -119,7 +119,7 @@ def calculate(source=SOURCE):
     assert len(operating.loc[operating.scale.eq("native")]) == 55
     assert dict(zip(native_main.level, native_main.threshold)) == {"Mid": 3.0, "High": 6.0}
     return {
-        "table4_aert": native_main,
+        "etable34_h02_native_operating": native_main,
         "etable32_populations": pd.DataFrame(read_json(source, "population_registry.json")),
         "etable33_reference_replay": pd.DataFrame(references),
         "etable33_anchor_uncertainty": pd.DataFrame(read_json(source, "development_anchor_summary.json")),
