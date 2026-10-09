@@ -1,5 +1,11 @@
 # Controlled V7 regression report
 
+This is a historical software regression record. The COPD values below use the
+early bin-width-2.5 compatibility setting: Mid 55.04 is not the paper's corrected
+Mid 55.0719. See the [current evidence](evidence.md#copd) and corrected aggregate
+bundle for the paper application. AKI and pneumonia development records are not
+reported in the paper.
+
 - Contract: Universal Cutoff Framework v0.3 Final
 - Executable reference: completed-bootstrap V7 notebook
 - Clinical inputs read from an ignored private directory. Not copied into this repository.

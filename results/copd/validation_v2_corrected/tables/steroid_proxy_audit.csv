@@ -1,0 +1,2 @@
+source,positive_encounters,missing_stored_flag,supported_stored_positives,full_current_raw_reconstruction_positive,raw_positive_stored_zero,raw_positive_stored_missing,raw_matching_records,definition,action,limitation
+stored historical steroid proxy,17258,7367,17258,18375,914,203,49080,legacy Pyxis record proxy; first matching record 0-24h; ophthalmic-keyword exclusion,retain stored field unchanged; missing-to-zero retained and disclosed,"legacy field undercovers full current raw extraction; no validated dose, route, indication or actual administration"

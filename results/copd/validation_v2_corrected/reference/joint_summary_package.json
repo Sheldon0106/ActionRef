@@ -1,0 +1,8 @@
+{
+  "requested_replicates": 500,
+  "evaluated_replicates": 500,
+  "failed_replicates": 0,
+  "complete_three_tier_probability": 0.284,
+  "strict_ordering_probability": 0.1,
+  "adjacent_tier_collision_probability": 0.184
+}

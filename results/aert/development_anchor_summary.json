@@ -1,0 +1,3790 @@
+[
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.245,
+    "operational_availability": 0.245,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "2.0": 41,
+      "3.0": 8
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 49,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.245,
+    "operational_availability": 0.21,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 36,
+      "4.0": 6
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 42,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 2.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.86,
+    "operational_frequency": {
+      "2.0": 172,
+      "3.0": 28
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.87,
+    "exact_threshold_fraction": 0.755,
+    "operational_frequency": {
+      "3.0": 151,
+      "4.0": 22,
+      "5.0": 1
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 174,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.245,
+    "operational_availability": 0.245,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 41,
+      "4.0": 8
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 49,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.245,
+    "operational_availability": 0.21,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 36,
+      "5.0": 6
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 42,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.86,
+    "operational_frequency": {
+      "3.0": 172,
+      "4.0": 28
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.87,
+    "exact_threshold_fraction": 0.755,
+    "operational_frequency": {
+      "4.0": 151,
+      "5.0": 22,
+      "6.0": 1
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 174,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.225,
+    "operational_availability": 0.02,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 4
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 4,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.225,
+    "operational_availability": 0.225,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 41,
+      "4.0": 4
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 45,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.225,
+    "operational_availability": 0.225,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "6.0": 27,
+      "5.0": 18
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 45,
+      "lower_025": 5.0,
+      "median": 6.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.055,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 11
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 11,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.945,
+    "operational_frequency": {
+      "3.0": 189,
+      "4.0": 11
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.99,
+    "exact_threshold_fraction": 0.555,
+    "operational_frequency": {
+      "5.0": 81,
+      "6.0": 111,
+      "4.0": 6
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 198,
+      "lower_025": 4.0,
+      "median": 6.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.225,
+    "operational_availability": 0.02,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 4
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 4,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.225,
+    "operational_availability": 0.225,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 41,
+      "5.0": 4
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 45,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.225,
+    "operational_availability": 0.225,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "7.0": 27,
+      "6.0": 18
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 45,
+      "lower_025": 6.0,
+      "median": 7.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.055,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 11
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 11,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.945,
+    "operational_frequency": {
+      "4.0": 189,
+      "5.0": 11
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.99,
+    "exact_threshold_fraction": 0.555,
+    "operational_frequency": {
+      "6.0": 81,
+      "7.0": 111,
+      "5.0": 6
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 198,
+      "lower_025": 5.0,
+      "median": 7.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 2.0,
+    "semantic_availability": 0.965,
+    "operational_availability": 0.965,
+    "exact_threshold_fraction": 0.685,
+    "operational_frequency": {
+      "2.0": 137,
+      "3.0": 56
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 193,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.965,
+    "operational_availability": 0.735,
+    "exact_threshold_fraction": 0.495,
+    "operational_frequency": {
+      "3.0": 99,
+      "5.0": 24,
+      "4.0": 24
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 147,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 2.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.71,
+    "operational_frequency": {
+      "2.0": 142,
+      "3.0": 58
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.765,
+    "exact_threshold_fraction": 0.52,
+    "operational_frequency": {
+      "3.0": 104,
+      "5.0": 24,
+      "4.0": 25
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 153,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.965,
+    "operational_availability": 0.965,
+    "exact_threshold_fraction": 0.685,
+    "operational_frequency": {
+      "3.0": 137,
+      "4.0": 56
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 193,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.965,
+    "operational_availability": 0.735,
+    "exact_threshold_fraction": 0.495,
+    "operational_frequency": {
+      "4.0": 99,
+      "6.0": 24,
+      "5.0": 24
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 147,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.71,
+    "operational_frequency": {
+      "3.0": 142,
+      "4.0": 58
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.765,
+    "exact_threshold_fraction": 0.52,
+    "operational_frequency": {
+      "4.0": 104,
+      "6.0": 24,
+      "5.0": 25
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 153,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.265,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 53
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 53,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.93,
+    "exact_threshold_fraction": 0.665,
+    "operational_frequency": {
+      "3.0": 133,
+      "4.0": 53
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 186,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.93,
+    "exact_threshold_fraction": 0.905,
+    "operational_frequency": {
+      "6.0": 181,
+      "7.0": 5
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 186,
+      "lower_025": 6.0,
+      "median": 6.0,
+      "upper_975": 6.375
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.29,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 58
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 58,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.71,
+    "operational_frequency": {
+      "3.0": 142,
+      "4.0": 58
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.925,
+    "operational_frequency": {
+      "6.0": 185,
+      "7.0": 15
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 6.0,
+      "median": 6.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.265,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 53
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 53,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.93,
+    "exact_threshold_fraction": 0.665,
+    "operational_frequency": {
+      "4.0": 133,
+      "5.0": 53
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 186,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.93,
+    "exact_threshold_fraction": 0.905,
+    "operational_frequency": {
+      "7.0": 181,
+      "8.0": 5
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 186,
+      "lower_025": 7.0,
+      "median": 7.0,
+      "upper_975": 7.375
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.29,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 58
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 58,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.71,
+    "operational_frequency": {
+      "4.0": 142,
+      "5.0": 58
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.925,
+    "operational_frequency": {
+      "7.0": 185,
+      "8.0": 15
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 7.0,
+      "median": 7.0,
+      "upper_975": 8.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.205,
+    "operational_availability": 0.205,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 38,
+      "2.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 41,
+      "lower_025": 2.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.205,
+    "operational_availability": 0.03,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 3,
+      "3.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 6,
+      "lower_025": 3.0,
+      "median": 3.5,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.98,
+    "exact_threshold_fraction": 0.865,
+    "operational_frequency": {
+      "3.0": 173,
+      "2.0": 23
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 196,
+      "lower_025": 2.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.02,
+    "operational_availability": 0.02,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 3,
+      "2.0": 1
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 4,
+      "lower_025": 2.075,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.215,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 17,
+      "3.0": 22,
+      "5.0": 4
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 43,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.205,
+    "operational_availability": 0.205,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 38,
+      "3.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 41,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.205,
+    "operational_availability": 0.03,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "5.0": 3,
+      "4.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 6,
+      "lower_025": 4.0,
+      "median": 4.5,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.98,
+    "exact_threshold_fraction": 0.865,
+    "operational_frequency": {
+      "4.0": 173,
+      "3.0": 23
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 196,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.02,
+    "operational_availability": 0.02,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 3,
+      "3.0": 1
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 4,
+      "lower_025": 3.075,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.215,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "5.0": 17,
+      "4.0": 22,
+      "6.0": 4
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 43,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.195,
+    "operational_availability": 0.025,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 5
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 5,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.195,
+    "operational_availability": 0.195,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 34,
+      "4.0": 5
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 39,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.195,
+    "operational_availability": 0.195,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "5.0": 10,
+      "6.0": 29
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 39,
+      "lower_025": 5.0,
+      "median": 6.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.05,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 10
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 10,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.95,
+    "operational_frequency": {
+      "3.0": 190,
+      "4.0": 10
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.71,
+    "operational_frequency": {
+      "5.0": 48,
+      "6.0": 142,
+      "4.0": 9,
+      "7.0": 1
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 4.0,
+      "median": 6.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.195,
+    "operational_availability": 0.025,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 5
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 5,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.195,
+    "operational_availability": 0.195,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 34,
+      "5.0": 5
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 39,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.195,
+    "operational_availability": 0.195,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "6.0": 10,
+      "7.0": 29
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 39,
+      "lower_025": 6.0,
+      "median": 7.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.05,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 10
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 10,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.95,
+    "operational_frequency": {
+      "4.0": 190,
+      "5.0": 10
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.71,
+    "operational_frequency": {
+      "6.0": 48,
+      "7.0": 142,
+      "5.0": 9,
+      "8.0": 1
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 5.0,
+      "median": 7.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.97,
+    "operational_availability": 0.945,
+    "exact_threshold_fraction": 0.845,
+    "operational_frequency": {
+      "3.0": 169,
+      "2.0": 20
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 189,
+      "lower_025": 2.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.025,
+    "operational_availability": 0.025,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 5
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 5,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.97,
+    "operational_availability": 0.18,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "5.0": 15,
+      "3.0": 17,
+      "4.0": 4
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 36,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.99,
+    "operational_availability": 0.965,
+    "exact_threshold_fraction": 0.865,
+    "operational_frequency": {
+      "3.0": 173,
+      "2.0": 20
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 193,
+      "lower_025": 2.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.025,
+    "operational_availability": 0.025,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 5
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 5,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.99,
+    "operational_availability": 0.18,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "5.0": 15,
+      "3.0": 17,
+      "4.0": 4
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 36,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.97,
+    "operational_availability": 0.945,
+    "exact_threshold_fraction": 0.845,
+    "operational_frequency": {
+      "4.0": 169,
+      "3.0": 20
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 189,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.025,
+    "operational_availability": 0.025,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 5
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 5,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.97,
+    "operational_availability": 0.18,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "6.0": 15,
+      "4.0": 17,
+      "5.0": 4
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 36,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.995,
+    "operational_availability": 0.97,
+    "exact_threshold_fraction": 0.87,
+    "operational_frequency": {
+      "4.0": 174,
+      "3.0": 20
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 194,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.025,
+    "operational_availability": 0.025,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 5
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 5,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.995,
+    "operational_availability": 0.185,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "6.0": 16,
+      "4.0": 17,
+      "5.0": 4
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 37,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.225,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 45
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 45,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.93,
+    "exact_threshold_fraction": 0.705,
+    "operational_frequency": {
+      "3.0": 141,
+      "4.0": 45
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 186,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.93,
+    "exact_threshold_fraction": 0.895,
+    "operational_frequency": {
+      "6.0": 179,
+      "7.0": 7
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 186,
+      "lower_025": 6.0,
+      "median": 6.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.235,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 47
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 47,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.765,
+    "operational_frequency": {
+      "3.0": 153,
+      "4.0": 47
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.915,
+    "operational_frequency": {
+      "6.0": 183,
+      "7.0": 17
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 6.0,
+      "median": 6.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.225,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 45
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 45,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.93,
+    "exact_threshold_fraction": 0.705,
+    "operational_frequency": {
+      "4.0": 141,
+      "5.0": 45
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 186,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 0.93,
+    "operational_availability": 0.93,
+    "exact_threshold_fraction": 0.895,
+    "operational_frequency": {
+      "7.0": 179,
+      "8.0": 7
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 186,
+      "lower_025": 7.0,
+      "median": 7.0,
+      "upper_975": 8.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.235,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 47
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 47,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.765,
+    "operational_frequency": {
+      "4.0": 153,
+      "5.0": 47
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.915,
+    "operational_frequency": {
+      "7.0": 183,
+      "8.0": 17
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 7.0,
+      "median": 7.0,
+      "upper_975": 8.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 2.0,
+    "semantic_availability": 0.88,
+    "operational_availability": 0.875,
+    "exact_threshold_fraction": 0.875,
+    "operational_frequency": {
+      "2.0": 175
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 175,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 2.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.005,
+    "operational_availability": 0.005,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "2.0": 1
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 1,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 2.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.88,
+    "operational_availability": 0.88,
+    "exact_threshold_fraction": 0.48,
+    "operational_frequency": {
+      "4.0": 67,
+      "3.0": 96,
+      "5.0": 13
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 176,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 2.0,
+    "semantic_availability": 0.995,
+    "operational_availability": 0.99,
+    "exact_threshold_fraction": 0.99,
+    "operational_frequency": {
+      "2.0": 198
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 198,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 2.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.005,
+    "operational_availability": 0.005,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "2.0": 1
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 1,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 2.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.995,
+    "operational_availability": 0.995,
+    "exact_threshold_fraction": 0.55,
+    "operational_frequency": {
+      "4.0": 76,
+      "3.0": 110,
+      "5.0": 13
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 199,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.88,
+    "operational_availability": 0.875,
+    "exact_threshold_fraction": 0.875,
+    "operational_frequency": {
+      "3.0": 175
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 175,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.005,
+    "operational_availability": 0.005,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 1
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 1,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.88,
+    "operational_availability": 0.88,
+    "exact_threshold_fraction": 0.48,
+    "operational_frequency": {
+      "5.0": 67,
+      "4.0": 96,
+      "6.0": 13
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 176,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.995,
+    "operational_availability": 0.99,
+    "exact_threshold_fraction": 0.99,
+    "operational_frequency": {
+      "3.0": 198
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 198,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.005,
+    "operational_availability": 0.005,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 1
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 1,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.995,
+    "operational_availability": 0.995,
+    "exact_threshold_fraction": 0.55,
+    "operational_frequency": {
+      "5.0": 76,
+      "4.0": 110,
+      "6.0": 13
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 199,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.815,
+    "operational_availability": 0.36,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "2.0": 4,
+      "3.0": 68
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 72,
+      "lower_025": 2.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.815,
+    "operational_availability": 0.815,
+    "exact_threshold_fraction": 0.46,
+    "operational_frequency": {
+      "3.0": 92,
+      "4.0": 71
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 163,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 0.815,
+    "operational_availability": 0.815,
+    "exact_threshold_fraction": 0.62,
+    "operational_frequency": {
+      "7.0": 5,
+      "6.0": 124,
+      "5.0": 34
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 163,
+      "lower_025": 5.0,
+      "median": 6.0,
+      "upper_975": 6.949999999999989
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.435,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "2.0": 5,
+      "3.0": 82
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 87,
+      "lower_025": 2.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.57,
+    "operational_frequency": {
+      "3.0": 114,
+      "4.0": 86
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.755,
+    "operational_frequency": {
+      "7.0": 5,
+      "6.0": 151,
+      "5.0": 44
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 5.0,
+      "median": 6.0,
+      "upper_975": 6.025000000000006
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 0.815,
+    "operational_availability": 0.36,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 4,
+      "4.0": 68
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 72,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.815,
+    "operational_availability": 0.815,
+    "exact_threshold_fraction": 0.46,
+    "operational_frequency": {
+      "4.0": 92,
+      "5.0": 71
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 163,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 0.815,
+    "operational_availability": 0.815,
+    "exact_threshold_fraction": 0.62,
+    "operational_frequency": {
+      "8.0": 5,
+      "7.0": 124,
+      "6.0": 34
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 163,
+      "lower_025": 6.0,
+      "median": 7.0,
+      "upper_975": 7.949999999999989
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.435,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 5,
+      "4.0": 82
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 87,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.57,
+    "operational_frequency": {
+      "4.0": 114,
+      "5.0": 86
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.755,
+    "operational_frequency": {
+      "8.0": 5,
+      "7.0": 151,
+      "6.0": 44
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 6.0,
+      "median": 7.0,
+      "upper_975": 7.025000000000006
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 2.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.99,
+    "exact_threshold_fraction": 0.975,
+    "operational_frequency": {
+      "2.0": 195,
+      "3.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 198,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 2.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.01,
+    "operational_availability": 0.01,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "2.0": 2
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 2,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 2.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.985,
+    "exact_threshold_fraction": 0.475,
+    "operational_frequency": {
+      "5.0": 74,
+      "3.0": 95,
+      "4.0": 28
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 197,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 2.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.99,
+    "exact_threshold_fraction": 0.975,
+    "operational_frequency": {
+      "2.0": 195,
+      "3.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 198,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 2.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.01,
+    "operational_availability": 0.01,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "2.0": 2
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 2,
+      "lower_025": 2.0,
+      "median": 2.0,
+      "upper_975": 2.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.985,
+    "exact_threshold_fraction": 0.475,
+    "operational_frequency": {
+      "5.0": 74,
+      "3.0": 95,
+      "4.0": 28
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 197,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.99,
+    "exact_threshold_fraction": 0.975,
+    "operational_frequency": {
+      "3.0": 195,
+      "4.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 198,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.01,
+    "operational_availability": 0.01,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 2
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 2,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.985,
+    "exact_threshold_fraction": 0.475,
+    "operational_frequency": {
+      "6.0": 74,
+      "4.0": 95,
+      "5.0": 28
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 197,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.99,
+    "exact_threshold_fraction": 0.975,
+    "operational_frequency": {
+      "3.0": 195,
+      "4.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 198,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.01,
+    "operational_availability": 0.01,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "3.0": 2
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 2,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.985,
+    "exact_threshold_fraction": 0.475,
+    "operational_frequency": {
+      "6.0": 74,
+      "4.0": 95,
+      "5.0": 28
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 197,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.65,
+    "exact_threshold_fraction": 0.65,
+    "operational_frequency": {
+      "3.0": 130
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 130,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.65,
+    "operational_frequency": {
+      "4.0": 130,
+      "3.0": 70
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.965,
+    "operational_frequency": {
+      "6.0": 193,
+      "7.0": 7
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 6.0,
+      "median": 6.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.65,
+    "exact_threshold_fraction": 0.65,
+    "operational_frequency": {
+      "3.0": 130
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 130,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.65,
+    "operational_frequency": {
+      "4.0": 130,
+      "3.0": 70
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.965,
+    "operational_frequency": {
+      "6.0": 193,
+      "7.0": 7
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 6.0,
+      "median": 6.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.65,
+    "exact_threshold_fraction": 0.65,
+    "operational_frequency": {
+      "4.0": 130
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 130,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 5.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.65,
+    "operational_frequency": {
+      "5.0": 130,
+      "4.0": 70
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.965,
+    "operational_frequency": {
+      "7.0": 193,
+      "8.0": 7
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 7.0,
+      "median": 7.0,
+      "upper_975": 8.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.65,
+    "exact_threshold_fraction": 0.65,
+    "operational_frequency": {
+      "4.0": 130
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 130,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 5.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.65,
+    "operational_frequency": {
+      "5.0": 130,
+      "4.0": 70
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.965,
+    "operational_frequency": {
+      "7.0": 193,
+      "8.0": 7
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 7.0,
+      "median": 7.0,
+      "upper_975": 8.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.79,
+    "operational_availability": 0.79,
+    "exact_threshold_fraction": 0.715,
+    "operational_frequency": {
+      "3.0": 143,
+      "2.0": 15
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 158,
+      "lower_025": 2.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.79,
+    "operational_availability": 0.355,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 48,
+      "3.0": 8,
+      "5.0": 15
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 71,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.88,
+    "operational_frequency": {
+      "3.0": 176,
+      "2.0": 24
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 2.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.44,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "4.0": 57,
+      "5.0": 20,
+      "3.0": 11
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 88,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.79,
+    "operational_availability": 0.79,
+    "exact_threshold_fraction": 0.715,
+    "operational_frequency": {
+      "4.0": 143,
+      "3.0": 15
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 158,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.79,
+    "operational_availability": 0.355,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "5.0": 48,
+      "4.0": 8,
+      "6.0": 15
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 71,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.88,
+    "operational_frequency": {
+      "4.0": 176,
+      "3.0": 24
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.44,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "5.0": 57,
+      "6.0": 20,
+      "4.0": 11
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 88,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.795,
+    "operational_availability": 0.495,
+    "exact_threshold_fraction": 0.495,
+    "operational_frequency": {
+      "3.0": 99
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 99,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.795,
+    "operational_availability": 0.795,
+    "exact_threshold_fraction": 0.495,
+    "operational_frequency": {
+      "3.0": 60,
+      "4.0": 99
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 159,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 0.795,
+    "operational_availability": 0.795,
+    "exact_threshold_fraction": 0.725,
+    "operational_frequency": {
+      "6.0": 145,
+      "5.0": 11,
+      "7.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 159,
+      "lower_025": 5.0,
+      "median": 6.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.6,
+    "exact_threshold_fraction": 0.6,
+    "operational_frequency": {
+      "3.0": 120
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 120,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.6,
+    "operational_frequency": {
+      "3.0": 80,
+      "4.0": 120
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.915,
+    "operational_frequency": {
+      "6.0": 183,
+      "5.0": 14,
+      "7.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 5.0,
+      "median": 6.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.795,
+    "operational_availability": 0.495,
+    "exact_threshold_fraction": 0.495,
+    "operational_frequency": {
+      "4.0": 99
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 99,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 5.0,
+    "semantic_availability": 0.795,
+    "operational_availability": 0.795,
+    "exact_threshold_fraction": 0.495,
+    "operational_frequency": {
+      "4.0": 60,
+      "5.0": 99
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 159,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 0.795,
+    "operational_availability": 0.795,
+    "exact_threshold_fraction": 0.725,
+    "operational_frequency": {
+      "7.0": 145,
+      "6.0": 11,
+      "8.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 159,
+      "lower_025": 6.0,
+      "median": 7.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.6,
+    "exact_threshold_fraction": 0.6,
+    "operational_frequency": {
+      "4.0": 120
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 120,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 5.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.6,
+    "operational_frequency": {
+      "4.0": 80,
+      "5.0": 120
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.915,
+    "operational_frequency": {
+      "7.0": 183,
+      "6.0": 14,
+      "8.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 6.0,
+      "median": 7.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.97,
+    "operational_frequency": {
+      "3.0": 194,
+      "2.0": 6
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 2.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.365,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "5.0": 62,
+      "3.0": 4,
+      "4.0": 7
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 73,
+      "lower_025": 3.0,
+      "median": 5.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 0.975,
+    "operational_availability": 0.975,
+    "exact_threshold_fraction": 0.945,
+    "operational_frequency": {
+      "3.0": 189,
+      "2.0": 6
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 195,
+      "lower_025": 2.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.975,
+    "operational_availability": 0.355,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "5.0": 60,
+      "3.0": 4,
+      "4.0": 7
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 71,
+      "lower_025": 3.0,
+      "median": 5.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.97,
+    "operational_frequency": {
+      "4.0": 194,
+      "3.0": 6
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.365,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "6.0": 62,
+      "4.0": 4,
+      "5.0": 7
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 73,
+      "lower_025": 4.0,
+      "median": 6.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 0.975,
+    "operational_availability": 0.975,
+    "exact_threshold_fraction": 0.945,
+    "operational_frequency": {
+      "4.0": 189,
+      "3.0": 6
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 195,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": null,
+    "semantic_availability": 0.0,
+    "operational_availability": 0.0,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {},
+    "conditional_threshold_interval": {
+      "finite_replicates": 0,
+      "lower_025": null,
+      "median": null,
+      "upper_975": null
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": null,
+    "semantic_availability": 0.975,
+    "operational_availability": 0.355,
+    "exact_threshold_fraction": null,
+    "operational_frequency": {
+      "6.0": 60,
+      "4.0": 4,
+      "5.0": 7
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 71,
+      "lower_025": 4.0,
+      "median": 6.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.77,
+    "exact_threshold_fraction": 0.77,
+    "operational_frequency": {
+      "3.0": 154
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 154,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.715,
+    "operational_frequency": {
+      "3.0": 46,
+      "4.0": 143,
+      "5.0": 11
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.985,
+    "operational_frequency": {
+      "6.0": 197,
+      "7.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 6.0,
+      "median": 6.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 3.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.77,
+    "exact_threshold_fraction": 0.77,
+    "operational_frequency": {
+      "3.0": 154
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 154,
+      "lower_025": 3.0,
+      "median": 3.0,
+      "upper_975": 3.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.715,
+    "operational_frequency": {
+      "3.0": 46,
+      "4.0": 143,
+      "5.0": 11
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 3.0,
+      "median": 4.0,
+      "upper_975": 5.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "native",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 6.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.985,
+    "operational_frequency": {
+      "6.0": 197,
+      "7.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 6.0,
+      "median": 6.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.77,
+    "exact_threshold_fraction": 0.77,
+    "operational_frequency": {
+      "4.0": 154
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 154,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "Mid",
+    "full_data_threshold": 5.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.715,
+    "operational_frequency": {
+      "4.0": 46,
+      "5.0": 143,
+      "6.0": 11
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "package_default_8",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.985,
+    "operational_frequency": {
+      "7.0": 197,
+      "8.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 7.0,
+      "median": 7.0,
+      "upper_975": 7.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Low",
+    "full_data_threshold": 4.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 0.77,
+    "exact_threshold_fraction": 0.77,
+    "operational_frequency": {
+      "4.0": 154
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 154,
+      "lower_025": 4.0,
+      "median": 4.0,
+      "upper_975": 4.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "Mid",
+    "full_data_threshold": 5.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.715,
+    "operational_frequency": {
+      "4.0": 46,
+      "5.0": 143,
+      "6.0": 11
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 4.0,
+      "median": 5.0,
+      "upper_975": 6.0
+    }
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "scale": "fill1",
+    "policy": "short_semantic_tail_guarded_v2",
+    "level": "High",
+    "full_data_threshold": 7.0,
+    "semantic_availability": 1.0,
+    "operational_availability": 1.0,
+    "exact_threshold_fraction": 0.985,
+    "operational_frequency": {
+      "7.0": 197,
+      "8.0": 3
+    },
+    "conditional_threshold_interval": {
+      "finite_replicates": 200,
+      "lower_025": 7.0,
+      "median": 7.0,
+      "upper_975": 7.0
+    }
+  }
+]

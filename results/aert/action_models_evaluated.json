@@ -1,0 +1,733 @@
+[
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_hadm",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0
+    ],
+    "action_probability": [
+      0.2757201646090535,
+      0.5644891122278057,
+      0.6970740103270223,
+      0.8203309692671394,
+      0.842741935483871,
+      0.9225806451612903,
+      0.94
+    ],
+    "development_action_rate": 0.6809605488850772,
+    "default8": {
+      "eligible": false,
+      "gate_passed": false,
+      "any_anchor": false,
+      "unique_anchors": 0,
+      "references": {},
+      "status": "score_support_abstention"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Low": 2.0,
+        "High": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_baseline_raw",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0
+    ],
+    "action_probability": [
+      0.08403361344537816,
+      0.15,
+      0.3257042253521127,
+      0.5423728813559322,
+      0.657258064516129,
+      0.7837837837837838,
+      0.9183673469387755
+    ],
+    "development_action_rate": 0.3826239578762615,
+    "default8": {
+      "eligible": false,
+      "gate_passed": false,
+      "any_anchor": false,
+      "unique_anchors": 0,
+      "references": {},
+      "status": "score_support_abstention"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Mid": 3.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_hadm",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.2757201646090535,
+      0.5634782608695652,
+      0.6889692585895117,
+      0.8161648177496038,
+      0.8161648177496038,
+      0.8914027149321267,
+      0.9541284403669725,
+      0.9541284403669725
+    ],
+    "development_action_rate": 0.6809605488850772,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Low": 2.0,
+        "High": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Low": 2.0,
+        "High": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "3h_report_evidence_proxy_expanded_coded_raw",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.08403361344537816,
+      0.1413237924865832,
+      0.3228200371057514,
+      0.5169712793733682,
+      0.6218487394957983,
+      0.7289719626168224,
+      0.8867924528301887,
+      0.9090909090909091
+    ],
+    "development_action_rate": 0.3826239578762615,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Mid": 3.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Mid": 3.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_hadm",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0
+    ],
+    "action_probability": [
+      0.40707964601769914,
+      0.6722222222222223,
+      0.7382075471698113,
+      0.830028328611898,
+      0.8333333333333334,
+      0.918918918918919,
+      0.9387755102040817
+    ],
+    "development_action_rate": 0.7593896713615024,
+    "default8": {
+      "eligible": false,
+      "gate_passed": false,
+      "any_anchor": false,
+      "unique_anchors": 0,
+      "references": {},
+      "status": "score_support_abstention"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 1,
+      "references": {
+        "Low": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "3h_report_evidence_strict_baseline_raw",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0
+    ],
+    "action_probability": [
+      0.08256880733944955,
+      0.11527377521613832,
+      0.30917874396135264,
+      0.5362318840579711,
+      0.6351351351351351,
+      0.7730496453900709,
+      0.9166666666666666
+    ],
+    "development_action_rate": 0.41420830824804333,
+    "default8": {
+      "eligible": false,
+      "gate_passed": false,
+      "any_anchor": false,
+      "unique_anchors": 0,
+      "references": {},
+      "status": "score_support_abstention"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Mid": 3.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_hadm",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.40707964601769914,
+      0.670487106017192,
+      0.7339901477832512,
+      0.8239845261121856,
+      0.8239845261121856,
+      0.8873239436619719,
+      0.9528301886792453,
+      0.9528301886792453
+    ],
+    "development_action_rate": 0.7593896713615024,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 1,
+      "references": {
+        "Low": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 1,
+      "references": {
+        "Low": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "3h_report_evidence_strict_expanded_coded_raw",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.08256880733944955,
+      0.10089020771513353,
+      0.31139240506329113,
+      0.5144694533762058,
+      0.6060606060606061,
+      0.7184466019417476,
+      0.88,
+      0.9090909090909091
+    ],
+    "development_action_rate": 0.41420830824804333,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Mid": 3.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Mid": 3.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_hadm",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.2694610778443114,
+      0.5383043922369765,
+      0.6738148984198645,
+      0.8034591194968553,
+      0.8271604938271605,
+      0.9101123595505618,
+      0.9101123595505618,
+      0.9565217391304348
+    ],
+    "development_action_rate": 0.638911788953009,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Low": 2.0,
+        "High": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Low": 2.0,
+        "High": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_baseline_raw",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.09406952965235174,
+      0.14616193480546794,
+      0.3108265424912689,
+      0.5048231511254019,
+      0.6137071651090342,
+      0.7736842105263158,
+      0.8923076923076924,
+      0.9130434782608695
+    ],
+    "development_action_rate": 0.3415184871577759,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Mid": 3.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Mid": 3.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_hadm",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.27,
+      0.5362014690451207,
+      0.667063020214031,
+      0.8021739130434783,
+      0.8021739130434783,
+      0.8706293706293706,
+      0.9411764705882353,
+      0.9436619718309859
+    ],
+    "development_action_rate": 0.638911788953009,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Low": 2.0,
+        "High": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 2,
+      "references": {
+        "Low": 2.0,
+        "High": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "6h_report_evidence_proxy_expanded_coded_raw",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.0942622950819672,
+      0.13930885529157666,
+      0.3046683046683047,
+      0.48947368421052634,
+      0.5705705705705706,
+      0.7116788321167883,
+      0.8805970149253731,
+      0.9014084507042254
+    ],
+    "development_action_rate": 0.3415184871577759,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 3,
+      "references": {
+        "Low": 3.0,
+        "Mid": 4.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 3,
+      "references": {
+        "Low": 3.0,
+        "Mid": 4.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_hadm",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.395,
+      0.6433823529411765,
+      0.7094155844155844,
+      0.8064516129032258,
+      0.8166089965397924,
+      0.9057591623036649,
+      0.9076923076923077,
+      0.9565217391304348
+    ],
+    "development_action_rate": 0.7276029055690073,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 1,
+      "references": {
+        "Low": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 1,
+      "references": {
+        "Low": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "6h_report_evidence_strict_baseline_raw",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.08717948717948718,
+      0.12571428571428572,
+      0.2953020134228188,
+      0.49224806201550386,
+      0.5909090909090909,
+      0.7611111111111111,
+      0.890625,
+      0.9130434782608695
+    ],
+    "development_action_rate": 0.3812292358803987,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 3,
+      "references": {
+        "Low": 3.0,
+        "Mid": 4.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 3,
+      "references": {
+        "Low": 3.0,
+        "Mid": 4.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_hadm",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.395,
+      0.6415094339622641,
+      0.7023809523809523,
+      0.807743658210948,
+      0.807743658210948,
+      0.8654545454545455,
+      0.9384615384615385,
+      0.9436619718309859
+    ],
+    "development_action_rate": 0.7276029055690073,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 1,
+      "references": {
+        "Low": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 1,
+      "references": {
+        "Low": 3.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  },
+  {
+    "analysis": "6h_report_evidence_strict_expanded_coded_raw",
+    "score": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "action_probability": [
+      0.08717948717948718,
+      0.11328125,
+      0.2945326278659612,
+      0.4805194805194805,
+      0.5474452554744526,
+      0.6996197718631179,
+      0.875,
+      0.9014084507042254
+    ],
+    "development_action_rate": 0.3812292358803987,
+    "default8": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 3,
+      "references": {
+        "Low": 3.0,
+        "Mid": 4.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "research": {
+      "eligible": true,
+      "gate_passed": true,
+      "any_anchor": true,
+      "unique_anchors": 3,
+      "references": {
+        "Low": 3.0,
+        "Mid": 4.0,
+        "High": 6.0
+      },
+      "status": "references_emitted"
+    },
+    "curve_regression_pass": true
+  }
+]

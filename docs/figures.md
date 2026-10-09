@@ -1,6 +1,6 @@
 # Figure sources and reproduction
 
-All three figures are drawn in **R/grid**, with editable text and vector shapes.
+All figures are drawn in **R/grid**, with editable text and vector shapes.
 `scripts/build_figures.R` assembles the panels in `scripts/figures/`. The scientific
 regions, clinical icons, curves, and comparison charts share one visual system.
 
@@ -98,8 +98,27 @@ The [primary result tables](paper-results.md) report the Brier interval and pair
 difference from the constant comparator. They use patient-cluster resampling
 conditional on the learned curve; these are separate from reference-relearning intervals.
 
-Low, Mid and High consistently use teal, blue and ochre, matching the paper's
-action-curve figure. Operating candidates use purple. The shared color mapping
-is recorded in `configs/figure_palette.json`; all three R figures read it.
+Low, Mid and High consistently use blue (#0072B2), green (#009E73) and orange
+(#D55E00). Operating candidates use purple. The shared color mapping is recorded
+in `configs/figure_palette.json`; all R figures read it.
 
 [SVG](assets/figures/clinical-action.svg) · [PDF](assets/figures/clinical-action.pdf)
+
+## COPD partial output
+
+![Corrected COPD references with the rejected relative High crossing.](assets/figures/copd-partial-output.png)
+
+**Message:** a retained Low/Mid pair with an unavailable High is a valid reference
+output. The [corrected curve and anchors](https://github.com/Sheldon0106/ActionRef/blob/v1.0.0-jamia-submission/results/copd/validation_v2_corrected/README.md)
+provide every plotted coordinate. All 28 supported learning bins are shown; point
+area follows bin encounter count. The orange cross identifies the rejected crossing
+at bin 50, and the orange horizontal line identifies its relative target 0.4278.
+The Low and Mid vertical lines locate the actual retained score thresholds.
+No bootstrap median is substituted for High and no uncertainty band is plotted.
+
+This single-panel figure is 8.5 by 5.5 inches with a 12/10/9-pt type hierarchy.
+The other figures retain their 16-inch repository layouts. See
+[output interpretation](output-states.md#real-data-partial-output-copd) for the
+action definition and ordering rule.
+
+[SVG](assets/figures/copd-partial-output.svg) · [PDF](assets/figures/copd-partial-output.pdf)

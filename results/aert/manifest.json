@@ -1,0 +1,117 @@
+{
+  "analysis": "exploratory HEART-derived AERT; native and fixed H=1 sensitivity",
+  "source_bundles": {
+    "paired_uncertainty": "<analysis-workspace>/built_heart_score/adapted_heart_uncertainty_v27/run_20260924T070809Z_paired_bootstrap200",
+    "action_evaluation": "<analysis-workspace>/built_heart_score/adapted_heart_evidence_v28/run_20261002T082847Z_history_action_calibration",
+    "construction_summaries": "<analysis-workspace>/built_heart_score/manuscript_evidence_v18/run_20260923T051255Z_native_AERT_handoff"
+  },
+  "config": {
+    "path": "configs/aert.json",
+    "sha256": "0eac95f095e0e85a97c237649ac1bc23f17c8d3474c82a2e77757b46ea625a4d",
+    "analysis_role_note": "The original source primary analysis used hospitalization linkage; the reported Table 4 primary analysis uses ADMITTED/HOME. Both settings are explicit in the public configuration."
+  },
+  "files": {
+    "models_frozen.json": {
+      "sha256": "10be584db120979cac8778d1560ed7322ea95908ecbf4ab57042aad7b8f0ea8e",
+      "source_sha256": "c28711bbf11b3775a0f2bce83d696bee2afb78b0932b3e154b36970695737c9e"
+    },
+    "population_registry.json": {
+      "sha256": "c0199bad20afe52073d53b36b8ec2937194d66ff3f140442684620b688e79c13",
+      "source_sha256": "f35a092e207b729803e085dd4c755490ac8f114e56fb5de1ac91e58d350717c0"
+    },
+    "development_curves.json": {
+      "sha256": "5174451d0ef5d3ba86efded19a9cb9577aa6987ec45960901056987a88154ba3",
+      "source_sha256": "f4b0215861fa6e34ab42428e1405779a7eef2805d032834f4741cef6b9ce4259"
+    },
+    "development_anchor_summary.json": {
+      "sha256": "f7fd71435951e4fd6238c7a99dd9d26c6eb174f21bb1920bf765665c95c72927",
+      "source_sha256": "464535e9fd924d780a17fa1f8bccb9a63c33cdb679456c24268f1ad4a1efe447"
+    },
+    "development_stability_summary.json": {
+      "sha256": "f9bf48d1b5cece6c956f2647d9b585ebf18cadaeb8c6ed5caae50c6136f65298",
+      "source_sha256": "bd82172639bcb93e3470842eb04609887febd4af4e2b3966873564c10b14070d"
+    },
+    "test_point.json": {
+      "sha256": "fef603f6e3fc7d71a78c737935407b3b50a3ddc0d36bd55100010fb182413749",
+      "source_sha256": "277b82c4c0076b88ce8b9e3dcb136128de4dc2d2950d6ec22511f8ecceb878ba"
+    },
+    "test_metric_intervals.json": {
+      "sha256": "7d5ca2d96581ec558a91f5842d430355d376500024b7e55c8ed6a726200d8f1a",
+      "source_sha256": "dc8c0df620c09f3c9c83f28c08a19477c69d01741a6d6fc9b25591271e542a85"
+    },
+    "test_operating_point.json": {
+      "sha256": "2dc1cbf0164d0c0e20cb66de6ad0deb367795fa8050dcf56a5d997b93642628c",
+      "source_sha256": "bf8be43ab6b7e66b17b086177fd8a83b772185eb0959bba5221b78ed2a281045"
+    },
+    "test_operating_intervals.json": {
+      "sha256": "c1c1724315e0d7197c1c5e11d4507563799445a57a01cb58dd3943d673972fc8",
+      "source_sha256": "9b62db2bbfedf5a80d1d72c3afdf0b3bcaf78349abff6c3f3e2c5c54baa2546b"
+    },
+    "score_response_distribution.json": {
+      "sha256": "f25ac09f125ff10f4874cee1921d64a757558fc4647a74b6c50aaa8a82e11cce",
+      "source_sha256": "672571e89fd23a730f6b8e404a8186ff63716252f3c5595f716e5ce6d3894ef8"
+    },
+    "paired_test_intervals.json": {
+      "sha256": "2c39dacab12d2ec73af2d1b41866208c61370b883bfe3cbe54595347d6d97654",
+      "source_sha256": "15700e21ffae5839cb3cf58eb56640a38496fba30b29b674d7cafa7140a17815"
+    },
+    "action_calibration_points.json": {
+      "sha256": "41ef5028d33622849f4a675ce079e5c34046d08adacbb3986b33e1dd7a35d508",
+      "source_sha256": "77561bcd7fdea255c225deec4980a690e94a2010c90aeb563d4012a9f026e10b"
+    },
+    "action_calibration_intervals.json": {
+      "sha256": "555514e60c790e937de058f8c747d3d613709c8608908832884812b4a69cf6ea",
+      "source_sha256": "b2a7b115333b109cbbc0433fde4f373a5731191f4907be6383d76746f058ef70"
+    },
+    "action_models_evaluated.json": {
+      "sha256": "905181974364405103b5d19dedda907b098ee93768266c8d57866783aef4b99d",
+      "source_sha256": "5a75c7466fe00a51ba4ac5b89f98e91bd2234b1a6e423a7bbcce05998efeef91"
+    },
+    "action_reliability_bins.json": {
+      "sha256": "f60dfe46edc8d2c7cf912b72c66d23dad8ce6be289a8b670e098deb1d1de9eee",
+      "source_sha256": "003ad0aa05eddc0e491e08b2575bc792443c6e3fdaefc5aafec2760f8393a936"
+    },
+    "component_coverage.csv": {
+      "sha256": "1e97cfab93773daf9aa9e6f30cdf589ff8e8f558e4494c7d0ca6a62e2cab9ab3",
+      "source_sha256": "1e97cfab93773daf9aa9e6f30cdf589ff8e8f558e4494c7d0ca6a62e2cab9ab3"
+    },
+    "component_score_distributions.csv": {
+      "sha256": "2bfab8020506878163ede433b6dd3784a203b809eb832a5837a7f1cbbdc63156",
+      "source_sha256": "2bfab8020506878163ede433b6dd3784a203b809eb832a5837a7f1cbbdc63156"
+    },
+    "cohort_summary.csv": {
+      "sha256": "90f8d31f94864379a4d11b9591ff4a83343e74c8a3e1d5a984666d4a566fdc2e",
+      "source_sha256": "90f8d31f94864379a4d11b9591ff4a83343e74c8a3e1d5a984666d4a566fdc2e"
+    },
+    "included_vs_excluded.csv": {
+      "sha256": "0f9727e67bf6c5621ecbf51703dc8191bb41be7e85ae043d13f8372b6fa7a31b",
+      "source_sha256": "0f9727e67bf6c5621ecbf51703dc8191bb41be7e85ae043d13f8372b6fa7a31b"
+    },
+    "candidate_protocol.json": {
+      "sha256": "6bcbce421acdb5f77ba080b56ecf217a4626329b926d74da11c319e7bccef8c0",
+      "source_sha256": "6b807f423c8db3a8132e08616d52a10ca912789bccfce4ff729d137f29446c4f"
+    },
+    "response_definition_cross_tab.csv": {
+      "sha256": "305fbf7a6fc03d37c691ea448d97b4e88e3435d25b708663ef88c355b400f6b7",
+      "source_sha256": "305fbf7a6fc03d37c691ea448d97b4e88e3435d25b708663ef88c355b400f6b7"
+    },
+    "subgroup_calibration_point_summary.csv": {
+      "sha256": "25cbea1389a4e13c8e5b0861ac4dffb5b679aa18ed6396dd1b6a9990fb902987",
+      "source_sha256": "25cbea1389a4e13c8e5b0861ac4dffb5b679aa18ed6396dd1b6a9990fb902987"
+    }
+  },
+  "paper_items": [
+    "Table 4",
+    "eTables 32-34",
+    "eTable 38",
+    "Supplementary Data 1",
+    "Supplementary Data 2"
+  ],
+  "excluded_materials": [
+    "Patient-level records and identifiers",
+    "Clinical note text and excerpts",
+    "Private annotation and linkage packs",
+    "Source offsets that identify individual records"
+  ],
+  "scope": "Aggregate reproduction; conditional intervals are supplied, not re-estimated from aggregate counts."
+}

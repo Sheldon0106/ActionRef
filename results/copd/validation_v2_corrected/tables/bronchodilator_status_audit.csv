@@ -1,0 +1,14 @@
+status,records,encounters,qualifies,explicit_nonadministration,note
+<missing>,57,33,False,False,encounters can occur under multiple statuses; do not sum encounter counts
+administered,32691,13432,True,False,encounters can occur under multiple statuses; do not sum encounter counts
+administered in other location,48,37,True,False,encounters can occur under multiple statuses; do not sum encounter counts
+confirmed,11,2,False,False,encounters can occur under multiple statuses; do not sum encounter counts
+delayed,6,4,False,False,encounters can occur under multiple statuses; do not sum encounter counts
+delayed administered,233,216,True,False,encounters can occur under multiple statuses; do not sum encounter counts
+hold dose,112,94,False,True,encounters can occur under multiple statuses; do not sum encounter counts
+in other location,49,42,False,False,encounters can occur under multiple statuses; do not sum encounter counts
+not confirmed,3,2,False,True,encounters can occur under multiple statuses; do not sum encounter counts
+not given,3304,2253,False,True,encounters can occur under multiple statuses; do not sum encounter counts
+started,5,5,True,False,encounters can occur under multiple statuses; do not sum encounter counts
+stopped,2,2,False,False,encounters can occur under multiple statuses; do not sum encounter counts
+stopped - unscheduled,2,2,False,False,encounters can occur under multiple statuses; do not sum encounter counts

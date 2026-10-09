@@ -1,0 +1,3 @@
+gap,available_replicates,median,CI_2_5,CI_97_5,nonpositive_probability
+low_mid_gap,142,37.29211530877262,17.278899257755043,50.40646540243868,0.0
+mid_high_gap,142,0.0,0.0,16.33114011372433,0.647887323943662

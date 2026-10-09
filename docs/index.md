@@ -61,10 +61,16 @@ aggregate outputs. [Follow it step by step →](quickstart.md)
 
 ## Explore the evidence
 
-The [sepsis illustration](clinical-example.md) shows what behavioral references
-look like in a clinical dataset. The [evidence guide](evidence.md) distinguishes
-primary research outputs, local diagnostics, sensitivity analyses, and earlier
-compatibility checks.
+The primary application is [sepsis ESRP](clinical-example.md): MIMIC references
+27 / 36 / 51, Stanford local re-estimation 26 / 36 / 50, and candidate 31 under
+R = 11,299/804. [COPD and HEART-derived AERT](evidence.md#additional-applications)
+provide additional applications, including partial-reference output and exploratory
+short-discrete reference learning. The [reported result tables](paper-results.md)
+and [reproduction guide](paper-reproduction.md) connect these applications to the
+paper's tables and Supplementary Data.
+
+AKI and pneumonia are retained as software development and compatibility records;
+they are not reported in the paper.
 
 ActionRef describes recorded practice and supports explicit threshold comparisons.
 The proposed clinical workflow and its evaluation remain part of the local decision.

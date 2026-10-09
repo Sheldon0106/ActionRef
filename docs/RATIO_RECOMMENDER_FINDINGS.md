@@ -1,4 +1,16 @@
-# Choosing R without a cost study — tier defaults and how much R actually matters
+# Optional R scenarios and historical development findings
+
+The tier tables below retain their historical full-sample exploratory settings
+and values. **AKI and pneumonia are behavioral software-development records, not
+reported paper applications.** COPD in these tables also uses its earlier supplied-
+score/action setting. The corrected COPD paper application is documented in the
+[evidence guide](evidence.md#copd).
+
+The current primary sepsis example uses **R = 11,299/804**, a Low-reference workload
+ceiling, and learning-data re-selection described in **Supplement eMethods 3**.
+Its [five-step R guide](R_GUIDANCE.md) distinguishes re-selection from the fixed
+31-versus-27 comparison in **eTable 37**. The historical R=15 results below do not
+replace the current primary example.
 
 Answers the question raised in the Module 3B walkthrough: a user applying the framework
 to a new disease has no literature cost build, so how do they set `R = c_FN / c_FP`?
@@ -31,7 +43,7 @@ decision curve analysis):
 pt = c_FP / (c_FP + c_FN) = 1 / (1 + R)        <=>        R = (1 - pt) / pt
 ```
 
-R is the risk threshold at which a decision-maker is indifferent, written as odds. So a
+R is the ratio of the complementary threshold probabilities, `(1 - pt) / pt`. So a
 scenario value can be read off a **published threshold probability for a comparable
 decision**, with no monetary cost derivation. Equivalently, `R = N - 1`, where N is the
 break-even number of alerts per outcome-positive case at the decision margin. This is
@@ -51,8 +63,9 @@ anchors make the defaults prespecified scenarios, not locally estimated paramete
 | **B** | Serious but not hour-critical, moderate response | Statin primary prevention at 7.5% 10-year ASCVD risk | 7–15% | **10** | 6–13 | ~11 |
 | **C** | Not time-critical, invasive or expensive response | Prostate biopsy, reasonable range 10–30% | 20–30% | **3** | 2–4 | ~4 |
 
-Tier A's low end is exactly R = 15 — the ED sepsis literature build sits there, at the
-conservative end of its own tier. Tier assignment is a judgement about what the alert
+Tier A's low end is exactly R = 15, the historical ED sepsis development scenario
+shown in this report. The primary paper uses 11,299/804 rather than that historical
+value. Tier assignment is a judgement about what the alert
 makes someone *do*: the same illness moves tiers if the response changes from a blood
 test to a procedure.
 
@@ -89,10 +102,11 @@ In the four source-update datasets, the tight-capacity settings often landed in 
 case. Users should test this on their own confusion table rather than assume that a
 nominal capacity limit is binding for every R.
 
-## 4. Validation: does the cheap route reproduce the expensive one?
+## 4. Historical scenario comparison
 
-Sepsis is the only disease with a full literature cost build (R = 15). Comparing that
-against the ten-second tier pick (Tier A default, R = 20):
+The historical full-sample sepsis analysis compared its R = 15 literature scenario
+with the Tier A default R = 20. Its sample and capacity fractions differ from the
+primary paper's learning-data Low workload ceiling:
 
 | Capacity | Cost-optimal threshold at R = 15 (literature) | at R = 20 (tier default) | Same? |
 |---|---|---|---|
@@ -108,9 +122,9 @@ against the ten-second tier pick (Tier A default, R = 20):
 literature-costed threshold at 1%, 2%, 5%, 10%, and 20% capacity.** The two diverged at
 30% and without a capacity constraint, where R changed the selected operating point.
 
-This is a consistency check on one disease, not proof that tier defaults transfer
-everywhere. It does establish that the expensive route was not buying threshold
-precision under the operating conditions the framework targets.
+This is a historical consistency check on one disease. Agreement applies to the
+five listed capacity settings; the 30% and unconstrained settings select different
+thresholds. It does not supply a setting-specific value of R for a new workflow.
 
 ## 5. Honest limitations
 

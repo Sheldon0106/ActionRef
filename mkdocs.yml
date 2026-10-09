@@ -27,7 +27,11 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
 extra_css:
@@ -45,10 +49,10 @@ nav:
       - Independent evaluation: evaluation.md
   - Paper and evidence:
       - Reproduce the paper: paper-reproduction.md
-      - Primary result tables: paper-results.md
+      - Reported result tables: paper-results.md
       - Clinical data contract: paper-data.md
       - Sepsis illustration: clinical-example.md
-      - Evidence and analysis roles: evidence.md
+      - Sepsis, COPD and AERT evidence: evidence.md
       - Figure sources: figures.md
   - Reference:
       - Python API: API_REFERENCE.md
@@ -56,8 +60,9 @@ nav:
       - Optional R scenarios: RATIO_RECOMMENDER_FINDINGS.md
       - Subgroups, time, and transport: GOVERNANCE_DIAGNOSTICS.md
       - Reproducing this site: development.md
+  - Development records (not paper applications):
       - Reference regression record: CONTROLLED_REGRESSION_REPORT.md
-      - Earlier compatibility settings: DISEASE_COMPATIBILITY_REPORT.md
+      - Earlier disease compatibility: DISEASE_COMPATIBILITY_REPORT.md
 validation:
   links:
     not_found: warn

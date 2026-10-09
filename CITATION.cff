@@ -4,6 +4,7 @@ type: software
 title: "ActionRef: Clinical Score Cutoff"
 authors:
   - name: "Universal Cutoff Framework contributors"
-version: 0.1.0
+version: 1.0.0
+date-released: 2026-10-09
 repository-code: "https://github.com/Sheldon0106/ActionRef"
 license: MIT

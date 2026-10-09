@@ -35,6 +35,16 @@
       "source": "Supplement eTable 4, 2026-10-02",
       "role": "reported confusion counts, transcribed without rounding",
       "sha256": "c64d8b09969ed7845fc86110e341f7c1d8920465a11b1ee4d64c17a262467366"
+    },
+    "learning_R_selection.csv": {
+      "sha256": "1012e1ad89af00d812bbd5b3ef06a5bb58d1e3a67eaf866c88d16778cb8028ae",
+      "role": "MIMIC learning-set R-grid sensitivity; Supplement eMethods 3",
+      "source": "Verified primary learning partition: N=297476; threshold31 TP=11662 FP=61888 FN=5732 TN=218194"
+    },
+    "learning_R_invariance.csv": {
+      "sha256": "2e3d68a628634e9774a85bd5665bb094e986f2ac550aa6d5fcdf097281b5d39e",
+      "role": "MIMIC learning-set R-grid sensitivity; Supplement eMethods 3",
+      "source": "Verified primary learning partition: N=297476; threshold31 TP=11662 FP=61888 FN=5732 TN=218194"
     }
   },
   "config": {

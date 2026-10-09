@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.0.0 - 2026-10-09
+
+- Aligned the paper-evidence route with primary sepsis ESRP and additional COPD
+  and exploratory HEART-derived AERT applications. Retained AKI, pneumonia and
+  combined historical results as development records with their original hashes.
+- Added corrected COPD action/reference summaries, bootstrap summaries and
+  supplemental score-fit-patient-excluded evaluation, with portable provenance.
+- Added AERT aggregate results across all 16 settings, the short-discrete research
+  policy, configurations and executable aggregate reproduction.
+- Added the real-data COPD partial-output illustration and unified reference
+  colors across the R figures.
+- Added the five-step R-setting guide, distinguishing learning-data re-selection
+  in Supplement eMethods 3 from the fixed comparison in eTable 37.
+- Updated paper-table/source mappings and public-data checks for the new bundles.
+
 ## 0.1.0 - 2026-10-05
 
 - Added the ActionRef overview, runnable synthetic learning/evaluation walkthrough,

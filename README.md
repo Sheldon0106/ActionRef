@@ -8,7 +8,7 @@ understand local practice, examine alert workload, and compare candidate thresho
 under a stated capacity or consequence scenario.
 
 The Python package is `universal-cutoff`; the import is `universal_cutoff`.
-Software version: **0.1.0** · [MIT license](LICENSE).
+Software version: **1.0.0** · [MIT license](LICENSE).
 
 [Get started](docs/quickstart.md) · [Prepare your data](docs/data.md) ·
 [Interpret references](docs/references.md) · [API](docs/API_REFERENCE.md) ·
@@ -109,21 +109,37 @@ belong to that analysis; the software learns references for the supplied data.
 
 ## Documentation and repository
 
+The paper centers on **sepsis ESRP**, with **COPD** and the **HEART-derived AERT
+score** as additional applications:
+
+| Application | Evidence and source |
+|---|---|
+| Sepsis ESRP | MIMIC references 27 / 36 / 51; Stanford local re-estimation 26 / 36 / 50; candidate 31 under R = 11,299/804. See the [primary results](docs/paper-results.md). |
+| COPD | Corrected recorded-action definition, references 17.7798 / 55.0719 / unavailable, and evaluation conditional on the supplied score. [Corrected aggregates](results/copd/validation_v2_corrected/README.md) support eTables 21, 22, 39 and 41. |
+| HEART-derived AERT | Exploratory short-discrete application, including response-definition sensitivity and partial outputs. [Aggregate results and executable reproduction](results/aert/README.md) support eTables 32–34 and 38 and Supplementary Data 1–2. |
+
+AKI and pneumonia materials remain as software development and compatibility
+records; they are not reported in the paper. The [evidence guide](docs/evidence.md)
+distinguishes these records from the reported applications.
+
 Two routes through the repository:
 
 - **Use ActionRef on your data:** follow the [synthetic walkthrough](docs/quickstart.md),
   [data contract](docs/data.md), and [output-state examples](docs/output-states.md).
 - **Examine the paper evidence:** follow the [reproduction guide](docs/paper-reproduction.md)
   and [primary result tables](docs/paper-results.md). Shared aggregate counts rebuild
-  Table 3 and eTables 35–37; an additional runner accepts authorized clinical analysis tables.
+  Table 3 and eTables 35–37. COPD and AERT have separate aggregate reproduction
+  commands; the sepsis analysis runner accepts authorized clinical analysis tables.
 
 ```bash
 python examples/reproduce_paper.py
+python examples/reproduce_additional.py
+python examples/reproduce_aert.py
 ```
 
 The documentation is built with MkDocs Material and includes a workflow overview,
 tutorials, clinical examples, and API guidance.
-All three repository figures are drawn in R/grid from original vector artwork
+All repository figures are drawn in R/grid from original vector artwork
 and saved aggregate inputs. [Rebuild the figures](docs/figures.md) or edit their
 [R sources](scripts/figures/).
 

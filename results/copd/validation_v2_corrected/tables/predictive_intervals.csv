@@ -1,0 +1,5 @@
+cohort,metric,point_estimate,B,seed,median,CI_2_5,CI_97_5,interpretation
+heldout_full,AUROC,0.903459808604389,200,42,0.9030135171567728,0.8954081716073842,0.9122815877219849,fixed-score patient percentile interval; not full development uncertainty
+heldout_full,AP,0.15294869214555853,200,42,0.15349687631004624,0.12724590480906114,0.18286387385806524,fixed-score patient percentile interval; not full development uncertainty
+heldout_score_fit_excluded,AUROC,0.8935961592934495,200,42,0.8924244677851696,0.8639776644743108,0.9208013764916481,fixed-score patient percentile interval; not full development uncertainty
+heldout_score_fit_excluded,AP,0.11596255406772545,200,42,0.12437980624208206,0.06937272954570672,0.19247210767107603,fixed-score patient percentile interval; not full development uncertainty
