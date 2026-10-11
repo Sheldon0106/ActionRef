@@ -63,15 +63,14 @@ aggregate outputs. [Follow it step by step →](quickstart.md)
 
 The primary application is [sepsis ESRP](clinical-example.md): MIMIC references
 27 / 36 / 51, Stanford local re-estimation 26 / 36 / 50, and candidate 31 under
-R = 11,299/804. [COPD](evidence.md#copd) is the additional main-text application,
-illustrating partial-reference output. [HEART-derived AERT](evidence.md#heart-derived-aert)
-is an exploratory example in the Supplement, illustrating short-discrete reference
-learning and shared thresholds. The [reported result tables](paper-results.md) and
-[reproduction guide](paper-reproduction.md) connect these analyses to the paper's
-tables and Supplementary Data.
+R = 11,299/804. The manuscript examines emergency sepsis assessment. The
+[sepsis aggregate results](paper-results.md) and [reproduction guide](paper-reproduction.md)
+describe the shared analysis materials and the scope of the aggregate entry point.
 
-AKI and pneumonia are retained as software development and compatibility records;
-they are not reported in the paper.
+COPD, HEART-derived AERT, pneumonia and AKI materials are **exploratory, not
+reported in the manuscript**. Changepoint functionality is retained in the
+software but was not used in the manuscript. See the [evidence guide](evidence.md)
+for analysis roles and simulation sources.
 
 ActionRef describes recorded practice and supports explicit threshold comparisons.
 The proposed clinical workflow and its evaluation remain part of the local decision.

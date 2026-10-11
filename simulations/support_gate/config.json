@@ -1,0 +1,116 @@
+{
+  "analysis": "v8_support_gate_addendum",
+  "default_module2": {
+    "min_bin_n": 40,
+    "min_valid_bins": 8,
+    "target_valid_bins": 30,
+    "max_valid_bins": 40,
+    "min_isotonic_dynamic_range": 0.08,
+    "min_logistic_bic_improvement": 6.0,
+    "max_selected_changepoints": 2,
+    "min_bins_per_segment": 5,
+    "cp_candidate_stride": 2,
+    "min_structural_bic_improvement": 6.0,
+    "smooth_null_alpha": 0.1,
+    "min_standardized_slope_change": 0.12,
+    "min_cp_bootstrap_support": 0.5,
+    "cp_support_tolerance_bins": 2.0,
+    "max_alignment_bins": 1.0,
+    "bin_width": null
+  },
+  "default_changes": [],
+  "analyses": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "simulation": {
+    "n": [
+      6000,
+      2000
+    ],
+    "requested_replicates_per_scenario_n": 200,
+    "seed": 2026101101,
+    "seed_stream": "default_rng(SeedSequence([base_seed, scenario_index, n, replicate]))",
+    "paired_data": true,
+    "methods": {
+      "M1_default": "Unchanged fit_behavior_thresholds with unchanged Module2Config.",
+      "M2_no_gate_no_relative": "Same default-selected bin width, min_bin_n=40 and isotonic curve; waive minimum-bin precondition and behavior gate; absolute targets only; same ordering/collision rules; unattainable absolute target unavailable.",
+      "M2a_gate_only": "Additional explicit isolation control: waive minimum-bin precondition and behavior gate on same bins; retain default relative fallback, ordering and collision rules.",
+      "M3_short_scale": "Short scenarios only: min_valid_bins=3 or 4, fixed by prespecified structural support; all other default settings unchanged."
+    },
+    "strong_signal": "Exact existing aligned_sigmoid action curve and beta-mixture score generator; no outcome simulated.",
+    "flat_null": "Exact existing flat_behavior_null: p=0.18; same beta-mixture scores.",
+    "weak_signal": "p(s)=0.36+0.0008*s on [0,100]; true full-support span=0.08; same beta-mixture scores.",
+    "sparse_tail": "0.99*Uniform(0,80)+0.01*Uniform(80,100); p(s)=0.04+0.88*expit((s-70)/8); top 20% score range has population mass 1%.",
+    "low_ceiling": "Exact existing low_ceiling p(s)=0.03+0.25*expit((s-50)/9); same beta-mixture scores.",
+    "short_3": {
+      "values": [
+        0,
+        1,
+        2
+      ],
+      "mass": [
+        0.7,
+        0.25,
+        0.05
+      ],
+      "action_probability": [
+        0.1,
+        0.55,
+        0.9
+      ]
+    },
+    "short_4": {
+      "values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "mass": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "action_probability": [
+        0.1,
+        0.35,
+        0.65,
+        0.9
+      ]
+    },
+    "truth": "Known population P(A|S), with population-marginal action rate for Low; continuous crossing or first native value at target. Constant curve has no identifiable behavioral reference. Absolute and relative truth computed separately, over full prespecified score support. Error uses the output target family. Relative output when 0.80 is unattainable is legitimate, never itself a false output.",
+    "output": "Candidate availability and independent retention reported separately. Shared-threshold suppression is not semantic abstention. Over-abstention uses existence of default semantic truth; absolute-only over-abstention also reported for M2 to distinguish absence of fallback from gate effects.",
+    "error": "Absolute score-unit error conditional on output with an existing same-family truth; additionally error versus default population reference and sample-score-conditional Low truth. Population rather than fitted-support endpoints govern relative truth.",
+    "workers": 4,
+    "parameter_adjustments": []
+  },
+  "clinical": {
+    "split": "GroupShuffleSplit(train_size=0.70, random_state=2026), original 425011-row universe before complete-case filtering",
+    "action": "Missing-aware OR(lactate,icu_fluid,vasopressor,steroid), legacy_v7_primary_eligible=1",
+    "logistic": "Unpenalized binomial GLM A~S fitted once on all learning score/action complete encounters; intercept included",
+    "isotonic": "Saved original curve read unchanged; raw-score linear interpolation and endpoint clipping",
+    "metrics": "Brier on raw predicted probabilities; log loss and descriptive calibration diagnostics clipped at 1e-6, matching eTable6C",
+    "bootstrap": {
+      "requested": 200,
+      "seed": 2026101103,
+      "unit": "patient cluster",
+      "sampling": "default_rng.multinomial(G, equal patient probabilities), sorted eligible-patient order; all eligible encounters per sampled patient; fixed both curves; no refit"
+    },
+    "paired_difference": "isotonic Brier minus logistic Brier",
+    "interval": "linear percentiles 2.5 and 97.5; evaluation uncertainty conditional on fixed curves",
+    "calibration": "Joint intercept/slope diagnostic LogisticRegression(C=1e6, lbfgs, tol=1e-10, max_iter=2000), matching original diagnostic; no recalibration",
+    "reliability_bins": "10 fixed probability bins [0,.1),...,[.9,1]",
+    "logistic_crossings": "Diagnostic continuous crossing, first native supported value, and first saved supported bin; not a new operational reference selection"
+  },
+  "saved_only": {
+    "analysis2": true,
+    "analysis4": true
+  },
+  "tolerance_audit": "Historical source search and numerical rule replay on saved curve only; no change to default code or any old sensitivity row.",
+  "policy": "Synthetic evidence is not clinical evidence; no reliability guarantee or statistical calibration claim; no clinical superiority claim for curve comparison."
+}

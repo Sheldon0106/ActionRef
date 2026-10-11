@@ -55,3 +55,6 @@ Changepoints can corroborate a reference after the required support checks; they
 cannot move it. Bootstrap re-estimation describes reference stability and is
 disabled by default. It is separate from held-out operating evaluation.
 See the [API reference](API_REFERENCE.md) for output objects.
+
+Changepoint functionality is retained for exploratory use; changepoint analyses
+were not used in the manuscript. The software algorithms and defaults are unchanged.
