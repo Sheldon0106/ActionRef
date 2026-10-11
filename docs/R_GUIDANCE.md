@@ -62,8 +62,8 @@ The exact reference value is included in the grid. `ratio_invariance()` returns
 grid run from 11 to 14.0534825870647. The next evaluated value, 15, selects 28;
 these results do not locate the exact continuous transition. The full selection
 grid and the two invariance rows are shared in `results/sepsis_primary/` and
-described in **Supplement eMethods 3**. **eTable 37** contains only the fixed
-31-versus-27 evaluation comparison.
+described in **Supplement eMethods 3**. The fixed 31-versus-27 evaluation
+comparison is separate from learning-data re-selection.
 
 For prepared learning data, the package call is:
 

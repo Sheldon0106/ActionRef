@@ -5,8 +5,8 @@ cohort/threshold-level counts. All shared observations are aggregates.
 
 | File | Role |
 |---|---|
-| `operating_counts.csv` | Exact TP/FP/FN/TN counts reported in Supplement eTable 4 |
-| `observed_action_yield.csv` | Flagged, action-known and action-positive counts for eTable 35 |
+| `operating_counts.csv` | Exact cohort/threshold TP/FP/FN/TN counts |
+| `observed_action_yield.csv` | Flagged, action-known and action-positive counts |
 | `semantic_response_curve.csv` | Supported learning bins, observed rates and isotonic fit |
 | `sepsis_action_points.json` | Continuous-interpolation and bin-assignment evaluation estimates |
 | `sepsis_action_intervals.json` | Conditional evaluation intervals from 200 patient-cluster resamples |
@@ -15,7 +15,7 @@ cohort/threshold-level counts. All shared observations are aggregates.
 | `manifest.json` | Source labels and file checksums |
 
 From the repository root, run `python examples/reproduce_paper.py`. It derives
-Table 3 and eTables 35–37 under `output/paper/`. Point estimates and intervals
+operating rates, action yields and fixed-pair R comparisons under `output/paper/`. Point estimates and intervals
 for action probabilities are assembled from saved outputs; their encounter-level
 recalculation has a [separate entry point](../../docs/paper-reproduction.md).
 

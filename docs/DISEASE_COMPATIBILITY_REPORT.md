@@ -1,10 +1,11 @@
 # Historical COPD and pneumonia compatibility run
 
-These are software development and compatibility records. Pneumonia is not reported
-in the paper. The COPD results below use the earlier action definition and
-bin-width-2.5 setting; the paper uses the [corrected COPD application](evidence.md#copd),
-with Mid 55.0719 rather than the early Mid 55.04. The historical numbers below are
-retained for regression comparison.
+These are software development and compatibility records: **exploratory, not
+reported in the manuscript**. The COPD results below use the earlier action
+definition and bin-width-2.5 setting (Mid 55.04); the later exploratory aggregate
+bundle uses Mid 55.0719. The historical numbers are retained for regression
+comparison. See the [exploratory materials](evidence.md#exploratory-materials).
+Changepoint diagnostics in this record were not used in the manuscript.
 
 Validation of the frozen v0.3 package on two non-sepsis diseases.
 

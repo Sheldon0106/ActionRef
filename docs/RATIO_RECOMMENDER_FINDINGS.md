@@ -1,15 +1,14 @@
 # Optional R scenarios and historical development findings
 
 The tier tables below retain their historical full-sample exploratory settings
-and values. **AKI and pneumonia are behavioral software-development records, not
-reported paper applications.** COPD in these tables also uses its earlier supplied-
-score/action setting. The corrected COPD paper application is documented in the
-[evidence guide](evidence.md#copd).
+and values. **COPD, pneumonia and AKI are exploratory, not reported in the
+manuscript.** COPD in these tables uses its earlier supplied-score/action setting.
+See the [evidence guide](evidence.md#exploratory-materials) for their development roles.
 
 The current primary sepsis example uses **R = 11,299/804**, a Low-reference workload
 ceiling, and learning-data re-selection described in **Supplement eMethods 3**.
 Its [five-step R guide](R_GUIDANCE.md) distinguishes re-selection from the fixed
-31-versus-27 comparison in **eTable 37**. The historical R=15 results below do not
+31-versus-27 evaluation comparison. The historical R=15 results below do not
 replace the current primary example.
 
 Answers the question raised in the Module 3B walkthrough: a user applying the framework

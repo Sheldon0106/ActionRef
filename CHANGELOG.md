@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.0.2 - 2026-10-12
+
+- Aligned documentation with JAMIA submission manuscript v10, focused on
+  emergency sepsis assessment; COPD, AERT/HEART, pneumonia and AKI are retained
+  as exploratory materials not reported in the manuscript.
+- Removed obsolete supplementary-table mappings and clarified that the aggregate
+  entry point reads saved uncertainty summaries rather than re-estimating them.
+- Added the existing eight-scenario and paired support-gate simulation runners,
+  configurations, seeds and saved condition-level error summaries. Only source
+  and output path handling was adapted for the public repository; simulations
+  were not rerun. Algorithms, defaults and reported numerical values are unchanged.
+- Clarified that changepoint functionality was not used in the manuscript.
+- Fixed release: `v1.0.2-jamia`.
+
 ## 1.0.1 - 2026-10-09
 
 - Aligned evidence roles with the manuscript: COPD is the additional main-text

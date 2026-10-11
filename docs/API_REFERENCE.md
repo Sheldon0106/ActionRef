@@ -1,5 +1,8 @@
 # API reference
 
+Changepoint functions and output fields are retained for exploratory use;
+changepoint analyses were not used in the manuscript.
+
 | Function | Purpose |
 |---|---|
 | `validate_score` / `evaluate_score` | Score completeness, optional outcome performance and calibration. |

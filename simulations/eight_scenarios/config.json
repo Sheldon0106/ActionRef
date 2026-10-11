@@ -1,0 +1,45 @@
+{
+  "analysis": "final semantic-first ActionRef simulation validation",
+  "historical_design_source": "simulation_ablation_threshold_governance_v2_structural_refinement.ipynb",
+  "random_state": 20260802,
+  "monte_carlo_replicates_per_scenario_condition": 25,
+  "main_cp_bootstrap_replicates": 10,
+  "selected_sample_bootstrap_replicates": 40,
+  "selected_sample_inner_cp_bootstrap_replicates": 5,
+  "oracle_n": 200000,
+  "R_values": [
+    5.0,
+    14.05,
+    15.0,
+    20.0
+  ],
+  "primary_R": 14.05,
+  "historical_auxiliary_R": 15.0,
+  "module2": {
+    "min_bin_n": 40,
+    "min_valid_bins": 8,
+    "target_valid_bins": 30,
+    "max_valid_bins": 40,
+    "min_isotonic_dynamic_range": 0.08,
+    "min_logistic_bic_improvement": 6.0,
+    "max_selected_changepoints": 2,
+    "min_bins_per_segment": 5,
+    "cp_candidate_stride": 2,
+    "min_structural_bic_improvement": 6.0,
+    "smooth_null_alpha": 0.1,
+    "min_standardized_slope_change": 0.12,
+    "min_cp_bootstrap_support": 0.5,
+    "cp_support_tolerance_bins": 2.0,
+    "max_alignment_bins": 1.0,
+    "bin_width": null
+  },
+  "readiness_criteria": {
+    "flat_null_threshold_availability_max": 0.1,
+    "flat_null_false_cp_rate_max": 0.1,
+    "piecewise_cp_recall_min_legacy_provisional": 0.7,
+    "low_ceiling_attainability_accuracy_min": 0.9,
+    "validated_vs_point_mid_mae_margin": 0.5,
+    "inclusive_governance_accuracy_min": 0.75,
+    "cp_movement_rate_required": 0.0
+  }
+}

@@ -11,6 +11,7 @@ dist/
 # Aggregate run outputs only. Files under results/ must be threshold-level or
 # bin-level. No row may correspond to a single encounter.
 !results/**/*.csv
+!simulations/**/*.csv
 
 # Notebook-cell extraction scratch files. They contain absolute clinical-data paths.
 _ALL_CELLS.py

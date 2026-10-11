@@ -8,7 +8,8 @@ understand local practice, examine alert workload, and compare candidate thresho
 under a stated capacity or consequence scenario.
 
 The Python package is `universal-cutoff`; the import is `universal_cutoff`.
-Software version: **1.0.1** · [MIT license](LICENSE).
+Software version: **1.0.2** · [MIT license](LICENSE) ·
+[JAMIA manuscript v10 release](https://github.com/Sheldon0106/ActionRef/releases/tag/v1.0.2-jamia).
 
 [Get started](docs/quickstart.md) · [Prepare your data](docs/data.md) ·
 [Interpret references](docs/references.md) · [API](docs/API_REFERENCE.md) ·
@@ -109,33 +110,29 @@ belong to that analysis; the software learns references for the supplied data.
 
 ## Documentation and repository
 
-The paper centers on **sepsis ESRP**, with **COPD** as an additional main-text
-application. The **HEART-derived AERT score** is an exploratory example in the
-Supplement:
+The manuscript examines **emergency sepsis assessment**. ESRP is the primary
+score: MIMIC references are 27 / 36 / 51, Stanford local references are
+26 / 36 / 50, and candidate 31 uses R = 11,299/804. See the
+[sepsis aggregate results](docs/paper-results.md).
 
-| Application | Evidence and source |
-|---|---|
-| Sepsis ESRP | MIMIC references 27 / 36 / 51; Stanford local re-estimation 26 / 36 / 50; candidate 31 under R = 11,299/804. See the [primary results](docs/paper-results.md). |
-| COPD | Additional main-text application, with corrected recorded actions, references 17.7798 / 55.0719 / unavailable, and evaluation conditional on the supplied score. [Corrected aggregates](results/copd/validation_v2_corrected/README.md) support eTables 20–22, 39 and 41. |
-| HEART-derived AERT | Supplementary exploratory example of short-discrete reference learning, response-definition sensitivity and shared thresholds. [Aggregate results and executable reproduction](results/aert/README.md) support eMethods 1–2, eTables 32–34 and 38, and Supplementary Data 1–2. |
-
-AKI and pneumonia materials remain as software development and compatibility
-records; they are not reported in the paper. The [evidence guide](docs/evidence.md)
-distinguishes these records from the reported applications.
+COPD, HEART-derived AERT, pneumonia and AKI materials are retained as
+**exploratory, not reported in the manuscript**. Changepoint functionality is
+retained in the software but was not used in the manuscript. The
+[evidence guide](docs/evidence.md) distinguishes manuscript materials from these
+development records.
 
 Two routes through the repository:
 
 - **Use ActionRef on your data:** follow the [synthetic walkthrough](docs/quickstart.md),
   [data contract](docs/data.md), and [output-state examples](docs/output-states.md).
 - **Examine the paper evidence:** follow the [reproduction guide](docs/paper-reproduction.md)
-  and [primary result tables](docs/paper-results.md). Shared aggregate counts rebuild
-  Table 3 and eTables 35–37. COPD and AERT have separate aggregate reproduction
-  commands; the sepsis analysis runner accepts authorized clinical analysis tables.
+  and [sepsis aggregate results](docs/paper-results.md). Shared counts allow
+  recalculation of operating rates and fixed-candidate loss comparisons. Some
+  uncertainty intervals are read from saved summaries; the aggregate entry point
+  does not re-estimate them. Clinical analyses require authorized source data.
 
 ```bash
 python examples/reproduce_paper.py
-python examples/reproduce_additional.py
-python examples/reproduce_aert.py
 ```
 
 The documentation is built with MkDocs Material and includes a workflow overview,
@@ -153,6 +150,7 @@ python -m mkdocs serve
 |---|---|
 | [`src/universal_cutoff/`](src/universal_cutoff/) | Package APIs and method implementation |
 | [`examples/`](examples/) | Synthetic walkthrough and clinical-data runners |
+| [`simulations/`](simulations/README.md) | Existing simulation runners, configurations, seeds and saved condition-level error summaries |
 | [`docs/`](docs/index.md) | Tutorials, interpretation, API, and analysis notes |
 | [`configs/`](configs/) | Declared disease and analysis configurations |
 | [`results/`](results/) | Aggregate research outputs; see the [evidence guide](docs/evidence.md) for analysis roles |

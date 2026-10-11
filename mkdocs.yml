@@ -48,11 +48,11 @@ nav:
       - Capacity and consequences: operating-candidates.md
       - Independent evaluation: evaluation.md
   - Paper and evidence:
-      - Reproduce the paper: paper-reproduction.md
-      - Reported result tables: paper-results.md
+      - Analysis and reproduction scope: paper-reproduction.md
+      - Sepsis aggregate results: paper-results.md
       - Clinical data contract: paper-data.md
       - Sepsis illustration: clinical-example.md
-      - Sepsis, COPD and AERT evidence: evidence.md
+      - Manuscript and exploratory materials: evidence.md
       - Figure sources: figures.md
   - Reference:
       - Python API: API_REFERENCE.md
