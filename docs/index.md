@@ -63,7 +63,9 @@ aggregate outputs. [Follow it step by step →](quickstart.md)
 
 The primary application is [sepsis ESRP](clinical-example.md): MIMIC references
 27 / 36 / 51, Stanford local re-estimation 26 / 36 / 50, and candidate 31 under
-R = 11,299/804. The manuscript examines emergency sepsis assessment. The
+R = 11,299/804. NEWS, MEWS, REMS and two-criterion qSOFA extend the same
+recorded-action analysis to other scores. The manuscript examines emergency
+sepsis assessment. The
 [sepsis aggregate results](paper-results.md) and [reproduction guide](paper-reproduction.md)
 describe the shared analysis materials and the scope of the aggregate entry point.
 

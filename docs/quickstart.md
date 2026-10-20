@@ -40,10 +40,10 @@ to an operating candidate of 81, while the original references remain 45 / 45 / 
 
 ## 3. Evaluate the same thresholds on separate data
 
-The script passes the learned reference values and the candidate of 81 to
+The script passes the estimated reference values and the candidate of 81 to
 `evaluate_frozen_thresholds`. No reference is learned from the evaluation rows.
 
-| Fixed threshold | Alerts / 1,000 | Recorded-action yield | Outcome recall |
+| Fixed threshold | Alerts / 1,000 | Recorded-action yield | Outcome sensitivity |
 |---|---:|---:|---:|
 | Low and Mid: 45 | 555.3 | 88.3% | 90.4% |
 | High: 60 | 407.5 | 94.1% | 79.2% |
@@ -66,5 +66,5 @@ budget does not guarantee the same count in another cohort or time period.
 | `summary.json` | Seeds, sample sizes, full Module 2 configuration, evidence support |
 
 For your own data, first read the [data contract](data.md), then the
-[reference interpretation guide](references.md). Partial outputs and abstention
+[reference interpretation guide](references.md). Partial outputs and no-reference results
 are valid results, even though this synthetic example has three available labels.

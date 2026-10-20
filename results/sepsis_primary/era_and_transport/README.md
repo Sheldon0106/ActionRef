@@ -20,3 +20,5 @@ row selections, and SHA-256 hashes for the originals and public copies.
 - [v7_cell56_temporal_drift.csv](v7_cell56_temporal_drift.csv)
 - [v7_cell56_temporal_operating.csv](v7_cell56_temporal_operating.csv)
 - [v7_cell56_temporal_counts.csv](v7_cell56_temporal_counts.csv)
+- [V7_13_K_operationalization_capacity.csv](V7_13_K_operationalization_capacity.csv)
+- [v7_cell56_temporal_capacity.csv](v7_cell56_temporal_capacity.csv)

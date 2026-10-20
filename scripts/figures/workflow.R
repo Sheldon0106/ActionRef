@@ -28,7 +28,7 @@ workflow_checks <- function(d) {
 }
 
 workflow_references <- function(d) {
-  section(400,145,670,585,"Learn behavioral references",C$teal_bg,C$fit,"2",
+  section(400,145,670,585,"Estimate behavioral references",C$teal_bg,C$fit,"2",
           "MODULE 2 / relate an existing score to recorded action")
   steps <- c("Supported score bins","Monotone action fit","Probability targets")
   for(i in seq_along(steps)) {
@@ -65,7 +65,7 @@ workflow_references <- function(d) {
   tlabel(424,687,"Supported outputs",10.5,face="bold")
   pill(606,680,115,"Full set",C$fit)
   pill(734,680,127,"Partial set",C$fit)
-  pill(874,680,170,"Abstention",C$muted)
+  pill(874,680,170,"No references",C$muted)
 }
 
 workflow_selection <- function(d) {

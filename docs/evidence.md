@@ -1,7 +1,7 @@
 # Manuscript and exploratory materials
 
-The JAMIA submission manuscript v10 examines emergency sepsis assessment.
-ESRP is the primary score. Public materials contain aggregate summaries and
+The manuscript (JAMIA submission, October 2026) examines emergency sepsis assessment.
+ESRP is the primary score; NEWS, MEWS, REMS and two-criterion qSOFA are additional score applications within the same sepsis setting. Public materials contain aggregate summaries and
 analysis code; patient-level clinical data require authorized source access.
 
 ## Sepsis materials
@@ -12,19 +12,33 @@ applied unchanged to evaluation data. Stanford local references of 26 / 36 / 50
 describe recorded practice there; they are separate from transport of the MIMIC
 thresholds.
 
-`results/sepsis_primary/` contains operating and action counts, the learned action
+`results/sepsis_primary/` contains operating and action counts, the estimated action
 curve, saved action-probability estimates and intervals, fixed 31-versus-27 loss
 comparisons, and learning-data R-grid selections. See the [sepsis illustration](clinical-example.md),
 [aggregate results](paper-results.md) and [R guide](R_GUIDANCE.md).
 
 The [reproduction guide](paper-reproduction.md) explains which calculations use
 aggregate counts and which estimates and uncertainty intervals are read from
-saved summaries. Existing source labels and output filenames are retained for
-compatibility; they are not a table-number index for manuscript v10.
+saved summaries. It maps all 15 supplementary tables and 7 supplementary figures
+to the available sources. Existing data keys and historical filenames are retained
+for compatibility; reader-facing labels follow the manuscript.
+
+## Additional score applications
+
+`results/early_warning_scores/default/` contains two-site curves, references,
+500-draw reference summaries, fixed MIMIC-reference operating counts and score
+implementation tables. MIMIC NEWS, MEWS and REMS references are 2/3/6, 2/4/6
+and 3/11/13. Stanford MEWS has local Mid 3; transport evaluation retains Mid 4.
+
+Default two-criterion qSOFA returns no references. Its separate short-scale
+analysis in `results/early_warning_scores/qsofa_short_scale/` reports shared
+Low/Mid 1 and High 2 at both sites. This does not change package defaults.
+Use `python examples/reproduce_paper.py --early-warning-scores` to recalculate
+the four-score Figure 4 rates from shared confusion counts.
 
 ## Simulations
 
-The [simulation directory](https://github.com/Sheldon0106/ActionRef/tree/v1.0.2-jamia/simulations)
+The [simulation directory](https://github.com/Sheldon0106/ActionRef/tree/v1.0.3-jamia/simulations)
 contains the original eight-scenario runner/configuration (seed **20260802**) and
 the paired support-gate runner/configuration (seed **2026101101**), with saved
 condition-level error summaries. The simulation methods, parameters and results

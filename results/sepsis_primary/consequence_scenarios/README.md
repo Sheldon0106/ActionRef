@@ -17,3 +17,4 @@ The [manifest](manifest.json) records portable source labels, generation-date pr
 row selections, and SHA-256 hashes for the originals and public copies.
 
 - [paper_minimax_behavior_budget.csv](paper_minimax_behavior_budget.csv)
+- [comparator_development_selection_curve.csv](comparator_development_selection_curve.csv)

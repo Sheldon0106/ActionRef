@@ -28,7 +28,7 @@
       "source_saved_date": "2026-10-07",
       "date_basis": "saved figure-summary file; original generation date not recorded",
       "source_sha256": "a26ac9a0fb0eb548881a5c5d7e48ec9f2e229a7f483c2871180c0fef0546deee",
-      "sha256": "4c824ca5a6fbe581584d0256c92ed1f35d3b2043181e1e754f95c0012f4668b7",
+      "sha256": "1e551cab73cd9f236ddba95e2143e21b41d13ba983cca66b58b4c84346127849",
       "selection": "JSON subtree paired_FAE_difference_31_minus_27; values unchanged",
       "underlying_source_hashes": {
         "tables/reference_summary.csv": "eb00b7611a5ec4e754b5fccc757eb286c2fb21074c24c406f5560680aa8f193b",

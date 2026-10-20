@@ -39,6 +39,22 @@
       "sha256": "b2a60891bd177b4646c3c63eef36ee6ba45863d43b89d3d39170cd9c266a4a47",
       "rows": 4,
       "selection": "all rows; byte-identical copy"
+    },
+    "V7_13_K_operationalization_capacity.csv": {
+      "source_label": "<analysis_outputs>/v7_outputs/V7_13_K_operationalization_capacity.csv",
+      "source_generation_date": null,
+      "date_basis": "original generation date not recorded",
+      "source_sha256": "2019e92196fb80db5862cadfc546b8fe0184093de3dda4e1aa61f8ea15829ac9",
+      "sha256": "2019e92196fb80db5862cadfc546b8fe0184093de3dda4e1aa61f8ea15829ac9",
+      "selection": "all rows; byte-identical copy"
+    },
+    "v7_cell56_temporal_capacity.csv": {
+      "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/summaries/v7_cell56_temporal_capacity.csv",
+      "source_generation_date": "2026-08-29",
+      "date_basis": "source run label",
+      "source_sha256": "ff930c33d8e61de5edcd38a608ff8a11a78f3c2ba9c455fc7bae38ebb7416895",
+      "sha256": "ff930c33d8e61de5edcd38a608ff8a11a78f3c2ba9c455fc7bae38ebb7416895",
+      "selection": "all rows; byte-identical copy"
     }
   },
   "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."

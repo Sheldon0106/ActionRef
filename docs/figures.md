@@ -1,6 +1,23 @@
 # Figure sources and reproduction
 
-All figures are drawn in **R/grid**, with editable text and vector shapes.
+## Manuscript figures
+
+Numerical inputs for the manuscript accompany the [source map](paper-reproduction.md).
+
+| Figure | Available numerical inputs | Exact rendering source |
+|---|---|---|
+| Figure 1: framework | Definitions and workflow in the documentation; conceptual schematic | The final Python source was not supplied with the local materials |
+| Figure 2: recorded-action curve/evaluation | `results/sepsis_primary/semantic_response_curve.csv`, `sepsis_action_reliability.json`, `sepsis_action_points.json` | Production notes describe R output with the PNG label changed to “Monotone fit”; the exact journal-layout R source is not included |
+| Figure 3: workload and consequence comparison | `results/sepsis_primary/operating_counts.csv`, `fixed_candidate_R_sensitivity.csv`, `operating_uncertainty/paired_FAE_difference.json` | Production notes describe R output with the PNG label changed to “Workload and sepsis sensitivity”; the exact journal-layout R source is not included |
+| Figure 4: four-score comparison | `results/early_warning_scores/default/fixed_reference_operating_points.csv` plus ESRP operating counts | The final Python source was not supplied; `examples/reproduce_paper.py --early-warning-scores` verifies all 24 plotted rates |
+
+These statements distinguish the numerical sources from exact image rendering.
+The repository illustrations below have their own reproducible R layouts; they
+are not represented as the final manuscript figures.
+
+## Documentation illustrations
+
+The documentation illustrations are drawn in **R/grid**, with editable text and vector shapes.
 `scripts/build_figures.R` assembles the panels in `scripts/figures/`. The scientific
 regions, clinical icons, curves, and comparison charts share one visual system.
 
@@ -36,7 +53,7 @@ Rscript scripts/build_figures.R
 have distinct roles. The central curve uses the saved MIMIC learning bins, and the
 small reliability inset uses MIMIC held-out observations. Their sources are listed
 below. The operating-cutoff ruler and clinical icons are conceptual, without
-numerical performance claims. Full, partial, and abstention outputs remain visible.
+numerical performance claims. Complete, partial, and no-reference outputs remain visible.
 
 Low 27, Mid 36, and High 51 illustrate this analysis's attainable absolute targets:
 the local background action rate (about 0.327), 0.50, and 0.80. Each is the first
@@ -96,7 +113,7 @@ source windows, detailed in the [clinical example](clinical-example.md).
 
 The [primary result tables](paper-results.md) report the Brier interval and paired
 difference from the constant comparator. They use patient-cluster resampling
-conditional on the learned curve; these are separate from reference-relearning intervals.
+conditional on the estimated curve; these are separate from reference-relearning intervals.
 
 Low, Mid and High consistently use blue (#0072B2), green (#009E73) and orange
 (#D55E00). Operating candidates use purple. The shared color mapping is recorded
@@ -111,7 +128,7 @@ This illustration is **exploratory, not reported in the manuscript**.
 ![Corrected COPD references with the rejected relative High crossing.](assets/figures/copd-partial-output.png)
 
 **Message:** a retained Low/Mid pair with an unavailable High is a valid reference
-output. The [corrected curve and anchors](https://github.com/Sheldon0106/ActionRef/blob/v1.0.2-jamia/results/copd/validation_v2_corrected/README.md)
+output. The [corrected curve and anchors](https://github.com/Sheldon0106/ActionRef/blob/v1.0.3-jamia/results/copd/validation_v2_corrected/README.md)
 provide every plotted coordinate. All 28 supported learning bins are shown; point
 area follows bin encounter count. The orange cross identifies the rejected crossing
 at bin 50, and the orange horizontal line identifies its relative target 0.4278.
