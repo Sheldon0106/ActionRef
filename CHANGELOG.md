@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.4 - 2026-10-21
+
+- Focused the figure guide on the available scientific inputs and the R sources
+  for documentation illustrations.
+- Clarified that the aggregate entry point recalculates operating rates and
+  fixed-candidate loss comparisons and reads saved estimates and uncertainty
+  intervals.
+- Documentation and release metadata update. Algorithms, defaults, analysis
+  scripts and reported numerical results are unchanged.
+- Fixed release: `v1.0.4-jamia`.
+
 ## 1.0.3 - 2026-10-20
 
 - Aligned the README and documentation with the final JAMIA submission,
@@ -15,8 +26,8 @@
   API names and historical output stems remain unchanged.
 - Clarified the logistic High crossing: the manuscript reports the first native
   score, 55; the saved supported-bin crossing is 57. Both original values are retained.
-- Mapped the available numerical figure inputs and documented that the exact
-  final manuscript rendering scripts were not supplied with the local materials.
+- Mapped the numerical figure inputs and the sources for documentation
+  illustrations.
 - Updated author citation metadata and copyright. No clinical analyses or
   simulations were rerun; algorithms, defaults, random seeds and reported
   numerical values are unchanged.

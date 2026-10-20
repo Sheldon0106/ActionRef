@@ -1,19 +1,21 @@
-# Figure sources and reproduction
+# Figure data and documentation illustrations
 
 ## Manuscript figures
 
-Numerical inputs for the manuscript accompany the [source map](paper-reproduction.md).
+The repository provides saved curves, aggregate counts and evaluation summaries
+underlying the manuscript figures. The [reproduction guide](paper-reproduction.md)
+describes which quantities are recalculated and which are read from saved results.
+In the table, `S/` denotes `results/sepsis_primary/`.
 
-| Figure | Available numerical inputs | Exact rendering source |
+| Figure | Scientific content | Repository materials |
 |---|---|---|
-| Figure 1: framework | Definitions and workflow in the documentation; conceptual schematic | The final Python source was not supplied with the local materials |
-| Figure 2: recorded-action curve/evaluation | `results/sepsis_primary/semantic_response_curve.csv`, `sepsis_action_reliability.json`, `sepsis_action_points.json` | Production notes describe R output with the PNG label changed to “Monotone fit”; the exact journal-layout R source is not included |
-| Figure 3: workload and consequence comparison | `results/sepsis_primary/operating_counts.csv`, `fixed_candidate_R_sensitivity.csv`, `operating_uncertainty/paired_FAE_difference.json` | Production notes describe R output with the PNG label changed to “Workload and sepsis sensitivity”; the exact journal-layout R source is not included |
-| Figure 4: four-score comparison | `results/early_warning_scores/default/fixed_reference_operating_points.csv` plus ESRP operating counts | The final Python source was not supplied; `examples/reproduce_paper.py --early-warning-scores` verifies all 24 plotted rates |
+| Figure 1: framework | Clinical questions, behavioral references and operating candidates | [Reference definitions](references.md) and [capacity and consequence workflow](operating-candidates.md) |
+| Figure 2: recorded-action curve/evaluation | Estimated action curve and held-out action-probability evaluation | Saved curve and evaluation summaries in `S/semantic_response_curve.csv`, `S/sepsis_action_reliability.json` and `S/sepsis_action_points.json` |
+| Figure 3: workload and consequence comparison | Operating rates, fixed-candidate loss comparisons and paired uncertainty | Aggregate counts and saved summaries in `S/operating_counts.csv`, `S/fixed_candidate_R_sensitivity.csv` and `S/operating_uncertainty/paired_FAE_difference.json` |
+| Figure 4: four-score comparison | Alert rates and sepsis sensitivity at fixed references in both evaluation cohorts | `results/early_warning_scores/default/fixed_reference_operating_points.csv` and ESRP operating counts; `examples/reproduce_paper.py --early-warning-scores` recalculates and checks all 24 plotted rates |
 
-These statements distinguish the numerical sources from exact image rendering.
-The repository illustrations below have their own reproducible R layouts; they
-are not represented as the final manuscript figures.
+The sections below provide R sources and build instructions for the
+documentation illustrations.
 
 ## Documentation illustrations
 
