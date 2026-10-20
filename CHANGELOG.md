@@ -1,8 +1,30 @@
 # Changelog
 
+## 1.0.3 - 2026-10-20
+
+- Aligned the README and documentation with the final JAMIA submission,
+  October 2026, including eTables 1-15 and eFigures 1-7.
+- Added saved aggregate materials for NEWS, MEWS, REMS and two-criterion qSOFA,
+  reference uncertainty, score assessment, logistic comparison, action components,
+  action windows, era/transport, subgroups, conventional rules and simulations.
+  Added the saved joint-reference and paired loss-difference intervals.
+- Extended the aggregate entry point with optional Figure 4 rate checks,
+  preserving score-specific denominators and unchanged MIMIC thresholds at Stanford.
+- Standardized reader-facing terminology: recorded-action yield, sepsis sensitivity,
+  estimated references and reporting only supported levels. Original data keys,
+  API names and historical output stems remain unchanged.
+- Clarified the logistic High crossing: the manuscript reports the first native
+  score, 55; the saved supported-bin crossing is 57. Both original values are retained.
+- Mapped the available numerical figure inputs and documented that the exact
+  final manuscript rendering scripts were not supplied with the local materials.
+- Updated author citation metadata and copyright. No clinical analyses or
+  simulations were rerun; algorithms, defaults, random seeds and reported
+  numerical values are unchanged.
+- Fixed release: `v1.0.3-jamia`.
+
 ## 1.0.2 - 2026-10-12
 
-- Aligned documentation with JAMIA submission manuscript v10, focused on
+- Aligned documentation with the earlier JAMIA submission structure, focused on
   emergency sepsis assessment; COPD, AERT/HEART, pneumonia and AKI are retained
   as exploratory materials not reported in the manuscript.
 - Removed obsolete supplementary-table mappings and clarified that the aggregate
