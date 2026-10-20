@@ -19,10 +19,10 @@ authors:
     given-names: Michael A.
   - family-names: Xie
     given-names: Feng
-version: 1.0.3
-date-released: "2026-10-20"
+version: 1.0.4
+date-released: "2026-10-21"
 repository-code: "https://github.com/Sheldon0106/ActionRef"
-url: "https://github.com/Sheldon0106/ActionRef/releases/tag/v1.0.3-jamia"
+url: "https://github.com/Sheldon0106/ActionRef/releases/tag/v1.0.4-jamia"
 license: MIT
 preferred-citation:
   type: article

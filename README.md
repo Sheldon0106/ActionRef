@@ -8,8 +8,8 @@ understand local practice, examine alert workload, and compare candidate thresho
 under a stated capacity or consequence scenario.
 
 The Python package is `universal-cutoff`; the import is `universal_cutoff`.
-Software version: **1.0.3** · [MIT license](LICENSE) ·
-[JAMIA submission release](https://github.com/Sheldon0106/ActionRef/releases/tag/v1.0.3-jamia).
+Software version: **1.0.4** · [MIT license](LICENSE) ·
+[JAMIA submission release](https://github.com/Sheldon0106/ActionRef/releases/tag/v1.0.4-jamia).
 
 [Get started](docs/quickstart.md) · [Prepare your data](docs/data.md) ·
 [Interpret references](docs/references.md) · [API](docs/API_REFERENCE.md) ·
@@ -18,7 +18,7 @@ Software version: **1.0.3** · [MIT license](LICENSE) ·
 ![ActionRef workflow: scores and observed actions lead to behavioral references, operating candidates, and separate evaluation.](docs/assets/figures/workflow.png)
 
 [Zoomable SVG](docs/assets/figures/workflow.svg) · [PDF](docs/assets/figures/workflow.pdf) ·
-[R figure sources and reproduction](docs/figures.md)
+[Documentation illustration sources](docs/figures.md)
 
 ## What does ActionRef answer?
 
@@ -139,8 +139,8 @@ python examples/reproduce_paper.py --early-warning-scores
 The documentation is built with MkDocs Material and includes a workflow overview,
 tutorials, clinical examples, and API guidance.
 The documentation illustrations are drawn in R/grid from vector artwork
-and saved aggregate inputs. Manuscript figure inputs and rendering scope are
-listed in the [figure guide](docs/figures.md). [Rebuild the figures](docs/figures.md) or edit their
+and saved aggregate inputs. Manuscript figure data are
+listed in the [figure guide](docs/figures.md). [Build the documentation illustrations](docs/figures.md) or edit their
 [R sources](scripts/figures/).
 
 ```bash
