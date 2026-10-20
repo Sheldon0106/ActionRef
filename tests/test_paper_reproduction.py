@@ -32,6 +32,42 @@ def test_paper_count_algebra_and_separate_action_denominator():
         assert frame.loc[frame.R.eq(high_r), 'delta_FAE_per_1000_31_minus_27'].iloc[0] > 0
 
 
+def test_early_warning_reference_values_and_shared_qsofa_level():
+    folder = ROOT / 'results/early_warning_scores'
+    anchors = pd.read_csv(folder / 'default/reference_point_anchors.csv')
+    learning = anchors.loc[anchors.cohort.eq('MIMIC_learning')]
+    for score, expected in [('NEWS2', [2, 3, 6]), ('MEWS', [2, 4, 6]), ('REMS', [3, 11, 13])]:
+        values = learning.loc[learning.score.eq(score)].set_index('level')
+        assert values.loc[['Low', 'Mid', 'High'], 'selected_threshold'].tolist() == expected
+    assert learning.loc[learning.score.eq('qSOFA'), 'selected_threshold'].isna().all()
+    short = pd.read_csv(folder / 'qsofa_short_scale/reference_point_anchors.csv')
+    for _, values in short.groupby('cohort'):
+        values = values.set_index('level')
+        assert values.loc[['Low', 'Mid', 'High'], 'selected_threshold'].tolist() == [1, 1, 2]
+        assert not values.loc['Low', 'operational_representative']
+        assert values.loc['Mid', 'operational_representative']
+
+
+def test_figure4_rates_and_transport_use_manuscript_denominators():
+    table = load_example('reproduce_paper').calculate_early_warning_scores()
+    assert len(table) == 24
+    mimic = table.loc[table.cohort.eq('MIMIC held-out')]
+    for score, alerts, sensitivity, denominator in [
+        ('ESRP', 365.5, 77.5, 127528), ('NEWS', 187.6, 39.9, 127533),
+        ('MEWS', 236.2, 43.5, 127533), ('REMS', 570.3, 85.3, 127533),
+    ]:
+        row = mimic.loc[mimic.score.eq(score) & mimic.reference.eq('Low')].iloc[0]
+        assert row.policy_N == denominator
+        assert round(row.alerts_per_1000, 1) == alerts
+        assert round(100 * row.sepsis_sensitivity, 1) == sensitivity
+    stanford = table.loc[table.cohort.eq('Stanford transport')]
+    assert stanford.policy_N.eq(118385).all()
+    mews = stanford.loc[stanford.score.eq('MEWS') & stanford.reference.eq('Mid')].iloc[0]
+    assert mews.threshold == 4  # Local Stanford Mid = 3 must not replace transported Mid = 4.
+    assert round(mews.alerts_per_1000, 1) == 54.2
+    assert round(100 * mews.sepsis_sensitivity, 1) == 22.4
+
+
 def test_primary_missingness_and_linkage_eligibility():
     runner = load_example('sepsis_paper_analysis')
     frame = pd.DataFrame({'subject_id': [1, 2, 3, 4], 'score_ESRP_new': [10]*4,
