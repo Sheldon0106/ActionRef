@@ -1,0 +1,5 @@
+normalized_era,N,source_cell,extraction_method
+2008-2010,121622,56,parsed from serialized pandas to_string output with fixed-width schema
+2011-2013,117958,56,parsed from serialized pandas to_string output with fixed-width schema
+2014-2016,108405,56,parsed from serialized pandas to_string output with fixed-width schema
+2017-2019,77026,56,parsed from serialized pandas to_string output with fixed-width schema

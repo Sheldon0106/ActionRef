@@ -1,0 +1,90 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "JAMIA submission, October 2026",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "eTable 13C; eFigure 5",
+  "files": {
+    "action_curves.csv": {
+      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T093951021453Z_7ef624c3251f/tables/action_curves.csv",
+      "source_generation_date": "2026-10-10",
+      "date_basis": "source run label",
+      "source_sha256": "dec0046020a6a4a117e55dead1db57ab7b51fe6592a2d63c208365dec996bd52",
+      "sha256": "dec0046020a6a4a117e55dead1db57ab7b51fe6592a2d63c208365dec996bd52",
+      "rows": 6,
+      "selection": "all rows; byte-identical copy"
+    },
+    "cohort_denominators.csv": {
+      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T093951021453Z_7ef624c3251f/tables/cohort_denominators.csv",
+      "source_generation_date": "2026-10-10",
+      "date_basis": "source run label",
+      "source_sha256": "8066c80e9a828b65a72f8b25574a6da641004f5317d3c0a086e848b62907b3e6",
+      "sha256": "8066c80e9a828b65a72f8b25574a6da641004f5317d3c0a086e848b62907b3e6",
+      "rows": 3,
+      "selection": "all rows; byte-identical copy"
+    },
+    "reference_point_anchors.csv": {
+      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T093951021453Z_7ef624c3251f/tables/reference_point_anchors.csv",
+      "source_generation_date": "2026-10-10",
+      "date_basis": "source run label",
+      "source_sha256": "88adc18c828ae5ac8fc9dd40e39b82ea0f283d1268de42540f89ad9953d13c03",
+      "sha256": "88adc18c828ae5ac8fc9dd40e39b82ea0f283d1268de42540f89ad9953d13c03",
+      "rows": 6,
+      "selection": "all rows; byte-identical copy"
+    },
+    "reference_point_diagnostics.csv": {
+      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T093951021453Z_7ef624c3251f/tables/reference_point_diagnostics.csv",
+      "source_generation_date": "2026-10-10",
+      "date_basis": "source run label",
+      "source_sha256": "a479987a6589e7c0d530764c28a118239aeb266d561f895c175506b43c51e5e5",
+      "sha256": "a479987a6589e7c0d530764c28a118239aeb266d561f895c175506b43c51e5e5",
+      "rows": 2,
+      "selection": "all rows; byte-identical copy"
+    },
+    "reference_bootstrap_summary.csv": {
+      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T093951021453Z_7ef624c3251f/tables/reference_bootstrap_summary.csv",
+      "source_generation_date": "2026-10-10",
+      "date_basis": "source run label",
+      "source_sha256": "9357b103e0aa5af6cdff12415a758e68b2b5dee2c3ed0aeefa38a169e276eb17",
+      "sha256": "9357b103e0aa5af6cdff12415a758e68b2b5dee2c3ed0aeefa38a169e276eb17",
+      "rows": 6,
+      "selection": "all rows; byte-identical copy"
+    },
+    "reference_bootstrap_reasons.csv": {
+      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T093951021453Z_7ef624c3251f/tables/reference_bootstrap_reasons.csv",
+      "source_generation_date": "2026-10-10",
+      "date_basis": "source run label",
+      "source_sha256": "9e045c8dc879548ece301e0d0030021dbffa4e133ddcaf24d7a959d362da9bbe",
+      "sha256": "9e045c8dc879548ece301e0d0030021dbffa4e133ddcaf24d7a959d362da9bbe",
+      "rows": 8,
+      "selection": "all rows; byte-identical copy"
+    },
+    "reference_pair_joint_stability.csv": {
+      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T093951021453Z_7ef624c3251f/tables/reference_pair_joint_stability.csv",
+      "source_generation_date": "2026-10-10",
+      "date_basis": "source run label",
+      "source_sha256": "a9edf938ed34099189230df07c88587adcc25c7f4809fc6397c3341c4b93378b",
+      "sha256": "a9edf938ed34099189230df07c88587adcc25c7f4809fc6397c3341c4b93378b",
+      "rows": 16,
+      "selection": "all rows; byte-identical copy"
+    },
+    "fixed_reference_operating_points.csv": {
+      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T093951021453Z_7ef624c3251f/tables/fixed_reference_operating_points.csv",
+      "source_generation_date": "2026-10-10",
+      "date_basis": "source run label",
+      "source_sha256": "27b746e00095a94d882833b903797a4f45622146b197efe8e04610b213e10b03",
+      "sha256": "27b746e00095a94d882833b903797a4f45622146b197efe8e04610b213e10b03",
+      "rows": 4,
+      "selection": "all rows; byte-identical copy"
+    },
+    "fixed_reference_operating_intervals.csv": {
+      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T093951021453Z_7ef624c3251f/tables/fixed_reference_operating_intervals.csv",
+      "source_generation_date": "2026-10-10",
+      "date_basis": "source run label",
+      "source_sha256": "ae5542df9b1fe11b963e36c4852f77dc79f6fb703152dc4a03feabeeef6e22d1",
+      "sha256": "ae5542df9b1fe11b963e36c4852f77dc79f6fb703152dc4a03feabeeef6e22d1",
+      "rows": 64,
+      "selection": "all rows; byte-identical copy"
+    }
+  },
+  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+}

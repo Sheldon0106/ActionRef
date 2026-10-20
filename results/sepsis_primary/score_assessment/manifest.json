@@ -1,0 +1,27 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "JAMIA submission, October 2026",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "eTable 6A",
+  "files": {
+    "paper_module1_point.csv": {
+      "source_label": "<analysis_outputs>/v7_outputs/paper_module1_point.csv",
+      "source_generation_date": "2026-08-19",
+      "date_basis": "source file modification date; original run date not recorded",
+      "source_sha256": "79bee6ad3ad39b183b84d99dac61848ac659b959b942a82839102fafd103a339",
+      "sha256": "5ac24c54bf26c6556554f50adf4a83634a9fa52787cbc53606729e4ec7b7eae9",
+      "rows": 3,
+      "selection": "score_name == ESRP"
+    },
+    "paper_module1_bootstrap_ci.csv": {
+      "source_label": "<analysis_outputs>/v7_outputs/paper_module1_bootstrap_ci.csv",
+      "source_generation_date": "2026-08-19",
+      "date_basis": "source file modification date; original run date not recorded",
+      "source_sha256": "5348fffc8de654f3978f5badc94bce0c4c1dd163e955eaf33c89d7d38cf18ef6",
+      "sha256": "b17f7fdbeb59bae4c75d041a08f6df62f69e7e3e8464556586f2060c03380d77",
+      "rows": 10,
+      "selection": "score_name == ESRP"
+    }
+  },
+  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+}

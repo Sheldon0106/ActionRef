@@ -1,0 +1,63 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "JAMIA submission, October 2026",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "eTable 14A-B; eFigure 6",
+  "files": {
+    "analysis2_existing_summary.csv": {
+      "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis2_existing_summary.csv",
+      "source_generation_date": "2026-10-11",
+      "date_basis": "source run label",
+      "source_sha256": "aba4ad6d241c7387e2068a9a4ebc4affa37c19fbe5f44fc4f094e29dd1990c19",
+      "sha256": "aba4ad6d241c7387e2068a9a4ebc4affa37c19fbe5f44fc4f094e29dd1990c19",
+      "rows": 192,
+      "selection": "all rows; byte-identical copy"
+    },
+    "analysis2_existing_true_references.csv": {
+      "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis2_existing_true_references.csv",
+      "source_generation_date": "2026-10-11",
+      "date_basis": "source run label",
+      "source_sha256": "289b3c91c5722a9e539529a10aa6c03d7f69d87a58615a1e9e4c58970947dad6",
+      "sha256": "289b3c91c5722a9e539529a10aa6c03d7f69d87a58615a1e9e4c58970947dad6",
+      "rows": 96,
+      "selection": "all rows; byte-identical copy"
+    },
+    "analysis2_generation_mechanisms.csv": {
+      "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis2_generation_mechanisms.csv",
+      "source_generation_date": "2026-10-11",
+      "date_basis": "source run label",
+      "source_sha256": "bad89fa99722160f1b583da795936cd97978a51f86305720dc53c2dbd05c8533",
+      "sha256": "bad89fa99722160f1b583da795936cd97978a51f86305720dc53c2dbd05c8533",
+      "rows": 8,
+      "selection": "all rows; byte-identical copy"
+    },
+    "threshold_recovery_summary.csv": {
+      "source_label": "<analysis_outputs>/simulation_final_outputs/run_20260913T092841426893Z_727eb2dd9311/tables/threshold_recovery_summary.csv",
+      "source_generation_date": "2026-09-13",
+      "date_basis": "source run label",
+      "source_sha256": "d2d576fe430e510cb84a6496f4cbc78db1fa87e5e2c328ec9e57294d38dd2535",
+      "sha256": "d2d576fe430e510cb84a6496f4cbc78db1fa87e5e2c328ec9e57294d38dd2535",
+      "rows": 192,
+      "selection": "all rows; byte-identical copy"
+    },
+    "structural_abstention_summary.csv": {
+      "source_label": "<analysis_outputs>/simulation_final_outputs/run_20260913T092841426893Z_727eb2dd9311/tables/structural_abstention_summary.csv",
+      "source_generation_date": "2026-09-13",
+      "date_basis": "source run label",
+      "source_sha256": "29cb1d58f9898194f810fc8154aa8eb499a67aec23ab24e6d0786a3ed4b16b5f",
+      "sha256": "29cb1d58f9898194f810fc8154aa8eb499a67aec23ab24e6d0786a3ed4b16b5f",
+      "rows": 32,
+      "selection": "all rows; byte-identical copy"
+    },
+    "governance_summary.csv": {
+      "source_label": "<analysis_outputs>/simulation_final_outputs/run_20260913T092841426893Z_727eb2dd9311/tables/governance_summary.csv",
+      "source_generation_date": "2026-09-13",
+      "date_basis": "source run label",
+      "source_sha256": "9955d95ce925fc5a7a47457c7060d16ef419232aee8b52928290c2923c00c275",
+      "sha256": "9955d95ce925fc5a7a47457c7060d16ef419232aee8b52928290c2923c00c275",
+      "rows": 128,
+      "selection": "all rows; byte-identical copy"
+    }
+  },
+  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+}

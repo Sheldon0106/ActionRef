@@ -1,0 +1,73 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "JAMIA submission, October 2026",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "Table 2; eTable 8",
+  "files": {
+    "reference_summary.csv": {
+      "source_label": "<analysis_outputs>/bootstrap_precision_addendum_outputs/run_20261005T080004570969Z_2e75da2c1f5d/tables/reference_summary.csv",
+      "source_generation_date": "2026-10-05",
+      "date_basis": "source run label",
+      "source_sha256": "eb00b7611a5ec4e754b5fccc757eb286c2fb21074c24c406f5560680aa8f193b",
+      "sha256": "fcc040f68fca8123cb490f0dd7cdb2375fe370779792cd0b93ae7a0f85af02ee",
+      "rows": 15,
+      "selection": "analysis in MIMIC_primary, Stanford_local, window_1h, window_3h, window_6h"
+    },
+    "reference_pair_stability.csv": {
+      "source_label": "<analysis_outputs>/bootstrap_precision_addendum_outputs/run_20261005T080004570969Z_2e75da2c1f5d/tables/reference_pair_stability.csv",
+      "source_generation_date": "2026-10-05",
+      "date_basis": "source run label",
+      "source_sha256": "553a0866ea2793be11dc9b88e6fec27d94db7816bf1fe17b8440765d63ddde6f",
+      "sha256": "59e0d44f1b66287c7125510d3e6c711f9b26a50de6493eaa16c5a4c4ea207eb9",
+      "rows": 15,
+      "selection": "analysis in MIMIC_primary, Stanford_local, window_1h, window_3h, window_6h"
+    },
+    "reference_point_anchors.csv": {
+      "source_label": "<analysis_outputs>/bootstrap_precision_addendum_outputs/run_20261005T080004570969Z_2e75da2c1f5d/tables/reference_point_anchors.csv",
+      "source_generation_date": "2026-10-05",
+      "date_basis": "source run label",
+      "source_sha256": "6bdf3fbf919c54accb19dde404df14a3b4d083815f1d09eb17229c2c5be3c6db",
+      "sha256": "1b8fb0d972aa878cbdabe0f099dd39dd80cd221a1f4a18ef12fec383809a2589",
+      "rows": 15,
+      "selection": "analysis in MIMIC_primary, Stanford_local, window_1h, window_3h, window_6h"
+    },
+    "reference_point_curves.csv": {
+      "source_label": "<analysis_outputs>/bootstrap_precision_addendum_outputs/run_20261005T080004570969Z_2e75da2c1f5d/tables/reference_point_curves.csv",
+      "source_generation_date": "2026-10-05",
+      "date_basis": "source run label",
+      "source_sha256": "599c803859bb706e31aa88f096e0ebd4fd4b25a49661f38174b074bf1b22247b",
+      "sha256": "446414b270dab9799fb1b78a8053871731c5775493d6f5927368bd71ec634002",
+      "rows": 136,
+      "selection": "analysis in MIMIC_primary, Stanford_local, window_1h, window_3h, window_6h"
+    },
+    "analysis4_separated_provenance_summary.csv": {
+      "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis4_separated_provenance_summary.csv",
+      "source_generation_date": "2026-10-11",
+      "date_basis": "source run label",
+      "source_sha256": "5449bd8057f1d595e573a26cce9c132858eb12880c8ccfdbc04be42346de02b3",
+      "sha256": "5449bd8057f1d595e573a26cce9c132858eb12880c8ccfdbc04be42346de02b3",
+      "rows": 15,
+      "selection": "all rows; byte-identical copy"
+    },
+    "joint_reference_summary.json": {
+      "source_label": "<manuscript_figure_sources>/bootstrap_precision_summary.json",
+      "source_generation_date": null,
+      "source_saved_date": "2026-10-07",
+      "date_basis": "saved figure-summary file; original generation date not recorded",
+      "source_sha256": "a26ac9a0fb0eb548881a5c5d7e48ec9f2e229a7f483c2871180c0fef0546deee",
+      "sha256": "49225544468bd20bdffbf93707434658eb5ddc480f51921933fd404734afabdc",
+      "selection": "JSON subtree joint_reference_summary; values unchanged",
+      "underlying_source_hashes": {
+        "tables/reference_summary.csv": "eb00b7611a5ec4e754b5fccc757eb286c2fb21074c24c406f5560680aa8f193b",
+        "tables/reference_pair_stability.csv": "553a0866ea2793be11dc9b88e6fec27d94db7816bf1fe17b8440765d63ddde6f",
+        "tables/operating_points.csv": "c18295b397ed9bbb8e04a7f21f9a73fbf734e6f9db9d3d381268d656cebc26a4",
+        "tables/operating_summary.csv": "eaea09724d3103c3428164b0eb78be99ea863890b720aca93b6b3fca92c71485",
+        "reference/MIMIC_primary/replicate_anchors.csv": "43f57727a14850e433bf8638e6bbb16e6e634271c1f6c52dd2594d059d907ccb",
+        "reference/Stanford_local/replicate_anchors.csv": "5a750119a733b16d897156793419fe747f82ff6b4ad52dc4e3163206e9432cdd",
+        "operating/MIMIC_heldout/replicate_metrics.csv": "8fc7b1c1e00ad5c6ac8dcea2e90aed589c2e9d8ecaddb50b4619379f1978dea8",
+        "operating/Stanford_external/replicate_metrics.csv": "140f8154710ebf638595e4e4da62acdec59a22fe775275daaf5f39fe72553a17"
+      }
+    }
+  },
+  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+}

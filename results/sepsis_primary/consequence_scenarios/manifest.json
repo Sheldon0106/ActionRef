@@ -1,0 +1,18 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "JAMIA submission, October 2026",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "eTable 5C",
+  "files": {
+    "paper_minimax_behavior_budget.csv": {
+      "source_label": "<analysis_outputs>/v7_outputs/paper_minimax_behavior_budget.csv",
+      "source_generation_date": "2026-08-19",
+      "date_basis": "source file modification date; original run date not recorded",
+      "source_sha256": "e0f5b4e774be4e0555f347e0c4e6bf90f8aee1de98bd7d192ecc41d2791bdbb1",
+      "sha256": "e0f5b4e774be4e0555f347e0c4e6bf90f8aee1de98bd7d192ecc41d2791bdbb1",
+      "rows": 6,
+      "selection": "all rows; byte-identical copy"
+    }
+  },
+  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+}

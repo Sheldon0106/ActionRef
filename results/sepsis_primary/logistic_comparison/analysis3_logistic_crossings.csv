@@ -1,0 +1,4 @@
+level,target_probability,logistic_continuous_crossing,logistic_first_native_value,logistic_first_saved_supported_bin,existing_isotonic_reference,role
+Low,0.32664999507995912,26.094418781705308,27,27,27,alternative-fit diagnostic; existing references unchanged
+Mid,0.5,35.964257182125053,36,36,36,alternative-fit diagnostic; existing references unchanged
+High,0.80000000000000004,54.879041521606382,55,57,51,alternative-fit diagnostic; existing references unchanged

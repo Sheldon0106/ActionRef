@@ -1,0 +1,36 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "JAMIA submission, October 2026",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "eTable 2",
+  "files": {
+    "semantic_gate_one_factor_sensitivity.csv": {
+      "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/tables/semantic_gate_one_factor_sensitivity.csv",
+      "source_generation_date": "2026-08-29",
+      "date_basis": "source run label",
+      "source_sha256": "c480c93d621e60ee6ac1e77f8571b8d456bdc0730d35d5b46c8ab49c6b5a6f56",
+      "sha256": "c480c93d621e60ee6ac1e77f8571b8d456bdc0730d35d5b46c8ab49c6b5a6f56",
+      "rows": 48,
+      "selection": "all rows; byte-identical copy"
+    },
+    "semantic_target_selection.csv": {
+      "source_label": "<analysis_outputs>/v8_addendum_outputs/run_20260901T114212647018Z_7a68fbe37684/tables/semantic_target_selection.csv",
+      "source_generation_date": "2026-09-01",
+      "date_basis": "source run label",
+      "source_sha256": "eda009b03ca03d3b1c0147d9e468088ffa04efd1d537ef1ee5b7f54ea02dd5b3",
+      "sha256": "eda009b03ca03d3b1c0147d9e468088ffa04efd1d537ef1ee5b7f54ea02dd5b3",
+      "rows": 21,
+      "selection": "all rows; byte-identical copy"
+    },
+    "semantic_target_variant_registry.csv": {
+      "source_label": "<analysis_outputs>/v8_addendum_outputs/run_20260901T114212647018Z_7a68fbe37684/tables/semantic_target_variant_registry.csv",
+      "source_generation_date": "2026-09-01",
+      "date_basis": "source run label",
+      "source_sha256": "8e0bfa124b0b5dbb8c7f31b3fed5c9787de33b4baef1a9c7bbc3ace2e48095c2",
+      "sha256": "8e0bfa124b0b5dbb8c7f31b3fed5c9787de33b4baef1a9c7bbc3ace2e48095c2",
+      "rows": 9,
+      "selection": "all rows; byte-identical copy"
+    }
+  },
+  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+}

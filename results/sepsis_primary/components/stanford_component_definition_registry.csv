@@ -1,0 +1,7 @@
+site,component,source_field,transformation,clinical_action_category,missingness_rule,equivalence_premise,included_in_primary_component_analysis
+Stanford,lactate,lactate_flag,binary flag used unchanged,diagnostic/testing action,missing retained; no missing-to-zero coding,operational equivalence confirmed by investigator; not independently re-derived in this addendum,True
+Stanford,fluid,fluid_6h,1 if observed fluid_6h >= 2000 mL; 0 if observed below 2000; missing if unobserved,therapeutic action,missing retained; no missing-to-zero coding,operational equivalence confirmed by investigator; not independently re-derived in this addendum,True
+Stanford,vasopressor,vasopressor_flag,binary flag used unchanged,therapeutic action,missing retained; no missing-to-zero coding,operational equivalence confirmed by investigator; not independently re-derived in this addendum,True
+Stanford,steroid,steroid_flag,binary flag used unchanged,therapeutic action,missing retained; no missing-to-zero coding,operational equivalence confirmed by investigator; not independently re-derived in this addendum,True
+Stanford,antibiotics,antibiotic_flag,excluded,therapeutic action,not used,excluded from primary component analysis,False
+Stanford,blood_culture,blood_culture_flag,excluded,diagnostic/testing action,not used,excluded from primary component analysis,False

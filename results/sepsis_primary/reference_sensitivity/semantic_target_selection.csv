@@ -1,0 +1,22 @@
+variant_id,variant_family,variant_value,level,Low_target,Mid_target,High_target,target_probability,semantic_threshold_raw,selected_threshold,threshold_shift_from_frozen,target_attainable,evidence_gate_passed,evidence_gate_reason,complete_three_tiers,strict_tier_order,provenance_tier,provenance_label,learning_source
+baseline:baseline,baseline,baseline,Low,0.3266499950799591,0.5,0.8,0.3266499950799591,27.0,27.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+baseline:baseline,baseline,baseline,Mid,0.3266499950799591,0.5,0.8,0.5,36.0,36.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+baseline:baseline,baseline,baseline,High,0.3266499950799591,0.5,0.8,0.8,51.0,51.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Low:minus_0.05,Low,minus_0.05,Low,0.27664999507995913,0.5,0.8,0.27664999507995913,24.0,24.0,-3.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Low:minus_0.05,Low,minus_0.05,Mid,0.27664999507995913,0.5,0.8,0.5,36.0,36.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Low:minus_0.05,Low,minus_0.05,High,0.27664999507995913,0.5,0.8,0.8,51.0,51.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Low:plus_0.05,Low,plus_0.05,Low,0.3766499950799591,0.5,0.8,0.3766499950799591,30.0,30.0,3.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Low:plus_0.05,Low,plus_0.05,Mid,0.3766499950799591,0.5,0.8,0.5,36.0,36.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Low:plus_0.05,Low,plus_0.05,High,0.3766499950799591,0.5,0.8,0.8,51.0,51.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Mid:0.40,Mid,0.40,Low,0.3266499950799591,0.4,0.8,0.3266499950799591,27.0,27.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Mid:0.40,Mid,0.40,Mid,0.3266499950799591,0.4,0.8,0.4,30.0,30.0,-6.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Mid:0.40,Mid,0.40,High,0.3266499950799591,0.4,0.8,0.8,51.0,51.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Mid:0.60,Mid,0.60,Low,0.3266499950799591,0.6,0.8,0.3266499950799591,27.0,27.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Mid:0.60,Mid,0.60,Mid,0.3266499950799591,0.6,0.8,0.6,45.0,45.0,9.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+Mid:0.60,Mid,0.60,High,0.3266499950799591,0.6,0.8,0.8,51.0,51.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+High:0.70,High,0.70,Low,0.3266499950799591,0.5,0.7,0.3266499950799591,27.0,27.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+High:0.70,High,0.70,Mid,0.3266499950799591,0.5,0.7,0.5,36.0,36.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+High:0.70,High,0.70,High,0.3266499950799591,0.5,0.7,0.7,48.0,48.0,-3.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+High:0.90,High,0.90,Low,0.3266499950799591,0.5,0.9,0.3266499950799591,27.0,27.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+High:0.90,High,0.90,Mid,0.3266499950799591,0.5,0.9,0.5,36.0,36.0,0.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only
+High:0.90,High,0.90,High,0.3266499950799591,0.5,0.9,0.9,60.0,60.0,9.0,True,True,supported monotone response structure,True,True,A,local_behavioral_absolute,MIMIC development only

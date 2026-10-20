@@ -1,0 +1,45 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "JAMIA submission, October 2026",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "eTable 11; eFigure 3",
+  "files": {
+    "paper_transport_decomposition.csv": {
+      "source_label": "<analysis_outputs>/v7_outputs/paper_transport_decomposition.csv",
+      "source_generation_date": "2026-08-19",
+      "date_basis": "source file modification date; original run date not recorded",
+      "source_sha256": "973898bf6ead933092e8c978a58020ed6091d959e2da582ca23fa3c5b7389358",
+      "sha256": "973898bf6ead933092e8c978a58020ed6091d959e2da582ca23fa3c5b7389358",
+      "rows": 3,
+      "selection": "all rows; byte-identical copy"
+    },
+    "v7_cell56_temporal_drift.csv": {
+      "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/summaries/v7_cell56_temporal_drift.csv",
+      "source_generation_date": "2026-08-29",
+      "date_basis": "source run label",
+      "source_sha256": "5176d166c8f61f610093809c692e02c2ec4f94de7016615baeccd93ad2592513",
+      "sha256": "5176d166c8f61f610093809c692e02c2ec4f94de7016615baeccd93ad2592513",
+      "rows": 3,
+      "selection": "all rows; byte-identical copy"
+    },
+    "v7_cell56_temporal_operating.csv": {
+      "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/summaries/v7_cell56_temporal_operating.csv",
+      "source_generation_date": "2026-08-29",
+      "date_basis": "source run label",
+      "source_sha256": "04075088a0901c9b630bd77e9c35129918c3370934d3f96faf0e8bb525e50451",
+      "sha256": "04075088a0901c9b630bd77e9c35129918c3370934d3f96faf0e8bb525e50451",
+      "rows": 3,
+      "selection": "all rows; byte-identical copy"
+    },
+    "v7_cell56_temporal_counts.csv": {
+      "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/summaries/v7_cell56_temporal_counts.csv",
+      "source_generation_date": "2026-08-29",
+      "date_basis": "source run label",
+      "source_sha256": "b2a60891bd177b4646c3c63eef36ee6ba45863d43b89d3d39170cd9c266a4a47",
+      "sha256": "b2a60891bd177b4646c3c63eef36ee6ba45863d43b89d3d39170cd9c266a4a47",
+      "rows": 4,
+      "selection": "all rows; byte-identical copy"
+    }
+  },
+  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "JAMIA submission, October 2026",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "eTable 12; eFigure 4",
+  "files": {
+    "v7_subgroup_paper_summary_reconstructed.csv": {
+      "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/summaries/v7_subgroup_paper_summary_reconstructed.csv",
+      "source_generation_date": "2026-08-29",
+      "date_basis": "source run label",
+      "source_sha256": "e295edc1f6fa053c0ea021721c4e0e0d05cf9f8af2d4a1eadd2ef245ce41ec1c",
+      "sha256": "e295edc1f6fa053c0ea021721c4e0e0d05cf9f8af2d4a1eadd2ef245ce41ec1c",
+      "rows": 24,
+      "selection": "all rows; byte-identical copy"
+    },
+    "subgroup_predictive_calibration_detail.csv": {
+      "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/tables/subgroup_predictive_calibration_detail.csv",
+      "source_generation_date": "2026-08-29",
+      "date_basis": "source run label",
+      "source_sha256": "3f61015d8cf89298d1f0c0a277219f0e3d9bb78bc3ecd1bf57ba9319c60c7170",
+      "sha256": "3f61015d8cf89298d1f0c0a277219f0e3d9bb78bc3ecd1bf57ba9319c60c7170",
+      "rows": 33,
+      "selection": "all rows; byte-identical copy"
+    },
+    "subgroup_fixed_bin_calibration_curves.csv": {
+      "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/tables/subgroup_fixed_bin_calibration_curves.csv",
+      "source_generation_date": "2026-08-29",
+      "date_basis": "source run label",
+      "source_sha256": "d470f17c20986f5e93bde91c8f7b55ba0afe29e27b9a97885c02e0aed81c2987",
+      "sha256": "d470f17c20986f5e93bde91c8f7b55ba0afe29e27b9a97885c02e0aed81c2987",
+      "rows": 270,
+      "selection": "all rows; byte-identical copy"
+    }
+  },
+  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+}

@@ -1,0 +1,10 @@
+variant_family,variant_value,Low_target,Mid_target,High_target,valid_probability_order,duplicate_of_prior,included,reason
+baseline,baseline,0.3266499950799591,0.5,0.8,True,False,True,included
+Low,minus_0.05,0.27664999507995913,0.5,0.8,True,False,True,included
+Low,plus_0.05,0.3766499950799591,0.5,0.8,True,False,True,included
+Mid,0.40,0.3266499950799591,0.4,0.8,True,False,True,included
+Mid,0.50,0.3266499950799591,0.5,0.8,True,True,False,deduplicated baseline
+Mid,0.60,0.3266499950799591,0.6,0.8,True,False,True,included
+High,0.70,0.3266499950799591,0.5,0.7,True,False,True,included
+High,0.80,0.3266499950799591,0.5,0.8,True,True,False,deduplicated baseline
+High,0.90,0.3266499950799591,0.5,0.9,True,False,True,included

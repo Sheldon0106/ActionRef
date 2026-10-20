@@ -1,0 +1,9 @@
+cohort,score,fit_status,valid_bins,bin_width,gate_passed,gate_reason,isotonic_dynamic_range,logistic_bic_improvement,logistic_slope,complete_score_action_N,response_prevalence,module2_bootstrap_planned,bootstrap_precheck,abstention_reason
+MIMIC_learning,NEWS2,completed,9,1,True,supported monotone response structure,0.65148904944323927,12715.679544583254,0.39590259342577422,294713,0.32664999507995912,500,eligible,
+MIMIC_learning,MEWS,completed,8,1,True,supported monotone response structure,0.71055773712607351,11570.122219946352,0.48609880898708208,294713,0.32664999507995912,500,eligible,
+MIMIC_learning,REMS,completed,14,1,True,supported monotone response structure,0.6703500380161026,11562.906507158244,0.15359117705905853,294713,0.32664999507995912,500,eligible,
+MIMIC_learning,qSOFA,structural_precheck_abstention,3,1,,not computed: binning precondition failed,,,,294713,0.32664999507995912,500,not run: only three native score values; cannot meet eight valid bins,Only 3 valid bins; 8 required (min_bin_n=40)
+Stanford,NEWS2,completed,9,1,True,supported monotone response structure,0.74552035405103356,12290.148075271922,0.54723349215996631,118385,0.30575664146640197,500,eligible,
+Stanford,MEWS,completed,9,1,True,supported monotone response structure,0.75624811055927443,10465.262486725638,0.65568370926251707,118385,0.30575664146640197,500,eligible,
+Stanford,REMS,completed,14,1,True,supported monotone response structure,0.72344600125186576,4063.1233157786774,0.14100863488691226,118385,0.30575664146640197,500,eligible,
+Stanford,qSOFA,structural_precheck_abstention,3,1,,not computed: binning precondition failed,,,,118385,0.30575664146640197,500,not run: only three native score values; cannot meet eight valid bins,Only 3 valid bins; 8 required (min_bin_n=40)
