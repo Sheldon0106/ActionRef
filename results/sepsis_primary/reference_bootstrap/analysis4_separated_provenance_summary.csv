@@ -1,0 +1,16 @@
+object,target_family,requested,family_occurrence_N,family_occurrence_fraction,available_selected_N,threshold_median,threshold_p025,threshold_p975,independent_retained_N,independent_retained_fraction_all_requests,independent_threshold_median,independent_threshold_p025,independent_threshold_p975,shared_threshold_N,unavailable_after_target_N,final_provenance_A_N,final_provenance_B_N,final_provenance_E_N
+REMS_High_MIMIC,absolute,500,480,0.95999999999999996,480,13,13,13,480,0.95999999999999996,13,13,13,0,0,480,0,0
+REMS_High_MIMIC,relative,500,20,0.040000000000000001,20,12,12,12.524999999999999,20,0.040000000000000001,12,12,12.524999999999999,0,0,0,20,0
+REMS_High_MIMIC,no_target,500,0,0,0,,,,0,0,,,,0,0,0,0,0
+REMS_High_Stanford,absolute,500,497,0.99399999999999999,497,13,12,13,497,0.99399999999999999,13,12,13,0,0,497,0,0
+REMS_High_Stanford,relative,500,3,0.0060000000000000001,3,12,12,12.949999999999999,3,0.0060000000000000001,12,12,12.949999999999999,0,0,0,3,0
+REMS_High_Stanford,no_target,500,0,0,0,,,,0,0,,,,0,0,0,0,0
+ESRP_1h_High_MIMIC,absolute,500,46,0.091999999999999998,46,78,78,78,46,0.091999999999999998,78,78,78,0,0,46,0,0
+ESRP_1h_High_MIMIC,relative,500,454,0.90800000000000003,444,75,63,78,347,0.69399999999999995,75,69,78,97,10,0,444,10
+ESRP_1h_High_MIMIC,no_target,500,0,0,0,,,,0,0,,,,0,0,0,0,0
+qSOFA_3bin_High_MIMIC,absolute,500,351,0.70199999999999996,351,2,2,2,351,0.70199999999999996,2,2,2,0,0,351,0,0
+qSOFA_3bin_High_MIMIC,relative,500,149,0.29799999999999999,149,2,2,2,149,0.29799999999999999,2,2,2,0,0,0,149,0
+qSOFA_3bin_High_MIMIC,no_target,500,0,0,0,,,,0,0,,,,0,0,0,0,0
+qSOFA_3bin_High_Stanford,absolute,500,455,0.91000000000000003,455,2,2,2,455,0.91000000000000003,2,2,2,0,0,455,0,0
+qSOFA_3bin_High_Stanford,relative,500,45,0.089999999999999997,45,2,2,2,45,0.089999999999999997,2,2,2,0,0,0,45,0
+qSOFA_3bin_High_Stanford,no_target,500,0,0,0,,,,0,0,,,,0,0,0,0,0

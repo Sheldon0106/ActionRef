@@ -1,0 +1,135 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "JAMIA submission, October 2026",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "eTables 4 and 7",
+  "files": {
+    "component_missingness_prevalence.csv": {
+      "source_label": "<analysis_outputs>/v9_outputs/run_20260902T071128284014Z_d6ea520f88f7/component_missingness_prevalence.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "6f33e57a248fe1fc3a796c7bb1ee0db891f38f32a82ef5575d2ee360b4c33bed",
+      "sha256": "6f33e57a248fe1fc3a796c7bb1ee0db891f38f32a82ef5575d2ee360b4c33bed",
+      "rows": 12,
+      "selection": "all rows; byte-identical copy"
+    },
+    "action_pattern_distribution.csv": {
+      "source_label": "<analysis_outputs>/v9_outputs/run_20260902T071128284014Z_d6ea520f88f7/action_pattern_distribution.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "5ee7518d5692d4ae2372c4d771191bc9344d3ea93ada02998bb0ac7327480e2b",
+      "sha256": "5ee7518d5692d4ae2372c4d771191bc9344d3ea93ada02998bb0ac7327480e2b",
+      "rows": 1728,
+      "selection": "all rows; byte-identical copy"
+    },
+    "component_definition_registry.csv": {
+      "source_label": "<analysis_outputs>/v9_outputs/run_20260902T071128284014Z_d6ea520f88f7/component_definition_registry.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "8bada64c6c8e86f190f2d5b97997136db3fa8e09c4aa35043ac3c69fc97d5aa4",
+      "sha256": "8bada64c6c8e86f190f2d5b97997136db3fa8e09c4aa35043ac3c69fc97d5aa4",
+      "rows": 8,
+      "selection": "all rows; byte-identical copy"
+    },
+    "component_thresholds_point.csv": {
+      "source_label": "<analysis_outputs>/v9_outputs/run_20260902T071128284014Z_d6ea520f88f7/component_thresholds_point.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "4ced39225aa93e2392bdae34fd44f3a59113216171c98e99a68e7d02dbec2f37",
+      "sha256": "4ced39225aa93e2392bdae34fd44f3a59113216171c98e99a68e7d02dbec2f37",
+      "rows": 12,
+      "selection": "all rows; byte-identical copy"
+    },
+    "component_response_curves.csv": {
+      "source_label": "<analysis_outputs>/v9_outputs/run_20260902T071128284014Z_d6ea520f88f7/component_response_curves.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "bf4ed48fadac5a4cf28937f8b85c94cefbee6bdf38a4396ced5e451a53bdcb41",
+      "sha256": "bf4ed48fadac5a4cf28937f8b85c94cefbee6bdf38a4396ced5e451a53bdcb41",
+      "rows": 232,
+      "selection": "all rows; byte-identical copy"
+    },
+    "leave_one_component_out_sensitivity.csv": {
+      "source_label": "<analysis_outputs>/v9_outputs/run_20260902T071128284014Z_d6ea520f88f7/leave_one_component_out_sensitivity.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "3fbefd307bb47d024b38fc2a7ae6e37b069236855cd3f2840dfcc233ce26c4a6",
+      "sha256": "3fbefd307bb47d024b38fc2a7ae6e37b069236855cd3f2840dfcc233ce26c4a6",
+      "rows": 120,
+      "selection": "all rows; byte-identical copy"
+    },
+    "threshold_action_workload_matrix.csv": {
+      "source_label": "<analysis_outputs>/v9_outputs/run_20260902T071128284014Z_d6ea520f88f7/threshold_action_workload_matrix.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "b0a51f971e2ffbaf634c095acfda6695f953406bc3320997b4271a28835e52cd",
+      "sha256": "b0a51f971e2ffbaf634c095acfda6695f953406bc3320997b4271a28835e52cd",
+      "rows": 30,
+      "selection": "all rows; byte-identical copy"
+    },
+    "stanford_component_local_thresholds.csv": {
+      "source_label": "<analysis_outputs>/v9_stanford_component_outputs/run_20260902T092250247419Z_47329d620910/stanford_component_local_thresholds.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "118fa135120226c996c38ea6a6594b4a66d80d5e321cdc1d7717a0b1bde7b69c",
+      "sha256": "118fa135120226c996c38ea6a6594b4a66d80d5e321cdc1d7717a0b1bde7b69c",
+      "rows": 12,
+      "selection": "all rows; byte-identical copy"
+    },
+    "stanford_component_local_bootstrap_summary.csv": {
+      "source_label": "<analysis_outputs>/v9_stanford_component_outputs/run_20260902T092250247419Z_47329d620910/stanford_component_local_bootstrap_summary.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "d22b40d3b42affed0a2b5c247440f43ecf0fddfd97438295a9bd29989b771099",
+      "sha256": "d22b40d3b42affed0a2b5c247440f43ecf0fddfd97438295a9bd29989b771099",
+      "rows": 12,
+      "selection": "all rows; byte-identical copy"
+    },
+    "stanford_component_response_curves.csv": {
+      "source_label": "<analysis_outputs>/v9_stanford_component_outputs/run_20260902T092250247419Z_47329d620910/stanford_component_response_curves.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "a5f944d5df100f8d10c8c5d5f5de11ef3e94a8bb1b6c0f41cb6ce511ac46533f",
+      "sha256": "a5f944d5df100f8d10c8c5d5f5de11ef3e94a8bb1b6c0f41cb6ce511ac46533f",
+      "rows": 124,
+      "selection": "all rows; byte-identical copy"
+    },
+    "stanford_component_train_prevalence.csv": {
+      "source_label": "<analysis_outputs>/v9_stanford_component_outputs/run_20260902T092250247419Z_47329d620910/stanford_component_train_prevalence.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "a95846561cefdb17be403c1e9569e346ed316e66fd0203ad280ae38cc60ffa99",
+      "sha256": "a95846561cefdb17be403c1e9569e346ed316e66fd0203ad280ae38cc60ffa99",
+      "rows": 12,
+      "selection": "all rows; byte-identical copy"
+    },
+    "component_local_vs_transport_comparison.csv": {
+      "source_label": "<analysis_outputs>/v9_stanford_component_outputs/run_20260902T092250247419Z_47329d620910/component_local_vs_transport_comparison.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "bc29d6ce5a9979adf8b19fe1d1186ebdd19858b8dfc091694dd15e8cb9774b8e",
+      "sha256": "bc29d6ce5a9979adf8b19fe1d1186ebdd19858b8dfc091694dd15e8cb9774b8e",
+      "rows": 12,
+      "selection": "all rows; byte-identical copy"
+    },
+    "mimic_component_frozen_stanford_operating.csv": {
+      "source_label": "<analysis_outputs>/v9_stanford_component_outputs/run_20260902T092250247419Z_47329d620910/mimic_component_frozen_stanford_operating.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "d33dbab822d34df345a09b788752577ce64e366938cafd7a79217efb08b2f21b",
+      "sha256": "d33dbab822d34df345a09b788752577ce64e366938cafd7a79217efb08b2f21b",
+      "rows": 12,
+      "selection": "all rows; byte-identical copy"
+    },
+    "stanford_component_definition_registry.csv": {
+      "source_label": "<analysis_outputs>/v9_stanford_component_outputs/run_20260902T092250247419Z_47329d620910/stanford_component_definition_registry.csv",
+      "source_generation_date": "2026-09-02",
+      "date_basis": "source run label",
+      "source_sha256": "3e17942fa171d8492c6772a5377bcc101e1cc9dc38bf11dc7d442337741806d3",
+      "sha256": "3e17942fa171d8492c6772a5377bcc101e1cc9dc38bf11dc7d442337741806d3",
+      "rows": 6,
+      "selection": "all rows; byte-identical copy"
+    }
+  },
+  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+}

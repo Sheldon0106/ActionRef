@@ -1,0 +1,21 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "eTable 14C; eFigure 6",
+  "files": {
+    "condition_error_summary.csv": {
+      "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis1_summary.csv",
+      "source_generation_date": "2026-10-11",
+      "sha256": "daba6e71e3cc69e6dee564091bd3e39fcd074698604caacc78bc806f0baa92d3",
+      "source_sha256": "daba6e71e3cc69e6dee564091bd3e39fcd074698604caacc78bc806f0baa92d3",
+      "selection": "all rows; byte-identical copy"
+    },
+    "config.json": {
+      "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/config.json",
+      "source_generation_date": "2026-10-11",
+      "sha256": "eadb79aa4ffad71f84b5c84044fe206f107a9450cc9483ce6da98cbea8f5e1d0",
+      "source_sha256": "eadb79aa4ffad71f84b5c84044fe206f107a9450cc9483ce6da98cbea8f5e1d0",
+      "selection": "all rows; byte-identical copy"
+    }
+  }
+}

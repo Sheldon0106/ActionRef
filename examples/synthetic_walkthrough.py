@@ -67,7 +67,7 @@ def run_demo(output_dir):
     }
     (output / 'summary.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
     print('Synthetic example | learning: {} | evaluation: {}'.format(len(learning), len(evaluation)))
-    print('\nLearned references:')
+    print('\nEstimated references:')
     print(behavior.anchors[['level', 'selected_threshold', 'anchor_family', 'provenance_tier']].to_string(index=False))
     print('\nHeld-out evaluation (synthetic data):')
     print(heldout.table[['level', 'frozen_threshold', 'alert_fraction', 'response_yield', 'recall']].to_string(index=False))

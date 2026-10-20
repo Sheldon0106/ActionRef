@@ -55,7 +55,7 @@ group_col=None, n_bootstrap=0, random_state=2026100288)` returns an
 `ActionCurveEvaluation` with `points`, `intervals`, `reliability`, and `metadata`.
 The comparator predicts the supplied learning action rate for each complete
 evaluation row. Intervals require a group column and use paired resampling of
-whole patient clusters conditional on the learned curve. Returned summaries
+whole patient clusters conditional on the estimated curve. Returned summaries
 exclude patient identifiers and individual predictions.
 
 Calibration intercept and slope are descriptive logistic fits to the fixed

@@ -1,0 +1,17 @@
+site,component_field,base_N,stored_missing_N,upstream_missing_indicator_N,upstream_missing_indicator_available
+MIMIC,age,425011,0,,False
+MIMIC,triage_temperature,425011,0,23921,True
+MIMIC,triage_heartrate,425011,0,17115,True
+MIMIC,triage_resprate,425011,0,20395,True
+MIMIC,triage_o2sat,425011,0,20727,True
+MIMIC,triage_sbp,425011,0,18539,True
+MIMIC,triage_dbp,425011,0,19694,True
+MIMIC,triage_MAP,425011,0,,False
+Stanford,age,118385,0,,False
+Stanford,triage_temperature,118385,0,9498,True
+Stanford,triage_heartrate,118385,0,154,True
+Stanford,triage_resprate,118385,0,194,True
+Stanford,triage_o2sat,118385,0,219,True
+Stanford,triage_sbp,118385,0,577,True
+Stanford,triage_dbp,118385,0,607,True
+Stanford,triage_MAP,118385,0,,False

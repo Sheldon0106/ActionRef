@@ -1,0 +1,4 @@
+window_hours,status,passed,reason,n_complete,response_prevalence,bin_width,valid_bins,isotonic_dynamic_range,logistic_slope,logistic_bic_improvement
+1,supported,True,supported monotone response structure,292538,0.12252083490008135,3.0,26,0.679370088343128,0.0563596396465989,13496.29703036137
+3,supported,True,supported monotone response structure,292790,0.2509102086819905,3.0,26,0.9119632907243527,0.06766380885242662,28520.33384272596
+6,supported,True,supported monotone response structure,293929,0.29749021022083566,3.0,26,0.8972795804654212,0.07044325424587818,32549.161803974188

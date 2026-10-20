@@ -68,4 +68,4 @@ validation:
     not_found: warn
     unrecognized_links: warn
     anchors: warn
-copyright: ActionRef · Universal Cutoff Framework contributors
+copyright: ActionRef authors

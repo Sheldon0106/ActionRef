@@ -1,0 +1,54 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "JAMIA submission, October 2026",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "eTable 10; eFigure 2",
+  "files": {
+    "sensitivity_response_bundle_thresholds.csv": {
+      "source_label": "<analysis_outputs>/v7_outputs/sensitivity_response_bundle_thresholds.csv",
+      "source_generation_date": "2026-08-19",
+      "date_basis": "source file modification date; original run date not recorded",
+      "source_sha256": "162e62a42a4ba75bee2338b929e24cc33f57911302dd5f35ed9398cd85bc0fc2",
+      "sha256": "162e62a42a4ba75bee2338b929e24cc33f57911302dd5f35ed9398cd85bc0fc2",
+      "rows": 9,
+      "selection": "all rows; byte-identical copy"
+    },
+    "corrected_action_window_thresholds.csv": {
+      "source_label": "<analysis_outputs>/v10_corrected_fluid_action_window_outputs/run_20260913T095042149774Z_3034743a5a6c/tables/corrected_action_window_thresholds.csv",
+      "source_generation_date": "2026-09-13",
+      "date_basis": "source run label",
+      "source_sha256": "594bcf2fbd3fafb58ac92ae0390b4782696a5511a451948614726df88f26cea9",
+      "sha256": "594bcf2fbd3fafb58ac92ae0390b4782696a5511a451948614726df88f26cea9",
+      "rows": 9,
+      "selection": "all rows; byte-identical copy"
+    },
+    "corrected_action_window_response_curves.csv": {
+      "source_label": "<analysis_outputs>/v10_corrected_fluid_action_window_outputs/run_20260913T095042149774Z_3034743a5a6c/tables/corrected_action_window_response_curves.csv",
+      "source_generation_date": "2026-09-13",
+      "date_basis": "source run label",
+      "source_sha256": "aaeeef7bba6f089035f4291d913536fd2013ac03dc97932f8f32d2b0692a94ea",
+      "sha256": "aaeeef7bba6f089035f4291d913536fd2013ac03dc97932f8f32d2b0692a94ea",
+      "rows": 78,
+      "selection": "all rows; byte-identical copy"
+    },
+    "corrected_action_window_component_prevalence.csv": {
+      "source_label": "<analysis_outputs>/v10_corrected_fluid_action_window_outputs/run_20260913T095042149774Z_3034743a5a6c/tables/corrected_action_window_component_prevalence.csv",
+      "source_generation_date": "2026-09-13",
+      "date_basis": "source run label",
+      "source_sha256": "e4305ee3bf29566c92afe45f6d5ea4292db41b8d876a39d25a90fd7c0a1429d8",
+      "sha256": "e4305ee3bf29566c92afe45f6d5ea4292db41b8d876a39d25a90fd7c0a1429d8",
+      "rows": 15,
+      "selection": "all rows; byte-identical copy"
+    },
+    "corrected_action_window_evidence_gates.csv": {
+      "source_label": "<analysis_outputs>/v10_corrected_fluid_action_window_outputs/run_20260913T095042149774Z_3034743a5a6c/tables/corrected_action_window_evidence_gates.csv",
+      "source_generation_date": "2026-09-13",
+      "date_basis": "source run label",
+      "source_sha256": "7580c41696c77ed9f17cbc21e00dc9daf84fb64224607a0111efd9d5ecc0081b",
+      "sha256": "7580c41696c77ed9f17cbc21e00dc9daf84fb64224607a0111efd9d5ecc0081b",
+      "rows": 3,
+      "selection": "all rows; byte-identical copy"
+    }
+  },
+  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+}

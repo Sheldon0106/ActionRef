@@ -1,0 +1,4 @@
+level,MIMIC_behavior_threshold,MIMIC_alert_fraction,MIMIC_locked_risk_at_threshold,Stanford_fixed_score_threshold,Stanford_workload_matched_threshold,Stanford_risk_matched_threshold,Stanford_local_behavior_threshold,Stanford_R15_same_or_lower_workload_comparator,Stanford_fixed_alert_fraction
+Low,27.0,0.3654962047550342,0.05284578900141008,27.0,27.0,30.0,26.0,31.0,0.35574608269628755
+Mid,36.0,0.15692240135499655,0.11000901713255185,36.0,34.0,37.0,36.0,36.0,0.12701778096887276
+High,51.0,0.021501160529452355,0.3144126357354393,51.0,50.0,54.0,50.0,51.0,0.01909025636693838

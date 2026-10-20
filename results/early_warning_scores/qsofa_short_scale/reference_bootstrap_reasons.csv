@@ -1,0 +1,9 @@
+cohort,score,level,provenance_tier,selected_type,reason,replicates
+MIMIC_learning,qSOFA,High,A,semantic-only,semantic threshold retained; changepoints are corroborative only,351
+MIMIC_learning,qSOFA,High,B,relative-anchor,semantic threshold retained; changepoints are corroborative only,149
+MIMIC_learning,qSOFA,Low,A,semantic-only,semantic threshold retained; changepoints are corroborative only,500
+MIMIC_learning,qSOFA,Mid,A,semantic-only,semantic threshold retained; changepoints are corroborative only,500
+Stanford,qSOFA,High,A,semantic-only,semantic threshold retained; changepoints are corroborative only,455
+Stanford,qSOFA,High,B,relative-anchor,semantic threshold retained; changepoints are corroborative only,45
+Stanford,qSOFA,Low,A,semantic-only,semantic threshold retained; changepoints are corroborative only,500
+Stanford,qSOFA,Mid,A,semantic-only,semantic threshold retained; changepoints are corroborative only,500

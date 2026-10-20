@@ -46,14 +46,14 @@ Both passed the evidence gate under frozen parameters.
 
 | | Response prev. | Bin width | Valid bins | Isotonic range | CPs | Low | Mid | High |
 |---|---|---|---|---|---|---|---|---|
-| COPD, primary | 0.0610 | 2.5 | 29 | 0.518 | 2 | 17.78 | 55.04 | abstention |
+| COPD, primary | 0.0610 | 2.5 | 29 | 0.518 | 2 | 17.78 | 55.04 | unavailable |
 | Pneumonia, primary | 0.2715 | 1.0 | 34 | 0.751 | 0 | 5 | 14 | 24 |
 | Pneumonia, broad | 0.3548 | 1.0 | 34 | 0.710 | 0 | 5 | 11 | 24 |
 
 - All thresholds are `semantic-only`.
 - No changepoint replaced a semantic anchor, including the COPD fit with two supported changepoints.
-- COPD High abstains: the isotonic curve peaks near 0.53, so the 80% target is unreachable.
-- That abstention propagates into Module 3A as `unavailable_behavior_threshold` at every capacity level.
+- COPD High is unavailable: the isotonic curve peaks near 0.53, so the 80% target is unreachable.
+- That unavailable level propagates into Module 3A as `unavailable_behavior_threshold` at every capacity level.
 
 ## Module 3A
 
@@ -61,7 +61,7 @@ K fractions 0.01 to 0.30. For COPD:
 
 - Low (17.78) is below the floor through 10% and is raised to it.
 - Mid (55.04) is above every floor and is never adjusted.
-- High propagates its abstention.
+- High remains unavailable.
 
 ## Comparison against supplied reference anchors
 
@@ -89,13 +89,13 @@ COPD, `score_COPD_AutoScore`, primary bundle:
 |---|---|---|---|
 | Low | 14.886 | CP_aligned | 17.780 |
 | Mid | 55.098 | CP_aligned | 55.041 |
-| High | 57.009 | structural_fallback | abstention |
+| High | 57.009 | structural_fallback | unavailable |
 
 - Mid reproduces within 0.057.
 - Low differs on bin width: reference 2.0, package 2.5 under the frozen rule. The anchor sits in the steep part of the curve.
 - High differs by design.
   - Reference row is `structural_fallback_above_primary`: nearest stable changepoint substituted when semantic High was unreachable.
-  - v0.3 prohibits this. The package abstains.
+  - v0.3 prohibits this. The package returns no references.
 
 Data notes:
 

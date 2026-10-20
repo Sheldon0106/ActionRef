@@ -1,0 +1,233 @@
+analysis_role,cohort,component,score,observed_rate,count,isotonic_rate,bin_width
+post hoc secondary MIMIC learning,MIMIC learning,lactate,3.0,0.09344262295081968,1220,0.08436578171091445,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,6.0,0.09455719557195572,2168,0.08436578171091445,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,9.0,0.08157074239487655,11867,0.08436578171091445,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,12.0,0.11638211911898866,23019,0.11638211911898866,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,15.0,0.1435618690905769,21893,0.1435618690905769,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,18.0,0.1671889737426598,32867,0.1671889737426598,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,21.0,0.2162637807221604,49435,0.2162637807221604,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,24.0,0.26694366369302214,40915,0.26694366369302214,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,27.0,0.31810699588477365,26730,0.31810699588477365,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,30.0,0.37418775423952666,18929,0.37418775423952666,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,33.0,0.4134052788974126,15382,0.4134052788974126,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,36.0,0.46769253208868145,13712,0.46769253208868145,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,39.0,0.5046308318185753,11553,0.5046308318185753,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,42.0,0.553172811637823,7974,0.553172811637823,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,45.0,0.6544756516467973,4949,0.6544756516467973,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,48.0,0.708092485549133,3114,0.708092485549133,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,51.0,0.7894216510133465,2023,0.7894216510133465,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,54.0,0.8534296028880867,1385,0.8534296028880867,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,57.0,0.8697247706422019,1090,0.8697247706422019,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,60.0,0.9199029126213593,824,0.9183381088825215,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,63.0,0.916083916083916,572,0.9183381088825215,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,66.0,0.9438502673796791,374,0.9438502673796791,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,69.0,0.9798387096774194,248,0.9594594594594594,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,72.0,0.9310344827586207,116,0.9594594594594594,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,75.0,0.9375,80,0.9594594594594594,3.0
+post hoc secondary MIMIC learning,MIMIC learning,lactate,78.0,1.0,43,1.0,3.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,2.0,0.12232415902140673,327,0.08286778398510242,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,6.0,0.09238451935081149,801,0.08286778398510242,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,8.0,0.0763888888888889,3168,0.08286778398510242,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,12.0,0.0886968085106383,7520,0.0886968085106383,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,14.0,0.11074018648555313,8687,0.11074018648555313,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,16.0,0.15653153153153154,888,0.14338948839375826,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,18.0,0.1424164095722505,11993,0.14338948839375826,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,20.0,0.15879396984924624,19900,0.15879396984924624,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,22.0,0.22437295528898582,3668,0.21520169322709162,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,24.0,0.21248789932236206,12396,0.21520169322709162,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,26.0,0.2700588542054682,13423,0.2700588542054682,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,28.0,0.28918147208121825,6304,0.28918147208121825,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,30.0,0.35639066694197813,4843,0.35639066694197813,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,32.0,0.41108749557208646,5646,0.41108749557208646,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,34.0,0.4329187615771368,3779,0.4329187615771368,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,36.0,0.483800350262697,2284,0.483800350262697,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,38.0,0.5290412876137159,2858,0.5290412876137159,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,40.0,0.5409356725146199,2394,0.5409356725146199,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,42.0,0.6320754716981132,1166,0.6268656716417911,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,44.0,0.6228533685601056,1514,0.6268656716417911,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,46.0,0.7112417340191036,1361,0.7112417340191036,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,48.0,0.7629733520336606,713,0.7629733520336606,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,50.0,0.810477657935285,649,0.810477657935285,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,52.0,0.8391003460207612,578,0.8391003460207612,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,54.0,0.8936170212765957,376,0.8912087912087913,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,56.0,0.8885017421602788,287,0.8912087912087913,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,58.0,0.8906882591093117,247,0.8912087912087913,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,60.0,0.9528795811518325,191,0.9500959692898272,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,62.0,0.9508196721311475,122,0.9500959692898272,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,64.0,0.9550561797752809,89,0.9500959692898272,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,66.0,0.9571428571428572,70,0.9500959692898272,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,lactate,68.0,0.9183673469387755,49,0.9500959692898272,2.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,3.0,0.006557377049180328,1220,0.004259222855645109,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,6.0,0.006918819188191882,2168,0.004259222855645109,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,9.0,0.0035374378842752464,11873,0.004259222855645109,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,12.0,0.023581151832460734,23875,0.01676602560028473,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,15.0,0.013147683177356768,21905,0.01676602560028473,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,18.0,0.014228816393542306,32891,0.01676602560028473,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,21.0,0.05667757488914277,51643,0.0552967843176327,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,24.0,0.06128186800095306,41970,0.0552967843176327,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,27.0,0.04327568212315491,26828,0.0552967843176327,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,30.0,0.05950075880475169,19109,0.05876404818998642,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,33.0,0.05785603715170279,15504,0.05876404818998642,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,36.0,0.06917694582702157,13863,0.06917694582702157,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,39.0,0.07109248010950467,11689,0.07109248010950467,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,42.0,0.07458009526197042,7978,0.07458009526197042,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,45.0,0.09826472962066182,4956,0.09826472962066182,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,48.0,0.11524879614767256,3115,0.11524879614767256,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,51.0,0.14673913043478262,2024,0.14673913043478262,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,54.0,0.15262778977681785,1389,0.15262778977681785,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,57.0,0.16590284142988085,1091,0.16590284142988085,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,60.0,0.16707021791767554,826,0.16707021791767554,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,63.0,0.19055944055944055,572,0.18921775898520085,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,66.0,0.18716577540106952,374,0.18921775898520085,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,69.0,0.22580645161290322,248,0.22580645161290322,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,72.0,0.33620689655172414,116,0.33620689655172414,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,75.0,0.4,80,0.4,3.0
+post hoc secondary MIMIC learning,MIMIC learning,fluid,78.0,0.4418604651162791,43,0.4418604651162791,3.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,2.0,0.039755351681957186,327,0.026743398781313474,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,6.0,0.02871410736579276,801,0.026743398781313474,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,8.0,0.025883838383838384,3168,0.026743398781313474,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,12.0,0.026329787234042553,7520,0.026743398781313474,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,14.0,0.03119604005985956,8687,0.030287206266318537,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,16.0,0.021396396396396396,888,0.030287206266318537,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,18.0,0.04069040273492871,11993,0.034026039762661345,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,20.0,0.03291457286432161,19900,0.034026039762661345,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,22.0,0.01826608505997819,3668,0.034026039762661345,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,24.0,0.044288480154888676,12396,0.04208822339133954,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,26.0,0.04596587946062728,13423,0.04208822339133954,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,28.0,0.02950507614213198,6304,0.04208822339133954,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,30.0,0.07247573817881478,4843,0.06258760863470704,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,32.0,0.06340772228126107,5646,0.06258760863470704,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,34.0,0.048690129663932255,3779,0.06258760863470704,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,36.0,0.08887915936952714,2284,0.08187475690392844,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,38.0,0.07627711686494051,2858,0.08187475690392844,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,40.0,0.0835421888053467,2394,0.0835421888053467,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,42.0,0.10634648370497427,1166,0.10634648370497427,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,44.0,0.10766182298546896,1514,0.10766182298546896,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,46.0,0.12564290962527552,1361,0.12198649951783992,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,48.0,0.1150070126227209,713,0.12198649951783992,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,50.0,0.1694915254237288,649,0.15221459762944478,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,52.0,0.1384083044982699,578,0.15221459762944478,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,54.0,0.14361702127659576,376,0.15221459762944478,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,56.0,0.1602787456445993,287,0.15543071161048688,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,58.0,0.14979757085020243,247,0.15543071161048688,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,60.0,0.193717277486911,191,0.1853035143769968,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,62.0,0.1721311475409836,122,0.1853035143769968,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,64.0,0.20224719101123595,89,0.1971153846153846,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,66.0,0.21428571428571427,70,0.1971153846153846,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,fluid,68.0,0.16326530612244897,49,0.1971153846153846,2.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,3.0,0.0,1220,0.0,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,6.0,0.0009225092250922509,2168,0.00021375133594584965,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,9.0,8.426729586247578e-05,11867,0.00021375133594584965,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,12.0,0.0014335983318128503,23019,0.0010019593872461702,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,15.0,0.0005481204037820307,21893,0.0010019593872461702,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,18.0,0.0013387288161377674,32867,0.0013387288161377674,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,21.0,0.006372003641144938,49435,0.006372003641144938,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,24.0,0.00879872907246731,40915,0.007361963190184049,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,27.0,0.0051627384960718295,26730,0.007361963190184049,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,30.0,0.008346980823075703,18929,0.008346980823075703,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,33.0,0.011571967234429853,15382,0.011571967234429853,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,36.0,0.014002333722287048,13712,0.014002333722287048,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,39.0,0.015320695923136847,11553,0.015320695923136847,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,42.0,0.017055430147980936,7974,0.017055430147980936,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,45.0,0.02485350575873914,4949,0.02485350575873914,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,48.0,0.03628773281952473,3114,0.03628773281952473,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,51.0,0.05239742956005932,2023,0.05239742956005932,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,54.0,0.054873646209386284,1385,0.054873646209386284,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,57.0,0.06972477064220184,1090,0.06948798328108673,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,60.0,0.0691747572815534,824,0.06948798328108673,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,63.0,0.07342657342657342,572,0.07342657342657342,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,66.0,0.09893048128342247,374,0.09893048128342247,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,69.0,0.10080645161290322,248,0.10080645161290322,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,72.0,0.13793103448275862,116,0.13793103448275862,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,75.0,0.175,80,0.175,3.0
+post hoc secondary MIMIC learning,MIMIC learning,vasopressor,78.0,0.2558139534883721,43,0.2558139534883721,3.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,2.0,0.0,327,0.0,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,6.0,0.0,801,0.0,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,8.0,0.000946969696969697,3168,0.000946969696969697,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,12.0,0.0010638297872340426,7520,0.0009872277410995249,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,14.0,0.0009209163117301715,8687,0.0009872277410995249,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,16.0,0.0022522522522522522,888,0.0013727464079802325,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,18.0,0.0014174935378971066,11993,0.0013727464079802325,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,20.0,0.0013065326633165829,19900,0.0013727464079802325,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,22.0,0.004089422028353326,3668,0.0025522908366533864,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,24.0,0.002097450790577606,12396,0.0025522908366533864,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,26.0,0.004320941667287492,13423,0.004320941667287492,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,28.0,0.0077728426395939085,6304,0.0076253700547232435,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,30.0,0.007433409043981004,4843,0.0076253700547232435,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,32.0,0.008678710591569253,5646,0.008678710591569253,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,34.0,0.015083355385022493,3779,0.015083355385022493,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,36.0,0.017513134851138354,2284,0.017513134851138354,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,38.0,0.017844646606018196,2858,0.017844646606018196,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,40.0,0.023809523809523808,2394,0.023809523809523808,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,42.0,0.04373927958833619,1166,0.030597014925373135,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,44.0,0.02047556142668428,1514,0.030597014925373135,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,46.0,0.03159441587068332,1361,0.03159441587068332,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,48.0,0.07994389901823282,713,0.05515463917525773,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,50.0,0.03697996918335902,649,0.05515463917525773,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,52.0,0.04498269896193772,578,0.05515463917525773,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,54.0,0.09574468085106383,376,0.0681198910081744,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,56.0,0.041811846689895474,287,0.0681198910081744,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,58.0,0.06072874493927125,247,0.0681198910081744,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,60.0,0.06282722513089005,191,0.0681198910081744,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,62.0,0.12295081967213115,122,0.09608540925266904,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,64.0,0.06741573033707865,89,0.09608540925266904,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,66.0,0.08571428571428572,70,0.09608540925266904,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,vasopressor,68.0,0.16326530612244897,49,0.16326530612244897,2.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,3.0,0.02540983606557377,1220,0.02540983606557377,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,6.0,0.029059040590405903,2168,0.025792661204132525,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,9.0,0.025195921462880255,11867,0.025792661204132525,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,12.0,0.02854163951518311,23019,0.02854163951518311,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,15.0,0.03617594664961403,21893,0.032938240798502806,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,18.0,0.03246417379134086,32867,0.032938240798502806,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,21.0,0.031819561039749165,49435,0.032938240798502806,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,24.0,0.036221434681657096,40915,0.036221434681657096,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,27.0,0.04062850729517396,26730,0.04062850729517396,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,30.0,0.049870568968249776,18929,0.049870568968249776,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,33.0,0.052723963073722534,15382,0.052723963073722534,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,36.0,0.05710326721120187,13712,0.05710326721120187,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,39.0,0.060070977235350126,11553,0.060070977235350126,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,42.0,0.06696764484574869,7974,0.06696764484574869,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,45.0,0.07274196807435845,4949,0.07274196807435845,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,48.0,0.09248554913294797,3114,0.08328141225337488,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,51.0,0.08403361344537816,2023,0.08328141225337488,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,54.0,0.07509025270758123,1385,0.08328141225337488,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,57.0,0.0798165137614679,1090,0.08328141225337488,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,60.0,0.0691747572815534,824,0.08328141225337488,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,63.0,0.07867132867132867,572,0.08328141225337488,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,66.0,0.08288770053475936,374,0.08328141225337488,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,69.0,0.08064516129032258,248,0.08328141225337488,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,72.0,0.09482758620689655,116,0.09482758620689655,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,75.0,0.1625,80,0.15447154471544716,3.0
+post hoc secondary MIMIC learning,MIMIC learning,steroid,78.0,0.13953488372093023,43,0.15447154471544716,3.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,2.0,0.027522935779816515,327,0.027522935779816515,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,6.0,0.04369538077403246,801,0.03107320045260684,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,8.0,0.028093434343434344,3168,0.03107320045260684,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,12.0,0.03098404255319149,7520,0.03107320045260684,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,14.0,0.0410958904109589,8687,0.03808489897199575,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,16.0,0.0259009009009009,888,0.03808489897199575,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,18.0,0.038939381305761696,11993,0.03808489897199575,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,20.0,0.03864321608040201,19900,0.03808489897199575,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,22.0,0.02808069792802617,3668,0.03808489897199575,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,24.0,0.0494514359470797,12396,0.04672664446035551,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,26.0,0.04730686135737167,13423,0.04672664446035551,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,28.0,0.040133248730964466,6304,0.04672664446035551,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,30.0,0.05884782159818294,4843,0.05884782159818294,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,32.0,0.07137796670208997,5646,0.06684350132625995,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,34.0,0.060068801270177295,3779,0.06684350132625995,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,36.0,0.08581436077057793,2284,0.08581436077057793,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,38.0,0.08852344296710987,2858,0.0873952779893374,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,40.0,0.0860484544695071,2394,0.0873952779893374,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,42.0,0.1097770154373928,1166,0.10186567164179104,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,44.0,0.09577278731836196,1514,0.10186567164179104,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,46.0,0.10433504775900074,1361,0.10433504775900074,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,48.0,0.10659186535764376,713,0.10659186535764376,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,50.0,0.11556240369799692,649,0.11322751322751323,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,52.0,0.11591695501730104,578,0.11322751322751323,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,54.0,0.10904255319148937,376,0.11322751322751323,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,56.0,0.10801393728222997,287,0.11322751322751323,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,58.0,0.11336032388663968,247,0.11336032388663968,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,60.0,0.1256544502617801,191,0.1256544502617801,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,62.0,0.1557377049180328,122,0.1387900355871886,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,64.0,0.16853932584269662,89,0.1387900355871886,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,66.0,0.07142857142857142,70,0.1387900355871886,2.0
+Stanford descriptive local curve; no local threshold selection for claims,Stanford external,steroid,68.0,0.14285714285714285,49,0.14285714285714285,2.0

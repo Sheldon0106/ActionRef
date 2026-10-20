@@ -1,6 +1,6 @@
 # Sepsis: understand practice, then compare candidates
 
-The primary MIMIC analysis illustrates two distinct outputs: references learned
+The primary MIMIC analysis illustrates two distinct outputs: references estimated
 from recorded actions, and a candidate evaluated under a declared consequence
 scenario. These values belong to this study rather than being package defaults.
 
@@ -46,20 +46,22 @@ activity; it is not a uniform early-ED window or a completed sepsis bundle.
 In the paper's worked scenario, Low 27 supplies a workload comparison ceiling and
 `R = 11,299 / 804 ≈ 14.05` weights a missed outcome relative to a false-positive
 alert for a proposed diagnostic and short-course antibiotic workflow.
-The candidate selected on learning data is 31; Low remains 27.
+The candidate selected on learning data is 31; Low remains 27. The learning-sample
+ceiling is **109,888** alerts, while 31 produces **73,550**; it is also the
+unconstrained minimum-loss threshold in this scenario.
 
 On 127,528 score-complete MIMIC held-out encounters, moving from 27 to 31 produces
 approximately 123 fewer alerts per 1,000 encounters, including 116 fewer alerts
 among outcome-negative encounters, while flagging about 6.75 fewer outcome-positive
-encounters. Weighted loss decreases by 4.2% in that scenario. The proposed workflow
+encounters. The net weighted-loss difference is **−21.2 per 1,000** (31 minus 27),
+a decrease of 4.2%, in that scenario. The proposed workflow
 and the recorded composite action are different quantities.
 
 This illustrates how a candidate's gains and coverage cost can be presented
 together. It does not assign a universal preference to 31. The action-evaluation
 sample above is smaller because it additionally requires an observed action label.
 
-Among flagged encounters with known action, candidate 31 has an observed-action
-yield of **54.84%** in MIMIC held-out data (16,909/30,834) and **57.33%** in Stanford
+Among flagged encounters with known action, candidate 31 has an recorded-action yield of **54.84%** in MIMIC held-out data (16,909/30,834) and **57.33%** in Stanford
 (14,696/25,636). These yields summarize the flagged population, rather than the
 fitted action probability at score 31.
 

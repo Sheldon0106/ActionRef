@@ -1,0 +1,31 @@
+cohort,level,threshold,record_type,total_N_with_score_and_outcome,alert_N,alert_fraction,outcome_positive_N,outcome_recall,outcome_PPV,composite_response_yield_among_alerts,capacity_interpretation,component,component_observed_among_alert_N,component_positive_among_alert_N,component_yield_among_observed_alerts,observed_action_composition_guard
+MIMIC held-out,Low,27.0,threshold_summary,127528.0,46611,0.3654962047550342,7186.0,0.775396604508767,0.11954259724099461,0.48568353067814857,retrospective workload display; no empirical absolute K,,,,,
+MIMIC held-out,Low,27.0,component_workload,,46611,,,,,,,lactate,46321.0,20838.0,0.44986075430150474,observed composition is not a forecast of treatment demand after deployment
+MIMIC held-out,Low,27.0,component_workload,,46611,,,,,,,fluid,46609.0,3245.0,0.06962174687292154,observed composition is not a forecast of treatment demand after deployment
+MIMIC held-out,Low,27.0,component_workload,,46611,,,,,,,vasopressor,46321.0,742.0,0.016018652447054253,observed composition is not a forecast of treatment demand after deployment
+MIMIC held-out,Low,27.0,component_workload,,46611,,,,,,,steroid,46321.0,2537.0,0.05476997474147795,observed composition is not a forecast of treatment demand after deployment
+MIMIC held-out,Mid,36.0,threshold_summary,127528.0,20012,0.15692240135499655,7186.0,0.5165599777344837,0.18548870677593443,0.605218263923733,retrospective workload display; no empirical absolute K,,,,,
+MIMIC held-out,Mid,36.0,component_workload,,20012,,,,,,,lactate,19867.0,11469.0,0.5772889716615494,observed composition is not a forecast of treatment demand after deployment
+MIMIC held-out,Mid,36.0,component_workload,,20012,,,,,,,fluid,20011.0,1849.0,0.09239918045075209,observed composition is not a forecast of treatment demand after deployment
+MIMIC held-out,Mid,36.0,component_workload,,20012,,,,,,,vasopressor,19867.0,521.0,0.026224392208184427,observed composition is not a forecast of treatment demand after deployment
+MIMIC held-out,Mid,36.0,component_workload,,20012,,,,,,,steroid,19867.0,1237.0,0.06226405597221523,observed composition is not a forecast of treatment demand after deployment
+MIMIC held-out,High,51.0,threshold_summary,127528.0,2742,0.021501160529452355,7186.0,0.1480656832730309,0.38803792851932895,0.8857247170500182,retrospective workload display; no empirical absolute K,,,,,
+MIMIC held-out,High,51.0,component_workload,,2742,,,,,,,lactate,2739.0,2376.0,0.8674698795180723,observed composition is not a forecast of treatment demand after deployment
+MIMIC held-out,High,51.0,component_workload,,2742,,,,,,,fluid,2742.0,493.0,0.1797957695113056,observed composition is not a forecast of treatment demand after deployment
+MIMIC held-out,High,51.0,component_workload,,2742,,,,,,,vasopressor,2739.0,200.0,0.07301935012778386,observed composition is not a forecast of treatment demand after deployment
+MIMIC held-out,High,51.0,component_workload,,2742,,,,,,,steroid,2739.0,246.0,0.08981380065717415,observed composition is not a forecast of treatment demand after deployment
+Stanford external,Low,27.0,threshold_summary,118385.0,42115,0.35574608269628755,5262.0,0.814519194222729,0.10176896592662947,0.49153508251216904,retrospective workload display; no empirical absolute K,,,,,
+Stanford external,Low,27.0,component_workload,,42115,,,,,,,lactate,42115.0,19032.0,0.45190549685385256,observed composition is not a forecast of treatment demand after deployment
+Stanford external,Low,27.0,component_workload,,42115,,,,,,,fluid,42115.0,3174.0,0.07536507182713997,observed composition is not a forecast of treatment demand after deployment
+Stanford external,Low,27.0,component_workload,,42115,,,,,,,vasopressor,42115.0,713.0,0.01692983497566188,observed composition is not a forecast of treatment demand after deployment
+Stanford external,Low,27.0,component_workload,,42115,,,,,,,steroid,42115.0,3031.0,0.07196960702837468,observed composition is not a forecast of treatment demand after deployment
+Stanford external,Mid,36.0,threshold_summary,118385.0,15037,0.12701778096887276,5262.0,0.5167236792094261,0.1808206424153754,0.6641617343885083,retrospective workload display; no empirical absolute K,,,,,
+Stanford external,Mid,36.0,component_workload,,15037,,,,,,,lactate,15037.0,9509.0,0.6323734787524107,observed composition is not a forecast of treatment demand after deployment
+Stanford external,Mid,36.0,component_workload,,15037,,,,,,,fluid,15037.0,1614.0,0.1073352397419698,observed composition is not a forecast of treatment demand after deployment
+Stanford external,Mid,36.0,component_workload,,15037,,,,,,,vasopressor,15037.0,506.0,0.033650329188002925,observed composition is not a forecast of treatment demand after deployment
+Stanford external,Mid,36.0,component_workload,,15037,,,,,,,steroid,15037.0,1468.0,0.09762585622132074,observed composition is not a forecast of treatment demand after deployment
+Stanford external,High,51.0,threshold_summary,118385.0,2260,0.01909025636693838,5262.0,0.15659445077917142,0.36460176991150445,0.8982300884955752,retrospective workload display; no empirical absolute K,,,,,
+Stanford external,High,51.0,component_workload,,2260,,,,,,,lactate,2260.0,2005.0,0.8871681415929203,observed composition is not a forecast of treatment demand after deployment
+Stanford external,High,51.0,component_workload,,2260,,,,,,,fluid,2260.0,362.0,0.16017699115044248,observed composition is not a forecast of treatment demand after deployment
+Stanford external,High,51.0,component_workload,,2260,,,,,,,vasopressor,2260.0,163.0,0.07212389380530973,observed composition is not a forecast of treatment demand after deployment
+Stanford external,High,51.0,component_workload,,2260,,,,,,,steroid,2260.0,262.0,0.11592920353982301,observed composition is not a forecast of treatment demand after deployment

@@ -1,0 +1,54 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "JAMIA submission, October 2026",
+  "assembled_date": "2026-10-20",
+  "manuscript_locations": "eTable 6D",
+  "files": {
+    "analysis3_curve_comparison.csv": {
+      "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis3_curve_comparison.csv",
+      "source_generation_date": "2026-10-11",
+      "date_basis": "source run label",
+      "source_sha256": "dc747ead86ffbd027c8563ea6f04c4284628d47ceb007ddb12da650a60b0b2e3",
+      "sha256": "dc747ead86ffbd027c8563ea6f04c4284628d47ceb007ddb12da650a60b0b2e3",
+      "rows": 2,
+      "selection": "all rows; byte-identical copy"
+    },
+    "analysis3_logistic_crossings.csv": {
+      "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis3_logistic_crossings.csv",
+      "source_generation_date": "2026-10-11",
+      "date_basis": "source run label",
+      "source_sha256": "62ef3b4c7e6e265360640b81f176afc14876e5c35105712dfdf71a69afb6a7d4",
+      "sha256": "62ef3b4c7e6e265360640b81f176afc14876e5c35105712dfdf71a69afb6a7d4",
+      "rows": 3,
+      "selection": "all rows; byte-identical copy"
+    },
+    "analysis3_paired_Brier_interval.csv": {
+      "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis3_paired_Brier_interval.csv",
+      "source_generation_date": "2026-10-11",
+      "date_basis": "source run label",
+      "source_sha256": "59e2a7b0f5e4c755fdd6b7d6a5d16d0c9fb7527b4a56f82b83728813127ef9c0",
+      "sha256": "59e2a7b0f5e4c755fdd6b7d6a5d16d0c9fb7527b4a56f82b83728813127ef9c0",
+      "rows": 1,
+      "selection": "all rows; byte-identical copy"
+    },
+    "analysis3_probability_curves.csv": {
+      "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis3_probability_curves.csv",
+      "source_generation_date": "2026-10-11",
+      "date_basis": "source run label",
+      "source_sha256": "77b70508f0ad5d82116801c3a3dd26ee2c4ace16bb7ab46e162c736bf2715fce",
+      "sha256": "77b70508f0ad5d82116801c3a3dd26ee2c4ace16bb7ab46e162c736bf2715fce",
+      "rows": 79,
+      "selection": "all rows; byte-identical copy"
+    },
+    "analysis3_reliability_bins.csv": {
+      "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis3_reliability_bins.csv",
+      "source_generation_date": "2026-10-11",
+      "date_basis": "source run label",
+      "source_sha256": "17ce2f2327ee09c36b273febf82da9d8c75bb4a1087c93309fa33794ddfde9b9",
+      "sha256": "17ce2f2327ee09c36b273febf82da9d8c75bb4a1087c93309fa33794ddfde9b9",
+      "rows": 20,
+      "selection": "all rows; byte-identical copy"
+    }
+  },
+  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+}

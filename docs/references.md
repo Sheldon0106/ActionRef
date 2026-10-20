@@ -24,8 +24,7 @@ flag `score >= threshold`.
 
 Defaults require at least 8 bins with at least 40 observations each. The fitted
 isotonic range must be at least 0.08, the logistic slope positive, and logistic BIC
-improvement at least 6. An unsupported monotone relationship produces abstention
-labels. Insufficient bins or an unusable score range instead raise explicit
+improvement at least 6. An unsupported monotone relationship returns no references. Insufficient bins or an unusable score range instead raise explicit
 input/support errors.
 
 Available anchors must maintain their semantic order. An ordering inversion leaves
@@ -37,7 +36,7 @@ Read `selected_threshold`, `target_probability`, `anchor_family`,
 `attainability_status`, `provenance_tier`, and `reason` together.
 
 Run the [output-state examples](output-states.md) to see full, relative, partial
-and abstention results with the same API.
+and no-reference results with the same API.
 
 ## Curve probability and action yield
 

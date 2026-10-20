@@ -2,14 +2,14 @@
 
 **Connect clinical scores to observed practice, then make threshold trade-offs explicit.**
 
-ActionRef learns interpretable reference thresholds from the relationship between an
+ActionRef estimates interpretable reference thresholds from the relationship between an
 existing score and recorded clinical actions. Teams can use those references to
 understand local practice, examine alert workload, and compare candidate thresholds
 under a stated capacity or consequence scenario.
 
 The Python package is `universal-cutoff`; the import is `universal_cutoff`.
-Software version: **1.0.2** · [MIT license](LICENSE) ·
-[JAMIA manuscript v10 release](https://github.com/Sheldon0106/ActionRef/releases/tag/v1.0.2-jamia).
+Software version: **1.0.3** · [MIT license](LICENSE) ·
+[JAMIA submission release](https://github.com/Sheldon0106/ActionRef/releases/tag/v1.0.3-jamia).
 
 [Get started](docs/quickstart.md) · [Prepare your data](docs/data.md) ·
 [Interpret references](docs/references.md) · [API](docs/API_REFERENCE.md) ·
@@ -25,7 +25,7 @@ Software version: **1.0.2** · [MIT license](LICENSE) ·
 | Question | Output |
 |---|---|
 | How do recorded actions vary across a score? | An empirical action curve with sample support. |
-| Which score values have interpretable behavioral meaning? | Low, Mid, and High references with their probability targets and provenance; partial output or abstention when appropriate. |
+| Which score values have interpretable behavioral meaning? | Low, Mid, and High references with their probability targets and provenance; only the supported levels when evidence is limited. |
 | What fits a team's alert budget? | Capacity-adjusted operating candidates that retain the original references. |
 | What changes if a candidate is used? | Alert burden, recorded-action yield, outcome coverage, and optional scenario-weighted loss. |
 
@@ -45,12 +45,12 @@ python -m pip install -e ".[test]"
 python examples/synthetic_walkthrough.py --output-dir output/synthetic
 ```
 
-The example creates **12,000 synthetic encounters**, learns references on 8,400,
+The example creates **12,000 synthetic encounters**, estimates references on 8,400,
 and evaluates the same references and capacity candidates on the remaining 3,600.
 It needs no clinical data or downloads after installation.
 
 ```text
-Learned references
+Estimated references
 Low     45    absolute
 Mid     45    absolute
 High    60    absolute
@@ -100,7 +100,7 @@ observation windows, and missingness before interpreting the references.
 ## Follow the workflow
 
 1. **Check the score and inputs.** Review completeness, score orientation, and optional outcome performance.
-2. **Learn behavioral references.** Inspect the observed action curve, targets, and evidence support.
+2. **Estimate behavioral references.** Inspect the observed action curve, targets, and evidence support.
 3. **Compare operating candidates.** Apply a capacity budget; add consequence scenarios when relevant.
 4. **Evaluate on separate data.** Report workload, action yield, and outcome coverage for fixed thresholds.
 
@@ -112,7 +112,8 @@ belong to that analysis; the software learns references for the supplied data.
 
 The manuscript examines **emergency sepsis assessment**. ESRP is the primary
 score: MIMIC references are 27 / 36 / 51, Stanford local references are
-26 / 36 / 50, and candidate 31 uses R = 11,299/804. See the
+26 / 36 / 50, and candidate 31 uses R = 11,299/804. The same recorded-action
+analysis also evaluates NEWS, MEWS, REMS and two-criterion qSOFA. See the
 [sepsis aggregate results](docs/paper-results.md).
 
 COPD, HEART-derived AERT, pneumonia and AKI materials are retained as
@@ -132,13 +133,14 @@ Two routes through the repository:
   does not re-estimate them. Clinical analyses require authorized source data.
 
 ```bash
-python examples/reproduce_paper.py
+python examples/reproduce_paper.py --early-warning-scores
 ```
 
 The documentation is built with MkDocs Material and includes a workflow overview,
 tutorials, clinical examples, and API guidance.
-All repository figures are drawn in R/grid from original vector artwork
-and saved aggregate inputs. [Rebuild the figures](docs/figures.md) or edit their
+The documentation illustrations are drawn in R/grid from vector artwork
+and saved aggregate inputs. Manuscript figure inputs and rendering scope are
+listed in the [figure guide](docs/figures.md). [Rebuild the figures](docs/figures.md) or edit their
 [R sources](scripts/figures/).
 
 ```bash

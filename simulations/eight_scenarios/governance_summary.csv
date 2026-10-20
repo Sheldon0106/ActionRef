@@ -1,0 +1,129 @@
+scenario,condition,R,scope,replicates,oracle_classification,oracle_reference_classification_accuracy,end_to_end_classification_accuracy,correct_abstention_rate,oracle_comparator_MAE,end_to_end_comparator_MAE,oracle_excess_FAE_per_1000,mean_end_to_end_excess_FAE_per_1000
+aligned_sigmoid,baseline,5.0,evaluable,25.0,budget_bound_cost_discordance,0.68,0.8,0.0,0.6370290759961577,1.0458752807125113,0.08,2.4600000000000004
+aligned_sigmoid,baseline,14.05,evaluable,25.0,budget_bound_cost_discordance,0.8,0.84,0.0,0.04517802402643554,0.5391516463195469,0.030000000000000006,0.7663333333333382
+aligned_sigmoid,baseline,15.0,evaluable,25.0,budget_bound_cost_discordance,0.8,0.84,0.0,0.04517802402643554,0.5391516463195469,0.030000000000000006,0.76
+aligned_sigmoid,baseline,20.0,evaluable,25.0,budget_bound_cost_discordance,0.8,0.84,0.0,0.04517802402643554,0.5391516463195469,0.030000000000000006,0.7266666666666667
+aligned_sigmoid,label_noise,5.0,evaluable,25.0,budget_bound_cost_discordance,0.96,0.92,0.0,0.24882701857213504,0.7584077412578836,0.085,1.16
+aligned_sigmoid,label_noise,14.05,evaluable,25.0,budget_bound_retention,0.12,0.24,0.0,0.052069181504468244,0.6954448875342777,0.005,0.5866666666666667
+aligned_sigmoid,label_noise,15.0,evaluable,25.0,budget_bound_retention,0.12,0.24,0.0,0.052069181504468244,0.6954448875342777,0.005,0.5866666666666667
+aligned_sigmoid,label_noise,20.0,evaluable,25.0,budget_bound_retention,0.12,0.24,0.0,0.052069181504468244,0.6954448875342777,0.005,0.5866666666666667
+aligned_sigmoid,low_sample,5.0,evaluable,25.0,budget_bound_cost_discordance,0.56,0.6,0.0,1.8440399403086658,2.732912214229367,0.02,6.88
+aligned_sigmoid,low_sample,14.05,evaluable,25.0,budget_bound_cost_discordance,0.8,0.68,0.0,0.16003107462609337,1.863789628792476,0.02,2.339000000000001
+aligned_sigmoid,low_sample,15.0,evaluable,25.0,budget_bound_cost_discordance,0.8,0.68,0.0,0.16003107462609337,1.8813778587103327,0.02,2.32
+aligned_sigmoid,low_sample,20.0,evaluable,25.0,budget_bound_cost_discordance,0.8,0.68,0.0,0.16003107462609337,1.8813778587103327,0.02,2.32
+aligned_sigmoid,tied_scores,5.0,evaluable,25.0,budget_bound_retention,0.76,0.48,0.0,0.0,1.4,0.0,0.2
+aligned_sigmoid,tied_scores,14.05,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,1.6,0.0,0.0
+aligned_sigmoid,tied_scores,15.0,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,1.6,0.0,0.0
+aligned_sigmoid,tied_scores,20.0,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,1.6,0.0,0.0
+behavior_too_conservative,baseline,5.0,one-sided limitation,25.0,budget_bound_retention,0.24,0.28,0.0,0.08019437591781894,1.1405998133539879,0.015000000000000003,0.78
+behavior_too_conservative,baseline,14.05,one-sided limitation,25.0,budget_bound_retention,0.28,0.32,0.0,0.04625023931188707,1.0779190995474621,0.015000000000000003,0.646333333333326
+behavior_too_conservative,baseline,15.0,one-sided limitation,25.0,budget_bound_retention,0.28,0.32,0.0,0.04625023931188707,1.0878310853557371,0.015000000000000003,0.6399999999999999
+behavior_too_conservative,baseline,20.0,one-sided limitation,25.0,budget_bound_retention,0.28,0.32,0.0,0.04625023931188707,1.0878310853557371,0.015000000000000003,0.6399999999999999
+behavior_too_conservative,label_noise,5.0,one-sided limitation,25.0,budget_bound_cost_discordance,0.72,0.76,0.0,0.06595365164315269,1.7219505710927145,0.045,0.5800000000000001
+behavior_too_conservative,label_noise,14.05,one-sided limitation,25.0,budget_bound_cost_discordance,0.72,0.68,0.0,0.03289287032815167,1.7579254507086748,0.045,0.49333333333333335
+behavior_too_conservative,label_noise,15.0,one-sided limitation,25.0,budget_bound_cost_discordance,0.72,0.68,0.0,0.03289287032815167,1.7579254507086748,0.045,0.49333333333333335
+behavior_too_conservative,label_noise,20.0,one-sided limitation,25.0,budget_bound_cost_discordance,0.72,0.68,0.0,0.03289287032815167,1.7579254507086748,0.045,0.49333333333333335
+behavior_too_conservative,low_sample,5.0,one-sided limitation,25.0,budget_bound_retention,0.12,0.28,0.0,0.27855435269551265,1.8141561033814972,0.0,1.26
+behavior_too_conservative,low_sample,14.05,one-sided limitation,25.0,budget_bound_retention,0.16,0.44,0.0,0.19651747788404464,1.749023763322975,0.0,0.76
+behavior_too_conservative,low_sample,15.0,one-sided limitation,25.0,budget_bound_retention,0.16,0.44,0.0,0.19651747788404464,1.749023763322975,0.0,0.76
+behavior_too_conservative,low_sample,20.0,one-sided limitation,25.0,budget_bound_retention,0.16,0.44,0.0,0.19651747788404464,1.749023763322975,0.0,0.76
+behavior_too_conservative,tied_scores,5.0,one-sided limitation,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,0.4,0.0,0.0
+behavior_too_conservative,tied_scores,14.05,one-sided limitation,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,0.4,0.0,0.0
+behavior_too_conservative,tied_scores,15.0,one-sided limitation,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,0.4,0.0,0.0
+behavior_too_conservative,tied_scores,20.0,one-sided limitation,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,0.4,0.0,0.0
+behavior_too_inclusive,baseline,5.0,evaluable,25.0,nonbinding_cost_discordance,1.0,1.0,0.0,2.758471656129741,2.758471656129741,141.04500000000002,143.36
+behavior_too_inclusive,baseline,14.05,evaluable,25.0,nonbinding_cost_discordance,1.0,1.0,0.0,1.321764390307996,1.321764390307996,30.947750000000013,40.18666666666667
+behavior_too_inclusive,baseline,15.0,evaluable,25.0,nonbinding_cost_discordance,1.0,1.0,0.0,1.6023556896555222,1.6023556896555222,25.3,34.60666666666666
+behavior_too_inclusive,baseline,20.0,evaluable,25.0,nonbinding_cost_discordance,0.84,0.88,0.0,2.1393419259399136,2.284464822610185,6.52,16.546666666666667
+behavior_too_inclusive,label_noise,5.0,evaluable,25.0,nonbinding_cost_discordance,1.0,1.0,0.0,1.8337454522339478,1.8337454522339478,84.9,91.22666666666667
+behavior_too_inclusive,label_noise,14.05,evaluable,25.0,budget_bound_cost_discordance,0.8,0.76,0.0,1.875640589365925,2.5938124201356696,0.09,6.107666666666652
+behavior_too_inclusive,label_noise,15.0,evaluable,25.0,budget_bound_cost_discordance,0.8,0.92,0.0,0.8842171419045769,2.375884931765258,0.09,4.706666666666667
+behavior_too_inclusive,label_noise,20.0,evaluable,25.0,budget_bound_cost_discordance,1.0,0.96,0.0,0.404163010442642,1.5873881406306536,0.09,2.793333333333334
+behavior_too_inclusive,low_sample,5.0,evaluable,25.0,nonbinding_cost_discordance,1.0,1.0,0.0,2.5871007685247536,2.5871007685247536,143.445,154.48
+behavior_too_inclusive,low_sample,14.05,evaluable,25.0,nonbinding_cost_discordance,0.96,1.0,0.0,2.0747356722155534,2.219296406487608,34.91149999999994,53.617999999999995
+behavior_too_inclusive,low_sample,15.0,evaluable,25.0,nonbinding_cost_discordance,0.92,0.96,0.0,1.9220530216022196,1.9300566674023705,30.47,49.56
+behavior_too_inclusive,low_sample,20.0,evaluable,25.0,nonbinding_cost_discordance,0.88,0.84,0.0,2.320132170501861,2.095528983012988,8.69,35.14
+behavior_too_inclusive,tied_scores,5.0,evaluable,25.0,nonbinding_cost_discordance,1.0,1.0,0.0,2.2,2.2,128.1,139.02
+behavior_too_inclusive,tied_scores,14.05,evaluable,25.0,nonbinding_cost_discordance,0.92,0.96,0.0,1.8,1.8,23.713749999999926,31.80533333333333
+behavior_too_inclusive,tied_scores,15.0,evaluable,25.0,nonbinding_cost_discordance,0.88,0.92,0.0,1.8,1.8,19.985,27.16
+behavior_too_inclusive,tied_scores,20.0,evaluable,25.0,nonbinding_cost_discordance,0.56,0.64,0.0,2.2,2.2,0.36,12.766666666666667
+flat_behavior_null,baseline,5.0,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,baseline,14.05,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,baseline,15.0,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,baseline,20.0,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,label_noise,5.0,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,label_noise,14.05,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,label_noise,15.0,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,label_noise,20.0,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,low_sample,5.0,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,low_sample,14.05,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,low_sample,15.0,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,low_sample,20.0,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,tied_scores,5.0,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,tied_scores,14.05,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,tied_scores,15.0,abstain,25.0,,0.0,0.0,1.0,,,,
+flat_behavior_null,tied_scores,20.0,abstain,25.0,,0.0,0.0,1.0,,,,
+high_noise_monotone,baseline,5.0,evaluable,25.0,budget_bound_cost_discordance,0.96,0.92,0.0,0.5221582263044465,1.7203769065897683,0.235,2.1199999999999997
+high_noise_monotone,baseline,14.05,evaluable,25.0,budget_bound_retention,0.24,0.2,0.0,0.0602262209486625,1.6273466017892222,0.0,0.8729999999999989
+high_noise_monotone,baseline,15.0,evaluable,25.0,budget_bound_retention,0.24,0.2,0.0,0.05446668594949415,1.6273466017892222,0.0,0.8666666666666667
+high_noise_monotone,baseline,20.0,evaluable,25.0,budget_bound_retention,0.24,0.2,0.0,0.05446668594949415,1.6273466017892222,0.0,0.8333333333333333
+high_noise_monotone,label_noise,5.0,evaluable,25.0,budget_bound_cost_discordance,0.92,0.76,0.0,0.3359437028116989,1.6632437303087437,0.13999999999999999,1.26
+high_noise_monotone,label_noise,14.05,evaluable,25.0,budget_bound_retention,0.12,0.24,0.0,0.06642011615638467,1.6381294455557336,0.0,0.7796666666666654
+high_noise_monotone,label_noise,15.0,evaluable,25.0,budget_bound_retention,0.12,0.24,0.0,0.06642011615638467,1.6427560048786756,0.0,0.7733333333333333
+high_noise_monotone,label_noise,20.0,evaluable,25.0,budget_bound_retention,0.12,0.24,0.0,0.06642011615638467,1.6427560048786756,0.0,0.7733333333333333
+high_noise_monotone,low_sample,5.0,evaluable,25.0,budget_bound_cost_discordance,0.68,0.56,0.0,1.2062344801968807,1.8993828604666796,0.030000000000000006,5.34
+high_noise_monotone,low_sample,14.05,evaluable,25.0,budget_bound_retention,0.08,0.2,0.0,0.24325900815616847,1.9608683172487544,0.005,1.9189999999999963
+high_noise_monotone,low_sample,15.0,evaluable,25.0,budget_bound_retention,0.08,0.2,0.0,0.24325900815616847,1.9608683172487544,0.005,1.9
+high_noise_monotone,low_sample,20.0,evaluable,25.0,budget_bound_retention,0.08,0.2,0.0,0.19063269943466252,1.943916556720469,0.005,1.88
+high_noise_monotone,tied_scores,5.0,evaluable,25.0,nonbinding_exact_alignment,0.52,0.24,0.0,0.6,3.2,0.0,0.19333333333333336
+high_noise_monotone,tied_scores,14.05,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,2.8,0.0,0.0
+high_noise_monotone,tied_scores,15.0,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,2.8,0.0,0.0
+high_noise_monotone,tied_scores,20.0,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,2.8,0.0,0.0
+low_ceiling,baseline,5.0,evaluable,25.0,budget_bound_cost_discordance,0.84,0.64,0.0,0.7181875356587131,3.63623607538623,0.034999999999999996,2.746666666666667
+low_ceiling,baseline,14.05,evaluable,25.0,budget_bound_cost_discordance,0.76,0.76,0.0,0.04364874898063164,4.0793012367298,0.025000000000000005,0.5466666666666665
+low_ceiling,baseline,15.0,evaluable,25.0,budget_bound_cost_discordance,0.76,0.76,0.0,0.04364874898063164,4.0793012367298,0.025000000000000005,0.5466666666666665
+low_ceiling,baseline,20.0,evaluable,25.0,budget_bound_cost_discordance,0.76,0.76,0.0,0.04364874898063164,4.0793012367298,0.025000000000000005,0.5466666666666665
+low_ceiling,label_noise,5.0,evaluable,25.0,budget_bound_cost_discordance,0.96,0.8,0.0,0.6114013559694914,6.103587582872308,0.06000000000000001,1.965277777777778
+low_ceiling,label_noise,14.05,evaluable,25.0,budget_bound_retention,0.16,0.12,0.0,0.06301158459666738,6.279539723092221,0.0,0.8333333333333335
+low_ceiling,label_noise,15.0,evaluable,25.0,budget_bound_retention,0.16,0.12,0.0,0.053542342860481824,6.279539723092221,0.0,0.8333333333333335
+low_ceiling,label_noise,20.0,evaluable,25.0,budget_bound_retention,0.2,0.12,0.0,0.035613196196327405,6.279539723092221,0.0,0.8333333333333335
+low_ceiling,low_sample,5.0,evaluable,25.0,budget_bound_cost_discordance,0.52,0.48,0.0,1.654137186088834,2.883408319519033,0.02,11.62
+low_ceiling,low_sample,14.05,evaluable,25.0,budget_bound_cost_discordance,0.76,0.84,0.0,0.2351885913910425,3.412310753322472,0.02,4.178999999999997
+low_ceiling,low_sample,15.0,evaluable,25.0,budget_bound_cost_discordance,0.76,0.84,0.0,0.2351885913910425,3.412310753322472,0.02,4.16
+low_ceiling,low_sample,20.0,evaluable,25.0,budget_bound_cost_discordance,0.76,0.84,0.0,0.16173285857985006,3.3859039176725143,0.02,4.06
+low_ceiling,tied_scores,5.0,evaluable,25.0,nonbinding_exact_alignment,0.64,0.32,0.0,1.0,4.2,0.0,0.6533333333333334
+low_ceiling,tied_scores,14.05,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,4.0,0.0,0.0
+low_ceiling,tied_scores,15.0,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,4.0,0.0,0.0
+low_ceiling,tied_scores,20.0,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,4.0,0.0,0.0
+one_changepoint,baseline,5.0,evaluable,25.0,nonbinding_cost_discordance,1.0,0.92,0.0,2.1964224127235794,2.294391411199149,14.279999999999998,21.366666666666664
+one_changepoint,baseline,14.05,evaluable,25.0,budget_bound_retention,0.04,0.16,0.0,0.09734047033717473,1.805937814187071,0.02,2.106333333333338
+one_changepoint,baseline,15.0,evaluable,25.0,budget_bound_retention,0.04,0.16,0.0,0.09734047033717473,1.805937814187071,0.02,1.9733333333333334
+one_changepoint,baseline,20.0,evaluable,25.0,budget_bound_retention,0.04,0.16,0.0,0.09103766446514441,1.8652070655535957,0.02,1.6200000000000003
+one_changepoint,label_noise,5.0,evaluable,25.0,nonbinding_cost_discordance,0.8,0.72,0.0,1.817815280574018,1.9095456122939305,3.3649999999999993,7.913333333333334
+one_changepoint,label_noise,14.05,evaluable,25.0,budget_bound_cost_discordance,0.96,0.84,0.0,0.1335815803268062,2.143476665076156,0.23450000000011642,0.87
+one_changepoint,label_noise,15.0,evaluable,25.0,budget_bound_cost_discordance,0.96,0.84,0.0,0.1335815803268062,2.1917569971642727,0.225,0.8133333333333332
+one_changepoint,label_noise,20.0,evaluable,25.0,budget_bound_cost_discordance,0.92,0.84,0.0,0.09401619617235184,2.1917569971642727,0.17499999999999996,0.8133333333333332
+one_changepoint,low_sample,5.0,evaluable,25.0,nonbinding_cost_discordance,0.96,0.96,0.0,2.4015742345907127,2.4015742345907127,15.180000000000001,32.96
+one_changepoint,low_sample,14.05,evaluable,25.0,budget_bound_retention,0.0,0.08,0.0,0.28518202815965454,1.97583500667384,0.0,6.822999999999997
+one_changepoint,low_sample,15.0,evaluable,25.0,budget_bound_retention,0.0,0.08,0.0,0.28518202815965454,1.97583500667384,0.0,6.5
+one_changepoint,low_sample,20.0,evaluable,25.0,budget_bound_retention,0.0,0.12,0.0,0.22845109070376196,1.8622279740491685,0.0,5.44
+one_changepoint,tied_scores,5.0,evaluable,25.0,nonbinding_cost_discordance,0.88,0.88,0.0,1.4,1.4,6.610000000000001,22.68
+one_changepoint,tied_scores,14.05,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,2.6,0.0,0.0
+one_changepoint,tied_scores,15.0,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,2.6,0.0,0.0
+one_changepoint,tied_scores,20.0,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,2.6,0.0,0.0
+two_changepoints,baseline,5.0,evaluable,25.0,nonbinding_cost_discordance,0.72,0.72,0.0,1.8602328445340308,1.8395024782258778,1.845,4.42
+two_changepoints,baseline,14.05,evaluable,25.0,budget_bound_cost_discordance,0.88,0.76,0.0,0.10156652118328736,1.2341655176505215,0.045,0.8783333333333455
+two_changepoints,baseline,15.0,evaluable,25.0,budget_bound_cost_discordance,0.88,0.76,0.0,0.10156652118328736,1.2414826115016562,0.045,0.8466666666666667
+two_changepoints,baseline,20.0,evaluable,25.0,budget_bound_cost_discordance,0.88,0.76,0.0,0.08107140937107317,1.240089251320759,0.045,0.7866666666666667
+two_changepoints,label_noise,5.0,evaluable,25.0,budget_bound_cost_discordance,0.64,0.56,0.0,1.0644783301439602,1.6246286376489902,0.06000000000000001,2.0466666666666664
+two_changepoints,label_noise,14.05,evaluable,25.0,budget_bound_retention,0.32,0.28,0.0,0.07677510790256975,1.258539090195405,0.0,0.4533333333333333
+two_changepoints,label_noise,15.0,evaluable,25.0,budget_bound_retention,0.32,0.28,0.0,0.07677510790256975,1.258539090195405,0.0,0.4533333333333333
+two_changepoints,label_noise,20.0,evaluable,25.0,budget_bound_retention,0.36,0.28,0.0,0.06895744702225158,1.258539090195405,0.0,0.4533333333333333
+two_changepoints,low_sample,5.0,evaluable,25.0,nonbinding_cost_discordance,0.64,0.6,0.0,1.5232999214275607,2.2003931232259744,2.28,11.62
+two_changepoints,low_sample,14.05,evaluable,25.0,budget_bound_cost_discordance,0.84,0.88,0.0,0.3593753531360679,1.8904720198048275,0.025000000000000005,3.1939999999999964
+two_changepoints,low_sample,15.0,evaluable,25.0,budget_bound_cost_discordance,0.84,0.88,0.0,0.3211077804763551,1.8522044471451147,0.025000000000000005,3.08
+two_changepoints,low_sample,20.0,evaluable,25.0,budget_bound_cost_discordance,0.84,0.88,0.0,0.27168828832725894,1.8546634863169438,0.025000000000000005,2.78
+two_changepoints,tied_scores,5.0,evaluable,25.0,nonbinding_exact_alignment,0.76,0.72,0.0,0.6,0.6,0.0,0.9733333333333334
+two_changepoints,tied_scores,14.05,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,0.2,0.0,0.0
+two_changepoints,tied_scores,15.0,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,0.2,0.0,0.0
+two_changepoints,tied_scores,20.0,evaluable,25.0,budget_bound_retention,1.0,1.0,0.0,0.0,0.2,0.0,0.0

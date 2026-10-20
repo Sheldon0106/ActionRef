@@ -1,0 +1,142 @@
+score,recommended_name,formula_function,formula_source_sha256,preprocessing_scope
+NEWS2,four-component NEWS2-derived score,"def add_score_NEWS2(df):   
+    conditions1 = [
+        (df['triage_resprate'] <= 8),
+        (df['triage_resprate'] >= 9) & (df['triage_resprate'] <= 11),
+        (df['triage_resprate'] >= 12) & (df['triage_resprate'] <= 20),
+        (df['triage_resprate'] >= 21) & (df['triage_resprate'] <= 24),
+        (df['triage_resprate'] >= 25) 
+    ]
+    values1 = [3, 1, 0, 2, 3]
+    conditions2 = [
+        (df['triage_temperature'] <= 35),
+        (df['triage_temperature'] > 35) & (df['triage_temperature'] <= 36),
+        (df['triage_temperature'] > 36) & (df['triage_temperature'] <= 38),
+        (df['triage_temperature'] > 38) & (df['triage_temperature'] <= 39),
+        (df['triage_temperature'] > 39) 
+    ]
+    values2 = [3, 1, 0, 1, 2]
+    conditions3 = [
+        (df['triage_sbp'] <= 90),
+        (df['triage_sbp'] >= 91) & (df['triage_sbp'] <= 100),
+        (df['triage_sbp'] >= 101) & (df['triage_sbp'] <= 110),
+        (df['triage_sbp'] >= 111) & (df['triage_sbp'] <= 219),
+        (df['triage_sbp'] > 219) 
+    ]
+    values3 = [3, 2, 1, 0, 3]
+    conditions4 = [
+        (df['triage_heartrate'] <= 40),
+        (df['triage_heartrate'] >= 41) & (df['triage_heartrate'] <= 50),
+        (df['triage_heartrate'] >= 51) & (df['triage_heartrate'] <= 90),
+        (df['triage_heartrate'] >= 91) & (df['triage_heartrate'] <= 110),
+        (df['triage_heartrate'] >= 111) & (df['triage_heartrate'] <= 130),
+        (df['triage_heartrate'] > 130) 
+    ]
+    values4 = [3, 1, 0, 1, 2, 3]   
+    df['score_NEWS2'] = np.select(conditions1, values1) + np.select(conditions2, values2) + np.select(conditions3, values3) +                              np.select(conditions4, values4)
+    print(""Variable 'Score_NEWS2' successfully added"")",ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a,stored preprocessed fields reused; original missing indicators separately reported; upstream imputation fit partition not reconstructed in this task
+MEWS,four-component adapted MEWS,"def add_score_MEWS(df):     
+    conditions1 = [
+        (df['triage_sbp'] <= 70),
+        (df['triage_sbp'] >= 71) & (df['triage_sbp'] <= 80),
+        (df['triage_sbp'] >= 81) & (df['triage_sbp'] <= 100),
+        (df['triage_sbp'] >= 101) & (df['triage_sbp'] <= 199),
+        (df['triage_sbp'] > 199) 
+    ]
+    values1 = [3, 2, 1, 0, 2]
+    conditions2 = [
+        (df['triage_heartrate'] <= 40),
+        (df['triage_heartrate'] >= 41) & (df['triage_heartrate'] <= 50),
+        (df['triage_heartrate'] >= 51) & (df['triage_heartrate'] <= 100),
+        (df['triage_heartrate'] >= 101) & (df['triage_heartrate'] <= 110),
+        (df['triage_heartrate'] >= 111) & (df['triage_heartrate'] <= 129),
+        (df['triage_heartrate'] >= 130) 
+    ]
+    values2 = [2, 1, 0, 1, 2, 3]
+    conditions3 = [
+        (df['triage_resprate'] < 9),
+        (df['triage_resprate'] >= 9) & (df['triage_resprate'] <= 14),
+        (df['triage_resprate'] >= 15) & (df['triage_resprate'] <= 20),
+        (df['triage_resprate'] >= 21) & (df['triage_resprate'] <= 29),
+        (df['triage_resprate'] >= 30) 
+    ]
+    values3 = [2, 0, 1, 2, 3]
+    conditions4 = [
+        (df['triage_temperature'] < 35),
+        (df['triage_temperature'] >= 35) & (df['triage_temperature'] < 38.5),
+        (df['triage_temperature'] >= 38.5) 
+    ]
+    values4 = [2, 0, 2]        
+    df['score_MEWS'] = np.select(conditions1, values1) + np.select(conditions2, values2) + np.select(conditions3, values3) +                              np.select(conditions4, values4) 
+    print(""Variable 'Score_MEWS' successfully added"")",ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a,stored preprocessed fields reused; original missing indicators separately reported; upstream imputation fit partition not reconstructed in this task
+REMS,five-component adapted REMS (without GCS),"def add_score_REMS(df):
+    conditions1 = [
+        (df['age'] < 45),
+        (df['age'] >= 45) & (df['age'] <= 54),
+        (df['age'] >= 55) & (df['age'] <= 64),
+        (df['age'] >= 65) & (df['age'] <= 74),
+        (df['age'] > 74)
+    ]
+    values1 = [0, 2, 3, 5, 6]
+    conditions2 = [
+        (df['triage_MAP'] > 159),
+        (df['triage_MAP'] >= 130) & (df['triage_MAP'] <= 159),
+        (df['triage_MAP'] >= 110) & (df['triage_MAP'] <= 129),
+        (df['triage_MAP'] >= 70) & (df['triage_MAP'] <= 109),
+        (df['triage_MAP'] >= 50) & (df['triage_MAP'] <= 69),
+        (df['triage_MAP'] < 49)
+    ]
+    values2 = [4, 3, 2, 0, 2, 4]
+    conditions3 = [
+        (df['triage_heartrate'] >179),
+        (df['triage_heartrate'] >= 140) & (df['triage_heartrate'] <= 179),
+        (df['triage_heartrate'] >= 110) & (df['triage_heartrate'] <= 139),
+        (df['triage_heartrate'] >= 70) & (df['triage_heartrate'] <= 109),
+        (df['triage_heartrate'] >= 55) & (df['triage_heartrate'] <= 69),
+        (df['triage_heartrate'] >= 40) & (df['triage_heartrate'] <= 54),
+        (df['triage_heartrate'] < 40)
+    ]
+    values3 = [4, 3, 2, 0, 2, 3, 4]
+    conditions4 = [
+        (df['triage_resprate'] > 49),
+        (df['triage_resprate'] >= 35) & (df['triage_resprate'] <= 49),
+        (df['triage_resprate'] >= 25) & (df['triage_resprate'] <= 34),
+        (df['triage_resprate'] >= 12) & (df['triage_resprate'] <= 24),
+        (df['triage_resprate'] >= 10) & (df['triage_resprate'] <= 11),
+        (df['triage_resprate'] >= 6) & (df['triage_resprate'] <= 9),
+        (df['triage_resprate'] < 6)
+    ]
+    values4 = [4, 3, 1, 0, 1, 2, 4]
+    conditions5 = [
+        (df['triage_o2sat'] < 75),
+        (df['triage_o2sat'] >= 75) & (df['triage_o2sat'] <= 85),
+        (df['triage_o2sat'] >= 86) & (df['triage_o2sat'] <= 89),
+        (df['triage_o2sat'] > 89)
+    ]
+    values5 = [4, 3, 1, 0]
+    df['score_REMS'] = np.select(conditions1, values1) + np.select(conditions2, values2) + np.select(conditions3, values3) +                              np.select(conditions4, values4) + np.select(conditions5, values5)
+    print(""Variable 'Score_REMS' successfully added"")",ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a,stored preprocessed fields reused; original missing indicators separately reported; upstream imputation fit partition not reconstructed in this task
+qSOFA,two-component qSOFA-derived score,"def add_score_qSOFA(df):
+    conditions1 = [
+        (df['triage_resprate'] >= 22),
+        (df['triage_resprate'] < 22)
+    ]
+    values1 = [1, 0]
+
+    '''conditions2 = [
+        (df['gcs_total'] < 15),
+        (df['gcs_total'] >= 15)
+    ]
+    values2 = [1, 0]'''
+
+    conditions3 = [
+        (df['triage_sbp'] <= 100),
+        (df['triage_sbp'] > 100)
+    ]
+    values3 = [1, 0]
+
+    df['score_qSOFA'] = (np.select(conditions1, values1, default=0) +
+                         #np.select(conditions2, values2, default=0) +
+                         np.select(conditions3, values3, default=0))
+    
+    print(""Variable 'score_qSOFA' successfully added"")",ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a,stored preprocessed fields reused; original missing indicators separately reported; upstream imputation fit partition not reconstructed in this task

@@ -1,0 +1,20 @@
+{
+  "MIMIC_primary": {
+    "B": 500,
+    "available": 500,
+    "ordered": 500,
+    "collided": 0,
+    "median": 10.0,
+    "lower": 9.0,
+    "upper": 12.0
+  },
+  "Stanford_local": {
+    "B": 500,
+    "available": 500,
+    "ordered": 500,
+    "collided": 0,
+    "median": 10.0,
+    "lower": 10.0,
+    "upper": 10.0
+  }
+}

@@ -1,0 +1,25 @@
+cohort,score,level,full_data_threshold,requested_replicates,attempted_replicates,successful_fit_replicates,computational_failures,candidate_available_replicates,candidate_availability,independently_retained_replicates,independent_retention,candidate_CI_denominator,candidate_CI_2_5,candidate_CI_97_5,independent_CI_denominator,independent_CI_2_5,independent_CI_97_5,bootstrap_status,interval_definition,binning_precondition_abstentions
+MIMIC_learning,NEWS2,Low,2,500,500,500,0,500,1,500,1,500,2,2,500,2,2,completed,"conditional on candidate / independent availability, respectively",0
+MIMIC_learning,NEWS2,Mid,3,500,500,500,0,500,1,500,1,500,3,3,500,3,3,completed,"conditional on candidate / independent availability, respectively",0
+MIMIC_learning,NEWS2,High,6,500,500,500,0,500,1,500,1,500,5,6,500,5,6,completed,"conditional on candidate / independent availability, respectively",0
+MIMIC_learning,MEWS,Low,2,500,500,500,0,500,1,500,1,500,2,2,500,2,2,completed,"conditional on candidate / independent availability, respectively",0
+MIMIC_learning,MEWS,Mid,4,500,500,500,0,500,1,500,1,500,4,4,500,4,4,completed,"conditional on candidate / independent availability, respectively",0
+MIMIC_learning,MEWS,High,6,500,500,500,0,500,1,500,1,500,5,6,500,5,6,completed,"conditional on candidate / independent availability, respectively",0
+Stanford,NEWS2,Low,2,500,500,500,0,500,1,500,1,500,2,2,500,2,2,completed,"conditional on candidate / independent availability, respectively",0
+Stanford,NEWS2,Mid,3,500,500,500,0,500,1,500,1,500,3,3,500,3,3,completed,"conditional on candidate / independent availability, respectively",0
+Stanford,NEWS2,High,6,500,500,500,0,500,1,500,1,500,5,6,500,5,6,completed,"conditional on candidate / independent availability, respectively",0
+Stanford,MEWS,Low,2,500,500,500,0,500,1,500,1,500,2,2,500,2,2,completed,"conditional on candidate / independent availability, respectively",0
+Stanford,MEWS,Mid,3,500,500,500,0,500,1,500,1,500,3,3,500,3,3,completed,"conditional on candidate / independent availability, respectively",0
+Stanford,MEWS,High,6,500,500,500,0,500,1,500,1,500,5,6,500,5,6,completed,"conditional on candidate / independent availability, respectively",0
+MIMIC_learning,REMS,Low,3,500,500,500,0,500,1,500,1,500,3,3,500,3,3,completed,"conditional on candidate / independent availability, respectively",0
+MIMIC_learning,REMS,Mid,11,500,500,500,0,500,1,500,1,500,11,11,500,11,11,completed,"conditional on candidate / independent availability, respectively",0
+MIMIC_learning,REMS,High,13,500,500,500,0,500,1,500,1,500,12,13,500,12,13,completed,"conditional on candidate / independent availability, respectively",0
+Stanford,REMS,Low,3,500,500,500,0,500,1,500,1,500,3,3,500,3,3,completed,"conditional on candidate / independent availability, respectively",0
+Stanford,REMS,Mid,11,500,500,500,0,500,1,500,1,500,11,11,500,11,11,completed,"conditional on candidate / independent availability, respectively",0
+Stanford,REMS,High,13,500,500,500,0,500,1,500,1,500,12,13,500,12,13,completed,"conditional on candidate / independent availability, respectively",0
+MIMIC_learning,qSOFA,Low,,500,0,,,,,,,,,,,,,not run: structural binning precheck; no empirical availability estimate,,
+MIMIC_learning,qSOFA,Mid,,500,0,,,,,,,,,,,,,not run: structural binning precheck; no empirical availability estimate,,
+MIMIC_learning,qSOFA,High,,500,0,,,,,,,,,,,,,not run: structural binning precheck; no empirical availability estimate,,
+Stanford,qSOFA,Low,,500,0,,,,,,,,,,,,,not run: structural binning precheck; no empirical availability estimate,,
+Stanford,qSOFA,Mid,,500,0,,,,,,,,,,,,,not run: structural binning precheck; no empirical availability estimate,,
+Stanford,qSOFA,High,,500,0,,,,,,,,,,,,,not run: structural binning precheck; no empirical availability estimate,,

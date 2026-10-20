@@ -1,0 +1,17 @@
+cohort,score,scope,levels,requested_replicates,joint_available_replicates,joint_availability_all_requested,ordered_replicates,ordering_all_requested,ordering_joint_available,collision_replicates,collision_all_requested,collision_joint_available,gap_median,gap_CI_2_5,gap_CI_97_5,gap_denominator
+MIMIC_learning,qSOFA,selected_candidates,Low-Mid,500,500,1,0,0,0,500,1,1,0,0,0,500
+MIMIC_learning,qSOFA,selected_candidates,Mid-High,500,500,1,500,1,1,0,0,0,1,1,1,500
+MIMIC_learning,qSOFA,selected_candidates,Low-High,500,500,1,500,1,1,0,0,0,1,1,1,500
+MIMIC_learning,qSOFA,selected_candidates,Low-Mid-High,500,500,1,0,0,0,500,1,1,,,,
+MIMIC_learning,qSOFA,independent_representatives,Low-Mid,500,0,0,0,0,,0,0,,,,,0
+MIMIC_learning,qSOFA,independent_representatives,Mid-High,500,500,1,500,1,1,0,0,0,1,1,1,500
+MIMIC_learning,qSOFA,independent_representatives,Low-High,500,0,0,0,0,,0,0,,,,,0
+MIMIC_learning,qSOFA,independent_representatives,Low-Mid-High,500,0,0,0,0,,0,0,,,,,
+Stanford,qSOFA,selected_candidates,Low-Mid,500,500,1,0,0,0,500,1,1,0,0,0,500
+Stanford,qSOFA,selected_candidates,Mid-High,500,500,1,500,1,1,0,0,0,1,1,1,500
+Stanford,qSOFA,selected_candidates,Low-High,500,500,1,500,1,1,0,0,0,1,1,1,500
+Stanford,qSOFA,selected_candidates,Low-Mid-High,500,500,1,0,0,0,500,1,1,,,,
+Stanford,qSOFA,independent_representatives,Low-Mid,500,0,0,0,0,,0,0,,,,,0
+Stanford,qSOFA,independent_representatives,Mid-High,500,500,1,500,1,1,0,0,0,1,1,1,500
+Stanford,qSOFA,independent_representatives,Low-High,500,0,0,0,0,,0,0,,,,,0
+Stanford,qSOFA,independent_representatives,Low-Mid-High,500,0,0,0,0,,0,0,,,,,

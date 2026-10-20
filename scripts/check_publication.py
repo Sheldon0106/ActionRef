@@ -109,6 +109,19 @@ def main():
         if hashlib.sha256((ROOT / config['path']).read_bytes()).hexdigest() != config['sha256']:
             failures.append('Additional-application configuration checksum mismatch: ' + folder)
 
+    for manifest_path in paths:
+        if manifest_path.name != 'manifest.json':
+            continue
+        record = json.loads(manifest_path.read_text(encoding='utf-8'))
+        if record.get('schema') != 'actionref.aggregate-bundle.v1':
+            continue
+        if not (manifest_path.parent / 'README.md').is_file():
+            failures.append('Missing aggregate bundle README: ' + str(manifest_path.parent.relative_to(ROOT)))
+        for filename, expected in record['files'].items():
+            file = manifest_path.parent / filename
+            if not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest() != expected['sha256']:
+                failures.append('Aggregate bundle checksum mismatch: ' + str(file.relative_to(ROOT)))
+
     # JSON summaries must not silently carry individual records inside nested lists.
     forbidden = {'subject_id', 'hadm_id', 'stay_id', 'patient_id', 'encounter_id',
                  'subject_ids', 'patient_ids', 'stay_ids', 'hadm_ids',

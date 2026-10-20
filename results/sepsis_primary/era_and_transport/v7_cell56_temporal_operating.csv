@@ -1,0 +1,4 @@
+level,early_frozen_threshold,semantic_threshold,operational_threshold,alert_count,alert_fraction,response_yield,recall,FNR,PPV,missed_cases,FAE_per_1000,same_or_lower_workload_threshold,capacity_binding,audit_classification,source_cell,extraction_method
+Low,26.0,26.0,26.0,24668,0.320255,0.522193,0.759002,0.240998,0.13929,1091,488.107912,26.0,False,nonbinding exact alignment,56,parsed from serialized pandas to_string output with fixed-width schema
+Mid,36.0,36.0,36.0,7033,0.091307,0.697173,0.392975,0.607025,0.25295,2748,603.354711,36.0,True,budget-bound retention,56,parsed from serialized pandas to_string output with fixed-width schema
+High,50.0,50.0,50.0,1299,0.016864,0.892332,0.124365,0.875635,0.43341,3964,781.50235,50.0,True,budget-bound retention,56,parsed from serialized pandas to_string output with fixed-width schema

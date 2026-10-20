@@ -42,5 +42,5 @@ Method:
 
 - 47 tests passed on the same reference stack.
 - The regression above reproduced.
-- COPD compatibility run reproduced exactly: bin width 2.5, 29 valid bins, Low/Mid/High of 17.78, 55.04, abstention.
+- COPD compatibility run reproduced exactly: bin width 2.5, 29 valid bins, Low/Mid/High of 17.78, 55.04, with High unavailable.
 - pandas 1.2.5 emits its known NumPy percentile-argument deprecation warning during bootstrap quantiles. No test failed.
