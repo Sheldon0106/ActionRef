@@ -1,7 +1,7 @@
-cohort,score_name,bin_lower,count,observed_rate,bin_upper_exclusive,score,included_in_fit,isotonic_rate
-MIMIC_learning,qSOFA,0,271210,0.30321890785737987,1,0,True,0.30321890785737987
-MIMIC_learning,qSOFA,1,22673,0.5893794380981785,2,1,True,0.5893794380981785
-MIMIC_learning,qSOFA,2,830,0.80602409638554218,3,2,True,0.80602409638554218
-Stanford,qSOFA,0,104472,0.26778466957653724,1,0,True,0.26778466957653724
-Stanford,qSOFA,1,13271,0.57976037977545025,2,1,True,0.57976037977545025
-Stanford,qSOFA,2,642,0.82087227414330222,3,2,True,0.82087227414330222
+analysis,cohort,score_name,family,configuration,response_name,score,observed_rate,count,isotonic_rate
+MIMIC_learning_qSOFA_short,MIMIC_learning,qSOFA,short_score,short_scale_sensitivity,response,0,0.28724588230779158,286629,0.28724588230779158
+MIMIC_learning_qSOFA_short,MIMIC_learning,qSOFA,short_score,short_scale_sensitivity,response,1,0.55464933344373601,24154,0.55464933344373601
+MIMIC_learning_qSOFA_short,MIMIC_learning,qSOFA,short_score,short_scale_sensitivity,response,2,0.76793721973094176,892,0.76793721973094176
+Stanford_qSOFA_short,Stanford,qSOFA,short_score,short_scale_sensitivity,response,0,0.26777133229950417,104466,0.26777133229950417
+Stanford_qSOFA_short,Stanford,qSOFA,short_score,short_scale_sensitivity,response,1,0.57969267851762574,13276,0.57969267851762574
+Stanford_qSOFA_short,Stanford,qSOFA,short_score,short_scale_sensitivity,response,2,0.82115085536547439,643,0.82115085536547439

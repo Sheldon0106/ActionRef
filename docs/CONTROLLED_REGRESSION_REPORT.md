@@ -1,6 +1,7 @@
 # Controlled V7 regression report
 
-This is a historical software regression record. COPD, pneumonia and AKI materials
+This is a historical software regression record. Its sepsis population, outcome
+and reference values precede the [current analysis](paper-data.md). COPD, pneumonia and AKI materials
 are **exploratory, not reported in the manuscript**. The COPD values below use
 the early bin-width-2.5 setting (Mid 55.04); the later exploratory aggregate bundle
 uses Mid 55.0719. See the [exploratory materials](evidence.md#exploratory-materials).

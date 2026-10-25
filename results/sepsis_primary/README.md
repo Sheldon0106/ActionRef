@@ -1,25 +1,31 @@
 # Primary sepsis aggregate evidence
 
-Source data for the primary sepsis analysis include bin-level summaries and
-cohort/threshold-level counts. All shared observations are aggregates.
+These bin-level, cohort-level and threshold-level summaries describe the
+clinical-only Sepsis-3 analysis. The MIMIC ED 1.0 population contains 314,658
+learning and 134,146 held-out encounters; Stanford contains 118,385 encounters.
 
-| File | Role |
-|---|---|
-| `operating_counts.csv` | Exact cohort/threshold TP/FP/FN/TN counts |
-| `observed_action_yield.csv` | Flagged, action-known and action-positive counts |
-| `semantic_response_curve.csv` | Supported learning bins, observed rates and isotonic fit |
-| `sepsis_action_points.json` | Continuous-interpolation and bin-assignment evaluation estimates |
-| `sepsis_action_intervals.json` | Conditional evaluation intervals from 200 patient-cluster resamples |
-| `sepsis_action_reliability.json` | Fixed-width probability-bin counts and rates |
-| `fixed_candidate_R_sensitivity.csv` | Reported fixed-pair sensitivity for comparison with recalculated values |
-| `manifest.json` | Source labels and file checksums |
+MIMIC ESRP behavioral references are 27/39/54. Candidate 34 is selected on learning
+data at R = 11,299/804 under the 116,236-alert Low-reference ceiling. Stanford
+local references are 26/36/50; transport evaluation uses the MIMIC references.
 
-From the repository root, run `python examples/reproduce_paper.py`. It derives
-operating rates, action yields and fixed-pair R comparisons under `output/paper/`. Point estimates and intervals
-for action probabilities are assembled from saved outputs; their encounter-level
-recalculation has a [separate entry point](../../docs/paper-reproduction.md).
+Run `python examples/reproduce_paper.py --early-warning-scores` from the repository
+root to recalculate operating rates, action yields and fixed-pair R sensitivity.
+Action-probability estimates and uncertainty intervals are read from saved
+aggregates. Learning R-grid selection is separate from the fixed 34-versus-27
+comparison; its reported band endpoints are evaluated grid values.
 
-The configuration is [sepsis_primary.json](../../configs/sepsis_primary.json).
-The action definition, workload comparator and evaluation denominators retain
-their reported meanings. Candidate 31 remains a separate operating choice from
-the behavioral reference Low 27.
+## Current files
+
+- `observed_action_yield.csv`
+- `fixed_candidate_R_sensitivity.csv`
+- `sepsis_action_points.json`
+- `sepsis_action_intervals.json`
+- `sepsis_action_reliability.json`
+- `semantic_response_curve.csv`
+- `operating_counts.csv`
+- `learning_R_selection.csv`
+- `learning_R_invariance.csv`
+
+Source labels, row selections and file checksums are recorded in
+[manifest.json](manifest.json). All shared observations are aggregates; patient
+records and identifiers are not included.

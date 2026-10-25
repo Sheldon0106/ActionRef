@@ -1,27 +1,23 @@
 {
   "schema": "actionref.aggregate-bundle.v1",
   "manuscript": "JAMIA submission, October 2026",
-  "assembled_date": "2026-10-20",
-  "manuscript_locations": "eTable 6A",
+  "assembled_date": "2026-10-25",
   "files": {
     "paper_module1_point.csv": {
-      "source_label": "<analysis_outputs>/v7_outputs/paper_module1_point.csv",
-      "source_generation_date": "2026-08-19",
-      "date_basis": "source file modification date; original run date not recorded",
-      "source_sha256": "79bee6ad3ad39b183b84d99dac61848ac659b959b942a82839102fafd103a339",
-      "sha256": "5ac24c54bf26c6556554f50adf4a83634a9fa52787cbc53606729e4ec7b7eae9",
-      "rows": 3,
-      "selection": "score_name == ESRP"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_module1_points.csv",
+      "source_sha256": "850b309dc6039c9f1966fa5a68819e849ef7cdf26fdfdd2f52ffd37938f6286c",
+      "sha256": "218a9c8ed84a0ee9559aa6c2e20f224d39b82826680013087ff6f74a8631af9e",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "paper_module1_bootstrap_ci.csv": {
-      "source_label": "<analysis_outputs>/v7_outputs/paper_module1_bootstrap_ci.csv",
-      "source_generation_date": "2026-08-19",
-      "date_basis": "source file modification date; original run date not recorded",
-      "source_sha256": "5348fffc8de654f3978f5badc94bce0c4c1dd163e955eaf33c89d7d38cf18ef6",
-      "sha256": "b17f7fdbeb59bae4c75d041a08f6df62f69e7e3e8464556586f2060c03380d77",
-      "rows": 10,
-      "selection": "score_name == ESRP"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_module1_intervals.csv",
+      "source_sha256": "a758511316c08e08ae316322785b3ae998079274c4adc44f2d25ec1e55a02814",
+      "sha256": "7dadd881b8a23b93f19720013a25d4cb7427268f66699d227acddeae66a575fe",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     }
   },
-  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+  "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
+  "analysis_revision": "RR1 same-source full cohort"
 }

@@ -1,89 +1,70 @@
 {
   "schema": "actionref.aggregate-bundle.v1",
   "manuscript": "JAMIA submission, October 2026",
-  "assembled_date": "2026-10-20",
-  "manuscript_locations": "Figure 4; eTables 6B and 13A, B, D, E; eFigure 5",
+  "assembled_date": "2026-10-25",
   "files": {
     "action_curves.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/action_curves.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "220fd8e00aaadfca2cd3e40b78766d5df612b5789c385cd48c54b800a91878a1",
-      "sha256": "220fd8e00aaadfca2cd3e40b78766d5df612b5789c385cd48c54b800a91878a1",
-      "rows": 90,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/action_curves.csv",
+      "source_sha256": "8b169ced1f30f938922c028041d69b950ffca0b1323b4eb87690b2b36ff3e3e5",
+      "sha256": "7fc19166f5df6570fcc0d9aa9a4c5fced45ecfdb45c3fbb751eceda021343ba5",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "cohort_denominators.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/cohort_denominators.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "12f8ae69131243f9aa84252bc1d5cd6f62f9bdd9e443ac34a1e6fe933ee0f086",
-      "sha256": "12f8ae69131243f9aa84252bc1d5cd6f62f9bdd9e443ac34a1e6fe933ee0f086",
-      "rows": 12,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/lineage.csv",
+      "source_sha256": "d0de8ca3df13e1516954e63229e894f9d957a7f8b208b715a85c8b83e0b67891",
+      "sha256": "aa82c6c37943e795f325ec159dd2c9a8da84eb3df92176930e66a46103a66b5c",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "reference_point_anchors.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/reference_point_anchors.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "3c15e3fd3c9fe0fbb12df4783c3da9d9d352244a8b25e3028eae7cc01d07d2a9",
-      "sha256": "3c15e3fd3c9fe0fbb12df4783c3da9d9d352244a8b25e3028eae7cc01d07d2a9",
-      "rows": 24,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/reference_point_anchors.csv",
+      "source_sha256": "7b31fa9f8ac1b5b81a119c896fb850518276b1fd726937e68973934c33cea94c",
+      "sha256": "d92ecd0a9a6eed9d5fbaacfd02e928e60c1cfec65d8259dd433d8d742f2af2d6",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "reference_point_diagnostics.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/reference_point_diagnostics.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "d50f0b47dc8f4391f9c9893da2d8dd12121097fc9af5a42d2d684e948504eba9",
-      "sha256": "d50f0b47dc8f4391f9c9893da2d8dd12121097fc9af5a42d2d684e948504eba9",
-      "rows": 8,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/reference_point_diagnostics.csv",
+      "source_sha256": "1d13ec2348b6aae1ca8c8fea7ecf7ffe2197bda693d4d612b500c3607723edbc",
+      "sha256": "791b309b586581e37e9e7791ad4c4a0a9291ccedee76afcdfb4f7ea81c824b1c",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "reference_bootstrap_summary.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/reference_bootstrap_summary.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "8d4b75ee2da8108b75a843acf023c3f197507370da97ce7ff86235a3aef5e13e",
-      "sha256": "8d4b75ee2da8108b75a843acf023c3f197507370da97ce7ff86235a3aef5e13e",
-      "rows": 24,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/reference_bootstrap_summary.csv",
+      "source_sha256": "f5455a9035bfd4c8e60086b129fbbdda6230cbcab65b4c9df2c8c1f9cbd4c4ec",
+      "sha256": "c5d524de708e76b6976c9b89266412077868fd78ff678f66cffb5ade6b3cc3c0",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "reference_bootstrap_reasons.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/reference_bootstrap_reasons.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "37e324e44d8f1f612c3680998a32a2eb86244a9dffec42fbdc4cd7794ddbb53e",
-      "sha256": "37e324e44d8f1f612c3680998a32a2eb86244a9dffec42fbdc4cd7794ddbb53e",
-      "rows": 20,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/reference_bootstrap_reasons.csv",
+      "source_sha256": "441ea942e8d0a0874e7222fb74fb9eb31d2141542ed915e69ac12f70fa8260ee",
+      "sha256": "061046f05695ff6780485c6b37ca96b5c609f2e3868845d32ae5a07adb412a0f",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "reference_pair_joint_stability.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/reference_pair_joint_stability.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "85234aaeab4612351bc140ba4c4005d41244b5ee3430cdc84d721ce2bd1d7c69",
-      "sha256": "85234aaeab4612351bc140ba4c4005d41244b5ee3430cdc84d721ce2bd1d7c69",
-      "rows": 48,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/reference_pairwise_stability.csv",
+      "source_sha256": "3005cabfdf700d505cfaeeb39ae1cafd1c68c42e65dadf32e636f13292986499",
+      "sha256": "4779bf59aef05d3f641bee635eaa2d702dd1df01599bafb675ba8bdb868aa2b2",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "fixed_reference_operating_points.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/fixed_reference_operating_points.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "eef990685eda291cc7ded3990fa44c2d9e99ae4e6ffb65d04258fed249462b48",
-      "sha256": "eef990685eda291cc7ded3990fa44c2d9e99ae4e6ffb65d04258fed249462b48",
-      "rows": 18,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_fixed_operating_points.csv",
+      "source_sha256": "8e1ff11ed3ad2f4d0a116adf8c399db3050f3911598aa55c62f9efa515cdcc6b",
+      "sha256": "f31192ed17fd75b1112a023360fb085fa0c05c214cc29d4f05cb2fb33db1ef48",
+      "selection": "current reference policies only; reference_source and requested_replicates aliases added for public entry point",
+      "role": "current RR1 aggregate result"
     },
     "fixed_reference_operating_intervals.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/fixed_reference_operating_intervals.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "313a932e8ca7ca4d03cc069582bcb81fa61f7a95ca8a175174cf6e897a9899d0",
-      "sha256": "313a932e8ca7ca4d03cc069582bcb81fa61f7a95ca8a175174cf6e897a9899d0",
-      "rows": 288,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_fixed_operating_intervals.csv",
+      "source_sha256": "cf537927ad877e9615377d4895ac59d5cadea3e77df7f0250260e7024ac817bd",
+      "sha256": "d5fd7a4f0d52557937af16b6afe8560a1873d3b0fa923825cf8f6f73e77d587c",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "score_formula_definition.csv": {
       "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/score_formula_definition.csv",
@@ -92,7 +73,8 @@
       "source_sha256": "5a9d9f8c23cbeed4400f992046534c32371f9a4745eddd4c6baeb15e28782951",
       "sha256": "5a9d9f8c23cbeed4400f992046534c32371f9a4745eddd4c6baeb15e28782951",
       "rows": 4,
-      "selection": "all rows; byte-identical copy"
+      "selection": "all rows; byte-identical copy",
+      "role": "historical: pre-RR1 output retained for traceability; not a current result"
     },
     "score_component_implementation.csv": {
       "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/score_component_implementation.csv",
@@ -101,7 +83,8 @@
       "source_sha256": "7c611dc15e6624b7c05719801f9367a7732cf40f2ea127692dac8b7241092d7c",
       "sha256": "7c611dc15e6624b7c05719801f9367a7732cf40f2ea127692dac8b7241092d7c",
       "rows": 46,
-      "selection": "all rows; byte-identical copy"
+      "selection": "all rows; byte-identical copy",
+      "role": "historical: pre-RR1 output retained for traceability; not a current result"
     },
     "score_component_missingness.csv": {
       "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/score_component_missingness.csv",
@@ -110,16 +93,15 @@
       "source_sha256": "21e71c17f01c9b4fd5048c7556af02e4e1ea87691aa827225fbcfa88ef27040a",
       "sha256": "21e71c17f01c9b4fd5048c7556af02e4e1ea87691aa827225fbcfa88ef27040a",
       "rows": 16,
-      "selection": "all rows; byte-identical copy"
+      "selection": "all rows; byte-identical copy",
+      "role": "historical: pre-RR1 output retained for traceability; not a current result"
     },
     "score_formula_regression.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/score_formula_regression.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "27a0b010c644174b120e64cc327da0ebfa98c73a6e1ba5e0dbfe602c8560756e",
-      "sha256": "27a0b010c644174b120e64cc327da0ebfa98c73a6e1ba5e0dbfe602c8560756e",
-      "rows": 8,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/score_formula_checks.csv",
+      "source_sha256": "2ebf3bb5bf61996878edf189757496698561e71f44251a45fa71f33e468a1003",
+      "sha256": "9ef24d0e6fbcafb87730f850656b4434aa6ea04b2ad119536a719ac674ed9812",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "primary_action_definition.csv": {
       "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/primary_action_definition.csv",
@@ -128,35 +110,31 @@
       "source_sha256": "9145c8d91ddbbd2abcad52515c3bf8990bcc0b8c3353bea3d4d0cd2b4b6241c2",
       "sha256": "9145c8d91ddbbd2abcad52515c3bf8990bcc0b8c3353bea3d4d0cd2b4b6241c2",
       "rows": 8,
-      "selection": "all rows; byte-identical copy"
+      "selection": "all rows; byte-identical copy",
+      "role": "historical: pre-RR1 output retained for traceability; not a current result"
     },
     "module1_current_points.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/module1_current_points.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "3c528edc8990156198845da349e8ca21e52709c02028195d2bb725c0f0f66ef8",
-      "sha256": "3c528edc8990156198845da349e8ca21e52709c02028195d2bb725c0f0f66ef8",
-      "rows": 8,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_module1_points.csv",
+      "source_sha256": "850b309dc6039c9f1966fa5a68819e849ef7cdf26fdfdd2f52ffd37938f6286c",
+      "sha256": "ffe857e56ea4b3cb98e04d21661a9fbbce2d29a0cee189acc24ec75b8b855411",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "module1_current_intervals.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/module1_current_intervals.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "41d7af4a68e1e31583ea049522281e66b69019061f33f31ecda3737ebbf9d0db",
-      "sha256": "41d7af4a68e1e31583ea049522281e66b69019061f33f31ecda3737ebbf9d0db",
-      "rows": 64,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_module1_intervals.csv",
+      "source_sha256": "a758511316c08e08ae316322785b3ae998079274c4adc44f2d25ec1e55a02814",
+      "sha256": "4ba9f2ba0debb55d066d28ae88db604dae8c7553c4bca4bed71260af7777f3c7",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "module1_frozen_calibration_maps.csv": {
-      "source_label": "<analysis_outputs>/sepsis_comparator_actionref_outputs/run_20261010T084546891552Z_7fb192bc1a2b/tables/module1_frozen_calibration_maps.csv",
-      "source_generation_date": "2026-10-10",
-      "date_basis": "source run label",
-      "source_sha256": "b014ec0d0815d203481c2859914328c197e64fa061bcea87177fb1a08b84424f",
-      "sha256": "b014ec0d0815d203481c2859914328c197e64fa061bcea87177fb1a08b84424f",
-      "rows": 42,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_outcome_calibration_maps.csv",
+      "source_sha256": "1b7910a0e35f3ba896b3738c72b425fbbac230fb1660470b528245d1fe8b5dc1",
+      "sha256": "ac7abf64841b9577d7910032cebba0d5cafd03cdca4189e706f9b24f50a36c2c",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     }
   },
-  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+  "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
+  "analysis_revision": "RR1 same-source full cohort"
 }

@@ -1,0 +1,10 @@
+analysis,cohort,score,level,full_data_threshold,requested_replicates,attempted_replicates,successful_fit_replicates,computational_failures,candidate_available_replicates,candidate_availability,independently_retained_replicates,independent_retention,candidate_CI_denominator,candidate_CI_2_5,candidate_CI_97_5,independent_CI_denominator,independent_CI_2_5,independent_CI_97_5,bootstrap_status,interval_definition
+window_1h,MIMIC_learning,ESRP,Low,30,500,500,500,0,500,1,500,1,500,26,30,500,26,30,completed,"conditional on candidate / independent availability, respectively"
+window_1h,MIMIC_learning,ESRP,Mid,69,500,500,500,0,500,1,500,1,500,63,75,500,63,75,completed,"conditional on candidate / independent availability, respectively"
+window_1h,MIMIC_learning,ESRP,High,75,500,500,500,0,470,0.93999999999999995,328,0.65600000000000003,470,63,78,328,69,78,completed,"conditional on candidate / independent availability, respectively"
+window_3h,MIMIC_learning,ESRP,Low,27,500,500,500,0,500,1,500,1,500,26,27,500,26,27,completed,"conditional on candidate / independent availability, respectively"
+window_3h,MIMIC_learning,ESRP,Mid,45,500,500,500,0,500,1,500,1,500,45,46,500,45,46,completed,"conditional on candidate / independent availability, respectively"
+window_3h,MIMIC_learning,ESRP,High,60,500,500,500,0,500,1,500,1,500,60,63.524999999999977,500,60,63.524999999999977,completed,"conditional on candidate / independent availability, respectively"
+window_6h,MIMIC_learning,ESRP,Low,27,500,500,500,0,500,1,500,1,500,26,27,500,26,27,completed,"conditional on candidate / independent availability, respectively"
+window_6h,MIMIC_learning,ESRP,Mid,42,500,500,500,0,500,1,500,1,500,40,45,500,40,45,completed,"conditional on candidate / independent availability, respectively"
+window_6h,MIMIC_learning,ESRP,High,54,500,500,500,0,500,1,500,1,500,54,56,500,54,56,completed,"conditional on candidate / independent availability, respectively"

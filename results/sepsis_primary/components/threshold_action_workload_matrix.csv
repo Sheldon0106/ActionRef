@@ -1,31 +1,49 @@
-cohort,level,threshold,record_type,total_N_with_score_and_outcome,alert_N,alert_fraction,outcome_positive_N,outcome_recall,outcome_PPV,composite_response_yield_among_alerts,capacity_interpretation,component,component_observed_among_alert_N,component_positive_among_alert_N,component_yield_among_observed_alerts,observed_action_composition_guard
-MIMIC held-out,Low,27.0,threshold_summary,127528.0,46611,0.3654962047550342,7186.0,0.775396604508767,0.11954259724099461,0.48568353067814857,retrospective workload display; no empirical absolute K,,,,,
-MIMIC held-out,Low,27.0,component_workload,,46611,,,,,,,lactate,46321.0,20838.0,0.44986075430150474,observed composition is not a forecast of treatment demand after deployment
-MIMIC held-out,Low,27.0,component_workload,,46611,,,,,,,fluid,46609.0,3245.0,0.06962174687292154,observed composition is not a forecast of treatment demand after deployment
-MIMIC held-out,Low,27.0,component_workload,,46611,,,,,,,vasopressor,46321.0,742.0,0.016018652447054253,observed composition is not a forecast of treatment demand after deployment
-MIMIC held-out,Low,27.0,component_workload,,46611,,,,,,,steroid,46321.0,2537.0,0.05476997474147795,observed composition is not a forecast of treatment demand after deployment
-MIMIC held-out,Mid,36.0,threshold_summary,127528.0,20012,0.15692240135499655,7186.0,0.5165599777344837,0.18548870677593443,0.605218263923733,retrospective workload display; no empirical absolute K,,,,,
-MIMIC held-out,Mid,36.0,component_workload,,20012,,,,,,,lactate,19867.0,11469.0,0.5772889716615494,observed composition is not a forecast of treatment demand after deployment
-MIMIC held-out,Mid,36.0,component_workload,,20012,,,,,,,fluid,20011.0,1849.0,0.09239918045075209,observed composition is not a forecast of treatment demand after deployment
-MIMIC held-out,Mid,36.0,component_workload,,20012,,,,,,,vasopressor,19867.0,521.0,0.026224392208184427,observed composition is not a forecast of treatment demand after deployment
-MIMIC held-out,Mid,36.0,component_workload,,20012,,,,,,,steroid,19867.0,1237.0,0.06226405597221523,observed composition is not a forecast of treatment demand after deployment
-MIMIC held-out,High,51.0,threshold_summary,127528.0,2742,0.021501160529452355,7186.0,0.1480656832730309,0.38803792851932895,0.8857247170500182,retrospective workload display; no empirical absolute K,,,,,
-MIMIC held-out,High,51.0,component_workload,,2742,,,,,,,lactate,2739.0,2376.0,0.8674698795180723,observed composition is not a forecast of treatment demand after deployment
-MIMIC held-out,High,51.0,component_workload,,2742,,,,,,,fluid,2742.0,493.0,0.1797957695113056,observed composition is not a forecast of treatment demand after deployment
-MIMIC held-out,High,51.0,component_workload,,2742,,,,,,,vasopressor,2739.0,200.0,0.07301935012778386,observed composition is not a forecast of treatment demand after deployment
-MIMIC held-out,High,51.0,component_workload,,2742,,,,,,,steroid,2739.0,246.0,0.08981380065717415,observed composition is not a forecast of treatment demand after deployment
-Stanford external,Low,27.0,threshold_summary,118385.0,42115,0.35574608269628755,5262.0,0.814519194222729,0.10176896592662947,0.49153508251216904,retrospective workload display; no empirical absolute K,,,,,
-Stanford external,Low,27.0,component_workload,,42115,,,,,,,lactate,42115.0,19032.0,0.45190549685385256,observed composition is not a forecast of treatment demand after deployment
-Stanford external,Low,27.0,component_workload,,42115,,,,,,,fluid,42115.0,3174.0,0.07536507182713997,observed composition is not a forecast of treatment demand after deployment
-Stanford external,Low,27.0,component_workload,,42115,,,,,,,vasopressor,42115.0,713.0,0.01692983497566188,observed composition is not a forecast of treatment demand after deployment
-Stanford external,Low,27.0,component_workload,,42115,,,,,,,steroid,42115.0,3031.0,0.07196960702837468,observed composition is not a forecast of treatment demand after deployment
-Stanford external,Mid,36.0,threshold_summary,118385.0,15037,0.12701778096887276,5262.0,0.5167236792094261,0.1808206424153754,0.6641617343885083,retrospective workload display; no empirical absolute K,,,,,
-Stanford external,Mid,36.0,component_workload,,15037,,,,,,,lactate,15037.0,9509.0,0.6323734787524107,observed composition is not a forecast of treatment demand after deployment
-Stanford external,Mid,36.0,component_workload,,15037,,,,,,,fluid,15037.0,1614.0,0.1073352397419698,observed composition is not a forecast of treatment demand after deployment
-Stanford external,Mid,36.0,component_workload,,15037,,,,,,,vasopressor,15037.0,506.0,0.033650329188002925,observed composition is not a forecast of treatment demand after deployment
-Stanford external,Mid,36.0,component_workload,,15037,,,,,,,steroid,15037.0,1468.0,0.09762585622132074,observed composition is not a forecast of treatment demand after deployment
-Stanford external,High,51.0,threshold_summary,118385.0,2260,0.01909025636693838,5262.0,0.15659445077917142,0.36460176991150445,0.8982300884955752,retrospective workload display; no empirical absolute K,,,,,
-Stanford external,High,51.0,component_workload,,2260,,,,,,,lactate,2260.0,2005.0,0.8871681415929203,observed composition is not a forecast of treatment demand after deployment
-Stanford external,High,51.0,component_workload,,2260,,,,,,,fluid,2260.0,362.0,0.16017699115044248,observed composition is not a forecast of treatment demand after deployment
-Stanford external,High,51.0,component_workload,,2260,,,,,,,vasopressor,2260.0,163.0,0.07212389380530973,observed composition is not a forecast of treatment demand after deployment
-Stanford external,High,51.0,component_workload,,2260,,,,,,,steroid,2260.0,262.0,0.11592920353982301,observed composition is not a forecast of treatment demand after deployment
+version,cohort,region,component,complete_N,composite_positive_N,component_positive_N,component_rate_all_complete,component_rate_composite_positive
+RR1,MIMIC_learning,all,lactate,309518,94258,84255,0.27221357077778996,0.8938763818455728
+RR1,MIMIC_learning,all,fluid,309518,94258,12323,0.03981351649984815,0.13073691357762737
+RR1,MIMIC_learning,all,vasopressor,309518,94258,2437,0.007873532395531116,0.025854569373421885
+RR1,MIMIC_learning,all,steroid,309518,94258,12015,0.03881842089959227,0.1274692864266163
+RR1,MIMIC_learning,Below Low,lactate,193992,40669,34325,0.17694028619736896,0.84400895030613
+RR1,MIMIC_learning,Below Low,fluid,193992,40669,5062,0.02609385954059961,0.12446826821411887
+RR1,MIMIC_learning,Below Low,vasopressor,193992,40669,768,0.003958926141284177,0.0188841623841255
+RR1,MIMIC_learning,Below Low,steroid,193992,40669,5993,0.030893026516557384,0.14736039735425016
+RR1,MIMIC_learning,Low to High,lactate,110674,49359,45755,0.4134213997867611,0.92698393403432
+RR1,MIMIC_learning,Low to High,fluid,110674,49359,6405,0.05787267108806043,0.12976356895399016
+RR1,MIMIC_learning,Low to High,vasopressor,110674,49359,1328,0.011999204871966316,0.02690492108835268
+RR1,MIMIC_learning,Low to High,steroid,110674,49359,5640,0.05096047852250755,0.11426487570655808
+RR1,MIMIC_learning,At or above High,lactate,4852,4230,4175,0.8604699093157461,0.9869976359338062
+RR1,MIMIC_learning,At or above High,fluid,4852,4230,856,0.17642209398186315,0.20236406619385341
+RR1,MIMIC_learning,At or above High,vasopressor,4852,4230,341,0.070280296784831,0.0806146572104019
+RR1,MIMIC_learning,At or above High,steroid,4852,4230,382,0.07873042044517725,0.09030732860520095
+RR1,MIMIC_heldout,all,lactate,131919,39935,35547,0.2694608054942806,0.8901214473519469
+RR1,MIMIC_heldout,all,fluid,131919,39935,5271,0.03995633684306279,0.1319894829097283
+RR1,MIMIC_heldout,all,vasopressor,131919,39935,1072,0.008126198652203246,0.0268436208839364
+RR1,MIMIC_heldout,all,steroid,131919,39935,5243,0.03974408538572912,0.1312883435582822
+RR1,MIMIC_heldout,Below Low,lactate,83495,17494,14711,0.17619019102940295,0.8409168857894135
+RR1,MIMIC_heldout,Below Low,fluid,83495,17494,2135,0.025570393436732737,0.12204184291757174
+RR1,MIMIC_heldout,Below Low,vasopressor,83495,17494,314,0.0037607042337864543,0.017949011089516406
+RR1,MIMIC_heldout,Below Low,steroid,83495,17494,2677,0.03206180010779089,0.15302389390648222
+RR1,MIMIC_heldout,Low to High,lactate,46204,20577,18993,0.41106830577439185,0.9230208485201924
+RR1,MIMIC_heldout,Low to High,fluid,46204,20577,2765,0.05984330361007705,0.1343733294454974
+RR1,MIMIC_heldout,Low to High,vasopressor,46204,20577,598,0.012942602372088996,0.029061573601594014
+RR1,MIMIC_heldout,Low to High,steroid,46204,20577,2399,0.05192191152281188,0.11658648005054187
+RR1,MIMIC_heldout,At or above High,lactate,2220,1864,1843,0.8301801801801801,0.9887339055793991
+RR1,MIMIC_heldout,At or above High,fluid,2220,1864,371,0.1671171171171171,0.1990343347639485
+RR1,MIMIC_heldout,At or above High,vasopressor,2220,1864,160,0.07207207207207207,0.08583690987124463
+RR1,MIMIC_heldout,At or above High,steroid,2220,1864,167,0.07522522522522522,0.0895922746781116
+RR1,Stanford,all,lactate,118385,36197,31092,0.26263462431895934,0.8589662126695583
+RR1,Stanford,all,fluid,118385,36197,5675,0.04793681631963509,0.15678094869740586
+RR1,Stanford,all,vasopressor,118385,36197,860,0.007264433838746463,0.023758875044893223
+RR1,Stanford,all,steroid,118385,36197,5969,0.05042023905055539,0.16490316877089262
+RR1,Stanford,Below Low,lactate,75696,15323,11923,0.15751162544916508,0.7781113359002806
+RR1,Stanford,Below Low,fluid,75696,15323,2495,0.032960790530543224,0.1628271226261176
+RR1,Stanford,Below Low,vasopressor,75696,15323,146,0.0019287677023885014,0.009528160281929127
+RR1,Stanford,Below Low,steroid,75696,15323,2885,0.03811297822870429,0.1882790576257913
+RR1,Stanford,Low to High,lactate,41168,19469,17776,0.43179168286047415,0.9130412450562433
+RR1,Stanford,Low to High,fluid,41168,19469,2921,0.07095316750874466,0.15003338640916328
+RR1,Stanford,Low to High,vasopressor,41168,19469,588,0.014282938204430625,0.03020185936617186
+RR1,Stanford,Low to High,steroid,41168,19469,2895,0.07032160901671201,0.14869793004263188
+RR1,Stanford,At or above High,lactate,1521,1405,1393,0.915844838921762,0.9914590747330961
+RR1,Stanford,At or above High,fluid,1521,1405,259,0.1702827087442472,0.18434163701067616
+RR1,Stanford,At or above High,vasopressor,1521,1405,126,0.08284023668639054,0.08967971530249111
+RR1,Stanford,At or above High,steroid,1521,1405,189,0.1242603550295858,0.13451957295373665

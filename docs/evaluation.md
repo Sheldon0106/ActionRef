@@ -12,7 +12,7 @@ report = evaluate_frozen_thresholds(
 )
 ```
 
-The input may be an anchors DataFrame or a mapping such as `{"Low": 27, "candidate": 31}`.
+The input may be an anchors DataFrame or a mapping such as `{"Low": 27, "candidate": 34}`.
 At least one finite threshold is required. If a requested value is not observed,
 the table uses the next observed value representing the same `score >= threshold`
 decision, including the zero-alert strategy when needed. Requested and evaluated

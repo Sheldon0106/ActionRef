@@ -1,20 +1,42 @@
-{
-  "MIMIC_primary": {
-    "B": 500,
-    "available": 500,
-    "ordered": 500,
-    "collided": 0,
-    "median": 10.0,
-    "lower": 9.0,
-    "upper": 12.0
+[
+  {
+    "analysis": "MIMIC_primary",
+    "cohort": "MIMIC_learning",
+    "score": "ESRP",
+    "scope": "independent_representatives",
+    "levels": "Low-Mid-High",
+    "requested_replicates": 500,
+    "joint_available_replicates": 500,
+    "joint_availability_all_requested": 1.0,
+    "ordered_replicates": 500,
+    "ordering_all_requested": 1.0,
+    "ordering_joint_available": 1.0,
+    "collision_replicates": 0,
+    "collision_all_requested": 0.0,
+    "collision_joint_available": 0.0,
+    "gap_median": null,
+    "gap_CI_2_5": null,
+    "gap_CI_97_5": null,
+    "gap_denominator": null
   },
-  "Stanford_local": {
-    "B": 500,
-    "available": 500,
-    "ordered": 500,
-    "collided": 0,
-    "median": 10.0,
-    "lower": 10.0,
-    "upper": 10.0
+  {
+    "analysis": "Stanford_local",
+    "cohort": "Stanford",
+    "score": "ESRP",
+    "scope": "independent_representatives",
+    "levels": "Low-Mid-High",
+    "requested_replicates": 500,
+    "joint_available_replicates": 500,
+    "joint_availability_all_requested": 1.0,
+    "ordered_replicates": 500,
+    "ordering_all_requested": 1.0,
+    "ordering_joint_available": 1.0,
+    "collision_replicates": 0,
+    "collision_all_requested": 0.0,
+    "collision_joint_available": 0.0,
+    "gap_median": null,
+    "gap_CI_2_5": null,
+    "gap_CI_97_5": null,
+    "gap_denominator": null
   }
-}
+]

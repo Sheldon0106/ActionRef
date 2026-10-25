@@ -1,7 +1,7 @@
-cohort,score,level,full_data_threshold,requested_replicates,attempted_replicates,successful_fit_replicates,computational_failures,candidate_available_replicates,candidate_availability,independently_retained_replicates,independent_retention,candidate_CI_denominator,candidate_CI_2_5,candidate_CI_97_5,independent_CI_denominator,independent_CI_2_5,independent_CI_97_5,bootstrap_status,interval_definition,binning_precondition_abstentions
-MIMIC_learning,qSOFA,Low,1,500,500,500,0,500,1,0,0,500,1,1,0,,,completed,"conditional on candidate / independent availability, respectively",0
-MIMIC_learning,qSOFA,Mid,1,500,500,500,0,500,1,500,1,500,1,1,500,1,1,completed,"conditional on candidate / independent availability, respectively",0
-MIMIC_learning,qSOFA,High,2,500,500,500,0,500,1,500,1,500,2,2,500,2,2,completed,"conditional on candidate / independent availability, respectively",0
-Stanford,qSOFA,Low,1,500,500,500,0,500,1,0,0,500,1,1,0,,,completed,"conditional on candidate / independent availability, respectively",0
-Stanford,qSOFA,Mid,1,500,500,500,0,500,1,500,1,500,1,1,500,1,1,completed,"conditional on candidate / independent availability, respectively",0
-Stanford,qSOFA,High,2,500,500,500,0,500,1,500,1,500,2,2,500,2,2,completed,"conditional on candidate / independent availability, respectively",0
+analysis,cohort,score,level,full_data_threshold,requested_replicates,attempted_replicates,successful_fit_replicates,computational_failures,candidate_available_replicates,candidate_availability,independently_retained_replicates,independent_retention,candidate_CI_denominator,candidate_CI_2_5,candidate_CI_97_5,independent_CI_denominator,independent_CI_2_5,independent_CI_97_5,bootstrap_status,interval_definition
+MIMIC_learning_qSOFA_short,MIMIC_learning,qSOFA,Low,1,500,500,500,0,500,1,0,0,500,1,1,0,,,completed,"conditional on candidate / independent availability, respectively"
+MIMIC_learning_qSOFA_short,MIMIC_learning,qSOFA,Mid,1,500,500,500,0,500,1,500,1,500,1,1,500,1,1,completed,"conditional on candidate / independent availability, respectively"
+MIMIC_learning_qSOFA_short,MIMIC_learning,qSOFA,High,2,500,500,500,0,500,1,500,1,500,2,2,500,2,2,completed,"conditional on candidate / independent availability, respectively"
+Stanford_qSOFA_short,Stanford,qSOFA,Low,1,500,500,500,0,500,1,0,0,500,1,1,0,,,completed,"conditional on candidate / independent availability, respectively"
+Stanford_qSOFA_short,Stanford,qSOFA,Mid,1,500,500,500,0,500,1,500,1,500,1,1,500,1,1,completed,"conditional on candidate / independent availability, respectively"
+Stanford_qSOFA_short,Stanford,qSOFA,High,2,500,500,500,0,500,1,500,1,500,2,2,500,2,2,completed,"conditional on candidate / independent availability, respectively"

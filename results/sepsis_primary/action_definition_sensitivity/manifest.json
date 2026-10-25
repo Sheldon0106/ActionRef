@@ -1,54 +1,51 @@
 {
   "schema": "actionref.aggregate-bundle.v1",
   "manuscript": "JAMIA submission, October 2026",
-  "assembled_date": "2026-10-20",
-  "manuscript_locations": "eTable 10; eFigure 2",
+  "assembled_date": "2026-10-25",
   "files": {
     "sensitivity_response_bundle_thresholds.csv": {
-      "source_label": "<analysis_outputs>/v7_outputs/sensitivity_response_bundle_thresholds.csv",
-      "source_generation_date": "2026-08-19",
-      "date_basis": "source file modification date; original run date not recorded",
-      "source_sha256": "162e62a42a4ba75bee2338b929e24cc33f57911302dd5f35ed9398cd85bc0fc2",
-      "sha256": "162e62a42a4ba75bee2338b929e24cc33f57911302dd5f35ed9398cd85bc0fc2",
-      "rows": 9,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/broad_local_anchors_new.csv",
+      "source_sha256": "39c51ed742dd23dc0958f462796ea41afbfe6426295f4f19ec04ce0788e31950",
+      "sha256": "39c51ed742dd23dc0958f462796ea41afbfe6426295f4f19ec04ce0788e31950",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "corrected_action_window_thresholds.csv": {
-      "source_label": "<analysis_outputs>/v10_corrected_fluid_action_window_outputs/run_20260913T095042149774Z_3034743a5a6c/tables/corrected_action_window_thresholds.csv",
-      "source_generation_date": "2026-09-13",
-      "date_basis": "source run label",
-      "source_sha256": "594bcf2fbd3fafb58ac92ae0390b4782696a5511a451948614726df88f26cea9",
-      "sha256": "594bcf2fbd3fafb58ac92ae0390b4782696a5511a451948614726df88f26cea9",
-      "rows": 9,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/reference_point_anchors.csv",
+      "source_sha256": "7b31fa9f8ac1b5b81a119c896fb850518276b1fd726937e68973934c33cea94c",
+      "sha256": "faf06c685d733601bb2d2707cc4442ab232567fb15adafeb9c09e17698cb80cf",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "corrected_action_window_response_curves.csv": {
-      "source_label": "<analysis_outputs>/v10_corrected_fluid_action_window_outputs/run_20260913T095042149774Z_3034743a5a6c/tables/corrected_action_window_response_curves.csv",
-      "source_generation_date": "2026-09-13",
-      "date_basis": "source run label",
-      "source_sha256": "aaeeef7bba6f089035f4291d913536fd2013ac03dc97932f8f32d2b0692a94ea",
-      "sha256": "aaeeef7bba6f089035f4291d913536fd2013ac03dc97932f8f32d2b0692a94ea",
-      "rows": 78,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/action_curves.csv",
+      "source_sha256": "8b169ced1f30f938922c028041d69b950ffca0b1323b4eb87690b2b36ff3e3e5",
+      "sha256": "372c947741d2c8607650b007a450b9e1af321fafa6ade07dbcd34bffc316e1f7",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "corrected_action_window_component_prevalence.csv": {
-      "source_label": "<analysis_outputs>/v10_corrected_fluid_action_window_outputs/run_20260913T095042149774Z_3034743a5a6c/tables/corrected_action_window_component_prevalence.csv",
-      "source_generation_date": "2026-09-13",
-      "date_basis": "source run label",
-      "source_sha256": "e4305ee3bf29566c92afe45f6d5ea4292db41b8d876a39d25a90fd7c0a1429d8",
-      "sha256": "e4305ee3bf29566c92afe45f6d5ea4292db41b8d876a39d25a90fd7c0a1429d8",
-      "rows": 15,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_window_component_prevalence.csv",
+      "source_sha256": "fb519466cbef0c45a77e4197940df3a6bd0fe0721ab8c8489f6117847abde00a",
+      "sha256": "fb519466cbef0c45a77e4197940df3a6bd0fe0721ab8c8489f6117847abde00a",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "corrected_action_window_evidence_gates.csv": {
-      "source_label": "<analysis_outputs>/v10_corrected_fluid_action_window_outputs/run_20260913T095042149774Z_3034743a5a6c/tables/corrected_action_window_evidence_gates.csv",
-      "source_generation_date": "2026-09-13",
-      "date_basis": "source run label",
-      "source_sha256": "7580c41696c77ed9f17cbc21e00dc9daf84fb64224607a0111efd9d5ecc0081b",
-      "sha256": "7580c41696c77ed9f17cbc21e00dc9daf84fb64224607a0111efd9d5ecc0081b",
-      "rows": 3,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/reference_point_diagnostics.csv",
+      "source_sha256": "1d13ec2348b6aae1ca8c8fea7ecf7ffe2197bda693d4d612b500c3607723edbc",
+      "sha256": "5029ac08984f370c1fc5a73d5251bea01aa80adbd44bbf6457095122b8cf9494",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
+    },
+    "reference_bootstrap_summary.csv": {
+      "source_label": "<rr1_aggregate_bundle>/tables/reference_bootstrap_summary.csv",
+      "source_sha256": "f5455a9035bfd4c8e60086b129fbbdda6230cbcab65b4c9df2c8c1f9cbd4c4ec",
+      "sha256": "6bdbb987e00459206e33c57bb12d3c08f888bb023ac939f655496c5b5e2b1942",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     }
   },
-  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+  "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
+  "analysis_revision": "RR1 same-source full cohort"
 }

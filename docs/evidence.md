@@ -1,51 +1,55 @@
 # Manuscript and exploratory materials
 
-The manuscript (JAMIA submission, October 2026) examines emergency sepsis assessment.
-ESRP is the primary score; NEWS, MEWS, REMS and two-criterion qSOFA are additional score applications within the same sepsis setting. Public materials contain aggregate summaries and
+The manuscript examines emergency sepsis assessment.
+ESRP is the primary score; adapted NEWS2, adapted MEWS, adapted REMS and
+two-criterion qSOFA are additional score applications within the same sepsis setting. Public materials contain aggregate summaries and
 analysis code; patient-level clinical data require authorized source access.
 
 ## Sepsis materials
 
-MIMIC behavioral references are 27 / 36 / 51. Candidate 31 was selected on the
+MIMIC behavioral references are 27 / 39 / 54. Candidate 34 was selected on the
 learning partition under the Low-27 workload ceiling and R = 11,299/804, then
 applied unchanged to evaluation data. Stanford local references of 26 / 36 / 50
 describe recorded practice there; they are separate from transport of the MIMIC
 thresholds.
 
 `results/sepsis_primary/` contains operating and action counts, the estimated action
-curve, saved action-probability estimates and intervals, fixed 31-versus-27 loss
+curve, saved action-probability estimates and intervals, fixed 34-versus-27 loss
 comparisons, and learning-data R-grid selections. See the [sepsis illustration](clinical-example.md),
 [aggregate results](paper-results.md) and [R guide](R_GUIDANCE.md).
 
 The [reproduction guide](paper-reproduction.md) explains which calculations use
 aggregate counts and which estimates and uncertainty intervals are read from
-saved summaries. It maps all 15 supplementary tables and 7 supplementary figures
-to the available sources. Existing data keys and historical filenames are retained
-for compatibility; reader-facing labels follow the manuscript.
+saved summaries. The [data contract](paper-data.md) specifies the clinical-only
+sepsis endpoint, patient-disjoint partitions and analysis denominators.
 
 ## Additional score applications
 
 `results/early_warning_scores/default/` contains two-site curves, references,
 500-draw reference summaries, fixed MIMIC-reference operating counts and score
-implementation tables. MIMIC NEWS, MEWS and REMS references are 2/3/6, 2/4/6
-and 3/11/13. Stanford MEWS has local Mid 3; transport evaluation retains Mid 4.
+implementation tables. MIMIC adapted NEWS2, adapted MEWS and adapted REMS
+references are 2/3/7, 2/4/6 and 3/11/12. The adapted REMS High uses a relative
+probability target. Stanford local adapted MEWS has Mid 3; transport evaluation
+retains the MIMIC Mid 4.
 
-Default two-criterion qSOFA returns no references. Its separate short-scale
-analysis in `results/early_warning_scores/qsofa_short_scale/` reports shared
-Low/Mid 1 and High 2 at both sites. This does not change package defaults.
-Use `python examples/reproduce_paper.py --early-warning-scores` to recalculate
-the four-score Figure 4 rates from shared confusion counts.
+Default two-criterion qSOFA has three valid bins, below the required eight,
+and returns no references; reference bootstrapping is not run in this setting.
+The separate short-scale analysis in `results/early_warning_scores/qsofa_short_scale/`
+uses a minimum of three bins. Low and Mid candidates coincide at 1, so the shared
+threshold rule retains Mid 1 and High 2 as independent outputs at both sites.
+This does not change package defaults. Use
+`python examples/reproduce_paper.py --early-warning-scores` to recalculate
+the four-score operating rates from shared confusion counts.
 
 ## Simulations
 
-The [simulation directory](https://github.com/Sheldon0106/ActionRef/tree/v1.0.3-jamia/simulations)
+The [simulation directory](https://github.com/Sheldon0106/ActionRef/tree/main/simulations)
 contains the original eight-scenario runner/configuration (seed **20260802**) and
 the paired support-gate runner/configuration (seed **2026101101**), with saved
-condition-level error summaries. The simulation methods, parameters and results
-are unchanged; the simulations were not rerun for this release.
+condition-level error summaries.
 
 Changepoint functionality and historical structural diagnostics remain available
-in the software. Changepoint analyses were not used in the manuscript.
+in the software. They do not define or replace the semantic probability targets.
 
 ## Exploratory materials
 

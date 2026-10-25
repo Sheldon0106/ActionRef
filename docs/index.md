@@ -62,8 +62,8 @@ aggregate outputs. [Follow it step by step →](quickstart.md)
 ## Explore the evidence
 
 The primary application is [sepsis ESRP](clinical-example.md): MIMIC references
-27 / 36 / 51, Stanford local re-estimation 26 / 36 / 50, and candidate 31 under
-R = 11,299/804. NEWS, MEWS, REMS and two-criterion qSOFA extend the same
+27 / 39 / 54, Stanford local re-estimation 26 / 36 / 50, and candidate 34 under
+R = 11,299/804. Adapted NEWS2, adapted MEWS, adapted REMS and two-criterion qSOFA extend the same
 recorded-action analysis to other scores. The manuscript examines emergency
 sepsis assessment. The
 [sepsis aggregate results](paper-results.md) and [reproduction guide](paper-reproduction.md)
@@ -71,7 +71,7 @@ describe the shared analysis materials and the scope of the aggregate entry poin
 
 COPD, HEART-derived AERT, pneumonia and AKI materials are **exploratory, not
 reported in the manuscript**. Changepoint functionality is retained in the
-software but was not used in the manuscript. See the [evidence guide](evidence.md)
+software; it does not define or replace the semantic reference targets. See the [evidence guide](evidence.md)
 for analysis roles and simulation sources.
 
 ActionRef describes recorded practice and supports explicit threshold comparisons.
