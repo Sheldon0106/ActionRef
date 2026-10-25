@@ -6,9 +6,9 @@ manuscript.** COPD in these tables uses its earlier supplied-score/action settin
 See the [evidence guide](evidence.md#exploratory-materials) for their development roles.
 
 The current primary sepsis example uses **R = 11,299/804**, a Low-reference workload
-ceiling, and learning-data re-selection described in **Supplement eMethods 3**.
+ceiling, and learning-data re-selection.
 Its [five-step R guide](R_GUIDANCE.md) distinguishes re-selection from the fixed
-31-versus-27 evaluation comparison. The historical R=15 results below do not
+34-versus-27 evaluation comparison. The historical R=15 results below do not
 replace the current primary example.
 
 Answers the question raised in the Module 3B walkthrough: a user applying the framework

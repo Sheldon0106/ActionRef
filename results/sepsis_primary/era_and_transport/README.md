@@ -1,24 +1,31 @@
 # Era and transport summaries
 
-Manuscript locations: **eTable 11; eFigure 3**.
+The MIMIC era analysis compares coarse anchor-year groups for 2011–2016 and
+2017–2019; encounters in the 2008–2010 group are excluded. Local references and
+application of the early-era references to the later era are reported as point
+estimates. This is a coarse-era MIMIC analysis, not a Stanford chronological
+validation.
 
-Temporal tables retain the saved extraction precision. Historical R = 15 columns in source tables are retained as provenance and are not used for the manuscript primary R = 11,299/804 comparison.
+The transport table compares the fixed MIMIC references with local workload- and
+risk-matching rules at Stanford. Those matching rules are separate from the
+primary learning-selected candidate. Differences from earlier repository results
+also involve population, patient assignment and outcome changes, rather than
+isolating deterioration over time.
 
-## Checks against the final manuscript
+## Current files
 
-Early-era MIMIC references are 26 / 36 / 50; late-era references are 26 / 32 / 50. Stanford workload-matched thresholds are 27 / 34 / 50, while risk-matched thresholds are 30 / 37 / 54.
+- `paper_transport_decomposition.csv`
+- `v7_cell56_temporal_drift.csv`
+- `v7_cell56_temporal_operating.csv`
+- `v7_cell56_temporal_counts.csv`
 
-## Sources
+## Retained historical files
 
-Existing aggregate outputs only. No patient records or identifiers are included.
-Numbers and original data fields are preserved. No analyses were rerun.
+These earlier values or definitions are retained for historical reference and are
+not inputs to the current summaries.
+- `V7_13_K_operationalization_capacity.csv`
+- `v7_cell56_temporal_capacity.csv`
 
-The [manifest](manifest.json) records portable source labels, generation-date provenance,
-row selections, and SHA-256 hashes for the originals and public copies.
-
-- [paper_transport_decomposition.csv](paper_transport_decomposition.csv)
-- [v7_cell56_temporal_drift.csv](v7_cell56_temporal_drift.csv)
-- [v7_cell56_temporal_operating.csv](v7_cell56_temporal_operating.csv)
-- [v7_cell56_temporal_counts.csv](v7_cell56_temporal_counts.csv)
-- [V7_13_K_operationalization_capacity.csv](V7_13_K_operationalization_capacity.csv)
-- [v7_cell56_temporal_capacity.csv](v7_cell56_temporal_capacity.csv)
+Source labels, row selections and file checksums are recorded in
+[manifest.json](manifest.json). All shared observations are aggregates; patient
+records and identifiers are not included.

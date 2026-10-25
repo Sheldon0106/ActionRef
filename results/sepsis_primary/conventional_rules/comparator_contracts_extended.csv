@@ -1,14 +1,14 @@
-method_id,method_label,estimand,threshold,selection_detail,training_source,status,guard
-youden_J,Outcome Youden J,outcome discrimination,28.0,maximum J=0.45634669,MIMIC development only,available,outcome-derived comparator; not a behavioral tier
-fixed_sensitivity_80,Fixed sensitivity >=0.80,outcome discrimination,26.0,highest threshold retaining development sensitivity >= 0.80; achieved=0.84592388,MIMIC development only,available,outcome-derived comparator; not a behavioral tier
-fixed_specificity_80,Fixed specificity >=0.80,outcome discrimination,33.0,lowest threshold attaining development specificity >= 0.80; achieved=0.81011275,MIMIC development only,available,outcome-derived comparator; not a behavioral tier
-capacity_5pct,Top-capacity 5%,resource policy,46.0,tie-inclusive development alerts=14029 <= K=14873,MIMIC development only,available,resource constraint; not an outcome or behavior estimand
-capacity_10pct,Top-capacity 10%,resource policy,41.0,tie-inclusive development alerts=28434 <= K=29747,MIMIC development only,available,resource constraint; not an outcome or behavior estimand
-capacity_20pct,Top-capacity 20%,resource policy,34.0,tie-inclusive development alerts=57152 <= K=59495,MIMIC development only,available,resource constraint; not an outcome or behavior estimand
-behavior_logistic_p50,Behavior logistic p=0.50,behavior semantics,36.0,raw crossing=35.96425681; nearest observed score,MIMIC development only,available,model-based response crossing; distinct from isotonic semantic Mid
-actionref_low,Frozen ActionRef Low,behavioral reference,27.0,frozen V7 reference; not relearned by comparator module,MIMIC development only,available,frozen reference policy; not a newly optimized comparator
-actionref_mid,Frozen ActionRef Mid,behavioral reference,36.0,frozen V7 reference; not relearned by comparator module,MIMIC development only,available,frozen reference policy; not a newly optimized comparator
-actionref_high,Frozen ActionRef High,behavioral reference,51.0,frozen V7 reference; not relearned by comparator module,MIMIC development only,available,frozen reference policy; not a newly optimized comparator
-workload_match_low,Workload matched to ActionRef Low,workload audit,27.0,same scalar score and tie-inclusive rule; threshold is algebraically identical,MIMIC development only,available,identity audit only; not an independent method on the same score
-workload_match_mid,Workload matched to ActionRef Mid,workload audit,36.0,same scalar score and tie-inclusive rule; threshold is algebraically identical,MIMIC development only,available,identity audit only; not an independent method on the same score
-workload_match_high,Workload matched to ActionRef High,workload audit,51.0,same scalar score and tie-inclusive rule; threshold is algebraically identical,MIMIC development only,available,identity audit only; not an independent method on the same score
+score,policy_id,reference,threshold,family,bootstrap_B,selection_source,evidence_role,selection_status,raw_logistic_p50_crossing
+ESRP,youden_J,,26,conventional,200,MIMIC_learning,,available,
+ESRP,fixed_sensitivity_80,,26,conventional,200,MIMIC_learning,,available,
+ESRP,fixed_specificity_80,,34,conventional,200,MIMIC_learning,,available,
+ESRP,capacity_5pct,,45,conventional,200,MIMIC_learning,,available,
+ESRP,capacity_10pct,,40,conventional,200,MIMIC_learning,,available,
+ESRP,capacity_20pct,,34,conventional,200,MIMIC_learning,,available,
+ESRP,behavior_logistic_p50,,38,conventional,200,MIMIC_learning,,,37.611706105457259
+ESRP,actionref_low,Low,27,conventional,200,MIMIC_learning,MIMIC behavioral reference; frozen transport,,
+ESRP,workload_match_low,Low,27,conventional,200,MIMIC_learning,MIMIC behavioral reference; frozen transport,,
+ESRP,actionref_mid,Mid,39,conventional,200,MIMIC_learning,MIMIC behavioral reference; frozen transport,,
+ESRP,workload_match_mid,Mid,39,conventional,200,MIMIC_learning,MIMIC behavioral reference; frozen transport,,
+ESRP,actionref_high,High,54,conventional,200,MIMIC_learning,MIMIC behavioral reference; frozen transport,,
+ESRP,workload_match_high,High,54,conventional,200,MIMIC_learning,MIMIC behavioral reference; frozen transport,,

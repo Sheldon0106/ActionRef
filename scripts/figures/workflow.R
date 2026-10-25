@@ -43,16 +43,16 @@ workflow_references <- function(d) {
   # Interpolated line connects the saved isotonic bin coordinates, as in evaluation.
   curve_marks(p,d$clinical,point_r=3.4,lwd=2)
   for(i in 1:3) {
-    xx <- c(27,36,51)[i]; cc <- c(C$low,C$mid,C$high)[i]
+    xx <- c(27,39,54)[i]; cc <- c(C$low,C$mid,C$high)[i]
     fit <- approx(d$clinical$score,d$clinical$isotonic_rate,xout=xx)$y
     line(rep(p$X(xx),2),c(p$Y(0),p$Y(fit)),cc,.9,3)
     dot(p$X(xx),p$Y(fit),5,cc,"white",1)
   }
   tlabel(646,599,"Clinical score",10.5,just=c("center","top"))
   legend_curve(475,627)
-  vals <- c("Low 27","Mid 36","High 51")
+  vals <- c("Low 27","Mid 39","High 54")
   details <- c("Local action rate","P(action) = 0.50","P(action) = 0.80")
-  targets <- c("Target: about 0.327", "Absolute target", "Absolute target")
+  targets <- c("Target: about 0.309", "Absolute target", "Absolute target")
   for(i in 1:3) {
     yy <- 316+(i-1)*105; cc <- c(C$low,C$mid,C$high)[i]
     box(848,yy,196,89,"white",adjustcolor(cc,.32),r=6)

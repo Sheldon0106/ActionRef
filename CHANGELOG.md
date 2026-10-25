@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.1.0 - 2026-10-25
+
+- Updated the sepsis aggregate evidence for the complete MIMIC ED cohort,
+  patient-disjoint learning/evaluation split, clinical-only sepsis endpoint,
+  and corrected supplied Stanford scores.
+- Updated reference thresholds, fixed-candidate comparisons, saved uncertainty
+  summaries and the corresponding analysis configurations and reproduction entry
+  point. The primary ESRP references are 27/39/54 and the modeled candidate is 34.
+- Refreshed the existing documentation illustrations and numerical examples from
+  the current aggregate evidence.
+- Algorithms, package defaults, synthetic examples, simulations and exploratory
+  nonsepsis materials are unchanged. Clinical records are not distributed.
+- Fixed release: `v1.1.0-jamia`.
+
 ## 1.0.4 - 2026-10-21
 
 - Focused the figure guide on the available scientific inputs and the R sources

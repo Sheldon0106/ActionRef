@@ -1,0 +1,94 @@
+cohort,subgroup_variable,subgroup,level,requested_B,candidate_available_B,candidate_available_probability,median,CI_2_5,CI_97_5,fit_failure_B,denominator
+MIMIC_learning,sex_group_v7,Female,Low,200,200,1.0,26.0,25.0,26.0,0,available semantic candidates
+MIMIC_learning,sex_group_v7,Female,Mid,200,200,1.0,40.0,38.0,41.0,0,available semantic candidates
+MIMIC_learning,sex_group_v7,Female,High,200,200,1.0,54.0,53.0,58.025000000000006,0,available semantic candidates
+MIMIC_learning,sex_group_v7,Male,Low,200,200,1.0,26.0,26.0,26.0,0,available semantic candidates
+MIMIC_learning,sex_group_v7,Male,Mid,200,200,1.0,40.0,40.0,40.0,0,available semantic candidates
+MIMIC_learning,sex_group_v7,Male,High,200,200,1.0,52.0,52.0,54.0,0,available semantic candidates
+MIMIC_learning,age_group_v7,40–64,Low,200,200,1.0,27.0,27.0,27.0,0,available semantic candidates
+MIMIC_learning,age_group_v7,40–64,Mid,200,200,1.0,41.0,37.0,41.0,0,available semantic candidates
+MIMIC_learning,age_group_v7,40–64,High,200,200,1.0,51.0,49.0,53.0,0,available semantic candidates
+MIMIC_learning,age_group_v7,<40,Low,200,200,1.0,20.0,20.0,20.0,0,available semantic candidates
+MIMIC_learning,age_group_v7,<40,Mid,200,200,1.0,40.0,38.0,40.0,0,available semantic candidates
+MIMIC_learning,age_group_v7,<40,High,200,200,1.0,56.0,44.0,62.0,0,available semantic candidates
+MIMIC_learning,age_group_v7,65–79,Low,200,200,1.0,31.0,31.0,33.0,0,available semantic candidates
+MIMIC_learning,age_group_v7,65–79,Mid,200,200,1.0,39.0,35.0,41.0,0,available semantic candidates
+MIMIC_learning,age_group_v7,65–79,High,200,200,1.0,55.0,53.0,55.05000000000001,0,available semantic candidates
+MIMIC_learning,age_group_v7,≥80,Low,200,200,1.0,37.0,34.0,37.0,0,available semantic candidates
+MIMIC_learning,age_group_v7,≥80,Mid,200,200,1.0,40.0,37.0,40.0,0,available semantic candidates
+MIMIC_learning,age_group_v7,≥80,High,200,200,1.0,54.0,54.0,58.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,White,Low,200,200,1.0,32.0,30.0,33.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,White,Mid,200,200,1.0,38.0,36.0,40.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,White,High,200,200,1.0,54.0,51.975,55.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Unknown,Low,200,200,1.0,21.0,20.0,21.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Unknown,Mid,200,200,1.0,41.0,40.0,46.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Unknown,High,200,195,0.975,46.0,41.0,54.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Black or African American,Low,200,200,1.0,26.0,25.0,32.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Black or African American,Mid,200,200,1.0,40.0,40.0,44.05000000000001,0,available semantic candidates
+MIMIC_learning,race_group_v7,Black or African American,High,200,200,1.0,54.0,52.0,55.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Other,Low,200,200,1.0,29.0,26.0,32.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Other,Mid,200,200,1.0,34.0,31.0,36.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Other,High,200,200,1.0,50.0,40.0,55.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Asian,Low,200,200,1.0,30.0,26.0,32.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Asian,Mid,200,200,1.0,32.0,30.0,34.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Asian,High,200,200,1.0,50.0,48.95,50.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Hispanic or Latino,Low,200,200,1.0,30.0,25.0,32.0,0,available semantic candidates
+MIMIC_learning,race_group_v7,Hispanic or Latino,Mid,200,200,1.0,40.0,38.0,45.025000000000006,0,available semantic candidates
+MIMIC_learning,race_group_v7,Hispanic or Latino,High,200,200,1.0,51.0,47.0,58.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Other,Low,200,200,1.0,26.0,25.0,30.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Other,Mid,200,200,1.0,31.0,30.0,32.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Other,High,200,200,1.0,50.0,50.0,52.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Medicaid,Low,200,200,1.0,29.0,29.0,35.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Medicaid,Mid,200,200,1.0,41.0,34.975,44.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Medicaid,High,200,200,1.0,50.0,46.0,50.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Unknown,Low,200,200,1.0,24.0,24.0,26.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Unknown,Mid,200,200,1.0,50.0,50.0,56.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Unknown,High,200,179,0.895,54.0,50.0,60.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Medicare,Low,200,200,1.0,35.0,34.0,36.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Medicare,Mid,200,27,0.135,35.0,33.65,35.0,0,available semantic candidates
+MIMIC_learning,insurance_group_v7,Medicare,High,200,200,1.0,51.0,51.0,54.025000000000006,0,available semantic candidates
+Stanford,sex_group_v7,Male,Low,200,200,1.0,26.0,26.0,30.0,0,available semantic candidates
+Stanford,sex_group_v7,Male,Mid,200,200,1.0,36.0,32.0,36.0,0,available semantic candidates
+Stanford,sex_group_v7,Male,High,200,200,1.0,50.0,48.0,50.0,0,available semantic candidates
+Stanford,sex_group_v7,Female,Low,200,200,1.0,26.0,26.0,27.0,0,available semantic candidates
+Stanford,sex_group_v7,Female,Mid,200,200,1.0,37.0,36.0,39.0,0,available semantic candidates
+Stanford,sex_group_v7,Female,High,200,200,1.0,50.0,47.975,53.025000000000006,0,available semantic candidates
+Stanford,age_group_v7,<40,Low,200,200,1.0,24.0,23.0,27.0,0,available semantic candidates
+Stanford,age_group_v7,<40,Mid,200,200,1.0,36.0,33.0,36.0,0,available semantic candidates
+Stanford,age_group_v7,<40,High,200,200,1.0,50.0,41.0,53.0,0,available semantic candidates
+Stanford,age_group_v7,65–79,Low,200,200,1.0,31.0,31.0,33.0,0,available semantic candidates
+Stanford,age_group_v7,65–79,Mid,200,200,1.0,37.0,35.0,37.0,0,available semantic candidates
+Stanford,age_group_v7,65–79,High,200,200,1.0,51.0,47.0,53.0,0,available semantic candidates
+Stanford,age_group_v7,40–64,Low,200,200,1.0,27.0,26.0,27.0,0,available semantic candidates
+Stanford,age_group_v7,40–64,Mid,200,200,1.0,33.0,32.0,35.0,0,available semantic candidates
+Stanford,age_group_v7,40–64,High,200,200,1.0,47.0,46.0,50.0,0,available semantic candidates
+Stanford,age_group_v7,≥80,Low,200,200,1.0,32.0,32.0,35.0,0,available semantic candidates
+Stanford,age_group_v7,≥80,Mid,200,200,1.0,41.0,37.0,41.0,0,available semantic candidates
+Stanford,age_group_v7,≥80,High,200,200,1.0,50.0,50.0,57.0,0,available semantic candidates
+Stanford,race_group_v7,Asian,Low,200,200,1.0,27.0,27.0,27.0,0,available semantic candidates
+Stanford,race_group_v7,Asian,Mid,200,200,1.0,35.0,33.0,37.0,0,available semantic candidates
+Stanford,race_group_v7,Asian,High,200,200,1.0,51.0,47.0,51.0,0,available semantic candidates
+Stanford,race_group_v7,Other,Low,200,200,1.0,26.0,26.0,26.0,0,available semantic candidates
+Stanford,race_group_v7,Other,Mid,200,200,1.0,36.0,34.0,38.0,0,available semantic candidates
+Stanford,race_group_v7,Other,High,200,200,1.0,50.0,48.0,54.0,0,available semantic candidates
+Stanford,race_group_v7,White,Low,200,200,1.0,27.0,27.0,27.0,0,available semantic candidates
+Stanford,race_group_v7,White,Mid,200,200,1.0,37.0,35.0,37.0,0,available semantic candidates
+Stanford,race_group_v7,White,High,200,200,1.0,47.0,47.0,51.0,0,available semantic candidates
+Stanford,race_group_v7,Black or African American,Low,200,200,1.0,27.0,24.0,29.0,0,available semantic candidates
+Stanford,race_group_v7,Black or African American,Mid,200,200,1.0,37.0,33.0,38.0,0,available semantic candidates
+Stanford,race_group_v7,Black or African American,High,200,200,1.0,42.0,38.0,47.0,0,available semantic candidates
+Stanford,race_group_v7,Unknown,Low,200,124,0.62,27.0,24.0,34.0,1,available semantic candidates
+Stanford,race_group_v7,Unknown,Mid,200,101,0.505,27.0,15.0,34.5,1,available semantic candidates
+Stanford,race_group_v7,Unknown,High,200,158,0.79,27.0,18.0,34.07499999999999,1,available semantic candidates
+Stanford,insurance_group_v7,Medicaid,Low,200,200,1.0,27.0,23.0,27.0,0,available semantic candidates
+Stanford,insurance_group_v7,Medicaid,Mid,200,200,1.0,33.0,32.0,36.025000000000006,0,available semantic candidates
+Stanford,insurance_group_v7,Medicaid,High,200,200,1.0,44.0,36.0,50.0,0,available semantic candidates
+Stanford,insurance_group_v7,Medicare,Low,200,200,1.0,33.0,31.0,33.0,0,available semantic candidates
+Stanford,insurance_group_v7,Medicare,Mid,200,200,1.0,37.0,37.0,39.0,0,available semantic candidates
+Stanford,insurance_group_v7,Medicare,High,200,200,1.0,51.0,47.0,55.0,0,available semantic candidates
+Stanford,insurance_group_v7,Not admitted,Low,200,200,1.0,27.0,23.0,27.0,0,available semantic candidates
+Stanford,insurance_group_v7,Not admitted,Mid,200,200,1.0,47.0,43.0,47.0,0,available semantic candidates
+Stanford,insurance_group_v7,Not admitted,High,200,197,0.985,47.0,44.0,50.0,0,available semantic candidates
+Stanford,insurance_group_v7,Unknown,Low,200,200,1.0,30.0,27.0,30.0,0,available semantic candidates
+Stanford,insurance_group_v7,Unknown,Mid,200,198,0.99,30.0,27.0,30.0,0,available semantic candidates
+Stanford,insurance_group_v7,Unknown,High,200,200,1.0,45.0,42.0,47.0,0,available semantic candidates

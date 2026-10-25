@@ -1,23 +1,21 @@
 # Logistic action-curve comparison
 
-Manuscript locations: **eTable 6D**.
+These summaries compare a logistic action-probability curve with the primary
+isotonic curve, using the same recorded-action question. The saved paired Brier
+interval evaluates their fixed predictions on held-out encounters.
 
-The High target is first reached at native score 55, as reported in the final Supplement. The first saved supported bin reaching it is 57. Both original columns remain in the crossing table; they describe different score representations. These diagnostics do not replace the primary 27 / 36 / 51 references.
+Logistic targets are first reached at native integer scores 27/38/58. Their first
+supported bins are 27/39/60; continuous crossings are also supplied. These are
+different score representations. The primary isotonic references remain 27/39/54.
 
-## Checks against the final manuscript
+## Current files
 
-Logistic native-score crossings are Low 27, Mid 36 and High 55. Logistic Brier score rounds to 0.19435; monotone-fit Brier score rounds to 0.19433.
+- `analysis3_curve_comparison.csv`
+- `analysis3_logistic_crossings.csv`
+- `analysis3_paired_Brier_interval.csv`
+- `analysis3_probability_curves.csv`
+- `analysis3_reliability_bins.csv`
 
-## Sources
-
-Existing aggregate outputs only. No patient records or identifiers are included.
-Numbers and original data fields are preserved. No analyses were rerun.
-
-The [manifest](manifest.json) records portable source labels, generation-date provenance,
-row selections, and SHA-256 hashes for the originals and public copies.
-
-- [analysis3_curve_comparison.csv](analysis3_curve_comparison.csv)
-- [analysis3_logistic_crossings.csv](analysis3_logistic_crossings.csv)
-- [analysis3_paired_Brier_interval.csv](analysis3_paired_Brier_interval.csv)
-- [analysis3_probability_curves.csv](analysis3_probability_curves.csv)
-- [analysis3_reliability_bins.csv](analysis3_reliability_bins.csv)
+Source labels, row selections and file checksums are recorded in
+[manifest.json](manifest.json). All shared observations are aggregates; patient
+records and identifiers are not included.

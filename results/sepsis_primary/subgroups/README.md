@@ -1,21 +1,23 @@
 # Subgroup summaries
 
-Manuscript locations: **eTable 12; eFigure 4**.
+These descriptive subgroup tables separate fixed-policy operating performance,
+outcome-score assessment and local behavioral-reference estimation. Fields named
+`recall` report sepsis sensitivity. Subgroup calibration estimates are point-only;
+curves are omitted where their prespecified eligibility rule is not met.
 
-These are descriptive subgroup aggregates. Thresholds remain fixed within each comparison. Source fields named recall report sepsis sensitivity.
+Fixed-policy operating and local-reference resampling summaries report their
+own requested and valid counts. Local estimates describe subgroup practice;
+they do not replace the primary global references.
 
-## Checks against the final manuscript
+## Current files
 
-MIMIC sex-group sepsis sensitivity at Low ranges from 76.9% to 78.4%; at Mid the lower bound is 51.5%. MIMIC female AUROC rounds to 0.807.
+- `v7_subgroup_paper_summary_reconstructed.csv`
+- `subgroup_predictive_calibration_detail.csv`
+- `subgroup_fixed_bin_calibration_curves.csv`
+- `subgroup_operating_summary.csv`
+- `subgroup_local_points.csv`
+- `subgroup_local_summary.csv`
 
-## Sources
-
-Existing aggregate outputs only. No patient records or identifiers are included.
-Numbers and original data fields are preserved. No analyses were rerun.
-
-The [manifest](manifest.json) records portable source labels, generation-date provenance,
-row selections, and SHA-256 hashes for the originals and public copies.
-
-- [v7_subgroup_paper_summary_reconstructed.csv](v7_subgroup_paper_summary_reconstructed.csv)
-- [subgroup_predictive_calibration_detail.csv](subgroup_predictive_calibration_detail.csv)
-- [subgroup_fixed_bin_calibration_curves.csv](subgroup_fixed_bin_calibration_curves.csv)
+Source labels, row selections and file checksums are recorded in
+[manifest.json](manifest.json). All shared observations are aggregates; patient
+records and identifiers are not included.

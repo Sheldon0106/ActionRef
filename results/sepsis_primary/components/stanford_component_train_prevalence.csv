@@ -1,13 +1,5 @@
-cohort,component,N_observed,action_count,prevalence,missing_N,clinical_action_category
-Stanford train,lactate,94751,24821,0.26196029593355213,0,diagnostic/testing action
-Stanford train,fluid,94751,4531,0.04782007577756435,0,therapeutic action
-Stanford train,vasopressor,94751,693,0.007313906977235069,0,therapeutic action
-Stanford train,steroid,94751,4725,0.04986754757205729,0,therapeutic action
-Stanford test,lactate,23634,6271,0.2653380722687653,0,diagnostic/testing action
-Stanford test,fluid,23634,1144,0.0484048404840484,0,therapeutic action
-Stanford test,vasopressor,23634,167,0.007066091224507066,0,therapeutic action
-Stanford test,steroid,23634,1244,0.05263603283405264,0,therapeutic action
-Stanford full,lactate,118385,31092,0.26263462431895934,0,diagnostic/testing action
-Stanford full,fluid,118385,5675,0.04793681631963509,0,therapeutic action
-Stanford full,vasopressor,118385,860,0.007264433838746463,0,therapeutic action
-Stanford full,steroid,118385,5969,0.05042023905055539,0,therapeutic action
+component,N_complete,prevalence,passed,n_valid_bins,isotonic_dynamic_range,logistic_slope,logistic_bic_improvement,reason
+lactate,94751,0.26196029593355213,True,31,0.8806065630821511,0.09356650870616968,13827.808366663521,supported monotone response structure
+fluid,94751,0.04782007577756435,True,31,0.1823769028585807,0.04279896467250596,953.386428657046,supported monotone response structure
+vasopressor,94751,0.007313906977235069,True,31,0.08755760368663594,0.09459325192574279,1071.2840574308948,supported monotone response structure
+steroid,94751,0.04986754757205729,True,31,0.10884018343802021,0.03581069224964681,666.3356506570854,supported monotone response structure

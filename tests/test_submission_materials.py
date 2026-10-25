@@ -78,13 +78,13 @@ def test_learning_grid_is_separate_from_fixed_pair_sensitivity():
     import pandas as pd
     data = ROOT / 'results/sepsis_primary'
     grid = pd.read_csv(data / 'learning_R_selection.csv')
-    assert grid.learning_N.eq(297476).all() and grid.Low_alert_ceiling.eq(109888).all()
-    assert grid.loc[grid.R.eq(20), 'low_ceiling_threshold'].iloc[0] == 28
-    assert grid.loc[grid.R.eq(20), 'unconstrained_threshold'].iloc[0] == 26
+    assert grid.learning_N.eq(314658).all() and grid.Low_alert_ceiling.eq(116236).all()
+    assert grid.loc[grid.R.eq(20), 'low_ceiling_threshold'].iloc[0] == 31
+    assert grid.loc[grid.R.eq(20), 'unconstrained_threshold'].iloc[0] == 31
     assert grid.loc[grid.R.eq(100), 'low_ceiling_threshold'].iloc[0] == 27
     invariance = pd.read_csv(data / 'learning_R_invariance.csv')
     np.testing.assert_allclose(invariance.reference_ratio, 11299 / 804)
-    np.testing.assert_allclose(invariance.ratio_band_high, 11299 / 804)
-    assert invariance.distinct_thresholds.tolist() == [14, 11]
+    np.testing.assert_allclose(invariance.ratio_band_high, 16)
+    assert invariance.distinct_thresholds.tolist() == [15, 13]
     fixed = pd.read_csv(data / 'fixed_candidate_R_sensitivity.csv')
     assert 'low_ceiling_threshold' not in fixed.columns

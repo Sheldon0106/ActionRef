@@ -17,7 +17,6 @@ from universal_cutoff.validation import binary_series, validate_columns
 
 ROOT = Path(__file__).resolve().parents[1]
 COMPONENTS = ['lactate_flag', 'icu_fluid_flag', 'vasopressor_flag', 'steroid_flag']
-LINKAGE = ['legacy_data_available', 'legacy_subject_id_discordant', 'legacy_hadm_id_discordant']
 
 
 def missing_aware_or(frame, columns):
@@ -30,31 +29,27 @@ def missing_aware_or(frame, columns):
 
 
 def prepare_mimic(frame):
-    validate_columns(frame, ['subject_id', 'score_ESRP_new', 'outcome_sepsis3'] + COMPONENTS)
+    validate_columns(frame, ['subject_id', 'score_ESRP_new', 'sepsis3_new'] + COMPONENTS)
     if frame.subject_id.isna().any():
         raise ValueError('All source rows need a patient identifier before splitting')
     out = frame.copy()
-    if 'legacy_v7_primary_eligible' not in out:
-        validate_columns(out, LINKAGE)
-        links = out[LINKAGE].apply(pd.to_numeric, errors='coerce')
-        out['legacy_v7_primary_eligible'] = (links.legacy_data_available.eq(1)
-            & links.legacy_subject_id_discordant.eq(0) & links.legacy_hadm_id_discordant.eq(0)).astype(int)
+    # Components belong to the same source cohort. The earlier cross-release
+    # linkage mask is not part of this prepared-input contract.
     out['response'] = missing_aware_or(out, COMPONENTS)
-    out.loc[~pd.to_numeric(out.legacy_v7_primary_eligible, errors='coerce').eq(1), 'response'] = np.nan
     out['score'] = pd.to_numeric(out.score_ESRP_new, errors='coerce').replace([np.inf, -np.inf], np.nan)
-    out['outcome'] = binary_series(out.outcome_sepsis3, 'outcome_sepsis3')
+    out['outcome'] = binary_series(out.sepsis3_new, 'sepsis3_new')
     return out
 
 
 def prepare_stanford(frame):
-    fields = ['score_ESRP', 'outcome_sepsis3', 'fluid_6h', 'lactate_flag', 'vasopressor_flag', 'steroid_flag']
+    fields = ['score_corrected', 'sepsis3_new', 'fluid_6h', 'lactate_flag', 'vasopressor_flag', 'steroid_flag']
     validate_columns(frame, fields)
     out = frame.copy()
     fluid = pd.to_numeric(out.fluid_6h, errors='coerce')
     out['fluid_component'] = np.where(fluid.notna(), (fluid >= 2000).astype(float), np.nan)
     out['response'] = missing_aware_or(out, ['lactate_flag', 'fluid_component', 'vasopressor_flag', 'steroid_flag'])
-    out['score'] = pd.to_numeric(out.score_ESRP, errors='coerce').replace([np.inf, -np.inf], np.nan)
-    out['outcome'] = binary_series(out.outcome_sepsis3, 'outcome_sepsis3')
+    out['score'] = pd.to_numeric(out.score_corrected, errors='coerce').replace([np.inf, -np.inf], np.nan)
+    out['outcome'] = binary_series(out.sepsis3_new, 'sepsis3_new')
     return out
 
 
@@ -151,8 +146,10 @@ def analyze(mimic, protocol, stanford=None, verify_reported=False):
             np.testing.assert_allclose(evaluation.points[key], point[key], rtol=0, atol=1e-10)
         reported_ci = pd.DataFrame(json.loads((saved/'sepsis_action_intervals.json').read_text(encoding='utf-8')))
         cols = ['lower_025', 'median', 'upper_975']
-        np.testing.assert_allclose(evaluation.intervals.set_index('metric')[cols].sort_index(),
-            reported_ci.set_index('metric')[cols].sort_index(), rtol=0, atol=1e-10)
+        saved_intervals = reported_ci.set_index('metric')[cols].sort_index()
+        np.testing.assert_allclose(
+            evaluation.intervals.set_index('metric').loc[saved_intervals.index, cols],
+            saved_intervals, rtol=0, atol=1e-10)
         expected_counts = pd.read_csv(saved/'operating_counts.csv')
         expected_actions = pd.read_csv(saved/'observed_action_yield.csv')
         for saved_table, cols in [(expected_counts, ['policy_N', 'TP', 'FP', 'FN', 'TN']),
@@ -178,9 +175,9 @@ def main():
     parser.add_argument('--output-dir', type=Path, default=ROOT/'output/sepsis-analysis')
     parser.add_argument('--verify-reported', action='store_true', help='Fail if supplied cohorts differ from the reported analysis')
     args = parser.parse_args()
-    columns = ['subject_id', 'score_ESRP_new', 'outcome_sepsis3', 'legacy_v7_primary_eligible'] + COMPONENTS + LINKAGE
+    columns = ['subject_id', 'score_ESRP_new', 'sepsis3_new'] + COMPONENTS
     mimic = pd.read_csv(args.mimic, usecols=lambda col: col in columns, low_memory=False)
-    fields = ['score_ESRP', 'outcome_sepsis3', 'fluid_6h', 'lactate_flag', 'vasopressor_flag', 'steroid_flag']
+    fields = ['score_corrected', 'sepsis3_new', 'fluid_6h', 'lactate_flag', 'vasopressor_flag', 'steroid_flag']
     stanford = pd.read_csv(args.stanford, usecols=fields, low_memory=False) if args.stanford else None
     config = json.loads((ROOT/'configs/sepsis_primary.json').read_text(encoding='utf-8'))
     result = analyze(mimic, config, stanford, args.verify_reported)

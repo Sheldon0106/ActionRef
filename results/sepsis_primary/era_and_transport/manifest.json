@@ -1,44 +1,35 @@
 {
   "schema": "actionref.aggregate-bundle.v1",
   "manuscript": "JAMIA submission, October 2026",
-  "assembled_date": "2026-10-20",
-  "manuscript_locations": "eTable 11; eFigure 3",
+  "assembled_date": "2026-10-25",
   "files": {
     "paper_transport_decomposition.csv": {
-      "source_label": "<analysis_outputs>/v7_outputs/paper_transport_decomposition.csv",
-      "source_generation_date": "2026-08-19",
-      "date_basis": "source file modification date; original run date not recorded",
-      "source_sha256": "973898bf6ead933092e8c978a58020ed6091d959e2da582ca23fa3c5b7389358",
-      "sha256": "973898bf6ead933092e8c978a58020ed6091d959e2da582ca23fa3c5b7389358",
-      "rows": 3,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_revision_assets>/rr1_transport_existing_rules.csv",
+      "source_sha256": "181ec7f9823e2eae0de97a3bc508fffa443a8bdaf6c81896014f00d1316c95d6",
+      "sha256": "181ec7f9823e2eae0de97a3bc508fffa443a8bdaf6c81896014f00d1316c95d6",
+      "selection": "existing-grid secondary scenario; current source schema retained; not validation of the learning-selected candidate",
+      "role": "current RR1 aggregate result"
     },
     "v7_cell56_temporal_drift.csv": {
-      "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/summaries/v7_cell56_temporal_drift.csv",
-      "source_generation_date": "2026-08-29",
-      "date_basis": "source run label",
-      "source_sha256": "5176d166c8f61f610093809c692e02c2ec4f94de7016615baeccd93ad2592513",
-      "sha256": "5176d166c8f61f610093809c692e02c2ec4f94de7016615baeccd93ad2592513",
-      "rows": 3,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/era_local_anchors_new.csv",
+      "source_sha256": "27dd72fec2f9ca2c4d3962c97a8f91d17aa02b182488331accd29ef733c93150",
+      "sha256": "27dd72fec2f9ca2c4d3962c97a8f91d17aa02b182488331accd29ef733c93150",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "v7_cell56_temporal_operating.csv": {
-      "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/summaries/v7_cell56_temporal_operating.csv",
-      "source_generation_date": "2026-08-29",
-      "date_basis": "source run label",
-      "source_sha256": "04075088a0901c9b630bd77e9c35129918c3370934d3f96faf0e8bb525e50451",
-      "sha256": "04075088a0901c9b630bd77e9c35129918c3370934d3f96faf0e8bb525e50451",
-      "rows": 3,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/era_frozen_operating_new.csv",
+      "source_sha256": "29a3752100602a7b6503c779ed7484b5556dd3ac8701e75b01192ef75de2e884",
+      "sha256": "29a3752100602a7b6503c779ed7484b5556dd3ac8701e75b01192ef75de2e884",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "v7_cell56_temporal_counts.csv": {
-      "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/summaries/v7_cell56_temporal_counts.csv",
-      "source_generation_date": "2026-08-29",
-      "date_basis": "source run label",
-      "source_sha256": "b2a60891bd177b4646c3c63eef36ee6ba45863d43b89d3d39170cd9c266a4a47",
-      "sha256": "b2a60891bd177b4646c3c63eef36ee6ba45863d43b89d3d39170cd9c266a4a47",
-      "rows": 4,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/era_population_new.csv",
+      "source_sha256": "4ac910e0d053edbecf8deac6d5953722c9bf89c18faf028a758a8a6d19430d5d",
+      "sha256": "4ac910e0d053edbecf8deac6d5953722c9bf89c18faf028a758a8a6d19430d5d",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "V7_13_K_operationalization_capacity.csv": {
       "source_label": "<analysis_outputs>/v7_outputs/V7_13_K_operationalization_capacity.csv",
@@ -46,7 +37,8 @@
       "date_basis": "original generation date not recorded",
       "source_sha256": "2019e92196fb80db5862cadfc546b8fe0184093de3dda4e1aa61f8ea15829ac9",
       "sha256": "2019e92196fb80db5862cadfc546b8fe0184093de3dda4e1aa61f8ea15829ac9",
-      "selection": "all rows; byte-identical copy"
+      "selection": "all rows; byte-identical copy",
+      "role": "historical: pre-RR1 output retained for traceability; not a current result"
     },
     "v7_cell56_temporal_capacity.csv": {
       "source_label": "<analysis_outputs>/v8_outputs/run_20260829T065744238923Z_248d10f0e784/summaries/v7_cell56_temporal_capacity.csv",
@@ -54,8 +46,10 @@
       "date_basis": "source run label",
       "source_sha256": "ff930c33d8e61de5edcd38a608ff8a11a78f3c2ba9c455fc7bae38ebb7416895",
       "sha256": "ff930c33d8e61de5edcd38a608ff8a11a78f3c2ba9c455fc7bae38ebb7416895",
-      "selection": "all rows; byte-identical copy"
+      "selection": "all rows; byte-identical copy",
+      "role": "historical: pre-RR1 output retained for traceability; not a current result"
     }
   },
-  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+  "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
+  "analysis_revision": "RR1 same-source full cohort"
 }

@@ -1,23 +1,27 @@
 # Action-definition sensitivity
 
-Manuscript locations: **eTable 10; eFigure 2**.
+These summaries compare the primary action definition with expanded composites
+and uniform 1-, 3- and 6-hour windows. Uniform-window analyses also use the
+corresponding fluid definition, so differences reflect both the observation window
+and component construction.
 
-Uniform-window analyses also use the corresponding corrected fluid definition; differences cannot be attributed to window length alone. Their reported 500-draw uncertainty summaries are in ../reference_bootstrap/. Earlier 100-draw summaries are not used for the final reference intervals.
+Each uniform-window reference analysis requests 500 patient-bootstrap resamples.
+Candidate availability and independent retention are separate outputs. Window
+operating and component-prevalence results are point estimates.
 
-## Checks against the final manuscript
+## Current files
 
-The expanded MIMIC action definition gives 27 / 33 / 48. Uniform 1-hour references are 30 / 69 / 75; 6-hour references are 27 / 42 / 54. The 1-hour fluid count is 4 of 425,004 observed encounters.
+- `sensitivity_response_bundle_thresholds.csv`
+- `corrected_action_window_thresholds.csv`
+- `corrected_action_window_response_curves.csv`
+- `corrected_action_window_component_prevalence.csv`
+- `corrected_action_window_evidence_gates.csv`
+- `reference_bootstrap_summary.csv`
 
-## Sources
+Source labels, row selections and file checksums are recorded in
+[manifest.json](manifest.json). All shared observations are aggregates; patient
+records and identifiers are not included.
 
-Existing aggregate outputs only. No patient records or identifiers are included.
-Numbers and original data fields are preserved. No analyses were rerun.
-
-The [manifest](manifest.json) records portable source labels, generation-date provenance,
-row selections, and SHA-256 hashes for the originals and public copies.
-
-- [sensitivity_response_bundle_thresholds.csv](sensitivity_response_bundle_thresholds.csv)
-- [corrected_action_window_thresholds.csv](corrected_action_window_thresholds.csv)
-- [corrected_action_window_response_curves.csv](corrected_action_window_response_curves.csv)
-- [corrected_action_window_component_prevalence.csv](corrected_action_window_component_prevalence.csv)
-- [corrected_action_window_evidence_gates.csv](corrected_action_window_evidence_gates.csv)
+Completed resample counts and interval denominators are in
+`reference_bootstrap_summary.csv`. The status in the point diagnostics describes
+the planned bootstrap analysis.

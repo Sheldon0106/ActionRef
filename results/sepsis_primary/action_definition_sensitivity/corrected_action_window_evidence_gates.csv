@@ -1,4 +1,4 @@
-window_hours,status,passed,reason,n_complete,response_prevalence,bin_width,valid_bins,isotonic_dynamic_range,logistic_slope,logistic_bic_improvement
-1,supported,True,supported monotone response structure,292538,0.12252083490008135,3.0,26,0.679370088343128,0.0563596396465989,13496.29703036137
-3,supported,True,supported monotone response structure,292790,0.2509102086819905,3.0,26,0.9119632907243527,0.06766380885242662,28520.33384272596
-6,supported,True,supported monotone response structure,293929,0.29749021022083566,3.0,26,0.8972795804654212,0.07044325424587818,32549.161803974188
+status,passed,reason,n_valid_bins,isotonic_dynamic_range,logistic_slope,logistic_bic_improvement,valid_bins,bin_width,complete_N,response_prevalence,gate_passed,analysis,cohort,score,family,configuration,response_name,requested_bootstrap,bootstrap_status,attempted_bootstrap,source_patient_count,point_seconds
+supported,True,supported monotone response structure,26,0.64252691666431172,0.056112426555131732,13433.933961081231,26,3,309518,0.11605463979477769,True,window_1h,MIMIC_learning,ESRP,window,default,window_1,500,planned,0,151699,0.39343709999957355
+supported,True,supported monotone response structure,26,0.8932814310339956,0.065883120501788808,27778.686981963634,26,3,309803,0.23752190908415993,True,window_3h,MIMIC_learning,ESRP,window,default,window_3,500,planned,0,151699,0.39099820000046748
+supported,True,supported monotone response structure,26,0.87829852770791539,0.067949619309950318,31466.637792518479,26,3,311004,0.28258478990623914,True,window_6h,MIMIC_learning,ESRP,window,default,window_6,500,planned,0,151699,0.3701442000001407

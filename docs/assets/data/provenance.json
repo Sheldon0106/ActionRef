@@ -2,22 +2,25 @@
   "scope": "Aggregate figure inputs only; no patient rows",
   "files": {
     "sepsis_learning_curve.csv": {
-      "source_filename": "semantic_response_curve.csv",
-      "source_run": "run_20260901T114212647018Z_7a68fbe37684",
-      "sha256": "993328c6412c0552a9df0df05ad9035deda0e343f9b4f98203e7ff150ac42b86",
+      "source_filename": "semantic_response_curve_new.csv",
+      "source_run": "run_20261023T104445170533Z_5e79d9b15f84",
+      "repository_source": "results/sepsis_primary/semantic_response_curve.csv",
+      "sha256": "80f4a7614e5c8e5168707aa8cd6f755150fed8dead30d3512c70cd0775ad50bb",
       "role": "learning curve"
     },
     "sepsis_action_points.json": {
-      "source_filename": "sepsis_action_points.json",
-      "source_run": "run_20261002T082847Z_history_action_calibration",
-      "sha256": "235102fa2c29bd91fe6504b5fa071de3dc8079c0dfa17de09a4b7d0d1ea06d13",
+      "source_filename": "action_calibration_points.csv",
+      "source_run": "run_20261023T104445170533Z_5e79d9b15f84",
+      "repository_source": "results/sepsis_primary/sepsis_action_points.json",
+      "sha256": "ffaa247a9a61689739ea174d4a35fb2f153971758cc69b87ca359a1d3f783a68",
       "role": "held-out action evaluation"
     },
     "sepsis_action_reliability.json": {
-      "source_filename": "sepsis_action_reliability.json",
-      "source_run": "run_20261002T082847Z_history_action_calibration",
-      "sha256": "37281661bdc525e508929e0a77bcbf66f95fb95562afe8ace9530cfb5b7b8254",
-      "role": "held-out action evaluation"
+      "source_filename": "action_calibration_reliability.csv",
+      "source_run": "run_20261023T104445170533Z_5e79d9b15f84",
+      "repository_source": "results/sepsis_primary/sepsis_action_reliability.json",
+      "sha256": "88162a05822669c5851a80c40992016962c69ccced872b957c7a7be7e1cb2f94",
+      "role": "held-out isotonic action reliability"
     }
   }
 }

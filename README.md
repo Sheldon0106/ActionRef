@@ -8,8 +8,8 @@ understand local practice, examine alert workload, and compare candidate thresho
 under a stated capacity or consequence scenario.
 
 The Python package is `universal-cutoff`; the import is `universal_cutoff`.
-Software version: **1.0.4** · [MIT license](LICENSE) ·
-[JAMIA submission release](https://github.com/Sheldon0106/ActionRef/releases/tag/v1.0.4-jamia).
+[MIT license](LICENSE) ·
+[Software release](https://github.com/Sheldon0106/ActionRef/releases/latest).
 
 [Get started](docs/quickstart.md) · [Prepare your data](docs/data.md) ·
 [Interpret references](docs/references.md) · [API](docs/API_REFERENCE.md) ·
@@ -105,20 +105,20 @@ observation windows, and missingness before interpreting the references.
 4. **Evaluate on separate data.** Report workload, action yield, and outcome coverage for fixed thresholds.
 
 The [clinical example](docs/clinical-example.md) illustrates the MIMIC sepsis
-references 27 / 36 / 51 and a separate candidate-comparison question. These values
+references 27 / 39 / 54 and a separate candidate-comparison question. These values
 belong to that analysis; the software learns references for the supplied data.
 
 ## Documentation and repository
 
 The manuscript examines **emergency sepsis assessment**. ESRP is the primary
-score: MIMIC references are 27 / 36 / 51, Stanford local references are
-26 / 36 / 50, and candidate 31 uses R = 11,299/804. The same recorded-action
-analysis also evaluates NEWS, MEWS, REMS and two-criterion qSOFA. See the
+score: MIMIC references are 27 / 39 / 54, Stanford local references are
+26 / 36 / 50, and candidate 34 uses R = 11,299/804. The same recorded-action
+analysis also evaluates adapted NEWS2, adapted MEWS, adapted REMS and two-criterion qSOFA. See the
 [sepsis aggregate results](docs/paper-results.md).
 
 COPD, HEART-derived AERT, pneumonia and AKI materials are retained as
 **exploratory, not reported in the manuscript**. Changepoint functionality is
-retained in the software but was not used in the manuscript. The
+retained in the software; it does not define or replace the semantic reference targets. The
 [evidence guide](docs/evidence.md) distinguishes manuscript materials from these
 development records.
 

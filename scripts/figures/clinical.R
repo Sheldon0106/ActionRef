@@ -2,25 +2,25 @@
 
 clinical_learning <- function(d) {
   section(30,152,780,632,"Learning curve and sample support",C$teal_bg,C$fit,"a",
-          "MIMIC / 26 retained bins / 294,659 encounters represented")
+          "MIMIC / 26 retained bins / 311,618 encounters represented")
   legend_curve(137,247)
   p <- chart(139,315,610,265,c(0,80),c(0,1.02),numeric(0),c(0,.25,.5,.75,1),
               ylabel="Recorded-action probability",ylab_offset=69)
   for(i in 1:3) {
-    xx <- c(27,36,51)[i]; cc <- c(C$low,C$mid,C$high)[i]
+    xx <- c(27,39,54)[i]; cc <- c(C$low,C$mid,C$high)[i]
     rate <- approx(d$clinical$score,d$clinical$isotonic_rate,xout=xx)$y
     line(rep(p$X(xx),2),c(p$Y(0),p$Y(rate)),cc,1,3)
   }
   curve_marks(p,d$clinical,point_r=4.1)
   # Probability target labels, below and separate from the curve legend.
   for(i in 1:3) {
-    xx <- c(27,36,51)[i]; cc <- c(C$low,C$mid,C$high)[i]
+    xx <- c(27,39,54)[i]; cc <- c(C$low,C$mid,C$high)[i]
     rate <- approx(d$clinical$score,d$clinical$isotonic_rate,xout=xx)$y
     dot(p$X(xx),p$Y(rate),5.6,cc,"white",1)
-    pill(c(324,453,587)[i],278,116,c("Low 27","Mid 36","High 51")[i],cc,size=10.5,h=27)
+    pill(c(324,453,587)[i],278,116,c("Low 27","Mid 39","High 54")[i],cc,size=10.5,h=27)
   }
-  q <- chart(139,618,610,74,c(0,80),c(0,52000),seq(0,80,20),c(0,25000,50000),
-              "Clinical score","Bin count",ylabels=c("0","25,000","50,000"),
+  q <- chart(139,618,610,74,c(0,80),c(0,60000),seq(0,80,20),c(0,30000,60000),
+              "Clinical score","Bin count",ylabels=c("0","30,000","60,000"),
               labsize=9.5,ylab_offset=81,xlab_offset=36)
   for(i in seq_len(nrow(d$clinical)))
     box(q$X(d$clinical$score[i])-8,q$Y(d$clinical$count[i]),16,
@@ -29,7 +29,7 @@ clinical_learning <- function(d) {
 
 clinical_reliability <- function(d) {
   section(840,152,730,632,"Held-out action probability",C$blue_bg,C$blue,"b",
-          "MIMIC / 126,332 encounters / learning curve held fixed")
+          "MIMIC / 132,878 encounters / learning curve held fixed")
   tlabel(947,246,"Probability bins of width 0.1; area reflects bin count",10.5,C$muted)
   p <- chart(972,307,440,360,c(0,1),c(0,1),c(0,.25,.5,.75,1),c(0,.25,.5,.75,1),
               "Mean predicted action probability","Observed action proportion",

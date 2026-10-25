@@ -1,5 +1,3 @@
-normalized_era,N,source_cell,extraction_method
-2008-2010,121622,56,parsed from serialized pandas to_string output with fixed-width schema
-2011-2013,117958,56,parsed from serialized pandas to_string output with fixed-width schema
-2014-2016,108405,56,parsed from serialized pandas to_string output with fixed-width schema
-2017-2019,77026,56,parsed from serialized pandas to_string output with fixed-width schema
+era,N,patient_N,outcome_known_N,outcome_positive_N,bootstrap_requested_B,analysis_role
+early,238478,124396,238478,8877,0,era-based point analysis; not exact deployment simulation
+late,81221,60363,81221,3803,0,era-based point analysis; not exact deployment simulation

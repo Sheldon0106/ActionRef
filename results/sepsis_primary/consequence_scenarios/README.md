@@ -1,20 +1,19 @@
 # Saved consequence-scenario summaries
 
-Manuscript locations: **eTable 5C**.
+The minimax summaries compare thresholds over a specified R grid separately
+within each evaluation cohort. They describe cohort-specific secondary scenarios;
+the primary operating candidate is selected on MIMIC learning data and then
+applied unchanged to evaluation data.
 
-These exploratory minimax summaries were calculated separately within each evaluation cohort. They are distinct from the primary learning-selected candidate and are not transported candidate performance. The parent directory contains the fixed-pair comparison and learning-data R scan.
+The development selection curve provides aggregate confusion counts across
+learning thresholds. The parent directory contains the corresponding learning
+R-grid selections and the fixed 34-versus-27 evaluation comparison.
 
-## Checks against the final manuscript
+## Current files
 
-MIMIC robust thresholds are 34 / 37 / 51. The Low worst regret is 68.2 at the robust threshold and 202.6 at the reference threshold (rounded).
+- `paper_minimax_behavior_budget.csv`
+- `comparator_development_selection_curve.csv`
 
-## Sources
-
-Existing aggregate outputs only. No patient records or identifiers are included.
-Numbers and original data fields are preserved. No analyses were rerun.
-
-The [manifest](manifest.json) records portable source labels, generation-date provenance,
-row selections, and SHA-256 hashes for the originals and public copies.
-
-- [paper_minimax_behavior_budget.csv](paper_minimax_behavior_budget.csv)
-- [comparator_development_selection_curve.csv](comparator_development_selection_curve.csv)
+Source labels, row selections and file checksums are recorded in
+[manifest.json](manifest.json). All shared observations are aggregates; patient
+records and identifiers are not included.

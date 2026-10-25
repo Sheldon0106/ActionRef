@@ -1,13 +1,13 @@
-component,level,replicate_count,valid_replicate_count,gate_pass_probability,threshold_median,threshold_p2_5,threshold_p97_5,exact_threshold_frequency,tier_A_probability,tier_B_probability,abstention_probability,complete_tier_probability,strict_ordering_probability,adjacent_tier_collision_probability,valid_bin_count_median
-fluid,High,100,100,1.0,64.0,50.0,67.04999999999998,"{""50.0"": 15, ""56.0"": 1, ""58.0"": 6, ""60.0"": 26, ""62.0"": 1, ""64.0"": 26, ""66.0"": 22, ""68.0"": 2, ""69.0"": 1}",0.0,1.0,0.0,1.0,1.0,0.0,31.0
-fluid,Low,100,100,1.0,30.0,30.0,30.0,"{""27.0"": 1, ""30.0"": 99}",1.0,0.0,0.0,1.0,1.0,0.0,31.0
-fluid,Mid,100,100,1.0,50.0,42.0,60.0,"{""42.0"": 8, ""44.0"": 15, ""46.0"": 21, ""48.0"": 1, ""50.0"": 45, ""54.0"": 1, ""55.0"": 1, ""58.0"": 1, ""60.0"": 6, ""64.0"": 1}",0.0,1.0,0.0,1.0,1.0,0.0,31.0
-lactate,High,100,100,1.0,50.0,50.0,52.0,"{""49.0"": 1, ""50.0"": 83, ""52.0"": 15, ""54.0"": 1}",1.0,0.0,0.0,1.0,1.0,0.0,31.0
-lactate,Low,100,100,1.0,26.0,26.0,28.0,"{""26.0"": 93, ""27.0"": 1, ""28.0"": 6}",1.0,0.0,0.0,1.0,1.0,0.0,31.0
-lactate,Mid,100,100,1.0,38.0,38.0,38.0,"{""37.0"": 1, ""38.0"": 99}",1.0,0.0,0.0,1.0,1.0,0.0,31.0
-steroid,High,100,100,1.0,60.0,42.0,68.0,"{""42.0"": 17, ""44.0"": 2, ""46.0"": 2, ""48.0"": 1, ""50.0"": 5, ""52.0"": 3, ""54.0"": 2, ""56.0"": 7, ""58.0"": 8, ""60.0"": 7, ""61.0"": 1, ""62.0"": 31, ""64.0"": 10, ""68.0"": 4}",0.0,1.0,0.0,1.0,0.97,0.03,31.0
-steroid,Low,100,100,1.0,30.0,30.0,30.0,"{""26.0"": 1, ""27.0"": 1, ""30.0"": 98}",1.0,0.0,0.0,1.0,0.97,0.03,31.0
-steroid,Mid,100,100,1.0,42.0,32.0,57.04999999999998,"{""32.0"": 4, ""36.0"": 25, ""38.0"": 15, ""39.0"": 1, ""40.0"": 2, ""42.0"": 41, ""44.0"": 1, ""46.0"": 2, ""48.0"": 2, ""50.0"": 2, ""54.0"": 1, ""56.0"": 1, ""58.0"": 1, ""62.0"": 1, ""68.0"": 1}",0.0,1.0,0.0,1.0,0.97,0.03,31.0
-vasopressor,High,100,100,0.85,62.0,54.0,68.0,"{""54.0"": 23, ""58.0"": 2, ""60.0"": 6, ""61.0"": 1, ""62.0"": 33, ""64.0"": 3, ""66.0"": 10, ""68.0"": 7}",0.0,0.85,0.15,0.85,0.96,0.04,31.0
-vasopressor,Low,100,100,0.85,28.0,28.0,34.0,"{""28.0"": 51, ""30.0"": 18, ""31.0"": 1, ""32.0"": 11, ""34.0"": 4}",0.85,0.0,0.15,0.85,0.96,0.04,31.0
-vasopressor,Mid,100,100,0.85,48.0,48.0,63.79999999999998,"{""46.0"": 1, ""48.0"": 42, ""51.0"": 1, ""52.0"": 4, ""54.0"": 27, ""60.0"": 4, ""62.0"": 3, ""64.0"": 1, ""66.0"": 2}",0.0,0.85,0.15,0.85,0.96,0.04,31.0
+component,level,requested_B,successful_fit_B,candidate_available_B,candidate_available_probability,gate_pass_probability,median,CI_2_5,CI_97_5,interval_denominator,strict_ordering_probability,collision_probability
+lactate,Low,100,100,100,1.0,1.0,26.0,26.0,28.0,available semantic candidates; collisions not deleted,1.0,0.0
+lactate,Mid,100,100,100,1.0,1.0,38.0,38.0,40.0,available semantic candidates; collisions not deleted,1.0,0.0
+lactate,High,100,100,100,1.0,1.0,50.0,50.0,52.0,available semantic candidates; collisions not deleted,1.0,0.0
+fluid,Low,100,100,100,1.0,1.0,30.0,30.0,30.0,available semantic candidates; collisions not deleted,0.99,0.01
+fluid,Mid,100,100,100,1.0,1.0,50.0,42.0,61.04999999999998,available semantic candidates; collisions not deleted,0.99,0.01
+fluid,High,100,100,100,1.0,1.0,60.0,50.0,67.04999999999998,available semantic candidates; collisions not deleted,0.99,0.01
+vasopressor,Low,100,100,82,0.82,0.82,30.0,28.0,34.0,available semantic candidates; collisions not deleted,0.94,0.06
+vasopressor,Mid,100,100,82,0.82,0.82,48.0,48.0,59.849999999999966,available semantic candidates; collisions not deleted,0.94,0.06
+vasopressor,High,100,100,82,0.82,0.82,60.0,52.05,67.94999999999999,available semantic candidates; collisions not deleted,0.94,0.06
+steroid,Low,100,100,100,1.0,1.0,30.0,30.0,30.0,available semantic candidates; collisions not deleted,0.99,0.01
+steroid,Mid,100,100,100,1.0,1.0,42.0,36.0,55.04999999999998,available semantic candidates; collisions not deleted,0.99,0.01
+steroid,High,100,100,100,1.0,1.0,58.0,42.0,66.09999999999997,available semantic candidates; collisions not deleted,0.99,0.01

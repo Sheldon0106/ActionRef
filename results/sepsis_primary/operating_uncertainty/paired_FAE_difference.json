@@ -1,12 +1,18 @@
 {
   "MIMIC_heldout": {
     "B": 1000,
-    "lower": -28.98014892964466,
-    "upper": -13.267044735473979
+    "reference_threshold": 27,
+    "candidate_threshold": 34,
+    "orientation": "candidate_minus_Low_FAE_per_1000",
+    "lower": -61.487549547636995,
+    "upper": -45.90338192577274
   },
-  "Stanford_external": {
+  "Stanford": {
     "B": 1000,
-    "lower": -57.03894818711813,
-    "upper": -42.27474203743605
+    "reference_threshold": 27,
+    "candidate_threshold": 34,
+    "orientation": "candidate_minus_Low_FAE_per_1000",
+    "lower": -96.5988050905063,
+    "upper": -80.07334301215253
   }
 }

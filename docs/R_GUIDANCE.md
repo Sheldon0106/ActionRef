@@ -5,7 +5,7 @@
 - Never estimated from prevalence.
 - Never selected to favor a preferred cutoff.
 
-## Five-step workflow (Supplement eMethods 3)
+## Five-step workflow
 
 1. **Define the decision.** Specify the triggered action, target outcome,
    stakeholder perspective and time horizon. Distinguish the proposed workflow
@@ -42,28 +42,17 @@ flowchart TD
 
 The reference value is **R = 11,299/804 = 14.0534825870647** for the proposed
 diagnostic/short-course antibiotic workflow. The Low-27 comparison ceiling is
-**K = 109,888 alerts in 297,476 score-complete learning encounters**. It is a
+**K = 116,236 alerts in 314,658 score-complete learning encounters**. It is a
 reference workload ceiling, not measured staffing capacity. The observed action
 composite used in Module 2 has a different definition.
 
-| R | Unconstrained learning optimum | Optimum under the Low workload ceiling |
-|---:|---:|---:|
-| 1 | 66 | 66 |
-| 5 | 43 | 43 |
-| 10 | 34 | 34 |
-| 11–14.05 (evaluated grid nodes) | 31 | 31 |
-| 15 | 28 | 28 |
-| 20 | 26 | 28 |
-| 30 | 26 | 27 |
-| 100 | 17 | 27 |
-
-The exact reference value is included in the grid. `ratio_invariance()` returns
-31 at the reference value in both capacity conditions, with a contiguous matching
-grid run from 11 to 14.0534825870647. The next evaluated value, 15, selects 28;
-these results do not locate the exact continuous transition. The full selection
-grid and the two invariance rows are shared in `results/sepsis_primary/` and
-described in **Supplement eMethods 3**. The fixed 31-versus-27 evaluation
-comparison is separate from learning-data re-selection.
+At this R, threshold **34** minimizes learning-data weighted loss both without a
+capacity constraint and under the Low workload ceiling. It flags **59,849**
+learning encounters. The learning selection grid is supplied in
+`results/sepsis_primary/`; the fixed 34-versus-27 evaluation comparison is a
+separate calculation. The fixed-pair loss crossing is R ≈ **20.77** in MIMIC
+held-out data and **26.28** at Stanford. It compares these two thresholds, without
+reselecting a candidate in the evaluation cohorts.
 
 For prepared learning data, the package call is:
 
@@ -71,11 +60,12 @@ For prepared learning data, the package call is:
 from universal_cutoff import build_threshold_table, ratio_invariance
 
 table = build_threshold_table(learning_df, "score", outcome_col="outcome")
-grid = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 14.05348,
+R = 11299 / 804
+grid = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, R,
         15, 16, 17, 18, 19, 20, 22, 25, 30, 40, 50, 75, 100]
 result = ratio_invariance(
-    table, 11299 / 804,
-    k_fracs=[None, 109888 / 297476], ratio_grid=grid,
+    table, R,
+    k_fracs=[None, 116236 / 314658], ratio_grid=grid,
 )
 print(result.to_string(index=False))
 ```

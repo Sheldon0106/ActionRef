@@ -1,9 +1,9 @@
-site,score,recommended_name,score_available_N,reproduced_N,formula_mismatch_N,score_min,score_max,native_unique_values,formula_source,formula_source_sha256
-MIMIC,NEWS2,four-component NEWS2-derived score,425011,425011,0,0,10,11,source_helpers,ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a
-MIMIC,MEWS,four-component adapted MEWS,425011,425011,0,0,9,10,source_helpers,ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a
-MIMIC,REMS,five-component adapted REMS (without GCS),425011,425011,0,0,19,20,source_helpers,ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a
-MIMIC,qSOFA,two-component qSOFA-derived score,425011,425011,0,0,2,3,source_helpers,ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a
-Stanford,NEWS2,four-component NEWS2-derived score,118385,118385,0,0,12,13,source_helpers,ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a
-Stanford,MEWS,four-component adapted MEWS,118385,118385,0,0,10,11,source_helpers,ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a
-Stanford,REMS,five-component adapted REMS (without GCS),118385,118385,0,0,19,20,source_helpers,ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a
-Stanford,qSOFA,two-component qSOFA-derived score,118385,118385,0,0,2,3,source_helpers,ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a
+site,score,N,supplied_vector_formula_mismatch_N,difference_from_prior_support_score_N,input_policy,native_min,native_max
+MIMIC,NEWS2,448804,,0,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,10
+MIMIC,MEWS,448804,,0,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,9
+MIMIC,REMS,448804,,0,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,19
+MIMIC,qSOFA,448804,,0,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,2
+Stanford,NEWS2,118385,,9,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,12
+Stanford,MEWS,118385,,9,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,10
+Stanford,REMS,118385,,28,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,19
+Stanford,qSOFA,118385,,7,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,2

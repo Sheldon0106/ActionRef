@@ -7,12 +7,12 @@ underlying the manuscript figures. The [reproduction guide](paper-reproduction.m
 describes which quantities are recalculated and which are read from saved results.
 In the table, `S/` denotes `results/sepsis_primary/`.
 
-| Figure | Scientific content | Repository materials |
+| Content | Scientific question | Repository materials |
 |---|---|---|
-| Figure 1: framework | Clinical questions, behavioral references and operating candidates | [Reference definitions](references.md) and [capacity and consequence workflow](operating-candidates.md) |
-| Figure 2: recorded-action curve/evaluation | Estimated action curve and held-out action-probability evaluation | Saved curve and evaluation summaries in `S/semantic_response_curve.csv`, `S/sepsis_action_reliability.json` and `S/sepsis_action_points.json` |
-| Figure 3: workload and consequence comparison | Operating rates, fixed-candidate loss comparisons and paired uncertainty | Aggregate counts and saved summaries in `S/operating_counts.csv`, `S/fixed_candidate_R_sensitivity.csv` and `S/operating_uncertainty/paired_FAE_difference.json` |
-| Figure 4: four-score comparison | Alert rates and sepsis sensitivity at fixed references in both evaluation cohorts | `results/early_warning_scores/default/fixed_reference_operating_points.csv` and ESRP operating counts; `examples/reproduce_paper.py --early-warning-scores` recalculates and checks all 24 plotted rates |
+| Framework | Clinical questions, behavioral references and operating candidates | [Reference definitions](references.md) and [capacity and consequence workflow](operating-candidates.md) |
+| Recorded-action curve/evaluation | Estimated action curve and held-out action-probability evaluation | Saved curve and evaluation summaries in `S/semantic_response_curve.csv`, `S/sepsis_action_reliability.json` and `S/sepsis_action_points.json` |
+| Workload and consequence comparison | Operating rates, fixed-candidate loss comparisons and paired uncertainty | Aggregate counts and saved summaries in `S/operating_counts.csv`, `S/fixed_candidate_R_sensitivity.csv` and `S/operating_uncertainty/paired_FAE_difference.json` |
+| Four-score comparison | Alert rates and sepsis sensitivity at fixed references in both evaluation cohorts | `results/early_warning_scores/default/fixed_reference_operating_points.csv` and ESRP operating counts; `examples/reproduce_paper.py --early-warning-scores` recalculates and checks the fixed-reference rates |
 
 The sections below provide R sources and build instructions for the
 documentation illustrations.
@@ -57,8 +57,8 @@ small reliability inset uses MIMIC held-out observations. Their sources are list
 below. The operating-cutoff ruler and clinical icons are conceptual, without
 numerical performance claims. Complete, partial, and no-reference outputs remain visible.
 
-Low 27, Mid 36, and High 51 illustrate this analysis's attainable absolute targets:
-the local background action rate (about 0.327), 0.50, and 0.80. Each is the first
+Low 27, Mid 39, and High 54 illustrate this analysis's attainable absolute targets:
+the local background action rate (about 0.309), 0.50, and 0.80. Each is the first
 supported fitted bin reaching its target, so its fitted probability need not equal
 the target exactly. Other datasets can yield different references, relative targets,
 or unavailable outputs; see [reference interpretation](references.md).
@@ -92,23 +92,24 @@ calculated from the saved table. No confidence intervals are displayed.
 **Message:** the learned score–action relationship can be examined alongside sample
 support and evaluated on held-out action observations.
 
-- [Learning curve](assets/data/sepsis_learning_curve.csv): saved semantic response curve
-  from run `run_20260901T114212647018Z_7a68fbe37684`.
+- [Learning curve](assets/data/sepsis_learning_curve.csv): saved MIMIC learning
+  response curve from the primary clinical-only sepsis analysis.
 - [Reliability bins](assets/data/sepsis_action_reliability.json) and
   [evaluation metrics](assets/data/sepsis_action_points.json): saved held-out action
-  evaluation from run `run_20261002T082847Z_history_action_calibration`.
-- [Source hashes](assets/data/provenance.json): checksums and original filenames.
+  evaluation of the same fixed learning curve.
+- [Source hashes](assets/data/provenance.json): aggregate-input checksums and source files.
 
 The learning curve is plotted exactly from the saved bin coordinates and fitted
 rates. Held-out prediction uses continuous interpolation of the fixed curve with
 endpoint clipping. The reliability panel uses fixed 0.1-wide probability bins,
 omits empty bins, and scales point area by count. The additional bin-assignment
-sensitivity result remains in the source JSON but is not plotted. Counts refer to
+and logistic results remain in the source JSON but are not plotted. Counts refer to
 encounters, not unique people. No uncertainty bands have been added.
 
 The lower band reports the absolute reference targets and saved held-out action
 metrics. Brier score compares predicted probabilities with recorded actions; the
-constant comparator uses the complete learning cohort's background action rate.
+constant comparator uses the background action rate among action-known learning
+encounters.
 This is an assessment of recorded-action prediction, separate from outcome-risk
 prediction or clinical benefit. The composite action retains its heterogeneous
 source windows, detailed in the [clinical example](clinical-example.md).

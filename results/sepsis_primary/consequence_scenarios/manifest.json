@@ -1,26 +1,23 @@
 {
   "schema": "actionref.aggregate-bundle.v1",
   "manuscript": "JAMIA submission, October 2026",
-  "assembled_date": "2026-10-20",
-  "manuscript_locations": "eTable 5C",
+  "assembled_date": "2026-10-25",
   "files": {
     "paper_minimax_behavior_budget.csv": {
-      "source_label": "<analysis_outputs>/v7_outputs/paper_minimax_behavior_budget.csv",
-      "source_generation_date": "2026-08-19",
-      "date_basis": "source file modification date; original run date not recorded",
-      "source_sha256": "e0f5b4e774be4e0555f347e0c4e6bf90f8aee1de98bd7d192ecc41d2791bdbb1",
-      "sha256": "e0f5b4e774be4e0555f347e0c4e6bf90f8aee1de98bd7d192ecc41d2791bdbb1",
-      "rows": 6,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_revision_assets>/rr1_minimax_existing_grid.csv",
+      "source_sha256": "586056e8b65265d62bfe75ded63f96169573f400dfb921df006322825eaec114",
+      "sha256": "586056e8b65265d62bfe75ded63f96169573f400dfb921df006322825eaec114",
+      "selection": "existing-grid secondary scenario; current source schema retained; not validation of the learning-selected candidate",
+      "role": "current RR1 aggregate result"
     },
     "comparator_development_selection_curve.csv": {
-      "source_label": "<analysis_outputs>/v10_action_window_comparator_outputs/run_20260912T102617985877Z_446f116d20ce/tables/comparator_development_selection_curve.csv",
-      "source_generation_date": "2026-09-12",
-      "date_basis": "source run label",
-      "source_sha256": "8d1ca3ae42c8e52e5afa280c75ab65f7c082e0a9764eca837fa7d2e430af6b14",
-      "sha256": "8d1ca3ae42c8e52e5afa280c75ab65f7c082e0a9764eca837fa7d2e430af6b14",
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_development_candidate_curve.csv",
+      "source_sha256": "a09f2515d475431a33fad190fad276638452bc98c81ac7ab915a542021236faf",
+      "sha256": "a09f2515d475431a33fad190fad276638452bc98c81ac7ab915a542021236faf",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     }
   },
-  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+  "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
+  "analysis_revision": "RR1 same-source full cohort"
 }

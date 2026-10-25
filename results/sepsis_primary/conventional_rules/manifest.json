@@ -1,36 +1,30 @@
 {
   "schema": "actionref.aggregate-bundle.v1",
   "manuscript": "JAMIA submission, October 2026",
-  "assembled_date": "2026-10-20",
-  "manuscript_locations": "eTable 15",
+  "assembled_date": "2026-10-25",
   "files": {
     "comparator_operating_results_extended.csv": {
-      "source_label": "<analysis_outputs>/v10_action_window_comparator_outputs/run_20260912T102617985877Z_446f116d20ce/tables/comparator_operating_results_extended.csv",
-      "source_generation_date": "2026-09-12",
-      "date_basis": "source run label",
-      "source_sha256": "3a68fd368793806e81a9a5107bb7a02030b6b97c48540dfafcb3e8d91a83d461",
-      "sha256": "3a68fd368793806e81a9a5107bb7a02030b6b97c48540dfafcb3e8d91a83d461",
-      "rows": 26,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_fixed_operating_points.csv",
+      "source_sha256": "8e1ff11ed3ad2f4d0a116adf8c399db3050f3911598aa55c62f9efa515cdcc6b",
+      "sha256": "bc3e6f8396e755ccea9924c08aa4bce79e248192a642862d34165640f2592b92",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "comparator_selection_bootstrap_summary.csv": {
-      "source_label": "<analysis_outputs>/v10_action_window_comparator_outputs/run_20260912T102617985877Z_446f116d20ce/tables/comparator_selection_bootstrap_summary.csv",
-      "source_generation_date": "2026-09-12",
-      "date_basis": "source run label",
-      "source_sha256": "65aaae14766b6912a7c32a091b7ee0ca43e128087aa6863cf0b0a0bcf4cde884",
-      "sha256": "65aaae14766b6912a7c32a091b7ee0ca43e128087aa6863cf0b0a0bcf4cde884",
-      "rows": 6,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_conventional_selection_intervals.csv",
+      "source_sha256": "9008a131c4bc602b76aeedb9398a9fa012ac0eead4d1fec15b372cd3dbf1531a",
+      "sha256": "9008a131c4bc602b76aeedb9398a9fa012ac0eead4d1fec15b372cd3dbf1531a",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     },
     "comparator_contracts_extended.csv": {
-      "source_label": "<analysis_outputs>/v10_action_window_comparator_outputs/run_20260912T102617985877Z_446f116d20ce/tables/comparator_contracts_extended.csv",
-      "source_generation_date": "2026-09-12",
-      "date_basis": "source run label",
-      "source_sha256": "5d0219c7cd1bbf2279011fd309228f76844603ea57ce4b71d0b668709dca6077",
-      "sha256": "5d0219c7cd1bbf2279011fd309228f76844603ea57ce4b71d0b668709dca6077",
-      "rows": 13,
-      "selection": "all rows; byte-identical copy"
+      "source_label": "<rr1_aggregate_bundle>/tables/rr1_policy_contracts.csv",
+      "source_sha256": "48068f80b5043147eab6205b82cc6f0cffad88c262f00338d5d0bef080ed6698",
+      "sha256": "8fcc97214ce40d1487a0013ec3bd82dd5c4d1a1fef134a10f9442a0af5c0079d",
+      "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
+      "role": "current RR1 aggregate result"
     }
   },
-  "processing": "Existing aggregate tables only; string-preserving row subsets where stated. No analyses rerun."
+  "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
+  "analysis_revision": "RR1 same-source full cohort"
 }

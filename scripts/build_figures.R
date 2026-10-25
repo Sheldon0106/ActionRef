@@ -31,9 +31,10 @@ d <- list(clinical=csv("sepsis_learning_curve.csv"),
 d$copd_curve <- read.csv("results/copd/validation_v2_corrected/reference/module2_response_curve.csv",check.names=FALSE)
 d$copd_anchors <- read.csv("results/copd/validation_v2_corrected/reference/module2_point_anchors.csv",check.names=FALSE)
 # Assertions tie visual annotations to saved evidence and fail on stale data.
-stopifnot(nrow(d$clinical)==26,sum(d$clinical$count)==294659,
-          sum(d$reliability$N)==126332,d$metrics$N==126332,
-          all(c(27,36,51) %in% d$clinical$score),
+stopifnot(nrow(d$clinical)==26,sum(d$clinical$count)==311618,
+          sum(d$reliability$N)==132878,d$metrics$N==132878,
+          all(c(27,39,54) %in% d$clinical$score),
+          max(d$clinical$count)<=60000,
           d$alert_curve$alert_count[d$alert_curve$threshold==81]==1643,
           min(d$alert_curve$threshold[d$alert_curve$alert_count<=1680])==81,
           identical(as.numeric(d$synthetic_heldout$evaluated_threshold[1:3]),c(45,45,60)),
