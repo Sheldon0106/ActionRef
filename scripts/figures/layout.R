@@ -17,9 +17,3 @@ save_layout("synthetic-example",
                  panel("evaluation",synthetic_parts$evaluation$bounds)),
             rows=list(c("learning","capacity")),
             exemptions=list(exempt("evaluation","Evaluation comparison spans both learning panels.")))
-save_layout("clinical-action",
-            list(panel("curve",c(139,315,610,265)),panel("counts",c(139,618,610,74)),
-                 panel("reliability",c(972,307,440,360)),panel("context",clinical_parts$context$bounds)),
-            columns=list(c("curve","counts")),
-            exemptions=list(exempt("reliability","Reliability plot spans the learning curve and support strip."),
-                            exempt("context","Context band spans the full figure width.")))

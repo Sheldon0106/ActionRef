@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+- Focused reader documentation on the manuscript methods, data contract and shared
+  aggregate results.
+- Removed rendered clinical-result displays and Markdown result-table generation;
+  aggregate calculations and checks are unchanged.
+- Retained the software workflow and synthetic tutorial illustrations.
+
+
 ## 1.1.1 - 2026-11-04
 
 - Aligned documentation and the result map with the manuscript: Tables 1–3,

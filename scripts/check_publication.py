@@ -141,7 +141,7 @@ def main():
                 failures.append('{}: possible nested individual-record fields {}'.format(
                     path.relative_to(ROOT), sorted(found)))
 
-    for name in ('workflow', 'synthetic-example', 'clinical-action', 'copd-partial-output'):
+    for name in ('workflow', 'synthetic-example'):
         for suffix in ('png', 'svg', 'pdf'):
             if not (ROOT / 'docs/assets/figures' / (name + '.' + suffix)).is_file():
                 failures.append('Missing figure export: ' + name + '.' + suffix)

@@ -1,7 +1,7 @@
 # Build and check the repository
 
 Use Python 3.11 or newer for documentation. Figure drawing uses R 4.4 or newer;
-see [figure reproduction](figures.md) for its separate dependencies.
+see [documentation artwork](figures.md) for its separate dependencies.
 
 ```bash
 python -m pip install -e ".[test]"
@@ -29,4 +29,4 @@ clinical runner's `--verify-reported` option checks concordance with the reporte
 analysis when the specified authorized tables are supplied.
 
 Package source and analytical configurations retain their own versioning.
-Documentation and figures can be revised without changing the scientific defaults.
+Documentation and tutorial artwork can be revised without changing the scientific defaults.

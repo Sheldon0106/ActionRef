@@ -19,7 +19,7 @@ The primary entry point recalculates sepsis operating rates, recorded-action yie
 fixed 34-versus-27 loss comparison from saved aggregate counts. Action-probability
 point estimates and some uncertainty intervals are read from saved summaries;
 this entry point does not re-estimate those intervals or rebuild the patient-level
-cohorts. Outputs are written to ignored `output/paper/`.
+cohorts. The numerical CSV outputs are written to ignored `output/paper/`.
 
 The optional flag adds ESRP, NEWS2, MEWS and REMS at the
 fixed MIMIC references in both evaluation cohorts. It checks recalculated alert
@@ -43,12 +43,11 @@ and simulation results without rerunning either analysis. See the
 | `results/supplement_extended/` | Minimax regret, transfer-target sensitivity, subgroup diagnostics, original simulation and rule-selection uncertainty |
 | `simulations/` | Eight-scenario and paired support-criteria runners, configurations, seeds and saved condition-level error summaries |
 
-The [aggregate results](paper-results.md) distinguish count-based calculations
-from previously estimated curves and intervals. Reference-relearning intervals,
+The [aggregate results guide](paper-results.md) identifies shared counts, curves
+and saved estimates. Reference-relearning intervals,
 fixed-policy operating intervals and action-probability intervals represent
 separate resampling analyses. They are supplied as saved results rather than
-re-estimated by the aggregate entry point. Documentation illustration inputs and
-build instructions are described in the [figure guide](figures.md).
+re-estimated by the aggregate entry point.
 
 ## Analyze authorized clinical inputs
 
@@ -61,9 +60,3 @@ It performs the specified patient-disjoint split, reference learning, candidate
 comparison and fixed-threshold evaluation. Raw-EHR cohort and variable construction
 precedes this entry point; it does not rerun every analysis or uncertainty
 calculation in the manuscript.
-
-The current MIMIC population, patient assignment and clinical-only outcome differ
-from historical releases. Historical results remain available through Git history
-and release tags; they should not be combined with current point estimates or
-intervals. COPD, AERT/HEART, pneumonia and AKI materials are exploratory, not
-reported in the manuscript. See the [material roles](evidence.md).

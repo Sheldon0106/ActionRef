@@ -13,7 +13,7 @@ The Python package is `universal-cutoff`; the import is `universal_cutoff`.
 
 [Get started](docs/quickstart.md) · [Prepare your data](docs/data.md) ·
 [Interpret references](docs/references.md) · [API](docs/API_REFERENCE.md) ·
-[Clinical example](docs/clinical-example.md) · [Reproduce the paper](docs/paper-reproduction.md)
+[Clinical example](docs/clinical-example.md) · [Analysis and aggregate checks](docs/paper-reproduction.md)
 
 ![ActionRef workflow: scores and observed actions lead to behavioral references, operating candidates, and separate evaluation.](docs/assets/figures/workflow.png)
 
@@ -110,56 +110,12 @@ belong to that analysis; the software learns references for the supplied data.
 
 ## Manuscript results
 
-The manuscript contains Tables 1–3, Figures 1–5, eTables 1–14 and eFigures 1–5.
-The [result map](docs/evidence.md#manuscript-result-map) connects every display
-item to public aggregates, analysis code and its reproduction scope.
+The [result map](docs/evidence.md#manuscript-result-map) connects the manuscript
+analyses to public aggregates, analysis code and its reproduction scope.
 [Extended results](results/supplement_extended/README.md) supply subgroup-level
 diagnostics, the original eight-scenario simulation, conventional-rule selection
 uncertainty, minimax regret and transfer-target sensitivity. The
 [K/R guide](docs/R_GUIDANCE.md) accompanies these results.
-
-<details>
-<summary>Table and figure inputs</summary>
-
-`S/` = `results/sepsis_primary/`, `W/` = `results/early_warning_scores/`,
-`X/` = `results/supplement_extended/`. A filename following a directory entry
-uses that same directory. **P** = `examples/reproduce_paper.py`,
-**E** = `examples/reproduce_extended.py`, **A** = `examples/sepsis_paper_analysis.py`.
-P and E use public aggregates. A requires authorized prepared clinical inputs.
-Saved summaries retain the original estimation and resampling results; the table
-identifies scientific inputs and analysis code, not journal artwork generation.
-
-| Display item | Content | Aggregate inputs or definitions | Analysis entry point and scope |
-|---|---|---|---|
-| Table 1 | Cohort characteristics | S/cohort_characteristics.csv | Saved descriptive table; E checks action denominators |
-| Table 2 | Reference thresholds and uncertainty | S/reference_bootstrap/reference_summary.csv; reference_point_anchors.csv | A estimates references; saved bootstrap summaries |
-| Table 3 | References, revised threshold and comparators | S/operating_counts.csv; observed_action_yield.csv; conventional_rules/rule_operating_rows.csv; conventional_rules/esrp_tier_boundaries.csv | P + E: counts to operating rates |
-| Figure 1 | Framework | docs/references.md; docs/operating-candidates.md; configs/sepsis_primary.json | A: analysis workflow; conceptual illustration |
-| Figure 2 | Action curve and probability evaluation | S/semantic_response_curve.csv; sepsis_action_reliability.json; sepsis_action_points.json | A: curve/evaluation; P: saved probability summaries |
-| Figure 3 | Workload and consequences of threshold revision | S/learning_fae_curve.csv; operating_counts.csv; operating_uncertainty/paired_FAE_difference.json | E: derivation curve count checks; P: fixed comparison; saved paired interval |
-| Figure 4 | Role of R | S/learning_R_selection.csv; learning_R_invariance.csv; fixed_candidate_R_sensitivity.csv | P: derivation-grid selections and fixed-pair sensitivity |
-| Figure 5 | Alerts and sepsis sensitivity across four scores | W/default/fixed_reference_operating_points.csv; S/operating_counts.csv | P --early-warning-scores: fixed-reference rates |
-| eTable 1 | Default settings | src/universal_cutoff/config.py | src/universal_cutoff/module2.py |
-| eTable 2 | Triage-score implementations | W/default/score_formula_definition.csv; score_component_implementation.csv | Saved score definitions; A accepts supplied ESRP inputs |
-| eTable 3 | Score and action-probability performance | S/score_assessment/; S/sepsis_action_points.json; S/sepsis_action_intervals.json; S/logistic_comparison/ | P: saved action estimates; A: score/action evaluation; saved intervals |
-| eTable 4 | Action components and component references | S/components/ | A: primary composite construction; saved component analyses |
-| eTable 5 | Reference uncertainty | S/reference_bootstrap/; S/action_definition_sensitivity/reference_bootstrap_summary.csv | src/universal_cutoff/bootstrap.py; saved resampling summaries |
-| eTable 6 | Conventional rules | S/conventional_rules/rule_operating_rows.csv; esrp_tier_boundaries.csv; comparator_contracts_extended.csv; S/learning_fae_curve.csv | E: operating/count checks; saved selection contracts |
-| eTable 7 | References and revised threshold 34 | S/operating_counts.csv; observed_action_yield.csv; learning_fae_curve.csv; operating_uncertainty/ | P + E: count-based rates; saved operating intervals |
-| eTable 8 | Consequence scenario and R sensitivity | configs/sepsis_primary.json (declared ratio); S/fixed_candidate_R_sensitivity.csv; docs/R_GUIDANCE.md | P: fixed-pair calculation; modeled component assumptions are in supplement eTable 8A |
-| eTable 9 | Action definitions and windows | S/action_definition_sensitivity/ | src/universal_cutoff/module2.py; saved window-specific analyses |
-| eTable 10 | Support criteria and targets | S/reference_sensitivity/ | src/universal_cutoff/module2.py; saved parameter sensitivity summaries |
-| eTable 11 | External and era-based reference assessment | S/reference_bootstrap/; S/era_and_transport/v7_cell56_temporal_drift.csv; S/era_and_transport/v7_cell56_temporal_operating.csv | A: fixed transport and local estimation; saved era summaries |
-| eTable 12 | Subgroup diagnostics | S/subgroups/; X/subgroup_diagnostics.csv | E: join saved subgroup operating/calibration results |
-| eTable 13 | Early warning scores | W/default/; W/qsofa_short_scale/ | P --early-warning-scores; saved reference/short-scale summaries |
-| eTable 14 | Paired support-criteria simulation | simulations/support_gate/condition_error_summary.csv; config.json | simulations/support_gate/runner.py (seed 2026101101); saved results |
-| eFigure 1 | Weighted loss and net benefit | S/learning_fae_curve.csv; operating_counts.csv; fixed_candidate_R_sensitivity.csv | P + E: loss arithmetic; net benefit = TP/N - FP/(R*N) |
-| eFigure 2 | Uniform windows and action components | S/action_definition_sensitivity/corrected_action_window_thresholds.csv; S/components/threshold_action_workload_matrix.csv | Saved window-specific references and component counts |
-| eFigure 3 | Local references by MIMIC era | S/era_and_transport/v7_cell56_temporal_drift.csv | Saved era estimates; src/universal_cutoff/module2.py |
-| eFigure 4 | Subgroup sensitivity ranges | S/subgroups/v7_subgroup_paper_summary_reconstructed.csv; X/subgroup_diagnostics.csv | E: saved subgroup operating values; sensitivity = TP/(TP+FN) |
-| eFigure 5 | Early warning action curves and references | W/default/action_curves.csv; reference_point_anchors.csv; W/qsofa_short_scale/action_curves.csv; reference_point_anchors.csv | Saved curves/reference outputs; src/universal_cutoff/module2.py |
-
-</details>
 
 ## Documentation and repository
 
@@ -168,12 +124,6 @@ score: MIMIC references are 27 / 39 / 54, Stanford local references are
 26 / 36 / 50, and revised threshold 34 uses R = 11,299/804. The same recorded-action
 analysis also evaluates NEWS2, MEWS, REMS and qSOFA. See the
 [sepsis aggregate results](docs/paper-results.md).
-
-COPD, HEART-derived AERT, pneumonia and AKI materials are retained as
-**exploratory, not reported in the manuscript**. Changepoint functionality is
-retained for exploratory use and was not used in the manuscript. The
-[evidence guide](docs/evidence.md) distinguishes manuscript materials from these
-development records.
 
 Two routes through the repository:
 
@@ -192,10 +142,8 @@ python examples/reproduce_extended.py
 
 The documentation is built with MkDocs Material and includes a workflow overview,
 tutorials, clinical examples, and API guidance.
-The documentation illustrations are drawn in R/grid from vector artwork
-and saved aggregate inputs. Manuscript figure data are
-listed in the [figure guide](docs/figures.md). [Build the documentation illustrations](docs/figures.md) or edit their
-[R sources](scripts/figures/).
+The workflow illustration and synthetic walkthrough have their own
+[documentation artwork](docs/figures.md), drawn in R/grid.
 
 ```bash
 python -m pip install -r requirements-docs.txt
@@ -208,9 +156,9 @@ python -m mkdocs serve
 | [`examples/`](examples/) | Synthetic walkthrough and clinical-data runners |
 | [`simulations/`](simulations/README.md) | Existing simulation runners, configurations, seeds and saved condition-level error summaries |
 | [`docs/`](docs/index.md) | Tutorials, interpretation, API, and analysis notes |
-| [`configs/`](configs/) | Declared disease and analysis configurations |
+| [`configs/`](configs/) | Analysis configurations |
 | [`results/`](results/) | Aggregate research outputs; see the [evidence guide](docs/evidence.md) for analysis roles |
-| [`scripts/`](scripts/) | Figure generation and public-repository checks |
+| [`scripts/`](scripts/) | Documentation artwork and public-repository checks |
 | [`tests/`](tests/) | Synthetic tests of software behavior |
 
 ## Reproducibility, data, and citation

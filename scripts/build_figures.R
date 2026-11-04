@@ -14,8 +14,6 @@ for(pkg in c("jsonlite","svglite","ragg"))
 source("scripts/figures/style.R",encoding="UTF-8")
 source("scripts/figures/workflow.R",encoding="UTF-8")
 source("scripts/figures/synthetic.R",encoding="UTF-8")
-source("scripts/figures/clinical.R",encoding="UTF-8")
-source("scripts/figures/copd.R",encoding="UTF-8")
 apply_figure_style(preferred_family="Arial")
 
 data_dir <- "docs/assets/data"
@@ -28,8 +26,6 @@ d <- list(clinical=csv("sepsis_learning_curve.csv"),
           synthetic_curve=csv("synthetic_learning_curve.csv"),
           alert_curve=csv("synthetic_alert_curve.csv"),
           synthetic_heldout=csv("synthetic_heldout.csv"))
-d$copd_curve <- read.csv("results/copd/validation_v2_corrected/reference/module2_response_curve.csv",check.names=FALSE)
-d$copd_anchors <- read.csv("results/copd/validation_v2_corrected/reference/module2_point_anchors.csv",check.names=FALSE)
 # Assertions tie visual annotations to saved evidence and fail on stale data.
 stopifnot(nrow(d$clinical)==26,sum(d$clinical$count)==311618,
           sum(d$reliability$N)==132878,d$metrics$N==132878,
@@ -60,9 +56,7 @@ render <- function(draw,bounds,path,ext,dpi=300) {
 }
 
 figs <- list(workflow=list(draw=draw_workflow,parts=workflow_parts),
-             `synthetic-example`=list(draw=draw_synthetic,parts=synthetic_parts),
-             `clinical-action`=list(draw=draw_clinical,parts=clinical_parts),
-             `copd-partial-output`=list(draw=draw_copd,parts=copd_parts,bounds=c(0,0,850,550)))
+             `synthetic-example`=list(draw=draw_synthetic,parts=synthetic_parts))
 for(name in names(figs)) {
   f <- figs[[name]]
   # Each scientific region is also exported separately at its final physical size.

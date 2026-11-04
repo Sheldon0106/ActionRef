@@ -11,8 +11,8 @@ cd ActionRef
 ## Create an environment
 
 The core package supports Python 3.8 and newer. Python 3.11 or newer is convenient
-when also building the documentation. Regenerating the repository figures uses
-R separately; see [figure sources and reproduction](figures.md).
+when also building the documentation. Regenerating the documentation illustrations uses
+R separately; see [documentation artwork](figures.md).
 
 ```bash
 python -m venv .venv

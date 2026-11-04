@@ -86,32 +86,3 @@ Use the [reproduction guide](paper-reproduction.md) for commands. Preserve the
 population, patient assignment, source definitions and outcome version when
 preparing analysis inputs. Differences from historical repository results involve
 these analysis choices and cannot be interpreted as score deterioration over time.
-
-## Exploratory inputs (not reported in the manuscript)
-
-COPD, AERT/HEART, pneumonia and AKI materials are **exploratory, not reported in
-the manuscript**. Existing code and data contracts are retained.
-
-COPD uses the supplied balanced-logistic `score_COPD_AutoScore` from
-`autoscore_copd.ipynb`. `AutoScore` is a historical column/configuration label for
-local binned logistic-regression scores, not the published R AutoScore workflow;
-the label is retained for compatibility. The unweighted `_fixed` score was not
-stored in the input CSV. Existing filenames and column names are retained as data contracts.
-
-The corrected action is documented bronchodilator administration/start within
-24 hours OR the legacy Pyxis steroid-record proxy. Evaluation is conditional on
-the supplied score. The patient-excluded subset and its AUROC 0.894 are reported
-separately from the full threshold-evaluation cohort; both are exploratory materials.
-
-AERT public inputs are score-level counts, component/population summaries, fixed
-probability maps, output states and bootstrap summaries. The supplied score is the
-four-component HEART-derived AERT proxy; fixed H=1 is a separate shift sensitivity.
-ADMITTED/HOME and hospitalization linkage are different action definitions. The
-aggregate runner begins after raw component construction, earliest-encounter
-selection, reserved-patient exclusion and the original patient-disjoint assignment.
-The exact patient-order bootstrap requires restricted analysis records and is
-not reconstructed from these public bins.
-
-No patient records, identifiers, notes, annotation/linkage packs, individual
-predictions or record-identifying source offsets are distributed. See the
-[source mapping](evidence.md) and [AERT scope](https://github.com/Sheldon0106/ActionRef/blob/v1.0.3-jamia/results/aert/README.md).

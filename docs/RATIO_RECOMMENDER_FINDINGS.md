@@ -1,161 +1,41 @@
-# Optional R scenarios and historical development findings
+# Optional consequence-ratio scenarios
 
-The tier tables below retain their historical full-sample exploratory settings
-and values. **COPD, pneumonia and AKI are exploratory, not reported in the
-manuscript.** COPD in these tables uses its earlier supplied-score/action setting.
-See the [evidence guide](evidence.md#exploratory-materials) for their development roles.
+The optional `recommend_ratio()` function supplies a prespecified scenario when
+workflow-specific consequence estimates or stakeholder elicitation are unavailable.
+Use the [K/R specification guide](R_GUIDANCE.md) to define the intended action,
+outcome, perspective and time horizon before choosing a scenario.
 
-The current primary sepsis example uses **R = 11,299/804**, a Low-reference workload
-ceiling, and derivation-data re-selection.
-Its [five-step R guide](R_GUIDANCE.md) distinguishes re-selection from the fixed
-34-versus-27 evaluation comparison. The historical R=15 results below do not
-replace the current primary example.
+## Decision tiers
 
-Answers the question raised in the Module 3B walkthrough: a user applying the framework
-to a new disease has no literature cost build, so how do they set `R = c_FN / c_FP`?
+| Tier | Decision profile | Default R | Evaluated band |
+|---|---|---:|---|
+| A | Time-critical outcome with a relatively low-burden response | 20 | 15–49 |
+| B | Serious outcome with a moderately burdensome response | 10 | 6–13 |
+| C | Less time-critical outcome with an invasive or expensive response | 3 | 2–4 |
 
-Implementation: `src/universal_cutoff/ratio_recommender.py`;
-tests: `tests/test_ratio_recommender.py` in the repository checkout.
+Select a tier by the consequences of a missed outcome and of the triggered action.
+These are low-confidence scenario inputs. The package's `explain_tiers()` and
+`tier_table()` functions provide the underlying definitions and source assumptions.
 
-The numbers below were produced by `run_ratio_recommender.py` in the analysis workspace,
-which reads the standardized per-threshold exports for the four diseases. Those exports
-are derived from credentialed MIMIC-IV-ED and are therefore not redistributed here; the
-recommender itself runs on any confusion table:
+## Use the supplied threshold counts
 
 ```python
 from universal_cutoff import build_threshold_table, recommend_ratio
 
 thresholds = build_threshold_table(df, "score", outcome_col="outcome")
-print(recommend_ratio(thresholds, tier="A", k_fracs=[0.01, 0.05, 0.10, 0.20]).summary())
+scenario = recommend_ratio(thresholds, tier="A", k_fracs=[0.05, 0.10, None])
+print(scenario.summary())
 ```
 
----
+`ratio_invariance()` identifies the tested R-grid values that select the same
+threshold; `ratio_band_impact()` summarizes changes in alert volume and outcome
+coverage. The grid band describes a computational sensitivity analysis.
+The recommender does not redefine the Low/Mid/High reference thresholds.
 
-## 1. Why R does not require costing
+## Manuscript scenario
 
-When `C_FN` and `C_FP` represent constant relative consequences and the usual
-expected-loss assumptions apply, their ratio has an equivalent risk-threshold reading
-under the standard threshold identity (Pauker & Kassirer 1975/1980; Vickers & Elkin
-decision curve analysis):
-
-```
-pt = c_FP / (c_FP + c_FN) = 1 / (1 + R)        <=>        R = (1 - pt) / pt
-```
-
-R is the ratio of the complementary threshold probabilities, `(1 - pt) / pt`. So a
-scenario value can be read off a **published threshold probability for a comparable
-decision**, with no monetary cost derivation. Equivalently, `R = N - 1`, where N is the
-break-even number of alerts per outcome-positive case at the decision margin. This is
-not the observed PPV of the deployed alert and not a causal number needed to treat.
-
-Two drivers set it, and both are judgements about the **decision**, not the disease:
-how fast and how badly the miss hurts, and how costly it is to act on a well patient.
-
-## 2. The tier table
-
-Each tier is anchored to a published threshold probability. These adjacent-decision
-thresholds make the defaults prespecified scenarios, not locally estimated parameters.
-
-| Tier | Decision profile | Published threshold basis | pt | Default R | Band | Alerts per case |
-|---|---|---|---|---|---|---|
-| **A** | Time-critical illness, cheap and safe response | PE testing threshold ~1.8–2% (Pauker–Kassirer); this framework's ED sepsis cost build at 6.25% | 2–6.25% | **20** | 15–49 | ~21 |
-| **B** | Serious but not hour-critical, moderate response | Statin primary prevention at 7.5% 10-year ASCVD risk | 7–15% | **10** | 6–13 | ~11 |
-| **C** | Not time-critical, invasive or expensive response | Prostate biopsy, reasonable range 10–30% | 20–30% | **3** | 2–4 | ~4 |
-
-Tier A's low end is exactly R = 15, the historical ED sepsis development scenario
-shown in this report. The primary paper uses 11,299/804 rather than that historical
-value. Tier assignment is a judgement about what the alert
-makes someone *do*: the same illness moves tiers if the response changes from a blood
-test to a procedure.
-
-`explain_tiers()` prints the full guide, with worked examples and a "not this tier if"
-test for each.
-
-## 3. How much does R actually matter?
-
-Measured on each disease's own confusion table, sweeping R from 1 to 100. Only the
-score-by-outcome distribution is used — no treatment or behaviour data, so nothing here
-is entangled with the Module 2 reference thresholds.
-
-`recall spread` is the range of recall produced by **every R in the tier band**. Zero
-means the choice of R is irrelevant at that capacity.
-
-| Disease | Tier | Capacity 1% | 2% | 5% | 10% | 20% | 30% | Unconstrained |
-|---|---|---|---|---|---|---|---|---|
-| Sepsis (ESRP_new, sepsis3) | A | **0.0 pp** | **0.0** | **0.0** | **0.0** | **0.0** | 3.2 | 31.3 |
-| COPD (AutoScore) | B | **0.0 pp** | 9.8 | 14.0 | 14.0 | 14.0 | 14.0 | 14.0 |
-| Pneumonia (AutoScore) | B | **0.0 pp** | **0.0** | **0.0** | 13.0 | 17.7 | 17.7 | 17.7 |
-| AKI (AutoScore) | B | **0.0 pp** | **0.0** | **0.0** | **0.0** | **0.0** | 10.0 | 20.2 |
-
-### The rule this produces
-
-**Where the capacity boundary remains selected throughout the evaluated R band, R does
-not move the cutoff.** The optimum is then to alert the highest-risk feasible patients
-until the budget runs out. In the source update, sepsis at 1% capacity gave the same
-cutoff (59) for every evaluated R from 2 to 100.
-
-**Where capacity is slack, R matters and must be reported as a band.** Recall moves
-13–31 pp across a tier band once the budget stops binding.
-
-In the four source-update datasets, the tight-capacity settings often landed in the first
-case. Users should test this on their own confusion table rather than assume that a
-nominal capacity limit is binding for every R.
-
-## 4. Historical scenario comparison
-
-The historical full-sample sepsis analysis compared its R = 15 literature scenario
-with the Tier A default R = 20. Its sample and capacity fractions differ from the
-primary paper's derivation-data Low workload ceiling:
-
-| Capacity | Cost-optimal threshold at R = 15 (literature) | at R = 20 (tier default) | Same? |
-|---|---|---|---|
-| 1% | 59 | 59 | yes |
-| 2% | 53 | 53 | yes |
-| 5% | 45 | 45 | yes |
-| 10% | 40 | 40 | yes |
-| 20% | 34 | 34 | yes |
-| 30% | 31 | 30 | no (recall 64.8% vs 68.0%) |
-| Unconstrained | 31 | 26 | no |
-
-**In this sepsis source-update comparison, the tier default reproduced the
-literature-costed threshold at 1%, 2%, 5%, 10%, and 20% capacity.** The two diverged at
-30% and without a capacity constraint, where R changed the selected operating point.
-
-This is a historical consistency check on one disease. Agreement applies to the
-five listed capacity settings; the 30% and unconstrained settings select different
-thresholds. It does not supply a setting-specific value of R for a new workflow.
-
-## 5. Honest limitations
-
-- **The source thresholds come from adjacent decisions, not from the user's setting.** A tier
-  default is a starting point; where the invariance band is narrow, results should be
-  reported across the band (the standard decision-curve convention) or R narrowed locally.
-- **One-disease validation.** Only sepsis has both a literature build and a tier pick,
-  so §4 is a single comparison.
-- **Tier assignment is a judgement.** COPD, pneumonia and AKI were all placed in Tier B
-  by the same reasoning; a user who considers the pneumonia decision time-critical would
-  choose Tier A and get a different answer at loose capacity.
-- **In-sample.** All bands are computed on `full_sample_exploratory` exports, so they
-  inherit the same threshold optimism as the rest of the cross-disease work.
-- **Nothing here prices absolute cost.** The recommender fixes the ratio, which sets the
-  threshold. Reporting lambda in currency still needs absolute costs; lambda in
-  false-alarm-equivalents does not.
-- **The identity has assumptions.** It treats relative FP/FN consequences as constant
-  and connects them to a calibrated action probability through expected loss. The tier
-  route does not by itself demonstrate calibration, treatment benefit, transportability,
-  or clinical utility.
-- **The invariance band is computational.** It is the widest contiguous run on the
-  specified R grid selecting the same cutoff; it is not a statistical confidence interval.
-- **Module separation remains intact.** The recommender is an optional Module 3B scenario
-  input. It cannot create, rename, or replace Module 2 Low/Mid/High. Capacity-only users
-  may stop at Module 3A without specifying R.
-
-## References
-
-- Pauker SG, Kassirer JP. Therapeutic decision making: a cost-benefit analysis. *N Engl J Med* 1975;293:229-34.
-- Pauker SG, Kassirer JP. The threshold approach to clinical decision making. *N Engl J Med* 1980;302:1109-17.
-- Vickers AJ, Elkin EB. Decision curve analysis: a novel method for evaluating prediction models. *Med Decis Making* 2006;26:565-74.
-- Vickers AJ, van Calster B, Steyerberg EW. A simple, step-by-step guide to interpreting decision curve analysis. *Diagn Progn Res* 2019;3:18.
-- Vickers AJ, van Calster B, Steyerberg EW. Reporting and interpreting decision curve analysis: a guide for investigators. *Eur Urol* 2018;74:796-804.
-- Patel AP, et al. Learning decision thresholds for risk-stratification models from aggregate clinician behavior. *J Am Med Inform Assoc* 2021;28:2258-64. doi:10.1093/jamia/ocab159
-- Djulbegovic B, et al. How do physicians decide to treat: an empirical evaluation of the threshold model. *BMC Med Inform Decis Mak* 2014;14:47.
+The sepsis analysis uses the declared ratio **R = 11,299/804** and the Low-reference
+workload ceiling. The saved derivation selections and fixed 34-versus-27
+comparison are described in the [aggregate results guide](paper-results.md).
+The optional tier values above are package inputs for users specifying other
+workflow scenarios.

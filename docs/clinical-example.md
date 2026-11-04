@@ -19,21 +19,16 @@ requirement. The complete-row background action rate is approximately 30.9%.
 | Mid | 39 | First fitted bin reaching action probability 0.50 |
 | High | 54 | First fitted bin reaching action probability 0.80 |
 
-![MIMIC derivation set action curve, bin support, and internal validation action reliability.](assets/figures/clinical-action.png)
-
-The left panels show the saved derivation curve and bin counts. The right panel
-uses the fixed curve on 132,878 internal validation encounters with complete score and action.
-Points show observed versus mean predicted action probabilities within fixed
-0.1-wide probability bins; empty bins are omitted. Point area reflects bin count.
+The fixed action curve is evaluated on 132,878 internal validation encounters
+with complete score and action.
 
 The internal validation action Brier score is 0.1900, compared with 0.2130 for the constant
 derivation action rate. Mean predicted action probability is 31.75%, versus 30.78%
-observed. This assesses prediction of recorded actions. The displayed reliability
-points are descriptive, without confidence intervals. The Brier score's 95%
+observed. This assesses prediction of recorded actions. The Brier score's 95%
 patient-cluster interval is 0.1887–0.1913; the paired difference from the constant
 comparator is −0.0230 (−0.0243 to −0.0217). These intervals condition on the learned
 curve. Full estimates and the bin-assignment sensitivity appear in the
-[primary result tables](paper-results.md).
+[aggregate results](paper-results.md).
 
 ## Define the recorded action
 
@@ -74,12 +69,11 @@ fitted action probability at score 34.
 The fixed 34-versus-27 loss comparison changes sign at R ≈ **20.77** in MIMIC and
 **26.28** in Stanford. Above the relevant crossing, 27 has lower weighted loss
 within this pair. This is sensitivity of a fixed comparison, with no candidate
-reselection in evaluation data. [Rebuild the tables](paper-reproduction.md).
+reselection in evaluation data. [Check the aggregate calculations](paper-reproduction.md).
 
-## Sources and analysis role
+## Analysis inputs
 
-The curve and action-evaluation figure use saved aggregate research outputs,
-described in [figure sources](figures.md). The [aggregate results](paper-results.md)
-report the primary evaluation. The separate Stanford local diagnostic estimates
-26 / 36 / 50; transported evaluation retains the MIMIC references 27 / 39 / 54.
-Local re-estimation and transport evaluation answer different questions.
+The [data contract](paper-data.md) defines the score, outcome, action components
+and cohort split. The [aggregate results guide](paper-results.md) identifies
+saved counts and estimates; the [reproduction guide](paper-reproduction.md)
+describes the calculation and verification commands.
