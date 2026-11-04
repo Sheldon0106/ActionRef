@@ -2,7 +2,7 @@
 
 The minimax summaries compare thresholds over a specified R grid separately
 within each evaluation cohort. They describe cohort-specific secondary scenarios;
-the primary operating candidate is selected on MIMIC learning data and then
+the primary operating candidate is selected on MIMIC derivation set data and then
 applied unchanged to evaluation data.
 
 The development selection curve provides aggregate confusion counts across

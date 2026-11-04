@@ -1,0 +1,68 @@
+{
+  "schema": "actionref.aggregate-bundle.v1",
+  "manuscript": "the manuscript and the supplement",
+  "assembled_date": "2026-11-04",
+  "generator": "examples/reproduce_extended.py",
+  "processing": "Assembly from saved nonidentifying aggregates; numeric estimates and uncertainty summaries retained; no clinical analysis or simulation rerun.",
+  "files": {
+    "minimax_regret.csv": {
+      "sha256": "3396b5251294e03627227f8b7188efdcbbf00733e43aea8c98281dcd94830779",
+      "rows": 6,
+      "sources": [
+        {
+          "path": "results/sepsis_primary/consequence_scenarios/paper_minimax_behavior_budget.csv",
+          "sha256": "586056e8b65265d62bfe75ded63f96169573f400dfb921df006322825eaec114"
+        }
+      ],
+      "source_run": "run_20261023T104445170533Z_5e79d9b15f84"
+    },
+    "transfer_target_sensitivity.csv": {
+      "sha256": "acaef559bfc299a4bbad9cb74751e1b29bf71c4b019d56ef58e39cc1074e1197",
+      "rows": 3,
+      "sources": [
+        {
+          "path": "results/sepsis_primary/era_and_transport/paper_transport_decomposition.csv",
+          "sha256": "181ec7f9823e2eae0de97a3bc508fffa443a8bdaf6c81896014f00d1316c95d6"
+        }
+      ],
+      "source_run": "run_20261023T104445170533Z_5e79d9b15f84"
+    },
+    "original_eight_scenarios.csv": {
+      "sha256": "fa663916eb15f6e5b4b48ea48b310597774b065ee8cfeb51116581b94d283211",
+      "rows": 192,
+      "sources": [
+        {
+          "path": "simulations/eight_scenarios/analysis2_existing_summary.csv",
+          "sha256": "aba4ad6d241c7387e2068a9a4ebc4affa37c19fbe5f44fc4f094e29dd1990c19"
+        }
+      ],
+      "source_run": "run_20261011T111658280658Z_d76a23f3bb9d"
+    },
+    "conventional_selection_uncertainty.csv": {
+      "sha256": "9008a131c4bc602b76aeedb9398a9fa012ac0eead4d1fec15b372cd3dbf1531a",
+      "rows": 6,
+      "sources": [
+        {
+          "path": "results/sepsis_primary/conventional_rules/comparator_selection_bootstrap_summary.csv",
+          "sha256": "9008a131c4bc602b76aeedb9398a9fa012ac0eead4d1fec15b372cd3dbf1531a"
+        }
+      ],
+      "source_run": "run_20261023T104445170533Z_5e79d9b15f84"
+    },
+    "subgroup_diagnostics.csv": {
+      "sha256": "ad629a70eaa71702eb65585497dec26b609a73557a3907c1414c68cdbb94c612",
+      "rows": 96,
+      "sources": [
+        {
+          "path": "results/sepsis_primary/subgroups/v7_subgroup_paper_summary_reconstructed.csv",
+          "sha256": "dd15232c4fc21929e12ae212dadb7b129e6d982e06d2e913dfb2717a01e04913"
+        },
+        {
+          "path": "results/sepsis_primary/subgroups/subgroup_predictive_calibration_detail.csv",
+          "sha256": "ef96cd17a88f92e3d54c366c0d42fbd92abeb7f863bc1d039be09adaaf7b828c"
+        }
+      ],
+      "source_run": "run_20261023T104445170533Z_5e79d9b15f84"
+    }
+  }
+}

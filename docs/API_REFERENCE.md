@@ -6,7 +6,7 @@ changepoint analyses were not used in the manuscript.
 | Function | Purpose |
 |---|---|
 | `validate_score` / `evaluate_score` | Score completeness, optional outcome performance and calibration. |
-| `fit_behavior_thresholds` | V7 binning, weighted isotonic curve, evidence gate, structural corroboration, semantic Low/Mid/High. |
+| `fit_behavior_thresholds` | V7 binning, weighted isotonic curve, support criteria, structural corroboration, semantic Low/Mid/High. |
 | `bootstrap_module2` | Optional encounter or grouped re-estimation. `BootstrapConfig(enabled=False)` is the runtime default. |
 | `build_threshold_table` | Per-observed-score alert, response, and optional outcome table plus zero-alert strategy. |
 | `apply_capacity` | Absolute-K mapping preserving semantic thresholds and provenance. |
@@ -22,7 +22,7 @@ changepoint analyses were not used in the manuscript.
 | `r_guidance_frame_questions` | The four framing questions required before elicitation. |
 | `evaluate_frozen_thresholds` | Frozen operating evaluation without learning or mutation. |
 | `predict_action_probability` | Fixed action-curve interpolation with endpoint clipping. |
-| `evaluate_action_curve` | Held-out action-probability metrics, reliability bins and optional paired patient-cluster intervals. |
+| `evaluate_action_curve` | internal validation action-probability metrics, reliability bins and optional paired patient-cluster intervals. |
 | `audit_subgroups` | Subgroup evaluation with demographic, operational-proxy, or custom role. |
 | `audit_temporal` | Era-normalized evaluation, subject-overlap audit, optional local Module 2 drift. |
 | `audit_transport` | Frozen external evaluation plus optional local diagnostic re-estimation. |
@@ -32,7 +32,7 @@ changepoint analyses were not used in the manuscript.
 
 - Every Module 2 result serializes its full configuration snapshot.
 - Outcome and response are separate inputs. They are never substituted for one another.
-- Only changepoints with `status="supported"` and support at or above `min_cp_bootstrap_support` can corroborate an anchor.
+- Only changepoints with `status="supported"` and support at or above `min_cp_bootstrap_support` can corroborate a reference threshold.
 - Corroboration cannot change `selected_threshold`.
 - Ratio-tier outputs are optional Module 3B scenario inputs, use no Module 2 behavior
   fields, and cannot create, relabel, or replace Low/Mid/High.
@@ -53,7 +53,7 @@ or recalibrate probabilities. Missing/nonfinite scores return NaN.
 `evaluate_action_curve(data, score_col, response_col, curve, learning_action_rate,
 group_col=None, n_bootstrap=0, random_state=2026100288)` returns an
 `ActionCurveEvaluation` with `points`, `intervals`, `reliability`, and `metadata`.
-The comparator predicts the supplied learning action rate for each complete
+The comparator predicts the supplied derivation action rate for each complete
 evaluation row. Intervals require a group column and use paired resampling of
 whole patient clusters conditional on the estimated curve. Returned summaries
 exclude patient identifiers and individual predictions.

@@ -52,11 +52,11 @@ nav:
       - Sepsis aggregate results: paper-results.md
       - Clinical data contract: paper-data.md
       - Sepsis illustration: clinical-example.md
-      - Manuscript and exploratory materials: evidence.md
+      - Manuscript result map: evidence.md
       - Figure sources: figures.md
   - Reference:
       - Python API: API_REFERENCE.md
-      - R elicitation: R_GUIDANCE.md
+      - K and R specification: R_GUIDANCE.md
       - Optional R scenarios: RATIO_RECOMMENDER_FINDINGS.md
       - Subgroups, time, and transport: GOVERNANCE_DIAGNOSTICS.md
       - Reproducing this site: development.md

@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.1.1 - 2026-11-04
+
+- Aligned documentation and the result map with the manuscript: Tables 1–3,
+  Figures 1–5, eTables 1–14 and eFigures 1–5.
+- Organized extended results: minimax regret, transfer-target sensitivity,
+  subgroup-level operating/calibration diagnostics, the original eight-scenario
+  simulation and conventional-rule selection uncertainty. The K/R guide remains
+  at `docs/R_GUIDANCE.md`.
+- Added the reported cohort characteristics, fixed ESRP study-tier boundaries,
+  conventional-rule operating rows and the 0–100 derivation FAE curve.
+- Added aggregate assembly and arithmetic checks. Saved intervals are reused;
+  clinical analyses and simulations were not rerun. Algorithms, defaults and
+  reported numerical results are unchanged.
+- Pinned the package-test runner to Ubuntu 22.04 to retain Python 3.8 coverage
+  after the hosted latest image changed to Ubuntu 26.04.
+- Fixed release: `v1.1.1`.
+
 ## 1.1.0 - 2026-10-25
 
 - Updated the sepsis aggregate evidence for the complete MIMIC ED cohort,
@@ -29,7 +46,7 @@
 
 - Aligned the README and documentation with the final JAMIA submission,
   October 2026, including eTables 1-15 and eFigures 1-7.
-- Added saved aggregate materials for NEWS, MEWS, REMS and two-criterion qSOFA,
+- Added saved aggregate materials for NEWS, MEWS, REMS and qSOFA,
   reference uncertainty, score assessment, logistic comparison, action components,
   action windows, era/transport, subgroups, conventional rules and simulations.
   Added the saved joint-reference and paired loss-difference intervals.
@@ -54,7 +71,7 @@
   as exploratory materials not reported in the manuscript.
 - Removed obsolete supplementary-table mappings and clarified that the aggregate
   entry point reads saved uncertainty summaries rather than re-estimating them.
-- Added the existing eight-scenario and paired support-gate simulation runners,
+- Added the existing eight-scenario and paired support-criteria simulation runners,
   configurations, seeds and saved condition-level error summaries. Only source
   and output path handling was adapted for the public repository; simulations
   were not rerun. Algorithms, defaults and reported numerical values are unchanged.
@@ -83,7 +100,7 @@
   policy, configurations and executable aggregate reproduction.
 - Added the real-data COPD partial-output illustration and unified reference
   colors across the R figures.
-- Added the five-step R-setting guide, distinguishing learning-data re-selection
+- Added the five-step R-setting guide, distinguishing derivation-data re-selection
   in Supplement eMethods 3 from the fixed comparison in eTable 37.
 - Updated paper-table/source mappings and public-data checks for the new bundles.
 
@@ -112,7 +129,7 @@
 - Added synthetic disease-agnostic contract tests, including a check that no core module contains a disease or source column name.
 - Added primary sepsis aggregate source data, executable Table 3 and eTables 35–37
   reconstruction, and an analysis runner for authorized clinical tables.
-- Added action-curve interpolation, held-out evaluation, paired patient-cluster
+- Added action-curve interpolation, internal validation evaluation, paired patient-cluster
   intervals, and executable absolute, relative, partial and abstention examples.
 - Aligned figure colors with the paper and supplied editable SVG, PDF and 300-dpi PNG
   exports generated in R.
@@ -121,7 +138,7 @@
 ## 0.1.0rc1 - 2026-08-20
 
 - Installable Python 3.8-compatible package structure and public API.
-- V7 evidence-gated, semantic-first Module 2 with explicit abstention.
+- V7 Support-based, semantic-first Module 2 with explicit abstention.
 - Shared threshold-table engine and absolute-K Module 3A.
 - Disease-agnostic Module 3B: objective, inclusive cost tie rule, same-or-lower-workload audit, unconstrained comparator, binding classification, near-optimal regions.
 - Lambda semantics: nonbinding is calculated zero; missing or invalid calibrator is unavailable with a reason.

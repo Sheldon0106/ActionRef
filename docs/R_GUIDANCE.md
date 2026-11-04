@@ -1,9 +1,14 @@
-# Setting R for a specified workflow
+# Setting K and R for a specified workflow
 
 `R = C_FN / C_FP` — modeled relative consequence of one missed outcome-positive case versus one false alert.
 
 - Never estimated from prevalence.
 - Never selected to favor a preferred cutoff.
+
+K states an alert budget for a named workflow, team and period. For example,
+50 additional assessments per week is a capacity input; the action count in a
+retrospective dataset is not a staffing estimate. The manuscript uses a reference
+workload ceiling for comparison. Supplement eMethods 2 links to this guide.
 
 ## Five-step workflow
 
@@ -19,13 +24,13 @@
 3. **Record the reference value and range.** Preserve sources, assumptions and
    uncertainty. R is a consequence ratio, not an outcome prevalence or a score
    cutoff. Do not choose its value to obtain a preferred candidate.
-4. **Evaluate sensitivity on learning data.** For each prespecified R, minimize
+4. **Evaluate sensitivity on derivation data.** For each prespecified R, minimize
    `FAE = FP + R * FN` over thresholds using `score >= t`, both without a capacity
    constraint and under the stated K. Module 3B resolves loss ties in favor of
    more alerts, then the lower threshold. Report the selected thresholds, grid
    stability, workload and outcome coverage. A grid stability band is neither a
    continuous analytical interval nor a statistical confidence interval.
-5. **Evaluate the chosen candidate unchanged.** Apply the learning choice to
+5. **Evaluate the chosen candidate unchanged.** Apply the derivation-set choice to
    evaluation data and present benefits and costs together. A fixed pair's loss
    crossing is a different question from threshold re-selection. Document the
    workflow and review the trade-off with its stakeholders.
@@ -34,7 +39,7 @@
 flowchart TD
     A[Define action, outcome, perspective and horizon] --> B[Choose a justified R source]
     B --> C[Record reference value and uncertainty range]
-    C --> D[Compare thresholds on learning data across R and K]
+    C --> D[Compare thresholds on derivation data across R and K]
     D --> E[Evaluate the chosen candidate unchanged and review trade-offs]
 ```
 
@@ -42,19 +47,19 @@ flowchart TD
 
 The reference value is **R = 11,299/804 = 14.0534825870647** for the proposed
 diagnostic/short-course antibiotic workflow. The Low-27 comparison ceiling is
-**K = 116,236 alerts in 314,658 score-complete learning encounters**. It is a
+**K = 116,236 alerts in 314,658 score-complete derivation encounters**. It is a
 reference workload ceiling, not measured staffing capacity. The observed action
 composite used in Module 2 has a different definition.
 
-At this R, threshold **34** minimizes learning-data weighted loss both without a
+At this R, threshold **34** minimizes derivation-data weighted loss both without a
 capacity constraint and under the Low workload ceiling. It flags **59,849**
-learning encounters. The learning selection grid is supplied in
+derivation encounters. The derivation selection grid is supplied in
 `results/sepsis_primary/`; the fixed 34-versus-27 evaluation comparison is a
 separate calculation. The fixed-pair loss crossing is R ≈ **20.77** in MIMIC
-held-out data and **26.28** at Stanford. It compares these two thresholds, without
+internal validation data and **26.28** at Stanford. It compares these two thresholds, without
 reselecting a candidate in the evaluation cohorts.
 
-For prepared learning data, the package call is:
+For prepared derivation data, the package call is:
 
 ```python
 from universal_cutoff import build_threshold_table, ratio_invariance
@@ -180,6 +185,14 @@ Returns:
 - Status values: `evidence_based`, `consensus_based`, `locally_costed`, `scenario_based`, `insufficient_basis`.
 - Source types: expert elicitation, Delphi elicitation, published evidence, local costing, stakeholder preference, policy, scenario assumption.
 - Module 3B decision-transition R values may extend the grid after primary and range are fixed. Out-of-range values excluded. They cannot change the primary R.
+
+## Extended scenario results
+
+[Extended results](https://github.com/Sheldon0106/ActionRef/tree/main/results/supplement_extended)
+include the saved minimax-regret and transfer-target sensitivity analyses. These
+cohort-specific scenarios are separate from evaluation of the revised threshold
+34 selected in the MIMIC derivation set. Saved estimates are reused by
+`examples/reproduce_extended.py`.
 
 ## Optional minimax regret
 

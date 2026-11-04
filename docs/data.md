@@ -29,9 +29,9 @@ relationship belongs in the interpretation, not in a silent relabeling of inputs
 
 `run_framework` does not create a data split. Split upstream, using patient groups
 when people contribute repeated encounters. Learn references and choose candidates
-on learning data, then evaluate their fixed values on held-out or external data.
+on derivation data, then evaluate their fixed values on internal validation or external data.
 Fit any outcome calibrator on development data and evaluate it separately when
-a held-out calibration claim is needed.
+a internal validation calibration claim is needed.
 
 ## Denominators and missing data
 

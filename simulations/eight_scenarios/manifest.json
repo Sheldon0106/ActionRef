@@ -2,7 +2,7 @@
   "schema": "actionref.aggregate-bundle.v1",
   "manuscript": "JAMIA submission, October 2026",
   "assembled_date": "2026-10-20",
-  "manuscript_locations": "eTable 14A-B; eFigure 6",
+  "manuscript_locations": "extended repository results",
   "files": {
     "analysis2_existing_summary.csv": {
       "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis2_existing_summary.csv",

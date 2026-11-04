@@ -4,20 +4,22 @@
   "assembled_date": "2026-10-25",
   "files": {
     "paper_module1_point.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/rr1_module1_points.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/primary_module1_points.csv",
       "source_sha256": "850b309dc6039c9f1966fa5a68819e849ef7cdf26fdfdd2f52ffd37938f6286c",
       "sha256": "218a9c8ed84a0ee9559aa6c2e20f224d39b82826680013087ff6f74a8631af9e",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "paper_module1_bootstrap_ci.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/rr1_module1_intervals.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/primary_module1_intervals.csv",
       "source_sha256": "a758511316c08e08ae316322785b3ae998079274c4adc44f2d25ec1e55a02814",
       "sha256": "7dadd881b8a23b93f19720013a25d4cb7427268f66699d227acddeae66a575fe",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     }
   },
   "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
-  "analysis_revision": "RR1 same-source full cohort"
+  "analysis_revision": "same-source complete cohort",
+  "source_run": "run_20261023T104445170533Z_5e79d9b15f84",
+  "source_label_note": "Portable logical labels; original source hashes identify the saved inputs."
 }

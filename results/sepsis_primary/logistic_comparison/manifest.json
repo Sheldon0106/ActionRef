@@ -4,41 +4,43 @@
   "assembled_date": "2026-10-25",
   "files": {
     "analysis3_curve_comparison.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/action_calibration_points.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/action_calibration_points.csv",
       "source_sha256": "e00c8f6fdb481f600ab60e1f2735f2502108aace0df4c60d6aa2e5b8cbfe13e1",
       "sha256": "b496945e615bf08663689ddeace6069fc7733ac8763655c783b20a8697021e1b",
       "selection": "isotonic_raw_interpolation and logistic points; stable public columns",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "analysis3_logistic_crossings.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/rr1_logistic_crossings_old_new.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/primary_logistic_crossings_old_new.csv",
       "source_sha256": "98e5061ee6b72ed597716d65716b8d9db3b56858b73694aadcbb1039905f1d7d",
       "sha256": "4a8a592cc775625820da93bb5e37a77127dc333fbe7f23aa99a4c32631a0b8a6",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "analysis3_paired_Brier_interval.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/action_calibration_intervals.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/action_calibration_intervals.csv",
       "source_sha256": "3dde4ff6fb60850b5d7c10863f59fff7d90ce746ac0890ec794e2760afd09580",
       "sha256": "3adc5cb95374a394b961776ead929e3e21e1831c0f3cdd20e4c03e86de0fd0dd",
       "selection": "saved V8_logistic_comparison interval; point difference from current action_calibration_points.csv",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "analysis3_probability_curves.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/action_calibration_model_metadata.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/action_calibration_model_metadata.csv",
       "source_sha256": "a0e70a89acaaf74eb27c99daf53895c4bc6f7b8afb66b3489d89819dc6eae7ba",
       "sha256": "4f7ca8565de8d5847451646b193173143aa9df5826c7d403a3fc325da444fa1b",
       "selection": "deterministic predictions from saved logistic coefficients at supported score bins; current isotonic curve unchanged",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "analysis3_reliability_bins.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/action_calibration_reliability.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/action_calibration_reliability.csv",
       "source_sha256": "27581e3d0783fb2a90b3b2029e4aa3d7ba0fd218f88870093a7afad399fe74eb",
       "sha256": "8e92b0edc1fa4590dfaeea458722ee64ccdb8c9bcf3e27ebf9faf9a940bc2cc0",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     }
   },
   "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
-  "analysis_revision": "RR1 same-source full cohort"
+  "analysis_revision": "same-source complete cohort",
+  "source_run": "run_20261023T104445170533Z_5e79d9b15f84",
+  "source_label_note": "Portable logical labels; original source hashes identify the saved inputs."
 }

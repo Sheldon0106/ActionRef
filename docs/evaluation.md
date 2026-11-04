@@ -12,7 +12,7 @@ report = evaluate_frozen_thresholds(
 )
 ```
 
-The input may be an anchors DataFrame or a mapping such as `{"Low": 27, "candidate": 34}`.
+The input may be a reference-threshold DataFrame or a mapping such as `{"Low": 27, "candidate": 34}`.
 At least one finite threshold is required. If a requested value is not observed,
 the table uses the next observed value representing the same `score >= threshold`
 decision, including the zero-alert strategy when needed. Requested and evaluated
@@ -22,7 +22,7 @@ values are both reported.
 
 | Question | Evidence |
 |---|---|
-| Does the curve describe recorded actions? | Observed rates and support; held-out action-probability evaluation |
+| Does the curve describe recorded actions? | Observed rates and support; internal validation action-probability evaluation |
 | Are reference values stable? | Bootstrap distributions and availability |
 | What happens when a threshold is applied? | Alerts, action yield, recall, missed outcomes, and scenario loss |
 | Does the workflow improve care? | Clinical review or prospective evaluation in its intended setting |
@@ -45,7 +45,7 @@ print(action_report.points)
 print(action_report.intervals)
 ```
 
-The curve and learning-rate comparator stay fixed. Prediction uses linear
+The curve and derivation-rate comparator stay fixed. Prediction uses linear
 interpolation with endpoint clipping; intervals resample all eligible encounters
 within each sampled patient. They quantify evaluation uncertainty conditional on
 the curve, rather than uncertainty from relearning it. The descriptive calibration

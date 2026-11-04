@@ -2,7 +2,7 @@
 
 These tables assess ESRP discrimination and outcome-probability calibration
 against the clinical-only Sepsis-3 outcome. The learning calibration map is fixed
-before held-out and Stanford evaluation. Uncertainty summaries use 200 requested
+before internal validation and Stanford external validation cohort. Uncertainty summaries use 200 requested
 patient-cluster resamples.
 
 Outcome-risk assessment is separate from prediction of recorded actions, whose

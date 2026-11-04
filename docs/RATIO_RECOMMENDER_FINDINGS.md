@@ -6,7 +6,7 @@ manuscript.** COPD in these tables uses its earlier supplied-score/action settin
 See the [evidence guide](evidence.md#exploratory-materials) for their development roles.
 
 The current primary sepsis example uses **R = 11,299/804**, a Low-reference workload
-ceiling, and learning-data re-selection.
+ceiling, and derivation-data re-selection.
 Its [five-step R guide](R_GUIDANCE.md) distinguishes re-selection from the fixed
 34-versus-27 evaluation comparison. The historical R=15 results below do not
 replace the current primary example.
@@ -54,9 +54,9 @@ how fast and how badly the miss hurts, and how costly it is to act on a well pat
 ## 2. The tier table
 
 Each tier is anchored to a published threshold probability. These adjacent-decision
-anchors make the defaults prespecified scenarios, not locally estimated parameters.
+thresholds make the defaults prespecified scenarios, not locally estimated parameters.
 
-| Tier | Decision profile | Published anchor | pt | Default R | Band | Alerts per case |
+| Tier | Decision profile | Published threshold basis | pt | Default R | Band | Alerts per case |
 |---|---|---|---|---|---|---|
 | **A** | Time-critical illness, cheap and safe response | PE testing threshold ~1.8–2% (Pauker–Kassirer); this framework's ED sepsis cost build at 6.25% | 2–6.25% | **20** | 15–49 | ~21 |
 | **B** | Serious but not hour-critical, moderate response | Statin primary prevention at 7.5% 10-year ASCVD risk | 7–15% | **10** | 6–13 | ~11 |
@@ -75,7 +75,7 @@ test for each.
 
 Measured on each disease's own confusion table, sweeping R from 1 to 100. Only the
 score-by-outcome distribution is used — no treatment or behaviour data, so nothing here
-is entangled with the Module 2 anchors.
+is entangled with the Module 2 reference thresholds.
 
 `recall spread` is the range of recall produced by **every R in the tier band**. Zero
 means the choice of R is irrelevant at that capacity.
@@ -105,7 +105,7 @@ nominal capacity limit is binding for every R.
 
 The historical full-sample sepsis analysis compared its R = 15 literature scenario
 with the Tier A default R = 20. Its sample and capacity fractions differ from the
-primary paper's learning-data Low workload ceiling:
+primary paper's derivation-data Low workload ceiling:
 
 | Capacity | Cost-optimal threshold at R = 15 (literature) | at R = 20 (tier default) | Same? |
 |---|---|---|---|
@@ -127,7 +127,7 @@ thresholds. It does not supply a setting-specific value of R for a new workflow.
 
 ## 5. Honest limitations
 
-- **The anchors come from adjacent decisions, not from the user's setting.** A tier
+- **The source thresholds come from adjacent decisions, not from the user's setting.** A tier
   default is a starting point; where the invariance band is narrow, results should be
   reported across the band (the standard decision-curve convention) or R narrowed locally.
 - **One-disease validation.** Only sepsis has both a literature build and a tier pick,

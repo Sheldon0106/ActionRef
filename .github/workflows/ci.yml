@@ -6,7 +6,8 @@ permissions:
   contents: read
 jobs:
   package:
-    runs-on: ubuntu-latest
+    # Python 3.8 binaries are available on 22.04, not the current latest image.
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         python-version: ['3.8', '3.11', '3.13']
@@ -20,6 +21,7 @@ jobs:
       - run: python examples/synthetic_walkthrough.py
       - run: python examples/reference_states.py
       - run: python examples/reproduce_paper.py
+      - run: python examples/reproduce_extended.py
       - run: python examples/reproduce_additional.py
       - run: python examples/reproduce_aert.py
       - run: python examples/sepsis_paper_analysis.py --help

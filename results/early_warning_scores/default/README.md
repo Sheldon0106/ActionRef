@@ -1,13 +1,13 @@
-# Adapted early warning scores: default settings
+# Early warning scores: default settings
 
-These materials apply ActionRef to adapted NEWS2, adapted MEWS, adapted REMS and
-two-criterion qSOFA. MIMIC references are 2/3/7, 2/4/6 and 3/11/12 for the first
-three scores, respectively. Adapted REMS High uses a relative probability target.
+These materials apply ActionRef to NEWS2, MEWS, REMS and
+qSOFA. MIMIC references are 2/3/7, 2/4/6 and 3/11/12 for the first
+three scores, respectively. REMS High uses a relative probability target.
 Each reference bootstrap for these three scores requests 500 resamples per site.
 
 All fixed-reference operating rows use MIMIC thresholds unchanged at both sites.
 Stanford local estimates describe local practice and are reported separately.
-Default two-criterion qSOFA has three supported bins, below the eight-bin
+Default qSOFA has three supported bins, below the eight-bin
 requirement, so it returns no references and reference bootstrapping is not run.
 The non-default short-scale analysis is stored in the sibling directory.
 
@@ -27,12 +27,21 @@ The non-default short-scale analysis is stored in the sibling directory.
 - `module1_current_intervals.csv`
 - `module1_frozen_calibration_maps.csv`
 
-## Retained historical files
+## Score definitions
 
-These earlier values or definitions are retained for historical reference and are
-not inputs to the current summaries.
+The component definitions below document the supplied score implementations
+(eTable 2). Their source labels are retained; current score checks are recorded
+in `score_formula_regression.csv`.
+
 - `score_formula_definition.csv`
 - `score_component_implementation.csv`
+
+## Retained historical summaries
+
+These earlier missingness and action-definition summaries are retained for
+reference; current cohort denominators and action components come from the
+primary sepsis bundle.
+
 - `score_component_missingness.csv`
 - `primary_action_definition.csv`
 

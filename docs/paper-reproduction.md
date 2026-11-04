@@ -12,28 +12,36 @@ are not redistributed.
 python -m pip install -e ".[test,research]"
 python examples/reproduce_paper.py
 python examples/reproduce_paper.py --early-warning-scores
+python examples/reproduce_extended.py
 ```
 
-This command recalculates sepsis operating rates, recorded-action yields and the
+The primary entry point recalculates sepsis operating rates, recorded-action yields and the
 fixed 34-versus-27 loss comparison from saved aggregate counts. Action-probability
 point estimates and some uncertainty intervals are read from saved summaries;
 this entry point does not re-estimate those intervals or rebuild the patient-level
 cohorts. Outputs are written to ignored `output/paper/`.
 
-The optional flag adds ESRP, adapted NEWS2, adapted MEWS and adapted REMS at the
+The optional flag adds ESRP, NEWS2, MEWS and REMS at the
 fixed MIMIC references in both evaluation cohorts. It checks recalculated alert
 rates and sepsis sensitivity against saved rates. All four scores use **134,146**
-MIMIC held-out encounters and **118,385** Stanford encounters. Recorded-action
+MIMIC internal validation encounters and **118,385** Stanford encounters. Recorded-action
 yield excludes flagged encounters with missing action labels from its denominator.
 The [data contract](paper-data.md) specifies the clinical-only outcome and partitions.
+
+The extended entry point checks the ESRP study-tier and conventional-rule rates,
+reconstructs the integer-threshold FAE counts from the saved score histogram, and
+assembles five extended summaries. It reads previously estimated uncertainty
+and simulation results without rerunning either analysis. See the
+[table and figure map](evidence.md#manuscript-result-map) for source coverage.
 
 ## Saved analysis materials
 
 | Location | Contents |
 |---|---|
 | `results/sepsis_primary/` | Primary ESRP action curves, reference summaries, operating counts, action-probability evaluation, consequence comparisons and supplementary analysis summaries |
-| `results/early_warning_scores/` | Adapted-score definitions, curves, references and fixed-reference evaluation; the separate short-scale qSOFA setting is identified explicitly |
-| `simulations/` | Eight-scenario and paired support-gate runners, configurations, seeds and saved condition-level error summaries |
+| `results/early_warning_scores/` | Score definitions, curves, references and fixed-reference evaluation; the separate short-scale qSOFA setting is identified explicitly |
+| `results/supplement_extended/` | Minimax regret, transfer-target sensitivity, subgroup diagnostics, original simulation and rule-selection uncertainty |
+| `simulations/` | Eight-scenario and paired support-criteria runners, configurations, seeds and saved condition-level error summaries |
 
 The [aggregate results](paper-results.md) distinguish count-based calculations
 from previously estimated curves and intervals. Reference-relearning intervals,

@@ -27,7 +27,7 @@ isotonic range must be at least 0.08, the logistic slope positive, and logistic 
 improvement at least 6. An unsupported monotone relationship returns no references. Insufficient bins or an unusable score range instead raise explicit
 input/support errors.
 
-Available anchors must maintain their semantic order. An ordering inversion leaves
+Available reference thresholds must maintain their semantic order. An ordering inversion leaves
 the affected reference unavailable. Coincident references keep their labels, with
 one marked as the unique operating representative. A result can therefore contain
 a full set, a partial set, or no supported references.
@@ -52,7 +52,7 @@ was the correct decision.
 
 Changepoints can corroborate a reference after the required support checks; they
 cannot move it. Bootstrap re-estimation describes reference stability and is
-disabled by default. It is separate from held-out operating evaluation.
+disabled by default. It is separate from internal validation operating evaluation.
 See the [API reference](API_REFERENCE.md) for output objects.
 
 Changepoint functionality is retained for exploratory use; changepoint analyses

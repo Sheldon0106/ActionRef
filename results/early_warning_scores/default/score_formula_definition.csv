@@ -1,5 +1,5 @@
 score,recommended_name,formula_function,formula_source_sha256,preprocessing_scope
-NEWS2,four-component NEWS2-derived score,"def add_score_NEWS2(df):   
+NEWS2,NEWS2,"def add_score_NEWS2(df):   
     conditions1 = [
         (df['triage_resprate'] <= 8),
         (df['triage_resprate'] >= 9) & (df['triage_resprate'] <= 11),
@@ -35,7 +35,7 @@ NEWS2,four-component NEWS2-derived score,"def add_score_NEWS2(df):
     values4 = [3, 1, 0, 1, 2, 3]   
     df['score_NEWS2'] = np.select(conditions1, values1) + np.select(conditions2, values2) + np.select(conditions3, values3) +                              np.select(conditions4, values4)
     print(""Variable 'Score_NEWS2' successfully added"")",ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a,stored preprocessed fields reused; original missing indicators separately reported; upstream imputation fit partition not reconstructed in this task
-MEWS,four-component adapted MEWS,"def add_score_MEWS(df):     
+MEWS,MEWS,"def add_score_MEWS(df):     
     conditions1 = [
         (df['triage_sbp'] <= 70),
         (df['triage_sbp'] >= 71) & (df['triage_sbp'] <= 80),
@@ -69,7 +69,7 @@ MEWS,four-component adapted MEWS,"def add_score_MEWS(df):
     values4 = [2, 0, 2]        
     df['score_MEWS'] = np.select(conditions1, values1) + np.select(conditions2, values2) + np.select(conditions3, values3) +                              np.select(conditions4, values4) 
     print(""Variable 'Score_MEWS' successfully added"")",ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a,stored preprocessed fields reused; original missing indicators separately reported; upstream imputation fit partition not reconstructed in this task
-REMS,five-component adapted REMS (without GCS),"def add_score_REMS(df):
+REMS,REMS,"def add_score_REMS(df):
     conditions1 = [
         (df['age'] < 45),
         (df['age'] >= 45) & (df['age'] <= 54),
@@ -116,7 +116,7 @@ REMS,five-component adapted REMS (without GCS),"def add_score_REMS(df):
     values5 = [4, 3, 1, 0]
     df['score_REMS'] = np.select(conditions1, values1) + np.select(conditions2, values2) + np.select(conditions3, values3) +                              np.select(conditions4, values4) + np.select(conditions5, values5)
     print(""Variable 'Score_REMS' successfully added"")",ca43b89501680e1066ffbc2dd95da6528150fa35a21494c7f72034bc7d46b88a,stored preprocessed fields reused; original missing indicators separately reported; upstream imputation fit partition not reconstructed in this task
-qSOFA,two-component qSOFA-derived score,"def add_score_qSOFA(df):
+qSOFA,qSOFA,"def add_score_qSOFA(df):
     conditions1 = [
         (df['triage_resprate'] >= 22),
         (df['triage_resprate'] < 22)
