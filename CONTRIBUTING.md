@@ -21,16 +21,16 @@ or candidate selection should explain the scientific effect and include a separa
 results comparison. Documentation changes should preserve the distinction between
 behavioral references, capacity-adjusted candidates, and outcome evaluation.
 
-## Documentation and figures
+## Documentation and tutorial artwork
 
 Edit Markdown under `docs/`, and update the navigation in `mkdocs.yml`. Preview with
-`python -m mkdocs serve`. Figures use R/grid and committed aggregate inputs:
+`python -m mkdocs serve`. The software illustrations use R/grid and committed aggregate inputs:
 
 ```bash
 Rscript scripts/build_figures.R
 ```
 
-See [figure provenance](docs/figures.md) for sources and interpretation. Commit the
+See [documentation artwork](docs/figures.md) for sources and interpretation. Commit the
 R sources and regenerated PNG, SVG, and PDF together. The figure guide includes R
 dependency installation and synthetic-data regeneration. Inspect the complete
 figure and separate panels in `output/figures/`; keep QA files there and site builds

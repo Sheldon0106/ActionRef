@@ -193,98 +193,10 @@ def calculate_early_warning_scores(source=SOURCE, early_warning_source=EARLY_WAR
     return pd.concat([esrp[comparators.columns], comparators], ignore_index=True)
 
 
-def report(tables):
-    roles = {'MIMIC held-out': 'MIMIC internal validation set',
-             'Stanford transport': 'Stanford external validation cohort'}
-    lines = ['# Sepsis aggregate results', '',
-        'These tables summarize the primary sepsis analysis. Behavioral references',
-        'were estimated from recorded actions. The revised threshold 34 was selected on the MIMIC derivation set',
-        'with Low 27 as the workload comparator and R = 11,299/804.', '',
-        '## Table 3 and eTable 7: reference and revised thresholds', '',
-        'Unflagged counts refer to outcome-positive encounters below the threshold.', '']
-    for cohort, frame in tables['table3_operating_results'].groupby('cohort', sort=False):
-        lines += ['**{}**'.format(roles.get(cohort, cohort)), '',
-            '| Threshold | Alerts /1,000 | Recorded-action yield | Sepsis sensitivity | Unflagged /1,000 | FAE /1,000 |',
-            '|---:|---:|---:|---:|---:|---:|']
-        for r in frame.itertuples():
-            lines.append('| {} | {:.1f} | {:.1%} | {:.1%} | {:.2f} | {:.2f} |'.format(
-                r.threshold, r.alerts_per_1000, r.observed_action_yield, r.recall,
-                r.unflagged_outcomes_per_1000, r.FAE_per_1000))
-        lines.append('')
-    lines += ['', 'Recorded-action yield uses flagged encounters with known action status. Sepsis sensitivity uses',
-        'outcome-positive encounters. Per-1,000 rates use 134,146 MIMIC internal validation or',
-        '118,385 Stanford encounters. FAE is',
-        'false-alarm-equivalent loss, FP + R × FN. It is a scenario-weighted count.', '',
-        '## eTable 3: action-probability evaluation', '',
-        'Evaluation uses 132,878 encounters from 64,278 patients. The derivation curve and',
-        'constant derivation-rate comparator are held fixed. Intervals use 200 patient-cluster',
-        'resamples and quantify evaluation uncertainty conditional on those predictions.', '',
-        '| Metric | Continuous interpolation | 95% interval | Bin-assignment sensitivity |',
-        '|---|---:|---|---:|']
-    labels = {'action_rate':'Observed action rate', 'mean_predicted':'Mean prediction',
-              'calibration_gap':'Predicted minus observed', 'action_Brier':'Brier score',
-              'constant_development_rate_Brier':'Constant-rate Brier score',
-              'delta_Brier_vs_constant':'Paired Brier difference', 'Brier_skill':'Brier skill',
-              'action_log_loss':'Log loss', 'calibration_intercept':'Calibration intercept',
-              'calibration_slope':'Calibration slope'}
-    for r in tables['action_probability'].itertuples():
-        interval = '{:.5f} to {:.5f}'.format(r.lower_025, r.upper_975) if np.isfinite(r.lower_025) else 'Not estimated'
-        lines.append('| {} | {:.5f} | {} | {:.5f} |'.format(labels[r.metric], r.continuous_interpolation,
-                                                               interval, r.bin_assignment_sensitivity))
-    lines += ['', 'Calibration intercept and slope are descriptive fits to fixed predictions.',
-        'The bin-assignment sensitivity is reported as a point estimate.', '',
-        '## eTable 8: fixed 34-versus-27 comparison', '',
-        '| R | MIMIC ΔFAE /1,000 | Stanford ΔFAE /1,000 |', '|---:|---:|---:|']
-    for _, rows in tables['fixed_R_sensitivity'].groupby('R', sort=True):
-        m = rows.loc[rows.cohort.eq('MIMIC held-out')].iloc[0]
-        s = rows.loc[rows.cohort.eq('Stanford transport')].iloc[0]
-        lines.append('| {:.5g} | {:.2f} | {:.2f} |'.format(m.R, m.delta_FAE_per_1000_34_minus_27,
-                                                        s.delta_FAE_per_1000_34_minus_27))
-    lines += ['', 'ΔFAE = L(34) − L(27). Negative values favor 34 within this fixed pair.',
-        'Equality occurs at R = 20.76930 in MIMIC and 26.28256 in Stanford.',
-        'Candidates are not reselected on evaluation data. These crossings describe',
-        'this pair, not an optimum over all possible thresholds.', '',
-        'This is a fixed-pair comparison. Derivation-data re-selection and',
-        'R-setting are described in the Supplementary methods and the [R guide](R_GUIDANCE.md).']
-    if 'four_score_operating_results' in tables:
-        lines += ['', '## Figure 5: four-score comparison', '',
-            'MIMIC references are applied unchanged at both sites. Stanford local',
-            'reference estimates describe local practice and are not used in these rows.', '',
-            '| Cohort | Score | Level | Threshold | Encounters | Alerts /1,000 | Sepsis sensitivity |',
-            '|---|---|---|---:|---:|---:|---:|']
-        for r in tables['four_score_operating_results'].itertuples():
-            lines.append('| {} | {} | {} | {:g} | {:,} | {:.1f} | {:.1%} |'.format(
-                roles.get(r.cohort, r.cohort), r.score, r.reference, r.threshold, int(r.policy_N),
-                r.alerts_per_1000, r.sepsis_sensitivity))
-        lines += ['', 'The MIMIC denominator is 134,146 for all four scores; Stanford uses',
-            '118,385. Alerts and sensitivity are recalculated',
-            'from TP, FP, FN and TN and checked against the saved comparator rates.',
-            'The REMS High reference uses a relative probability target.',
-            'Default qSOFA returns no references and is omitted from the four-score comparison.', '']
-    lines += ['',
-        '## Conventional rules and ESRP tiers', '',
-        'The remaining Table 3 and eTable 6 operating rows are supplied in',
-        '`results/sepsis_primary/conventional_rules/rule_operating_rows.csv` and',
-        '`esrp_tier_boundaries.csv`. The latter applies the ESRP derivation-study',
-        'boundaries 21/31/45 unchanged. Run `python examples/reproduce_extended.py`',
-        'to check these count-based rates and the 101-point derivation FAE curve.', '',
-        'See the [manuscript result map](evidence.md#manuscript-result-map) for every table and figure.', '',
-        '## Reproduction', '',
-        'Run `python examples/reproduce_paper.py --early-warning-scores` from the repository root.',
-        'It recomputes operating rates, action yields and R sensitivity from shared counts.',
-        'The action-probability estimates and intervals are restored from the reported',
-        'aggregate outputs; recomputing them requires encounter-level action and score data.', '',
-        'This aggregate entry point does not rebuild patient-level cohorts or',
-        're-estimate every manuscript result. See the [reproduction scope](paper-reproduction.md).',
-        '']
-    return '\n'.join(lines)
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source-dir', type=Path, default=SOURCE)
     parser.add_argument('--output-dir', type=Path, default=ROOT / 'output/paper')
-    parser.add_argument('--write-docs', action='store_true', help='Also update docs/paper-results.md')
     parser.add_argument('--early-warning-scores', action='store_true',
                         help='Also verify and report four-score rates from saved aggregate counts')
     args = parser.parse_args()
@@ -294,10 +206,6 @@ def main():
     args.output_dir.mkdir(parents=True, exist_ok=True)
     for name, table in tables.items():
         table.to_csv(args.output_dir / (name + '.csv'), index=False)
-    text = report(tables)
-    (args.output_dir / 'results.md').write_text(text, encoding='utf-8')
-    if args.write_docs:
-        (ROOT / 'docs/paper-results.md').write_text(text, encoding='utf-8')
     print('Recalculated sepsis operating rates, recorded-action yields and fixed R comparisons; source and arithmetic checks passed.')
     if args.early_warning_scores:
         display = tables['four_score_operating_results'].replace({'cohort': {

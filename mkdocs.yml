@@ -53,16 +53,13 @@ nav:
       - Clinical data contract: paper-data.md
       - Sepsis illustration: clinical-example.md
       - Manuscript result map: evidence.md
-      - Figure sources: figures.md
+      - Documentation illustrations: figures.md
   - Reference:
       - Python API: API_REFERENCE.md
       - K and R specification: R_GUIDANCE.md
       - Optional R scenarios: RATIO_RECOMMENDER_FINDINGS.md
       - Subgroups, time, and transport: GOVERNANCE_DIAGNOSTICS.md
       - Reproducing this site: development.md
-  - Development records (not paper applications):
-      - Reference regression record: CONTROLLED_REGRESSION_REPORT.md
-      - Earlier disease compatibility: DISEASE_COMPATIBILITY_REPORT.md
 validation:
   links:
     not_found: warn

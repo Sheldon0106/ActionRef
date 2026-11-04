@@ -13,7 +13,7 @@ interpretable reference points for discussing alert thresholds and their consequ
 
 [Run the example](quickstart.md){ .md-button .md-button--primary }
 [Understand the references](references.md){ .md-button }
-[Reproduce the paper](paper-reproduction.md){ .md-button }
+[Analysis and aggregate checks](paper-reproduction.md){ .md-button }
 </div>
 
 ![The ActionRef workflow, from existing scores and observed actions to behavioral references, operating candidates, and separate evaluation.](assets/figures/workflow.png)
@@ -24,7 +24,7 @@ interpretable reference points for discussing alert thresholds and their consequ
 
 Using your own score? Start with the [synthetic walkthrough](quickstart.md) and
 [output states](output-states.md). Reading the paper? Open the
-[primary result tables](paper-results.md) and their [reproduction guide](paper-reproduction.md).
+[aggregate results](paper-results.md) and their [reproduction guide](paper-reproduction.md).
 
 <div class="feature-grid" markdown>
 <div class="feature-card" markdown>
@@ -68,11 +68,6 @@ recorded-action analysis to other scores. The manuscript examines emergency
 sepsis assessment. The
 [sepsis aggregate results](paper-results.md) and [reproduction guide](paper-reproduction.md)
 describe the shared analysis materials and the scope of the aggregate entry point.
-
-COPD, HEART-derived AERT, pneumonia and AKI materials are **exploratory, not
-reported in the manuscript**. Changepoint functionality is retained in the
-software and was not used in the manuscript. See the [evidence guide](evidence.md)
-for the complete manuscript table/figure map, extended results and simulation sources.
 
 ActionRef describes recorded practice and supports explicit threshold comparisons.
 The proposed clinical workflow and its evaluation remain part of the local decision.

@@ -29,31 +29,3 @@ gap with a bootstrap median or an operating candidate.
 Returning no references concerns support for this score–action relationship. It is not a judgment
 about the clinical value of the underlying score. See [reference interpretation](references.md)
 for the support criteria, target rules and treatment of coincident values.
-
-## Real-data partial output: COPD
-
-This example is **exploratory, not reported in the manuscript**.
-
-The corrected COPD action definition yields Low **17.7798** and Mid **55.0719**.
-The absolute High target is outside the fitted range. Its prespecified relative
-target, **0.4278**, reaches bin **50**, below Mid's bin **55**. The ordering rule
-therefore leaves High unavailable, with no replacement.
-
-![The corrected COPD action curve: Low and Mid are retained; the relative High candidate falls below Mid and is rejected by the ordering rule.](assets/figures/copd-partial-output.png)
-
-[Editable SVG](assets/figures/copd-partial-output.svg) ·
-[PDF](assets/figures/copd-partial-output.pdf) · [R source](https://github.com/Sheldon0106/ActionRef/blob/v1.0.3-jamia/scripts/figures/copd.R)
-
-Points show recorded-action rates in supported derivation bins; the neutral line is
-the fitted isotonic curve. Vertical lines locate the two retained operating
-references. The orange cross marks the rejected High crossing at bin 50; the
-horizontal orange line shows its relative probability target. The corrected action
-is documented bronchodilator administration/start within 24 hours OR the legacy
-Pyxis steroid-record proxy. Counts refer to encounters. No uncertainty band is
-plotted. [Source aggregates](https://github.com/Sheldon0106/ActionRef/blob/v1.0.3-jamia/results/copd/validation_v2_corrected/README.md)
-are retained as exploratory software-development materials.
-
-**Partial output is a valid result.** The 500 reference re-estimations describe
-sampling variability and output availability; their High median does not replace
-the unavailable full-learning High. An operating candidate likewise cannot fill
-the missing behavioral-reference level.
