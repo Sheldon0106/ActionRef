@@ -6,7 +6,8 @@ permissions:
   contents: read
 jobs:
   package:
-    runs-on: ubuntu-latest
+    # Python 3.8 binaries are available on 22.04, not the current latest image.
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         python-version: ['3.8', '3.11', '3.13']

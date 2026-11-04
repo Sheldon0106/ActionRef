@@ -13,6 +13,8 @@
 - Added aggregate assembly and arithmetic checks. Saved intervals are reused;
   clinical analyses and simulations were not rerun. Algorithms, defaults and
   reported numerical results are unchanged.
+- Pinned the package-test runner to Ubuntu 22.04 to retain Python 3.8 coverage
+  after the hosted latest image changed to Ubuntu 26.04.
 - Fixed release: `v1.1.1`.
 
 ## 1.1.0 - 2026-10-25
