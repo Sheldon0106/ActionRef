@@ -1,7 +1,7 @@
 {
   "schema": "actionref.aggregate-bundle.v1",
   "assembled_date": "2026-10-20",
-  "manuscript_locations": "eTable 14C; eFigure 6",
+  "manuscript_locations": "eTable 14",
   "files": {
     "condition_error_summary.csv": {
       "source_label": "<analysis_outputs>/v8_support_gate_addendum_outputs/run_20261011T111658280658Z_d76a23f3bb9d/tables/analysis1_summary.csv",

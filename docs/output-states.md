@@ -15,7 +15,7 @@ The response patterns are deterministic teaching examples, not clinical findings
 | Absolute references | 51 (A) | 54 (A) | 87 (A) | All absolute probability targets are attainable |
 | Relative references | 51 (A) | 51 (B) | 81 (B) | Absolute 0.50 and 0.80 are outside the fitted range; the prespecified relative targets are used |
 | Partial references | 51 (A) | Unavailable (E) | 84 (A) | The absolute Mid crossing falls below Low; the ordering rule leaves Mid unavailable |
-| No references | Unavailable (E) | Unavailable (E) | Unavailable (E) | The flat response pattern fails the evidence gate |
+| No references | Unavailable (E) | Unavailable (E) | Unavailable (E) | The flat response pattern fails the support criteria |
 
 A denotes an absolute reference, B a relative reference, and E an unavailable
 level. The script saves the target probability, family, status and reason for
@@ -28,7 +28,7 @@ gap with a bootstrap median or an operating candidate.
 
 Returning no references concerns support for this score–action relationship. It is not a judgment
 about the clinical value of the underlying score. See [reference interpretation](references.md)
-for the gates, target rules and treatment of coincident values.
+for the support criteria, target rules and treatment of coincident values.
 
 ## Real-data partial output: COPD
 
@@ -44,7 +44,7 @@ therefore leaves High unavailable, with no replacement.
 [Editable SVG](assets/figures/copd-partial-output.svg) ·
 [PDF](assets/figures/copd-partial-output.pdf) · [R source](https://github.com/Sheldon0106/ActionRef/blob/v1.0.3-jamia/scripts/figures/copd.R)
 
-Points show recorded-action rates in supported learning bins; the neutral line is
+Points show recorded-action rates in supported derivation bins; the neutral line is
 the fitted isotonic curve. Vertical lines locate the two retained operating
 references. The orange cross marks the rejected High crossing at bin 50; the
 horizontal orange line shows its relative probability target. The corrected action

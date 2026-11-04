@@ -34,7 +34,7 @@ capacity = apply_capacity(
 )
 ```
 
-Here, 1,680 alerts means 20% of the learning cohort. All available references map
+Here, 1,680 alerts means 20% of the derivation cohort. All available references map
 to an operating candidate of 81, while the original references remain 45 / 45 / 60.
 `K` counts flagged encounters, not observed actions, staff hours, or admissions.
 
@@ -50,10 +50,10 @@ The script passes the estimated reference values and the candidate of 81 to
 | Capacity candidate: 81 | 194.4 | 96.4% | 44.3% |
 
 These are synthetic example outputs. The candidate reduces alert burden and
-outcome coverage. Its held-out alert fraction is measured anew; a learning-cohort
+outcome coverage. Its internal validation alert fraction is measured anew; a learning-cohort
 budget does not guarantee the same count in another cohort or time period.
 
-![Synthetic action curve and held-out operating results.](assets/figures/synthetic-example.png)
+![Synthetic action curve and internal validation operating results.](assets/figures/synthetic-example.png)
 
 ## 4. Read the saved files
 

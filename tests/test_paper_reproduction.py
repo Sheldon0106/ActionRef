@@ -23,7 +23,7 @@ def test_paper_count_algebra_and_separate_action_denominator():
     assert row.observed_action_yield == 14024/25234
     assert row.observed_action_yield != 14024/25352
     assert round(row.FAE_per_1000, 2) == 422.31
-    sensitivity = tables['etable37_fixed_R_sensitivity']
+    sensitivity = tables['fixed_R_sensitivity']
     for cohort, expected, low_r, high_r in [('MIMIC held-out', 22327/1075, 20, 25),
                                           ('Stanford transport', 22603/860, 25, 30)]:
         frame = sensitivity.loc[sensitivity.cohort.eq(cohort)]
@@ -48,13 +48,13 @@ def test_early_warning_reference_values_and_shared_qsofa_level():
         assert values.loc['Mid', 'operational_representative']
 
 
-def test_figure4_rates_and_transport_use_manuscript_denominators():
+def test_four_score_rates_and_transport_use_manuscript_denominators():
     table = load_example('reproduce_paper').calculate_early_warning_scores()
     assert len(table) == 24
     mimic = table.loc[table.cohort.eq('MIMIC held-out')]
     for score, alerts, sensitivity, denominator in [
-        ('ESRP', 363.4, 74.1, 134146), ('Adapted NEWS2', 187.5, 42.9, 134146),
-        ('Adapted MEWS', 236.0, 45.1, 134146), ('Adapted REMS', 569.6, 84.1, 134146),
+        ('ESRP', 363.4, 74.1, 134146), ('NEWS2', 187.5, 42.9, 134146),
+        ('MEWS', 236.0, 45.1, 134146), ('REMS', 569.6, 84.1, 134146),
     ]:
         row = mimic.loc[mimic.score.eq(score) & mimic.reference.eq('Low')].iloc[0]
         assert row.policy_N == denominator
@@ -62,7 +62,7 @@ def test_figure4_rates_and_transport_use_manuscript_denominators():
         assert round(100 * row.sepsis_sensitivity, 1) == sensitivity
     stanford = table.loc[table.cohort.eq('Stanford transport')]
     assert stanford.policy_N.eq(118385).all()
-    mews = stanford.loc[stanford.score.eq('Adapted MEWS') & stanford.reference.eq('Mid')].iloc[0]
+    mews = stanford.loc[stanford.score.eq('MEWS') & stanford.reference.eq('Mid')].iloc[0]
     assert mews.threshold == 4  # Local Stanford Mid = 3 must not replace transported Mid = 4.
     assert round(mews.alerts_per_1000, 1) == 54.3
     assert round(100 * mews.sepsis_sensitivity, 1) == 24.8
@@ -133,3 +133,40 @@ def test_authorized_data_runner_on_synthetic_inputs():
     assert result['selection']['same_or_lower_workload_alert_count'] <= result['selection']['behavior_alert_count']
     assert result['evaluation'].metadata['group_N'] > 0
     assert set(result['operating'].cohort) == {'MIMIC learning', 'MIMIC held-out'}
+
+
+def test_reported_esrp_tiers_and_derivation_loss_curve():
+    extended = load_example('reproduce_extended')
+    curve = extended.check_primary()
+    row = curve.loc[curve.threshold.eq(34)].iloc[0]
+    assert (row.N, row.TP, row.FP, row.FN, row.TN) == (314658, 6272, 53577, 5827, 248982)
+    assert round(row.FAE_per_1000, 2) == 430.52
+    assert curve.loc[curve.alert_N.gt(116236), 'threshold'].tolist() == list(range(27))
+    tiers = pd.read_csv(ROOT / 'results/sepsis_primary/conventional_rules/esrp_tier_boundaries.csv')
+    expected = {
+        ('MIMIC internal validation set', 21): (4953, 86411, 253, 42529, 34106, 90393),
+        ('MIMIC internal validation set', 31): (3177, 29456, 2029, 99484, 16972, 32501),
+        ('Stanford external validation cohort', 21): (3656, 80034, 153, 34542, 30407, 83690),
+        ('Stanford external validation cohort', 31): (2606, 23530, 1203, 91046, 14857, 26136),
+    }
+    for key, counts in expected.items():
+        row = tiers.loc[tiers.cohort.eq(key[0]) & tiers.threshold.eq(key[1])].iloc[0]
+        assert tuple(row[['TP', 'FP', 'FN', 'TN', 'action_positive_flagged_N', 'action_known_flagged_N']]) == counts
+
+
+def test_extended_subgroup_join_retains_point_only_calibration():
+    tables = load_example('reproduce_extended').calculate()
+    assert {k: len(v) for k, v in tables.items()} == {
+        'minimax_regret.csv': 6, 'transfer_target_sensitivity.csv': 3,
+        'original_eight_scenarios.csv': 192, 'conventional_selection_uncertainty.csv': 6,
+        'subgroup_diagnostics.csv': 96,
+    }
+    subgroups = tables['subgroup_diagnostics.csv']
+    keys = ['cohort', 'subgroup_variable', 'subgroup']
+    assert len(subgroups[keys].drop_duplicates()) == 32
+    assert subgroups.calibration_bootstrap_requested_B.eq(0).all()
+    assert subgroups.groupby(keys).calibration_slope.nunique().le(1).all()
+    assert set(subgroups.level) == {'Low', 'Mid', 'High'}
+    for name, frame in tables.items():
+        saved = pd.read_csv(ROOT / 'results/supplement_extended' / name)
+        pd.testing.assert_frame_equal(frame, saved, check_dtype=False, rtol=1e-13, atol=1e-13)

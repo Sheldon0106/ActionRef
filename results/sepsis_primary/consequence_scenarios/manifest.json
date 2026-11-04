@@ -4,20 +4,22 @@
   "assembled_date": "2026-10-25",
   "files": {
     "paper_minimax_behavior_budget.csv": {
-      "source_label": "<rr1_revision_assets>/rr1_minimax_existing_grid.csv",
+      "source_label": "<aggregate_reporting_assets>/primary_minimax_existing_grid.csv",
       "source_sha256": "586056e8b65265d62bfe75ded63f96169573f400dfb921df006322825eaec114",
       "sha256": "586056e8b65265d62bfe75ded63f96169573f400dfb921df006322825eaec114",
       "selection": "existing-grid secondary scenario; current source schema retained; not validation of the learning-selected candidate",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "comparator_development_selection_curve.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/rr1_development_candidate_curve.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/primary_development_candidate_curve.csv",
       "source_sha256": "a09f2515d475431a33fad190fad276638452bc98c81ac7ab915a542021236faf",
       "sha256": "a09f2515d475431a33fad190fad276638452bc98c81ac7ab915a542021236faf",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     }
   },
   "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
-  "analysis_revision": "RR1 same-source full cohort"
+  "analysis_revision": "same-source complete cohort",
+  "source_run": "run_20261023T104445170533Z_5e79d9b15f84",
+  "source_label_note": "Portable logical labels; original source hashes identify the saved inputs."
 }

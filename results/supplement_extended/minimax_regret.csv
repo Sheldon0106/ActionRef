@@ -1,0 +1,7 @@
+site,budget_label,K_absolute,K_fraction,behavior_threshold,robust_threshold,robust_alert_fraction,worst_case_regret_FAE_per_1000,behavior_worst_case_regret_FAE_per_1000,R_specific_optimum_min,R_specific_optimum_max,R_specific_optima,level
+MIMIC internal validation set,Low behavior workload,48754,0.3634398342104871,27,40.0,0.1001371639855083,50.57921965619549,250.2273642151089,28.0,60.0,R=3:t=60; R=5:t=51; R=10:t=40; R=15:t=34; R=20:t=28,Low
+MIMIC internal validation set,Mid behavior workload,15421,0.1149568380719514,39,42.0,0.0766105586450583,29.751166639333263,54.67177552815589,39.0,60.0,R=3:t=60; R=5:t=51; R=10:t=40; R=15:t=40; R=20:t=39,Mid
+MIMIC internal validation set,High behavior workload,2222,0.0165640421630164,54,54.0,0.0165640421630164,0.6783653631118334,0.6783653631118334,54.0,60.0,R=3:t=60; R=5:t=54; R=10:t=54; R=15:t=54; R=20:t=54,High
+Stanford frozen external,Low behavior workload,42689,0.3605946699328462,27,39.0,0.0926806605566583,38.40858216834904,257.56641466402,31.0,54.0,R=3:t=54; R=5:t=48; R=10:t=39; R=15:t=34; R=20:t=31,Low
+Stanford frozen external,Mid behavior workload,10972,0.0926806605566583,39,42.0,0.0638172065717785,26.6587827849812,38.40858216834904,39.0,54.0,R=3:t=54; R=5:t=48; R=10:t=39; R=15:t=39; R=20:t=39,Mid
+Stanford frozen external,High behavior workload,1521,0.0128479114752713,54,54.0,0.0128479114752713,0.0,0.0,54.0,54.0,R=3:t=54; R=5:t=54; R=10:t=54; R=15:t=54; R=20:t=54,High

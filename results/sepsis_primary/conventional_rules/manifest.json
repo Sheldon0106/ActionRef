@@ -4,27 +4,49 @@
   "assembled_date": "2026-10-25",
   "files": {
     "comparator_operating_results_extended.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/rr1_fixed_operating_points.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/primary_fixed_operating_points.csv",
       "source_sha256": "8e1ff11ed3ad2f4d0a116adf8c399db3050f3911598aa55c62f9efa515cdcc6b",
       "sha256": "bc3e6f8396e755ccea9924c08aa4bce79e248192a642862d34165640f2592b92",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "comparator_selection_bootstrap_summary.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/rr1_conventional_selection_intervals.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/primary_conventional_selection_intervals.csv",
       "source_sha256": "9008a131c4bc602b76aeedb9398a9fa012ac0eead4d1fec15b372cd3dbf1531a",
       "sha256": "9008a131c4bc602b76aeedb9398a9fa012ac0eead4d1fec15b372cd3dbf1531a",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "comparator_contracts_extended.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/rr1_policy_contracts.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/primary_policy_contracts.csv",
       "source_sha256": "48068f80b5043147eab6205b82cc6f0cffad88c262f00338d5d0bef080ed6698",
       "sha256": "8fcc97214ce40d1487a0013ec3bd82dd5c4d1a1fef134a10f9442a0af5c0079d",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
+    },
+    "rule_operating_rows.csv": {
+      "sha256": "676d10f3db9c2c09f49f1d4aa9acace3598c325c2b826309c54df7ecdc50ce5b",
+      "source_run": "run_20261023T104445170533Z_5e79d9b15f84",
+      "source_label": "existing fixed operating points; aggregate reporting record, section 30 B/E",
+      "source_sha256": "56615663b932d288317fe92dea6570e56cab93743a89f505dd351faf563174d4",
+      "source_script_label": "<aggregate_reporting_assets>/reporting_calculations.py",
+      "source_script_sha256": "84bda232b6a1a1afcc244289b3838c2658bad75f1ce050a4b077c7cc5dc44659",
+      "reproduction": "examples/reproduce_extended.py checks count arithmetic; no raw-source reconstruction",
+      "selection": "saved exact confusion/action counts; inclusive score >= threshold; exact R=11299/804; no new intervals"
+    },
+    "esrp_tier_boundaries.csv": {
+      "sha256": "1d8e3b5228f2db1ad83f72b630d84c67844d217085926678e3676af5caf0fe0f",
+      "source_run": "run_20261023T104445170533Z_5e79d9b15f84",
+      "source_label": "aggregate reporting record, section 30 F/G; existing threshold-45 operating points",
+      "source_sha256": "56615663b932d288317fe92dea6570e56cab93743a89f505dd351faf563174d4",
+      "source_script_label": "<aggregate_reporting_assets>/reporting_calculations.py",
+      "source_script_sha256": "84bda232b6a1a1afcc244289b3838c2658bad75f1ce050a4b077c7cc5dc44659",
+      "reproduction": "examples/reproduce_extended.py checks count arithmetic; no raw-source reconstruction",
+      "selection": "saved exact confusion/action counts; inclusive score >= threshold; exact R=11299/804; no new intervals"
     }
   },
   "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
-  "analysis_revision": "RR1 same-source full cohort"
+  "analysis_revision": "same-source complete cohort",
+  "source_run": "run_20261023T104445170533Z_5e79d9b15f84",
+  "source_label_note": "Portable logical labels; original source hashes identify the saved inputs."
 }

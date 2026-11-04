@@ -1,10 +1,12 @@
 # Eight-scenario simulation summaries
 
-Manuscript locations: **eTable 14A-B; eFigure 6**.
+Role: **extended repository results**. The current eTable 14 reports the separate paired support-criteria simulation.
+
+The [extended result bundle](../../results/supplement_extended/README.md#original-eight-scenario-simulation) provides one consolidated condition-summary CSV.
 
 The existing runner and configuration are unchanged. The error summaries were previously calculated from the original simulation outputs; no simulation or analysis was rerun. Historical changepoint fields remain in source tables but are not used in the manuscript.
 
-## Checks against the final manuscript
+## Saved design and results
 
 Seed 20260802; eight scenarios, four conditions, 25 replicates per condition (800 fits). Aligned-sigmoid baseline median absolute errors for Low / Mid / High round to 0.3 / 0.4 / 0.5.
 

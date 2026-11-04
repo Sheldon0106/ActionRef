@@ -4,27 +4,29 @@
   "assembled_date": "2026-10-25",
   "files": {
     "operating_points.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/rr1_fixed_operating_points.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/primary_fixed_operating_points.csv",
       "source_sha256": "8e1ff11ed3ad2f4d0a116adf8c399db3050f3911598aa55c62f9efa515cdcc6b",
       "sha256": "9e60aa88682db59c367adba78ffab6e713d2fabcd5968f0605fe3b653a5f2356",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "operating_summary.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/rr1_fixed_operating_intervals.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/primary_fixed_operating_intervals.csv",
       "source_sha256": "cf537927ad877e9615377d4895ac59d5cadea3e77df7f0250260e7024ac817bd",
       "sha256": "eabf2161f05e2e181ec30bbb298d18a27536aa4069fb39c91677f4b3f153c18d",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "paired_FAE_difference.json": {
-      "source_label": "<rr1_aggregate_bundle>/operating/rr1_replicate_metrics.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/operating/primary_replicate_metrics.csv",
       "source_sha256": "70fb877cc73253e945686b1b4cdffb8a79341c36a3f6adbaf574784dac6f108e",
       "sha256": "18a3c110ce91c8acadc7ebee96a5bc3c04453ffe9bcde8665c32005816e21c60",
       "selection": "paired same cohort/replicate percentile of modeled_R_candidate minus ESRP_MIMIC_primary_Low, B1000; no resampling",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     }
   },
   "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
-  "analysis_revision": "RR1 same-source full cohort"
+  "analysis_revision": "same-source complete cohort",
+  "source_run": "run_20261023T104445170533Z_5e79d9b15f84",
+  "source_label_note": "Portable logical labels; original source hashes identify the saved inputs."
 }

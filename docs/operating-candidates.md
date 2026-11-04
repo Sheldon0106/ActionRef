@@ -62,6 +62,6 @@ monetary values. Capacity analysis can be used without R.
 
 ## Carry choices into evaluation
 
-Choose candidates on learning data, fix their values, and compare them on separate
+Choose candidates on derivation data, fix their values, and compare them on separate
 data. Sensitivity analyses can compare those same candidates across R values.
 Reselecting the best candidate in evaluation data is a separate analysis.

@@ -1,13 +1,13 @@
-# Paired support-gate simulation
+# Paired support-criteria simulation
 
-Manuscript locations: **eTable 14C; eFigure 6**.
+Manuscript location: **eTable 14**.
 
 The existing [runner](runner.py), [configuration](config.json) and
 [condition error summaries](condition_error_summary.csv) retain seed **2026101101**.
 No simulations or analyses were rerun. The [manifest](manifest.json) identifies
 byte-identical source copies using portable labels and SHA-256 hashes.
 
-## Checks against the final manuscript
+## Saved design and results
 
 Seven scenarios use sample sizes 6,000 and 2,000, with 200 datasets per condition.
 In the 6,000-row flat-null condition, default output is 0% at all three levels;

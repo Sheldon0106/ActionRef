@@ -2,7 +2,7 @@
 
 These summaries compare a logistic action-probability curve with the primary
 isotonic curve, using the same recorded-action question. The saved paired Brier
-interval evaluates their fixed predictions on held-out encounters.
+interval evaluates their fixed predictions on internal validation encounters.
 
 Logistic targets are first reached at native integer scores 27/38/58. Their first
 supported bins are 27/39/60; continuous crossings are also supplied. These are

@@ -1,7 +1,7 @@
 # Reference-setting sensitivity
 
 These point-estimate summaries vary probability targets, binning and support or
-evidence-gate settings one at a time. The analyses describe sensitivity to the
+support criteria settings one at a time. The analyses describe sensitivity to the
 specified settings; package defaults remain unchanged.
 
 The tolerance rows replay a historical numerical rule and are identified

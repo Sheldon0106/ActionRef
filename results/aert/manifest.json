@@ -3,7 +3,7 @@
   "source_bundles": {
     "paired_uncertainty": "<analysis-workspace>/built_heart_score/adapted_heart_uncertainty_v27/run_20260924T070809Z_paired_bootstrap200",
     "action_evaluation": "<analysis-workspace>/built_heart_score/adapted_heart_evidence_v28/run_20261002T082847Z_history_action_calibration",
-    "construction_summaries": "<analysis-workspace>/built_heart_score/manuscript_evidence_v18/run_20260923T051255Z_native_AERT_handoff"
+    "construction_summaries": "<analysis-workspace>/built_heart_score/construction_summaries/run_20260923T051255Z_native_AERT_handoff"
   },
   "config": {
     "path": "configs/aert.json",

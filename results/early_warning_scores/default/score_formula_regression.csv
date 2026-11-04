@@ -1,9 +1,9 @@
 site,score,N,supplied_vector_formula_mismatch_N,difference_from_prior_support_score_N,input_policy,native_min,native_max
-MIMIC,NEWS2,448804,,0,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,10
-MIMIC,MEWS,448804,,0,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,9
-MIMIC,REMS,448804,,0,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,19
-MIMIC,qSOFA,448804,,0,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,2
-Stanford,NEWS2,118385,,9,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,12
-Stanford,MEWS,118385,,9,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,10
-Stanford,REMS,118385,,28,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,19
-Stanford,qSOFA,118385,,7,"same adapted helper; RR1 relevant fields, source-matched temperature, recomputed MAP",0,2
+MIMIC,NEWS2,448804,,0,"same supplied helper; primary relevant fields, source-matched temperature, recomputed MAP",0,10
+MIMIC,MEWS,448804,,0,"same supplied helper; primary relevant fields, source-matched temperature, recomputed MAP",0,9
+MIMIC,REMS,448804,,0,"same supplied helper; primary relevant fields, source-matched temperature, recomputed MAP",0,19
+MIMIC,qSOFA,448804,,0,"same supplied helper; primary relevant fields, source-matched temperature, recomputed MAP",0,2
+Stanford,NEWS2,118385,,9,"same supplied helper; primary relevant fields, source-matched temperature, recomputed MAP",0,12
+Stanford,MEWS,118385,,9,"same supplied helper; primary relevant fields, source-matched temperature, recomputed MAP",0,10
+Stanford,REMS,118385,,28,"same supplied helper; primary relevant fields, source-matched temperature, recomputed MAP",0,19
+Stanford,qSOFA,118385,,7,"same supplied helper; primary relevant fields, source-matched temperature, recomputed MAP",0,2

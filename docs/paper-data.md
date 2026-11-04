@@ -56,22 +56,30 @@ Supply `score_corrected`, `sepsis3_new`, `lactate_flag`, `fluid_6h`,
 six-hour fluid volume is at least 2,000 mL, 0 below it, and missing when volume is
 missing. Combine the four components with the same missing-aware OR.
 
-The MIMIC references 27/39/54 and selected candidate 34 are transported unchanged.
-The separate Stanford local diagnostic learns 26/36/50 in the reported cohort;
+The MIMIC references 27/39/54 and selected revised threshold 34 are transported unchanged.
+Stanford local estimation yields 26/36/50 in the reported cohort;
 it does not replace the transported thresholds.
+
+## Triage-score definition
+
+The supplied qSOFA implementation is `I(respiratory rate >= 22/min) +
+I(systolic blood pressure <= 100 mmHg)`, ranging from 0 to 2; the mental-status
+component is omitted. Missing component comparisons contribute zero under the
+existing implementation. The eTable 2 source files list the components and
+missingness rules for NEWS2, MEWS and REMS as well.
 
 ## Expected cohort checks
 
 | Cohort | Encounters | Patients | Outcome-positive encounters | Action-known encounters |
 |---|---:|---:|---:|---:|
-| MIMIC learning | 314,658 | 151,699 | 12,099 | 311,675 |
-| MIMIC held-out | 134,146 | 65,015 | 5,206 | 132,878 |
-| Stanford evaluation | 118,385 | 70,545 | 3,809 | 118,385 |
+| MIMIC derivation set | 314,658 | 151,699 | 12,099 | 311,675 |
+| MIMIC internal validation set | 134,146 | 65,015 | 5,206 | 132,878 |
+| Stanford external validation cohort | 118,385 | 70,545 | 3,809 | 118,385 |
 
 The split uses `GroupShuffleSplit(train_size=0.70, random_state=2026)` on the complete
 MIMIC analysis population, grouped by patient. All five evaluated scores and the
-outcome are complete in these cohorts. The held-out action subset contains 64,278
-patients. The learning action rate is 96,415/311,675. Supported learning bins
+outcome are complete in these cohorts. The internal validation action subset contains 64,278
+patients. The derivation action rate is 96,415/311,675. Supported derivation bins
 contain 311,618 encounters; 57 complete rows fall in bins below the support limit.
 
 Use the [reproduction guide](paper-reproduction.md) for commands. Preserve the

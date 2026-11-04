@@ -4,48 +4,50 @@
   "assembled_date": "2026-10-25",
   "files": {
     "v7_subgroup_paper_summary_reconstructed.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/subgroup_operating_points.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/subgroup_operating_points.csv",
       "source_sha256": "dd15232c4fc21929e12ae212dadb7b129e6d982e06d2e913dfb2717a01e04913",
       "sha256": "dd15232c4fc21929e12ae212dadb7b129e6d982e06d2e913dfb2717a01e04913",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "subgroup_predictive_calibration_detail.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/subgroup_predictive_calibration_detail.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/subgroup_predictive_calibration_detail.csv",
       "source_sha256": "ef96cd17a88f92e3d54c366c0d42fbd92abeb7f863bc1d039be09adaaf7b828c",
       "sha256": "ef96cd17a88f92e3d54c366c0d42fbd92abeb7f863bc1d039be09adaaf7b828c",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "subgroup_fixed_bin_calibration_curves.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/subgroup_fixed_bin_calibration_curves.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/subgroup_fixed_bin_calibration_curves.csv",
       "source_sha256": "034d29f7691fbcba626c1428c4e2e589163df5da887a76af91ee4a71d5890469",
       "sha256": "034d29f7691fbcba626c1428c4e2e589163df5da887a76af91ee4a71d5890469",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "subgroup_operating_summary.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/subgroup_operating_summary.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/subgroup_operating_summary.csv",
       "source_sha256": "8eb5b4cd7849e45afd77f51b58238c9440cb53ab7ac2f47483e91ba224d9393b",
       "sha256": "8eb5b4cd7849e45afd77f51b58238c9440cb53ab7ac2f47483e91ba224d9393b",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "subgroup_local_points.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/subgroup_local_points.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/subgroup_local_points.csv",
       "source_sha256": "8ef6db734aa4f3022d6fba88f3f35b513ae31def6fc315a89405a07bf08be202",
       "sha256": "8ef6db734aa4f3022d6fba88f3f35b513ae31def6fc315a89405a07bf08be202",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     },
     "subgroup_local_summary.csv": {
-      "source_label": "<rr1_aggregate_bundle>/tables/subgroup_local_summary.csv",
+      "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/subgroup_local_summary.csv",
       "source_sha256": "3dfd8fcac03df153296af02384e8e4570997c00110d204f339f973c3ac28d341",
       "sha256": "3dfd8fcac03df153296af02384e8e4570997c00110d204f339f973c3ac28d341",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
-      "role": "current RR1 aggregate result"
+      "role": "current manuscript aggregate result"
     }
   },
   "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
-  "analysis_revision": "RR1 same-source full cohort"
+  "analysis_revision": "same-source complete cohort",
+  "source_run": "run_20261023T104445170533Z_5e79d9b15f84",
+  "source_label_note": "Portable logical labels; original source hashes identify the saved inputs."
 }

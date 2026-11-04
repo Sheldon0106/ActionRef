@@ -9,7 +9,7 @@ Changepoint diagnostics in this record were not used in the manuscript.
 
 Validation of the frozen v0.3 package on two non-sepsis diseases.
 
-- Frozen Module 2 and evidence-gate parameters.
+- Frozen Module 2 and support criteria parameters.
 - No disease-specific override. The runner raises if a config supplies one.
 - Bootstrap disabled. Module 3B unavailable in both.
 
@@ -42,7 +42,7 @@ Calibration is `apparent_in_sample`. A single labelled dataset was supplied.
 
 ## Module 2
 
-Both passed the evidence gate under frozen parameters.
+Both passed the support criteria under frozen parameters.
 
 | | Response prev. | Bin width | Valid bins | Isotonic range | CPs | Low | Mid | High |
 |---|---|---|---|---|---|---|---|---|
@@ -51,7 +51,7 @@ Both passed the evidence gate under frozen parameters.
 | Pneumonia, broad | 0.3548 | 1.0 | 34 | 0.710 | 0 | 5 | 11 | 24 |
 
 - All thresholds are `semantic-only`.
-- No changepoint replaced a semantic anchor, including the COPD fit with two supported changepoints.
+- No changepoint replaced a semantic reference threshold, including the COPD fit with two supported changepoints.
 - COPD High is unavailable: the isotonic curve peaks near 0.53, so the 80% target is unreachable.
 - That unavailable level propagates into Module 3A as `unavailable_behavior_threshold` at every capacity level.
 
@@ -63,9 +63,9 @@ K fractions 0.01 to 0.30. For COPD:
 - Mid (55.04) is above every floor and is never adjusted.
 - High remains unavailable.
 
-## Comparison against supplied reference anchors
+## Comparison against supplied reference thresholds
 
-Reference anchors from `*_module2_operational_anchors.csv`, produced by the earlier notebooks.
+Reference thresholds from `*_module2_operational_anchors.csv`, produced by the earlier notebooks.
 
 Pneumonia, `score_pneumonia_auto`:
 
@@ -92,7 +92,7 @@ COPD, `score_COPD_AutoScore`, primary bundle:
 | High | 57.009 | structural_fallback | unavailable |
 
 - Mid reproduces within 0.057.
-- Low differs on bin width: reference 2.0, package 2.5 under the frozen rule. The anchor sits in the steep part of the curve.
+- Low differs on bin width: reference 2.0, package 2.5 under the frozen rule. The reference threshold sits in the steep part of the curve.
 - High differs by design.
   - Reference row is `structural_fallback_above_primary`: nearest stable changepoint substituted when semantic High was unreachable.
   - v0.3 prohibits this. The package returns no references.
@@ -124,7 +124,7 @@ Data notes:
 
 - Bootstrap. Compatibility run only.
 - Module 3B. No disease-specific R elicited or costed.
-- AKI. Data, notebook, and reference anchors available.
+- AKI. Data, notebook, and reference thresholds available.
 
 ## Committed outputs
 

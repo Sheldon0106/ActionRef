@@ -1,4 +1,4 @@
-# Two-criterion qSOFA: short-scale sensitivity
+# qSOFA: short-scale sensitivity
 
 This separate sensitivity analysis lowers the minimum supported-bin requirement
 to three; package defaults remain unchanged. It requests 500 patient-bootstrap

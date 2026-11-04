@@ -8,7 +8,7 @@ validation.
 
 The transport table compares the fixed MIMIC references with local workload- and
 risk-matching rules at Stanford. Those matching rules are separate from the
-primary learning-selected candidate. Differences from earlier repository results
+primary derivation-selected candidate. Differences from earlier repository results
 also involve population, patient assignment and outcome changes, rather than
 isolating deterioration over time.
 
