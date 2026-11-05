@@ -11,7 +11,7 @@ Default qSOFA has three supported bins, below the eight-bin
 requirement, so it returns no references and reference bootstrapping is not run.
 The non-default short-scale analysis is stored in the sibling directory.
 
-## Current files
+## Files
 
 - `action_curves.csv`
 - `cohort_denominators.csv`
@@ -36,18 +36,7 @@ in `score_formula_regression.csv`.
 - `score_formula_definition.csv`
 - `score_component_implementation.csv`
 
-## Retained historical summaries
 
-These earlier missingness and action-definition summaries are retained for
-reference; current cohort denominators and action components come from the
-primary sepsis bundle.
-
-- `score_component_missingness.csv`
-- `primary_action_definition.csv`
-
-Source labels, row selections and file checksums are recorded in
-[manifest.json](manifest.json). All shared observations are aggregates; patient
-records and identifiers are not included.
 
 Completed resample counts and interval denominators are in
 `reference_bootstrap_summary.csv`. The status in the point diagnostics describes

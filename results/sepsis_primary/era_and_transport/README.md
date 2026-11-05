@@ -8,24 +8,11 @@ validation.
 
 The transport table compares the fixed MIMIC references with local workload- and
 risk-matching rules at Stanford. Those matching rules are separate from the
-primary derivation-selected candidate. Differences from earlier repository results
-also involve population, patient assignment and outcome changes, rather than
-isolating deterioration over time.
+primary derivation-selected candidate.
 
-## Current files
+## Files
 
 - `paper_transport_decomposition.csv`
 - `v7_cell56_temporal_drift.csv`
 - `v7_cell56_temporal_operating.csv`
 - `v7_cell56_temporal_counts.csv`
-
-## Retained historical files
-
-These earlier values or definitions are retained for historical reference and are
-not inputs to the current summaries.
-- `V7_13_K_operationalization_capacity.csv`
-- `v7_cell56_temporal_capacity.csv`
-
-Source labels, row selections and file checksums are recorded in
-[manifest.json](manifest.json). All shared observations are aggregates; patient
-records and identifiers are not included.

@@ -10,7 +10,7 @@ retained denominator specified in the table. The full-data point reference is
 distinct from a bootstrap median. The primary MIMIC references are 27/39/54;
 Stanford local references are 26/36/50.
 
-## Current files
+## Files
 
 - `reference_summary.csv`
 - `reference_pair_stability.csv`
@@ -18,7 +18,3 @@ Stanford local references are 26/36/50.
 - `reference_point_curves.csv`
 - `analysis4_separated_provenance_summary.csv`
 - `joint_reference_summary.json`
-
-Source labels, row selections and file checksums are recorded in
-[manifest.json](manifest.json). All shared observations are aggregates; patient
-records and identifiers are not included.

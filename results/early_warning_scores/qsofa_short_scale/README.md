@@ -10,7 +10,7 @@ with High 2. Low is not independently retained; its target is attainable. The
 summary distinguishes candidate availability from independent retention and
 absolute from relative probability targets.
 
-## Current files
+## Files
 
 - `action_curves.csv`
 - `cohort_denominators.csv`
@@ -22,9 +22,7 @@ absolute from relative probability targets.
 - `fixed_reference_operating_points.csv`
 - `fixed_reference_operating_intervals.csv`
 
-Source labels, row selections and file checksums are recorded in
-[manifest.json](manifest.json). All shared observations are aggregates; patient
-records and identifiers are not included.
+
 
 Completed resample counts and interval denominators are in
 `reference_bootstrap_summary.csv`. The status in the point diagnostics describes

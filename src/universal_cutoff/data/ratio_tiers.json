@@ -6,11 +6,8 @@
     "response_profile": "little more than staff time -- bloods, a scan, fluids, or an early drug dose",
     "pick_if": "missing this for a few hours changes the outcome, and acting on a patient who turns out to be well costs you a test and some clinician time, not harm",
     "examples": [
-      "ED sepsis alert -> lactate, cultures, fluids, empiric antibiotics",
-      "suspected pulmonary embolism -> D-dimer or CT pulmonary angiogram",
-      "possible ACS in chest pain -> troponin and serial ECG",
-      "stroke code activation -> urgent imaging and specialist review",
-      "deterioration or early-warning-score alert -> rapid response team review"
+      "sepsis-related diagnostic assessment",
+      "early-warning-score-triggered clinical review"
     ],
     "not_this_tier_if": "the response itself is invasive or risky (that is Tier C), or the illness unfolds over days rather than hours (Tier B)",
     "pt_low": 0.02,
@@ -27,11 +24,8 @@
     "response_profile": "a real but bounded commitment -- a drug course, extra monitoring, an observation bed, or a specialist referral",
     "pick_if": "you would be uncomfortable missing it, but you would also not want to start treatment in ten well patients to catch one case",
     "examples": [
-      "COPD exacerbation -> bronchodilator or steroid course",
-      "community-acquired pneumonia -> antibiotics and blood cultures",
-      "AKI risk flag -> repeat creatinine, fluid review, nephrotoxin hold",
-      "heart-failure decompensation -> diuresis and observation",
-      "statin or antihypertensive initiation from a risk score"
+      "additional monitoring and time-limited observation",
+      "medication review and repeat laboratory assessment"
     ],
     "not_this_tier_if": "hours matter and the workup is cheap (Tier A), or acting means a procedure with its own complication rate (Tier C)",
     "pt_low": 0.07,
@@ -48,11 +42,9 @@
     "response_profile": "something with its own risk or a large cost -- a biopsy, an operation, an ICU bed, or long-term therapy the patient may not need",
     "pick_if": "acting on a well patient does real harm, so you want reasonable confidence before pulling the trigger",
     "examples": [
-      "prostate or breast biopsy after a risk calculator",
-      "ICU transfer or step-up from a deterioration score",
-      "starting long-term anticoagulation",
-      "elective surgical referral from a screening pathway",
-      "genetic or specialist workup with a long, costly tail"
+      "invasive diagnostic workup",
+      "elective procedural assessment",
+      "long-term treatment review"
     ],
     "not_this_tier_if": "the response is a cheap test rather than a procedure -- that is Tier A or B even when the underlying disease is serious",
     "pt_low": 0.20,

@@ -17,16 +17,6 @@
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
       "role": "current manuscript aggregate result"
     },
-    "component_definition_registry.csv": {
-      "source_label": "<analysis_outputs>/v9_outputs/run_20260902T071128284014Z_d6ea520f88f7/component_definition_registry.csv",
-      "source_generation_date": "2026-09-02",
-      "date_basis": "source run label",
-      "source_sha256": "8bada64c6c8e86f190f2d5b97997136db3fa8e09c4aa35043ac3c69fc97d5aa4",
-      "sha256": "8bada64c6c8e86f190f2d5b97997136db3fa8e09c4aa35043ac3c69fc97d5aa4",
-      "rows": 8,
-      "selection": "all rows; byte-identical copy",
-      "role": "historical: earlier-population output retained for traceability; not a current result"
-    },
     "component_thresholds_point.csv": {
       "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/mimic_component_thresholds_point.csv",
       "source_sha256": "a2fd6a9dd6a4bc68252534ef7cb605810345c6f4a9d8e6d31c81cad8cd6cd5ab",
@@ -96,16 +86,6 @@
       "sha256": "023d4441752ed5647e9807132c818f60f8e8d4bbcae0d50c911cb4f5e29c5d0f",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
       "role": "current manuscript aggregate result"
-    },
-    "stanford_component_definition_registry.csv": {
-      "source_label": "<analysis_outputs>/v9_stanford_component_outputs/run_20260902T092250247419Z_47329d620910/stanford_component_definition_registry.csv",
-      "source_generation_date": "2026-09-02",
-      "date_basis": "source run label",
-      "source_sha256": "3e17942fa171d8492c6772a5377bcc101e1cc9dc38bf11dc7d442337741806d3",
-      "sha256": "3e17942fa171d8492c6772a5377bcc101e1cc9dc38bf11dc7d442337741806d3",
-      "rows": 6,
-      "selection": "all rows; byte-identical copy",
-      "role": "historical: earlier-population output retained for traceability; not a current result"
     }
   },
   "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",

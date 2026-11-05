@@ -12,7 +12,7 @@ component learner's ordering field is not a count of complete three-reference
 outputs. Local component estimates and evaluations of transported MIMIC component
 references are separate analyses.
 
-## Current files
+## Files
 
 - `component_missingness_prevalence.csv`
 - `action_pattern_distribution.csv`
@@ -26,14 +26,3 @@ references are separate analyses.
 - `stanford_component_train_prevalence.csv`
 - `component_local_vs_transport_comparison.csv`
 - `mimic_component_frozen_stanford_operating.csv`
-
-## Retained historical files
-
-These earlier values or definitions are retained for historical reference and are
-not inputs to the current summaries.
-- `component_definition_registry.csv`
-- `stanford_component_definition_registry.csv`
-
-Source labels, row selections and file checksums are recorded in
-[manifest.json](manifest.json). All shared observations are aggregates; patient
-records and identifiers are not included.

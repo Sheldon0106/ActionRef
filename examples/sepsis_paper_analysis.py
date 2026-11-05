@@ -1,7 +1,7 @@
 """Run the primary sepsis workflow on separately authorized analysis tables.
 
 Inputs are prepared analysis variables, not raw database exports. See
-docs/paper-data.md. Outputs contain aggregate results only.
+docs/data.md. Outputs contain aggregate results only.
 """
 import argparse
 import json

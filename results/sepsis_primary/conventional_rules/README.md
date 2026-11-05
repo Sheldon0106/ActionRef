@@ -27,21 +27,15 @@ Both files report exact TP/FP/FN/TN and action counts, with inclusive `score >= 
 Rates are proportions except fields named `per_1000`; recorded-action yield uses
 known action status among flagged encounters. FAE uses exact R = 11,299/804.
 No intervals have been inferred for the additional ESRP tier rows.
-The source run is `run_20261023T104445170533Z_5e79d9b15f84`; the saved aggregate
-reporting record supplies the additional tier counts. The manifest retains source
 hashes. `examples/reproduce_extended.py` checks arithmetic and shared policy rows.
 
 The [extended bundle](../../supplement_extended/README.md#conventional-rule-selection-uncertainty)
 provides conventional-rule selection uncertainty separately.
 
-## Current files
+## Files
 
 - `rule_operating_rows.csv`
 - `esrp_tier_boundaries.csv`
 - `comparator_operating_results_extended.csv`
 - `comparator_selection_bootstrap_summary.csv`
 - `comparator_contracts_extended.csv`
-
-Source labels, row selections and file checksums are recorded in
-[manifest.json](manifest.json). All shared observations are aggregates; patient
-records and identifiers are not included.
