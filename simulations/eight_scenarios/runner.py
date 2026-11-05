@@ -1,15 +1,4 @@
-"""Final semantic-first ActionRef simulation validation.
-
-This additive validation preserves the scenario definitions, sample sizes,
-Monte Carlo replicates, and random seeds from
-``simulation_ablation_threshold_governance_v2_structural_refinement.ipynb``
-while replacing its self-contained Module 2 implementation with the frozen
-``universal_cutoff`` package implementation.
-
-The script writes a new, non-overwriting, versioned output bundle. It does not
-modify the historical notebooks, package source, clinical data, or prior
-outputs.
-"""
+"""Eight-scenario ActionRef simulation and aggregate numerical summaries."""
 
 from __future__ import annotations
 
@@ -22,7 +11,6 @@ from dataclasses import asdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
@@ -413,9 +401,7 @@ def main():
     output_root = ROOT / "output" / "simulations" / "eight-scenarios"
     run_dir = output_root / f"run_{timestamp}_{config_hash}"
     table_dir = run_dir / "tables"
-    figure_dir = run_dir / "figures"
     table_dir.mkdir(parents=True, exist_ok=False)
-    figure_dir.mkdir(parents=True, exist_ok=False)
 
     compatibility = pd.DataFrame([
         {
@@ -905,39 +891,6 @@ def main():
     for filename, table in tables.items():
         table.to_csv(table_dir / filename, index=False)
 
-    baseline_plot = threshold_summary[
-        (threshold_summary.condition == "baseline")
-        & (threshold_summary.method == "bootstrap_validated")
-    ].copy()
-    fig, axes = plt.subplots(1, 3, figsize=(14, 4.5), sharey=False)
-    for axis, level in zip(axes, ["Low", "Mid", "High"]):
-        view = baseline_plot[baseline_plot.level == level]
-        axis.barh(view.scenario, view.MAE, color="#4C78A8")
-        axis.set_title(level)
-        axis.set_xlabel("Mean absolute error")
-        axis.grid(axis="x", alpha=.2)
-    fig.suptitle("Final-package semantic-reference recovery: baseline scenarios")
-    fig.tight_layout()
-    fig.savefig(figure_dir / "baseline_threshold_recovery.png", dpi=300, bbox_inches="tight")
-    fig.savefig(figure_dir / "baseline_threshold_recovery.pdf", bbox_inches="tight")
-    plt.close(fig)
-
-    governance_plot = baseline_governance.copy()
-    fig, axis = plt.subplots(figsize=(8.5, 5.0))
-    axis.barh(governance_plot.scenario, governance_plot.end_to_end_classification_accuracy,
-              color="#54A24B")
-    axis.axvline(.75, color="#E45756", linestyle="--", linewidth=1.3,
-                 label="pre-specified 0.75 target")
-    axis.set_xlim(0, 1.02)
-    axis.set_xlabel("Governance-classification recovery")
-    axis.set_title("Final-package governance recovery at R=14.05 (baseline)")
-    axis.grid(axis="x", alpha=.2)
-    axis.legend(frameon=False)
-    fig.tight_layout()
-    fig.savefig(figure_dir / "baseline_governance_R14_05.png", dpi=300, bbox_inches="tight")
-    fig.savefig(figure_dir / "baseline_governance_R14_05.pdf", bbox_inches="tight")
-    plt.close(fig)
-
     blocking_pass = bool(
         invariant_audit.loc[invariant_audit.blocking_for_new_bundle, "passed"].all()
     )
@@ -946,46 +899,6 @@ def main():
             invariant_audit.criterion.str.contains("legacy provisional"), "passed"
         ].iloc[0]
     )
-    summary_lines = [
-        "# Final semantic-first ActionRef simulation validation",
-        "",
-        f"Run bundle: `{run_dir}`  ",
-        f"Config hash: `{config_hash}`  ",
-        f"Status: `{'PASS' if blocking_pass else 'FAIL'}`",
-        "",
-        "## Why a new run was required",
-        "",
-        "The historical v2 simulation was not implementation-compatible with the frozen package: "
-        "it could move a semantic threshold to a nearby supported changepoint, forced global "
-        "abstention when Low was unavailable, and did not explicitly de-duplicate threshold "
-        "collisions. The new run uses the frozen package and supersedes historical v2 for all "
-        "final-method performance claims.",
-        "",
-        "## Preserved design",
-        "",
-        f"Eight scenarios, four stress conditions, {N_REPLICATES} Monte Carlo replicates per "
-        f"scenario-condition, main inner bootstrap n={CP_BOOTSTRAP_REPS_MAIN}, representative "
-        f"outer bootstrap n={N_SELECTED_SAMPLE_BOOTSTRAP} with inner n={CP_BOOTSTRAP_REPS_SELECTED}, "
-        f"and random seed {RANDOM_STATE} were preserved. R=14.05 is the primary governance "
-        "worked value; R=15 is retained only as a historical auxiliary stress value.",
-        "",
-        "## Headline checks",
-        "",
-        invariant_audit.to_markdown(index=False),
-        "",
-        "The legacy provisional changepoint-recall criterion is reported transparently as "
-        f"`{'passed' if legacy_cp_pass else 'not passed'}`, but it is non-blocking for the "
-        "semantic-first implementation because changepoints cannot create, move, or rescue any "
-        "reference.",
-        "",
-        "## Claim guard",
-        "",
-        "Simulation results validate behavior of the specified algorithm under synthetic "
-        "conditions. They do not establish clinical benefit, causal treatment effects, monetary "
-        "savings, or transport performance.",
-    ]
-    (run_dir / "summary.md").write_text("\n".join(summary_lines) + "\n", encoding="utf-8")
-
     output_inventory = []
     for path in sorted(run_dir.rglob("*")):
         if path.is_file() and path.name != "manifest.json":
