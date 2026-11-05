@@ -9,7 +9,7 @@ Fixed-policy operating and local-reference resampling summaries report their
 own requested and valid counts. Local estimates describe subgroup practice;
 they do not replace the primary global references.
 
-## Current files
+## Files
 
 - `v7_subgroup_paper_summary_reconstructed.csv`
 - `subgroup_predictive_calibration_detail.csv`
@@ -17,7 +17,3 @@ they do not replace the primary global references.
 - `subgroup_operating_summary.csv`
 - `subgroup_local_points.csv`
 - `subgroup_local_summary.csv`
-
-Source labels, row selections and file checksums are recorded in
-[manifest.json](manifest.json). All shared observations are aggregates; patient
-records and identifiers are not included.

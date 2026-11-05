@@ -170,3 +170,19 @@ def test_extended_subgroup_join_retains_point_only_calibration():
     for name, frame in tables.items():
         saved = pd.read_csv(ROOT / 'results/supplement_extended' / name)
         pd.testing.assert_frame_equal(frame, saved, check_dtype=False, rtol=1e-13, atol=1e-13)
+
+
+def test_learning_grid_is_separate_from_fixed_pair_sensitivity():
+    import pandas as pd
+    data = ROOT / 'results/sepsis_primary'
+    grid = pd.read_csv(data / 'learning_R_selection.csv')
+    assert grid.learning_N.eq(314658).all() and grid.Low_alert_ceiling.eq(116236).all()
+    assert grid.loc[grid.R.eq(20), 'low_ceiling_threshold'].iloc[0] == 31
+    assert grid.loc[grid.R.eq(20), 'unconstrained_threshold'].iloc[0] == 31
+    assert grid.loc[grid.R.eq(100), 'low_ceiling_threshold'].iloc[0] == 27
+    invariance = pd.read_csv(data / 'learning_R_invariance.csv')
+    np.testing.assert_allclose(invariance.reference_ratio, 11299 / 804)
+    np.testing.assert_allclose(invariance.ratio_band_high, 16)
+    assert invariance.distinct_thresholds.tolist() == [15, 13]
+    fixed = pd.read_csv(data / 'fixed_candidate_R_sensitivity.csv')
+    assert 'low_ceiling_threshold' not in fixed.columns

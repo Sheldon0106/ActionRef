@@ -8,12 +8,8 @@ The 34-minus-27 FAE intervals use differences from shared cohort and resample ID
 not subtraction of marginal confidence limits. They quantify uncertainty for the
 fixed policies; candidate-selection uncertainty is a separate question.
 
-## Current files
+## Files
 
 - `operating_points.csv`
 - `operating_summary.csv`
 - `paired_FAE_difference.json`
-
-Source labels, row selections and file checksums are recorded in
-[manifest.json](manifest.json). All shared observations are aggregates; patient
-records and identifiers are not included.

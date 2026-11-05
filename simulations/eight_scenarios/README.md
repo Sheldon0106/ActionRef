@@ -1,26 +1,10 @@
-# Eight-scenario simulation summaries
+# Eight-scenario simulation
 
-Role: **extended repository results**. The current eTable 14 reports the separate paired support-criteria simulation.
+The [runner](runner.py) and [configuration](config.json) use seed **20260802**:
+eight scenarios, four conditions and 25 replicates per condition (800 fits).
+The summaries describe reference recovery under baseline, low-sample, tied-score
+and label-noise conditions. All observations are synthetic.
 
-The [extended result bundle](../../results/supplement_extended/README.md#original-eight-scenario-simulation) provides one consolidated condition-summary CSV.
-
-The existing runner and configuration are unchanged. The error summaries were previously calculated from the original simulation outputs; no simulation or analysis was rerun. Historical changepoint fields remain in source tables but are not used in the manuscript.
-
-## Saved design and results
-
-Seed 20260802; eight scenarios, four conditions, 25 replicates per condition (800 fits). Aligned-sigmoid baseline median absolute errors for Low / Mid / High round to 0.3 / 0.4 / 0.5.
-
-## Sources
-
-Existing aggregate outputs only. No patient records or identifiers are included.
-Numbers and original data fields are preserved. No analyses were rerun.
-
-The [manifest](manifest.json) records portable source labels, generation-date provenance,
-row selections, and SHA-256 hashes for the originals and public copies.
-
-- [analysis2_existing_summary.csv](analysis2_existing_summary.csv)
-- [analysis2_existing_true_references.csv](analysis2_existing_true_references.csv)
-- [analysis2_generation_mechanisms.csv](analysis2_generation_mechanisms.csv)
-- [threshold_recovery_summary.csv](threshold_recovery_summary.csv)
-- [structural_abstention_summary.csv](structural_abstention_summary.csv)
-- [governance_summary.csv](governance_summary.csv)
+Condition-level errors are in [analysis2_existing_summary.csv](analysis2_existing_summary.csv).
+Generation mechanisms and true reference values are supplied alongside it.
+Additional summaries describe threshold recovery and output availability.

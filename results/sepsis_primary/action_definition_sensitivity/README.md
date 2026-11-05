@@ -9,7 +9,7 @@ Each uniform-window reference analysis requests 500 patient-bootstrap resamples.
 Candidate availability and independent retention are separate outputs. Window
 operating and component-prevalence results are point estimates.
 
-## Current files
+## Files
 
 - `sensitivity_response_bundle_thresholds.csv`
 - `corrected_action_window_thresholds.csv`
@@ -18,9 +18,7 @@ operating and component-prevalence results are point estimates.
 - `corrected_action_window_evidence_gates.csv`
 - `reference_bootstrap_summary.csv`
 
-Source labels, row selections and file checksums are recorded in
-[manifest.json](manifest.json). All shared observations are aggregates; patient
-records and identifiers are not included.
+
 
 Completed resample counts and interval denominators are in
 `reference_bootstrap_summary.csv`. The status in the point diagnostics describes

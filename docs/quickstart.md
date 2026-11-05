@@ -1,7 +1,22 @@
-# A complete synthetic walkthrough
+# Quick start
 
 This example demonstrates the software using **synthetic data**. No patient data,
 clinical estimates, or disease-specific parameters are needed.
+
+## Installation
+
+Use Python 3.8 or newer in a virtual environment:
+
+```bash
+git clone https://github.com/Sheldon0106/ActionRef.git
+cd ActionRef
+python -m venv .venv
+```
+
+Activate with `.venv\Scripts\Activate.ps1` in Windows PowerShell or
+`source .venv/bin/activate` on macOS/Linux, then run `python -m pip install -e .`.
+
+## Run the example
 
 ```bash
 python examples/synthetic_walkthrough.py --output-dir output/synthetic

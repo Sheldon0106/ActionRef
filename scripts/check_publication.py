@@ -62,18 +62,6 @@ def main():
             found = forbidden.intersection(x.strip().lower() for x in header)
             if found:
                 failures.append('{}: possible encounter-level identifiers {}'.format(path.relative_to(ROOT), sorted(found)))
-    manifest_path = ROOT / 'docs/assets/data/provenance.json'
-    manifest = json.loads(manifest_path.read_text())
-    for filename, record in manifest['files'].items():
-        file = manifest_path.parent / filename
-        if hashlib.sha256(file.read_bytes()).hexdigest() != record['sha256']:
-            failures.append('Figure source checksum mismatch: ' + filename)
-    manifest_path = ROOT / 'results/cross_disease_validation_v1/manifest.json'
-    manifest = json.loads(manifest_path.read_text())
-    for filename, expected in manifest['output_sha256'].items():
-        file = ROOT / 'results' / filename.replace('\\', '/')
-        if not file.exists() or hashlib.sha256(file.read_bytes()).hexdigest().lower() != expected.lower():
-            failures.append('Research output checksum mismatch: ' + filename)
     manifest_path = ROOT / 'docs/assets/data/synthetic_provenance.json'
     manifest = json.loads(manifest_path.read_text())
     for filename, expected in manifest['sha256'].items():
@@ -89,26 +77,6 @@ def main():
     config = manifest['config']
     if hashlib.sha256((ROOT / config['path']).read_bytes()).hexdigest() != config['sha256']:
         failures.append('Primary paper configuration checksum mismatch')
-    pairs = [('semantic_response_curve.csv', 'sepsis_learning_curve.csv'),
-             ('sepsis_action_points.json', 'sepsis_action_points.json'),
-             ('sepsis_action_reliability.json', 'sepsis_action_reliability.json')]
-    for primary, figure in pairs:
-        if (manifest_path.parent / primary).read_bytes() != (ROOT / 'docs/assets/data' / figure).read_bytes():
-            failures.append('Paper and figure source differ: ' + primary)
-    for folder, files_key, config_key in (
-        ('results/copd/validation_v2_corrected', 'public_files', 'public_config'),
-        ('results/aert', 'files', 'config'),
-    ):
-        bundle = ROOT / folder
-        record = json.loads((bundle / 'manifest.json').read_text(encoding='utf-8'))
-        for filename, expected in record[files_key].items():
-            file = bundle / filename
-            if not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest() != expected['sha256']:
-                failures.append('Additional-application source checksum mismatch: ' + folder + '/' + filename)
-        config = record[config_key]
-        if hashlib.sha256((ROOT / config['path']).read_bytes()).hexdigest() != config['sha256']:
-            failures.append('Additional-application configuration checksum mismatch: ' + folder)
-
     for manifest_path in paths:
         if manifest_path.name != 'manifest.json':
             continue

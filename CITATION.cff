@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, cite the repository and the commit or release used."
+message: "If you use this software, cite ActionRef and the repository."
 type: software
 title: "ActionRef: practice-based reference thresholds for clinical risk scores"
 authors:
@@ -9,10 +9,10 @@ authors:
     given-names: Satva
   - family-names: Jin
     given-names: Yanwei
-  - family-names: Chu
-    given-names: Chenyin
   - family-names: Mai
     given-names: Xinnie
+  - family-names: Chu
+    given-names: Chenyin
   - family-names: Hou
     given-names: Jue
   - family-names: Puskarich
@@ -22,7 +22,7 @@ authors:
 version: 1.1.1
 date-released: "2026-11-04"
 repository-code: "https://github.com/Sheldon0106/ActionRef"
-url: "https://github.com/Sheldon0106/ActionRef/releases/tag/v1.1.1"
+url: "https://github.com/Sheldon0106/ActionRef"
 license: MIT
 preferred-citation:
   type: article
@@ -34,10 +34,10 @@ preferred-citation:
       given-names: Satva
     - family-names: Jin
       given-names: Yanwei
-    - family-names: Chu
-      given-names: Chenyin
     - family-names: Mai
       given-names: Xinnie
+    - family-names: Chu
+      given-names: Chenyin
     - family-names: Hou
       given-names: Jue
     - family-names: Puskarich

@@ -1,227 +1,126 @@
 # Setting K and R for a specified workflow
 
-`R = C_FN / C_FP` — modeled relative consequence of one missed outcome-positive case versus one false alert.
+K is an alert budget for a named task, team and period. R is the relative
+consequence of one missed outcome-positive encounter compared with one
+false-positive alert. Specify these inputs for the proposed workflow before
+comparing operating thresholds.
 
-- Never estimated from prevalence.
-- Never selected to favor a preferred cutoff.
+## Capacity
 
-K states an alert budget for a named workflow, team and period. For example,
-50 additional assessments per week is a capacity input; the action count in a
-retrospective dataset is not a staffing estimate. The manuscript uses a reference
-workload ceiling for comparison. Supplement eMethods 2 links to this guide.
+`CapacityConfig(K=..., period=...)` declares an absolute alert limit. The capacity
+floor is the smallest represented threshold whose alert count is no greater
+than K. `apply_capacity` maps each available reference to a threshold at or above
+both the reference and this floor, retaining the original reference value.
+Discrete-score ties can leave capacity unused; K = 0 permits a zero-alert strategy.
 
-## Five-step workflow
+For example, 50 additional assessments per week is a capacity input. In the study,
+the alert count at Low serves as a comparison ceiling, rather than a measurement
+of staffing capacity. Capacity analysis can be used without R.
 
-1. **Define the decision.** Specify the triggered action, target outcome,
-   stakeholder perspective and time horizon. Distinguish the proposed workflow
-   from the recorded-action label used to learn behavioral references. Specify
-   K separately, with its task, team and period.
-2. **Choose a defensible source.** Use commensurate, independently valued FN/FP
-   consequences, structured stakeholder elicitation, or a comparable published
-   decision threshold. The optional tier recommender supplies a low-confidence
-   scenario when a setting-specific basis is unavailable. Capacity mapping alone
-   requires no R.
-3. **Record the reference value and range.** Preserve sources, assumptions and
-   uncertainty. R is a consequence ratio, not an outcome prevalence or a score
-   cutoff. Do not choose its value to obtain a preferred candidate.
-4. **Evaluate sensitivity on derivation data.** For each prespecified R, minimize
-   `FAE = FP + R * FN` over thresholds using `score >= t`, both without a capacity
-   constraint and under the stated K. Module 3B resolves loss ties in favor of
-   more alerts, then the lower threshold. Report the selected thresholds, grid
-   stability, workload and outcome coverage. A grid stability band is neither a
-   continuous analytical interval nor a statistical confidence interval.
-5. **Evaluate the chosen candidate unchanged.** Apply the derivation-set choice to
-   evaluation data and present benefits and costs together. A fixed pair's loss
-   crossing is a different question from threshold re-selection. Document the
-   workflow and review the trade-off with its stakeholders.
+## Five-step consequence workflow
 
-```mermaid
-flowchart TD
-    A[Define action, outcome, perspective and horizon] --> B[Choose a justified R source]
-    B --> C[Record reference value and uncertainty range]
-    C --> D[Compare thresholds on derivation data across R and K]
-    D --> E[Evaluate the chosen candidate unchanged and review trade-offs]
-```
+1. **Define the decision:** triggered action, target outcome, stakeholder
+   perspective and time horizon. The proposed action may differ from the recorded
+   action used to estimate references.
+2. **Choose a source:** independently valued consequences in commensurate units,
+   structured stakeholder elicitation, or a relevant published decision threshold.
+   The optional tier recommender supplies scenario values.
+3. **Specify a reference value and plausible range:** record sources and
+   assumptions independently of the threshold that will be selected.
+4. **Compare candidates on derivation data:** minimize `FP + R * FN` across the
+   specified R grid and K. Loss ties favor more alerts, then the lower threshold.
+5. **Evaluate fixed choices on separate data:** report alert burden, outcome
+   coverage and weighted loss together.
 
-### Reported primary sepsis example
+A fixed pair's loss crossing and re-selection across an R grid answer different
+questions. A grid stability band describes the evaluated grid points; it is
+neither a continuous analytical interval nor a confidence interval.
 
-The reference value is **R = 11,299/804 = 14.0534825870647** for the proposed
-diagnostic/short-course antibiotic workflow. The Low-27 comparison ceiling is
-**K = 116,236 alerts in 314,658 score-complete derivation encounters**. It is a
-reference workload ceiling, not measured staffing capacity. The observed action
-composite used in Module 2 has a different definition.
+## Natural-frequency elicitation
 
-At this R, threshold **34** minimizes derivation-data weighted loss both without a
-capacity constraint and under the Low workload ceiling. It flags **59,849**
-derivation encounters. The derivation selection grid is supplied in
-`results/sepsis_primary/`; the fixed 34-versus-27 evaluation comparison is a
-separate calculation. The fixed-pair loss crossing is R ≈ **20.77** in MIMIC
-internal validation data and **26.28** at Stanford. It compares these two thresholds, without
-reselecting a candidate in the evaluation cohorts.
+`ElicitationFrame` specifies `intended_action`, `target_outcome`,
+`stakeholder_perspective` and `time_horizon`. For example:
 
-For prepared derivation data, the package call is:
+> Would you accept nine additional assessments in outcome-negative encounters
+> to identify one additional outcome-positive encounter, for this workflow and
+> time horizon?
 
-```python
-from universal_cutoff import build_threshold_table, ratio_invariance
-
-table = build_threshold_table(learning_df, "score", outcome_col="outcome")
-R = 11299 / 804
-grid = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, R,
-        15, 16, 17, 18, 19, 20, 22, 25, 30, 40, 50, 75, 100]
-result = ratio_invariance(
-    table, R,
-    k_fracs=[None, 116236 / 314658], ratio_grid=grid,
-)
-print(result.to_string(index=False))
-```
-
-Use the primary partition and its separately constructed outcome labels; source
-columns from another export can have a different outcome definition. The
-[paper data contract](paper-data.md) describes the required analysis inputs.
-
-## Primary route: natural-frequency elicitation
-
-### Frame (required first)
-
-`ElicitationFrame` enforces all four. `build_r_guidance` raises if a frequency elicitation omits them.
-
-| Field | Question |
-|---|---|
-| `intended_action` | What action does crossing the threshold trigger? |
-| `target_outcome` | What is the target outcome, as the score identifies it? |
-| `stakeholder_perspective` | Whose perspective is being elicited? |
-| `time_horizon` | Over what time horizon is the outcome assessed? |
-
-### Trade-off question
-
-```text
-Suppose lowering the threshold identifies 1 additional patient who experiences Sepsis-3,
-while also triggering clinical reassessment for 9 additional patients who do not
-experience Sepsis-3. Considering the expected benefits, harms, workload, and a time
-horizon of 6 hours, would you accept this tradeoff?
-```
-
-- No causal treatment effect is estimated.
-- No patient is described as benefiting.
-- No action is described as unnecessary.
-- Field names follow the same rule: `additional_outcome_positive`, `additional_outcome_negative`, `accepted`.
-
-### Point estimate
+`next_natural_frequency_question` helps bracket the trade-off. If the largest
+accepted ratio and smallest rejected ratio are available, the reported scenario
+value is their geometric midpoint:
 
 ```text
 R_primary = sqrt(R_largest_accepted * R_smallest_rejected)
 ```
 
-- Accepted scenario sets the lower bound. Rejected sets the upper bound.
-- Report as the geometric (log-scale) midpoint of the elicited switch interval.
-- Not an estimate of the true R. `point_estimate_basis` states this in the output.
-- The interval carries the uncertainty. The grid spans it.
-- Confidence is forced to low whenever elicitation determines the primary value.
+The bracket is the uncertainty range. Accepting 13 and rejecting 19 gives a
+range of 13–19 and a scenario value of 15.72. Elicited values carry low confidence.
+One-sided or inconsistent responses return `insufficient_basis`, with no primary
+R. The accepted and rejected trade-offs remain in the output for review.
 
-Example: accept 13, reject 19 → range `13`–`19`, primary `15.72`, `scenario_assumption`, low confidence.
+## Other input routes
 
-### Unbracketed and inconsistent responses
+- **Valued consequences:** `R = sum(FN components) / sum(FP components)`;
+  range bounds use FN lower / FP upper and FN upper / FP lower. Components must
+  use the same unit and distinct names.
+- **Action-threshold probability:** `R = (1 - p_t) / p_t`. Here `p_t` is the
+  outcome probability at which the proposed action becomes worthwhile, distinct
+  from the Module 2 recorded-action probability.
+- **Direct R:** a prespecified scenario with documented assumptions and range.
 
-Ladder: opens at 9. Tests 19 after an acceptance, 4 after a rejection. Then targets the geometric midpoint.
+Prevalence and a preferred score cutoff are not sources for R. Monetary
+interpretation requires independently defined monetary consequences for both
+error types.
 
-| `bracketing_status` | Condition | Result |
-|---|---|---|
-| `bracketed` | Accepted and rejected straddle R | Primary R, range, grid |
-| `one_sided_lower` | All accepted | No primary R; warning gives the floor |
-| `one_sided_upper` | All rejected | No primary R; warning gives the ceiling |
-| `inconsistent` | Harder accepted, easier rejected | No primary R; warning requests review |
+## Optional tier scenarios
 
-- Last three return `insufficient_basis`, `recommended_R_primary = None`.
-- None raises.
-- The ladder halts on `inconsistent`.
+`recommend_ratio` supplies low-confidence scenarios when a workflow-specific
+basis is unavailable. Choose a tier using the consequences of a miss and the
+burden of the proposed response.
 
-## Alternate routes
+| Tier | Decision profile | Default R | Evaluated band |
+|---|---|---:|---|
+| A | Time-critical outcome with a relatively low-burden response | 20 | 15–49 |
+| B | Serious outcome with a moderately burdensome response | 10 | 6–13 |
+| C | Less time-critical outcome with an invasive or expensive response | 3 | 2–4 |
 
-**Published-threshold tier recommender.** When Module 3B is required but no local
-cost build or elicitation is available, `recommend_ratio()` offers a prespecified,
-low-confidence scenario value from one of three decision tiers. The tier is chosen
-from the consequence of a miss and the burden/risk of the triggered action, not from
-the disease name. `ratio_invariance()` and `ratio_band_impact()` then test the tier
-band on the local threshold-level confusion table. See
-[`RATIO_RECOMMENDER_FINDINGS.md`](RATIO_RECOMMENDER_FINDINGS.md).
+```python
+from universal_cutoff import build_threshold_table, recommend_ratio
 
-- It is not an estimate of the true R and does not establish clinical utility.
-- Its invariance band is a discrete-grid sensitivity result, not a confidence interval.
-- `1 + R` is a break-even threshold-odds interpretation, not empirical PPV or causal NNT.
-- If local stakeholders are available, the framed natural-frequency route above remains
-  the stronger setting-specific justification.
-- Capacity-only Module 3A users do not need R.
-
-**Independently valued consequences.** One commensurate unit across FN and FP. Mixed units and duplicate names rejected.
-
-```text
-R      = sum(FN components) / sum(FP components)
-R_low  = sum(FN lower) / sum(FP upper)
-R_high = sum(FN upper) / sum(FP lower)
+thresholds = build_threshold_table(derivation, "score", outcome_col="outcome")
+scenario = recommend_ratio(thresholds, tier="A", k_fracs=[0.05, 0.10, None])
+print(scenario.summary())
 ```
 
-**Elicited action threshold probability.** `p_t` = outcome probability at which the action becomes worthwhile.
+`ratio_invariance` identifies tested R values selecting the same threshold;
+`ratio_band_impact` reports changes in workload and outcome coverage. `tier_table`
+and `explain_tiers` expose the scenario definitions and source assumptions.
+These inputs do not redefine Low, Mid or High.
 
-```text
-R      = (1 - p_t) / p_t
-R_low  = (1 - p_high) / p_high
-R_high = (1 - p_low) / p_low
-```
+## Study example
 
-- `p_t = 0.10` implies `R = 9`.
-- This is an action threshold probability. Not a score threshold. Not a Low/Mid/High candidate.
+The sepsis scenario uses R = 11,299/804 for a proposed diagnostic and short-course
+antibiotic workflow. The Low-reference workload ceiling is 116,236 alerts in
+314,658 derivation encounters. Threshold 34 minimizes derivation-set weighted
+loss at this R both with and without that ceiling. The recorded-action composite
+used to estimate references has a separate definition.
 
-**Direct R entry.** Available for prespecified analyses such as the primary sepsis
-`R=11299/804` scenario. Historical development reports also contain an `R=15`
-scenario; it is separate from the current primary paper value.
+The fixed 34-versus-27 loss comparison crosses at R approximately 20.77 in MIMIC
+internal validation and 26.28 at Stanford. [Study materials](paper-reproduction.md)
+provides the corresponding aggregate calculations and input requirements.
 
-## Outputs
+## Output interpretation
 
-Returns:
+`build_r_guidance` returns the primary value, range, grid, basis, source,
+confidence, status and warnings. Status values include `evidence_based`,
+`consensus_based`, `locally_costed`, `scenario_based` and `insufficient_basis`.
+K supplies workload context and does not enter the R derivation equations.
 
-`recommended_R_primary`, `recommended_R_range`, `recommended_R_grid`,
-`point_estimate_basis`, status, provenance, confidence, warnings, rationale
+For a prespecified grid, `minimax_regret_cost_audit` compares the maximum regret
+of each feasible threshold, where `regret(t, r) = loss(t, r) - min_s loss(s, r)`.
+This is a separate scenario comparison; it neither estimates R nor replaces
+the reference thresholds.
 
-- Status values: `evidence_based`, `consensus_based`, `locally_costed`, `scenario_based`, `insufficient_basis`.
-- Source types: expert elicitation, Delphi elicitation, published evidence, local costing, stakeholder preference, policy, scenario assumption.
-- Module 3B decision-transition R values may extend the grid after primary and range are fixed. Out-of-range values excluded. They cannot change the primary R.
-
-## Extended scenario results
-
-[Extended results](https://github.com/Sheldon0106/ActionRef/tree/main/results/supplement_extended)
-include the saved minimax-regret and transfer-target sensitivity analyses. These
-cohort-specific scenarios are separate from evaluation of the revised threshold
-34 selected in the MIMIC derivation set. Saved estimates are reused by
-`examples/reproduce_extended.py`.
-
-## Optional minimax regret
-
-```text
-loss(t, r)   = FP(t) + r * FN(t)
-regret(t, r) = loss(t, r) - min_s loss(s, r)
-```
-
-- Selects the feasible threshold with the smallest maximum regret over a fixed R grid.
-- Does not choose or estimate R.
-- Cannot define, relabel, or replace Low/Mid/High.
-
-## Safeguards
-
-- Prevalence-based and threshold-tuned rationales rejected.
-- Primary value without uncertainty bounds warns.
-- Scenario assumptions set to low confidence.
-- Currency interpretation requires both FP and FN monetary consequences independently defined.
-- Expected binding capacity triggers the budget-bound-retention warning.
-- K is context and binding audit only. It does not enter either R equation.
-- R guidance is separate from Module 2. It cannot define, replace, or relabel Low/Mid/High.
-
-## Method sources
-
-- Vickers and Elkin 2006 — action threshold probability versus relative FP/FN harms.
-- Pauker and Kassirer 1980 — testing and treatment thresholds.
-- Bojke et al. 2021 — structured expert elicitation reference protocol.
-- Soares et al. 2024 — ISPOR report; SHELF, Cooke, IDEA, modified Delphi, MRC.
-- Valentine et al. 2023 — direct, threshold-technique, and discrete-choice methods gave materially different results.
-- Manski 2007 — adaptive minimax-regret treatment choice.
-- Hoffrage et al. 2015 — natural frequencies beat probability presentations.
-- Jacobs et al. 2023 — no gold standard exists.
+Method sources include Pauker and Kassirer (1980), Vickers and Elkin (2006),
+Bojke et al. (2021), and Manski (2007); the study bibliography and package tier
+metadata provide the relevant decision-theory and elicitation context.

@@ -38,28 +38,12 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - Overview: index.md
-  - Get started:
-      - Installation: installation.md
-      - Synthetic walkthrough: quickstart.md
-      - Prepare your data: data.md
-  - Understand the workflow:
-      - Behavioral references: references.md
-      - Output-state examples: output-states.md
-      - Capacity and consequences: operating-candidates.md
-      - Independent evaluation: evaluation.md
-  - Paper and evidence:
-      - Analysis and reproduction scope: paper-reproduction.md
-      - Sepsis aggregate results: paper-results.md
-      - Clinical data contract: paper-data.md
-      - Sepsis illustration: clinical-example.md
-      - Manuscript result map: evidence.md
-      - Documentation illustrations: figures.md
-  - Reference:
-      - Python API: API_REFERENCE.md
-      - K and R specification: R_GUIDANCE.md
-      - Optional R scenarios: RATIO_RECOMMENDER_FINDINGS.md
-      - Subgroups, time, and transport: GOVERNANCE_DIAGNOSTICS.md
-      - Reproducing this site: development.md
+  - Quick start: quickstart.md
+  - Data inputs: data.md
+  - Methods and outputs: references.md
+  - K and R guidance: R_GUIDANCE.md
+  - Python API: API_REFERENCE.md
+  - Study materials: paper-reproduction.md
 validation:
   links:
     not_found: warn
