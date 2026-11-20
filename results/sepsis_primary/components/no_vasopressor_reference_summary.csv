@@ -1,0 +1,4 @@
+level,point_threshold,primary_point_threshold,requested_B,attempted_B,failed_fit_B,available_B,availability_requested,independently_retained_B,independent_retention_requested,median,CI_2_5,CI_97_5,exact_recurrence_count,exact_recurrence_requested,paired_primary_joint_available_B,paired_unchanged_B,paired_delta_median,paired_delta_CI_2_5,paired_delta_CI_97_5
+Low,27,27,500,500,0,500,1,500,1,27,26,27,407,0.81399999999999995,500,500,0,0,0
+Mid,39,39,500,500,0,500,1,500,1,39,39,42,386,0.77200000000000002,500,500,0,0,0
+High,54,54,500,500,0,500,1,500,1,54,54,54,488,0.97599999999999998,500,497,0,0,0

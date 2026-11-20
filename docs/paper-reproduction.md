@@ -28,6 +28,8 @@ extraction and construction of the input variables precede this entry point.
 | Location | Contents |
 |---|---|
 | [Primary sepsis results](https://github.com/Sheldon0106/ActionRef/tree/main/results/sepsis_primary) | References, action curves, operating counts, and sensitivity analyses |
+| [Consequence scenarios](https://github.com/Sheldon0106/ActionRef/tree/main/results/sepsis_primary/consequence_scenarios) | Workload bounds, threshold selection, and fixed evaluations under the resource and mortality scenarios |
+| [Action-curve evaluation](https://github.com/Sheldon0106/ActionRef/tree/main/results/sepsis_primary/logistic_comparison) | Evaluation of the MIMIC action curves in internal validation and at Stanford |
 | [Early warning scores](https://github.com/Sheldon0106/ActionRef/tree/main/results/early_warning_scores) | Score definitions, references and evaluation summaries |
 | [Additional analyses](https://github.com/Sheldon0106/ActionRef/tree/main/results/supplement_extended) | Subgroup diagnostics, eight-scenario simulation, rule-selection uncertainty, minimax regret and transfer-target sensitivity |
 
@@ -39,9 +41,10 @@ python examples/reproduce_paper.py --early-warning-scores
 python examples/reproduce_extended.py
 ```
 
-Some point estimates and uncertainty intervals are read from saved aggregate
-results; these commands do not re-estimate those intervals or reconstruct the
-clinical cohorts. Numerical outputs are written to the ignored `output/` directory.
+The mortality comparisons, selection resampling, and Stanford action-curve
+evaluation are available as saved aggregate results. The commands also reuse
+saved estimates and intervals for some of their summaries. Numerical outputs
+are written to the ignored `output/` directory.
 
 ## Simulations and scenario guidance
 

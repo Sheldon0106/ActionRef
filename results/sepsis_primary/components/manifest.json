@@ -86,6 +86,20 @@
       "sha256": "023d4441752ed5647e9807132c818f60f8e8d4bbcae0d50c911cb4f5e29c5d0f",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
       "role": "current manuscript aggregate result"
+    },
+    "no_vasopressor_reference_summary.csv": {
+      "source_label": "<source_bundle>/workload_and_action_sensitivity/tables/no_vasopressor_reference_summary.csv",
+      "source_sha256": "6483e419c54fe810dda9d389d1f4e3001432bfe5ce70f4bd09156731eea39f59",
+      "sha256": "8239fc670e83bf7698cc3acb2d8a3af61fa977ccdb928dd5fb32a81343a9ddea",
+      "selection": "Reference thresholds and matched bootstrap summaries after omitting vasopressor use from the action",
+      "role": "manuscript aggregate result"
+    },
+    "vasopressor_outcome_dependence.csv": {
+      "source_label": "<source_bundle>/workload_and_action_sensitivity/tables/vasopressor_outcome_dependence.csv",
+      "source_sha256": "ec061dea3e4e984e416596a69d0dd2a2df605bf5f0d528bf3336de874bc702c9",
+      "sha256": "d7337c1ec221886f7e1dc7aba87a8144d475e85e6ec95c4d25c683a237a3e4b2",
+      "selection": "Sensitivity of the original Sepsis-3 labels to removal of vasopressor-related SOFA points",
+      "role": "manuscript aggregate result"
     }
   },
   "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",

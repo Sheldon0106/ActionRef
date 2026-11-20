@@ -37,6 +37,34 @@
       "sha256": "8e92b0edc1fa4590dfaeea458722ee64ccdb8c9bcf3e27ebf9faf9a940bc2cc0",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
       "role": "current manuscript aggregate result"
+    },
+    "stanford_action_calibration_points.csv": {
+      "source_label": "<source_bundle>/stanford_action_probability_evaluation/tables/stanford_action_calibration_points.csv",
+      "source_sha256": "db23cbca30728e9a4c9691dffddbae2687738375b577accf38484a7cc3dc9cc0",
+      "sha256": "1bd60691c6ee50092bdbcdfa42e08503fae7a3b87cf114133a875f3d067a0e8b",
+      "selection": "Fixed MIMIC derivation-set isotonic and logistic predictions evaluated at Stanford",
+      "role": "manuscript aggregate result"
+    },
+    "stanford_action_calibration_intervals.csv": {
+      "source_label": "<source_bundle>/stanford_action_probability_evaluation/tables/stanford_action_calibration_intervals.csv",
+      "source_sha256": "dc2c98b35d2a53a6e4988bf5720943381ba9161ac6d42089f0b60068c4d000db",
+      "sha256": "491e39c79897dc0d2ed0905bdceb4c218fa87d2ad6673a3272952b01d0601a91",
+      "selection": "Saved 1,000-patient-resample intervals for the primary isotonic predictions",
+      "role": "manuscript aggregate result"
+    },
+    "stanford_action_reliability.csv": {
+      "source_label": "<source_bundle>/stanford_action_probability_evaluation/tables/stanford_action_reliability.csv",
+      "source_sha256": "a3e3e6425387c6b7877a007c3a03a66adc4de7ae1cff569aab0728d3fa37aa3e",
+      "sha256": "ee10319bb380f1efb5c9043c7cea9f60bb1451e3b2b39643580546576348d859",
+      "selection": "Fixed MIMIC derivation-set isotonic and logistic predictions evaluated at Stanford",
+      "role": "manuscript aggregate result"
+    },
+    "stanford_action_paired_Brier.csv": {
+      "source_label": "<source_bundle>/stanford_action_probability_evaluation/tables/paired_Brier_comparisons.csv",
+      "source_sha256": "68c4760e7f5aaa281a82df36f7c07510d7e8099d16e17897fd2ed7adc44cd4dc",
+      "sha256": "7e39b009a5249baa26922711ab587dc02c8982236f3f900aa384ae15e52f2716",
+      "selection": "Paired Brier difference, isotonic minus logistic, in Stanford",
+      "role": "manuscript aggregate result"
     }
   },
   "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",

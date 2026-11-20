@@ -16,6 +16,107 @@
       "sha256": "a09f2515d475431a33fad190fad276638452bc98c81ac7ab915a542021236faf",
       "selection": "selected aggregate rows; source precision preserved; source schema retained unless column mapping specified",
       "role": "current manuscript aggregate result"
+    },
+    "workload_bound_selection.csv": {
+      "source_label": "<source_bundle>/workload_bound_and_threshold_exchanges/tables/R_bound_point_scenarios.csv",
+      "source_sha256": "757689127b884211bb494d9dc24c738ea65bf96ade1f11d6cae5891691b75e57",
+      "sha256": "cd73bee8a3abd1878bbf76c481175334a06d8f0ac560f96f8ae332c6535b1442",
+      "selection": "MIMIC derivation selections at the reported R values and workload bounds, including the matched unconstrained selection",
+      "role": "manuscript aggregate result"
+    },
+    "low_bound_switchpoints.csv": {
+      "source_label": "<source_bundle>/workload_bound_and_threshold_exchanges/tables/Low_bound_switchpoints.csv",
+      "source_sha256": "7b3bb19bb7527fd065a1ed67be5f9da6089112db8180fd5e870793f7fb562b4f",
+      "sha256": "705379010c61dc2e3d319348f800e28ddc53bb7aff42e789c1ebab919e79ba74",
+      "selection": "Exact derivation-set transitions under the Low workload bound over R from 5 to 40",
+      "role": "manuscript aggregate result"
+    },
+    "selection_bootstrap_summary.csv": {
+      "source_label": "<source_bundle>/threshold_selection_resampling/tables/step3_selection_summary.csv",
+      "source_sha256": "65d3e99383c488d6b4b244cc962eb010f9fe72fb5750e650480132b107fe5a9d",
+      "sha256": "59bbc1445e7a9d8c04afe40e638057425eb540b9ee726167e2e77c898532b5ec",
+      "selection": "Saved threshold selection summaries across the reported consequence ratios with patient resampling in the derivation set",
+      "role": "manuscript aggregate result",
+      "additional_source_sha256": {
+        "<source_bundle>/threshold_selection_resampling/tables/step3_R_grid_summary.csv": "208da3ec47bca56bac52e11e5a51f70a6a83190fca6f129cac5a6afeafb5496f",
+        "<source_bundle>/threshold_selection_resampling/tables/step3_selection_replicates.csv": "444caaef335ca69bdb775bfdaf500f5ba926f6fe96caa5601a0c79a0a31bae15",
+        "<source_bundle>/workload_bound_and_threshold_exchanges/tables/R_bound_point_scenarios.csv": "757689127b884211bb494d9dc24c738ea65bf96ade1f11d6cae5891691b75e57",
+        "<source_bundle>/workload_and_action_sensitivity/tables/R_bound_bootstrap_summary.csv": "f8173b01fb82c9d5770cc851de2578d0851ddd977e3cf6bc5bd4bedd6a27c5bd",
+        "<source_bundle>/cohort_mortality_scenarios/tables/R_bound_bootstrap_summary.csv": "5ad0facc5cb43a5ebaab9d6310967dc64b72239fa30886280d3c9357a6b9eae9"
+      }
+    },
+    "selection_bootstrap_frequencies.csv": {
+      "source_label": "<source_bundle>/threshold_selection_resampling/tables/step3_selection_frequencies.csv",
+      "source_sha256": "e3d3760d98e88479a8df355974823c94360430609a25d1a49e2133c23392b02c",
+      "sha256": "de139c146bbb7ad50dcbd1922e02c7184b4335e425492773fbc0f5257e168fb7",
+      "selection": "Frequencies of selected thresholds at the reported scenario and stress-test ratios",
+      "role": "manuscript aggregate result",
+      "additional_source_sha256": {
+        "<source_bundle>/workload_and_action_sensitivity/tables/R_bound_bootstrap_frequencies.csv": "1927f504f95a13c1b49033eff2335fc2550b958cc691e58332afb1bad53c652a",
+        "<source_bundle>/cohort_mortality_scenarios/tables/R_bound_bootstrap_frequencies.csv": "51a2259796ace4466fb6a12e6f261ed7cb04763127873768a98a60a2d146a98f"
+      }
+    },
+    "default_strategy_results.csv": {
+      "source_label": "<source_bundle>/workload_and_action_sensitivity/tables/FAE_net_benefit_baselines.csv",
+      "source_sha256": "ec5a89ce700415b1bc614d105be54af0532a59a542f7c0fd9e04e1ab5b7031f4",
+      "sha256": "73a00c73d6000481815ad32e6ae749ae95a43cbc44e3f8e33655c96697ddd6a6",
+      "selection": "Scenario A alert-none, alert-all, Low and revised policies with FAE and net benefit",
+      "role": "manuscript aggregate result"
+    },
+    "default_strategy_paired_differences.csv": {
+      "source_label": "<source_bundle>/workload_and_action_sensitivity/tables/baseline_paired_differences.csv",
+      "source_sha256": "27c83c058dfb18f7a76c2feccf82470a317cecb304e040513f6d7309222f078c",
+      "sha256": "588e70b2a9efb1c1bda10d7207a40d28bc314be0fb3cfc88729c71f5228d1ded",
+      "selection": "Paired Scenario A FAE differences between the revised policy and the two default strategies",
+      "role": "manuscript aggregate result"
+    },
+    "mortality_scenario_inputs.csv": {
+      "source_label": "<source_bundle>/cohort_mortality_scenarios/tables/mortality_component_scenarios.csv",
+      "source_sha256": "04dd298f49228aeee656bc4936dddd94e04b6d8a9bc8fa1eb7d0c0c068776fc4",
+      "sha256": "904859db2b6ca08f993d311c4784dbb337ec51f3edd9c110b43eadea0a5e3a92",
+      "selection": "Scenario B central inputs and one-way variations reported in the study, retaining saved precision",
+      "role": "manuscript aggregate result",
+      "additional_source_sha256": {
+        "<source_bundle>/lower_mortality_scenario_inputs/T4/scenario_B_lower_inputs.csv": "694cbfb174ac2437670283e23e5b227c0b0fb12aa7828d2467a2915072b74a74"
+      }
+    },
+    "mortality_scenario_fixed_results.csv": {
+      "source_label": "<source_bundle>/cohort_mortality_scenarios/tables/fixed_policy_results.csv",
+      "source_sha256": "49f8954097faf1ee74d1a1da3d7f37b0170a99d93d545d178fbf0a7e5048c4d6",
+      "sha256": "9d65163225e4274adc9e4bb86d842a5db46e8b51ef17e6f1417388df7a20792f",
+      "selection": "Scenario B FAE of fixed thresholds 27, 28, 31 and 34 in each evaluation cohort",
+      "role": "manuscript aggregate result"
+    },
+    "mortality_scenario_paired_differences.csv": {
+      "source_label": "<source_bundle>/cohort_mortality_scenarios/tables/fixed_policy_paired_differences.csv",
+      "source_sha256": "bcfca8a92023a2fe08bb9ab81a0c450ca7234ffca3714e15185c5d900fb695e5",
+      "sha256": "0a6fb1d8a9e3d99e0fd7ff15407cda04a31d1486312872fe023cfcf1635d2e12",
+      "selection": "Scenario B paired FAE differences for fixed thresholds 28 and 34 versus Low 27",
+      "role": "manuscript aggregate result"
+    },
+    "sepsis_mortality_rate_summary.csv": {
+      "source_label": "<source_bundle>/cohort_mortality_scenarios/tables/sepsis_mortality_rate_summary.csv",
+      "source_sha256": "c5e5a171ddc3c65a35d04e4a4f75d0793b531a7375d698a93c3d27192ca4ce89",
+      "sha256": "0578c882676274de7910a76b3dc87b9876f262fa82ecfa18176784611cb71ba6",
+      "selection": "In-hospital mortality among sepsis-positive encounters with known vital status",
+      "role": "manuscript aggregate result"
+    },
+    "threshold_sepsis_mortality.csv": {
+      "source_label": "<source_bundle>/cohort_mortality_scenarios/tables/threshold_sepsis_mortality.csv",
+      "source_sha256": "45d2df8c990197b6f469413ff3b1fe4bb68aa04ccbfd2c7fa0dfab5c2ec45700",
+      "sha256": "5c479c44856872e7341b31c49db425544afe5d8b6522bc77d699934c5c0c033f",
+      "selection": "In-hospital mortality among sepsis-positive encounters with known vital status",
+      "role": "manuscript aggregate result"
+    },
+    "unflagged_sepsis_recorded_action.csv": {
+      "source_label": "<source_bundle>/recorded_action_among_unflagged/tables/unflagged_sepsis_no_recorded_action.csv",
+      "source_sha256": "a561ace952370826e9744737c8e2b33ecef9809d3929e46c4ea4e65ce8b609cd",
+      "sha256": "68056ae262acda6ab34964b2e77a330793384f594feb1b349eb0e0baa5282830",
+      "selection": "Known-action counts and the share without recorded action below fixed thresholds; threshold 28 uses the complement of the saved recorded-action share and interval",
+      "role": "manuscript aggregate result",
+      "additional_source_sha256": {
+        "<source_bundle>/cohort_mortality_scenarios/tables/unflagged_sepsis_recorded_action.csv": "06aeeaa621e87458918e3978d39f2029702bdb2b9654dccf5ce614674b515181"
+      }
     }
   },
   "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",
