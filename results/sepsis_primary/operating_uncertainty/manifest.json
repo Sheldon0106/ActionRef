@@ -23,6 +23,20 @@
       "sha256": "18a3c110ce91c8acadc7ebee96a5bc3c04453ffe9bcde8665c32005816e21c60",
       "selection": "paired same cohort/replicate percentile of modeled_R_candidate minus ESRP_MIMIC_primary_Low, B1000; no resampling",
       "role": "current manuscript aggregate result"
+    },
+    "paired_threshold_differences.csv": {
+      "source_label": "<source_bundle>/threshold_selection_resampling/tables/paired_differences_summary.csv",
+      "source_sha256": "3a833660626219565e0b0f3c80d8f0b5843f0cf84c290de08750e01247f9c1c7",
+      "sha256": "c48e0738288577b43d0b4a1b74d5680add81dda0cae731990e9c79ef83e0e4d6",
+      "selection": "Fixed 34-minus-27 and 34-minus-31 comparisons under Scenario A, with paired patient-resample intervals",
+      "role": "manuscript aggregate result"
+    },
+    "threshold_exchanges.csv": {
+      "source_label": "<source_bundle>/workload_bound_and_threshold_exchanges/tables/threshold_exchanges.csv",
+      "source_sha256": "32e8702d6ba661ad4980682feee415b7914e576afee2e23e63718de7422aebb6",
+      "sha256": "457b2aeab8ad0f57385cf8ff95f99f99363dfd5cdc2f445bfdabcce0cfb9d610",
+      "selection": "Changes in false-positive alerts and flagged sepsis-positive encounters when a fixed threshold is lowered",
+      "role": "manuscript aggregate result"
     }
   },
   "processing": "Existing nonidentifying aggregate outputs, selected by analysis family and policy identifier. Saved uncertainty intervals retain their original requested/valid replicate counts. No patient-level inputs, fitting, or resampling performed.",

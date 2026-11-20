@@ -1,0 +1,4 @@
+cohort,N,outcome_positive_N,vaso_dependent_label_N,fraction_of_primary_positive
+MIMIC_learning,314658,12099,882,0.072898586660054554
+MIMIC_heldout,134146,5206,394,0.075681905493661161
+Stanford,118385,3809,267,0.070097138356524022

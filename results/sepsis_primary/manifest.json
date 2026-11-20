@@ -4,11 +4,12 @@
     "observed_action_yield.csv": {
       "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/primary_fixed_operating_points.csv",
       "source_sha256": "8e1ff11ed3ad2f4d0a116adf8c399db3050f3911598aa55c62f9efa515cdcc6b",
-      "sha256": "ae24cc582689329de675e06912c1848daaf31cd4ad2b3a3600352482484c5a5e",
-      "selection": "ESRP primary Low/Mid/High and modeled_R_candidate by policy_id; learning rows from <aggregate_reporting_assets>/primary_action_known_counts.csv; stable public column names",
+      "sha256": "22a7ec4eeaa08e2609d9d9f64b9f68d23673934fe1f25e833e1433171b1defec",
+      "selection": "ESRP primary Low/Mid/High and modeled_R_candidate by policy_id; learning rows from <aggregate_reporting_assets>/primary_action_known_counts.csv; stable public column names; validation action denominators and yields for fixed threshold 28",
       "role": "current manuscript aggregate result",
       "additional_source_sha256": {
-        "primary_action_known_counts.csv": "1ca42146715edf68f9ee1e29001cf4e69a25f94834346a4ac6a945688c66efdf"
+        "primary_action_known_counts.csv": "1ca42146715edf68f9ee1e29001cf4e69a25f94834346a4ac6a945688c66efdf",
+        "<source_bundle>/workload_and_action_sensitivity/tables/R_bound_fixed_evaluation_points.csv": "72de42f2c62f30708eed938666faa987b35a5a9b948642593bbe06ad2eebc683"
       }
     },
     "fixed_candidate_R_sensitivity.csv": {
@@ -49,11 +50,13 @@
     "operating_counts.csv": {
       "source_label": "<source_bundle>/run_20261023T104445170533Z_5e79d9b15f84/tables/primary_fixed_operating_points.csv",
       "source_sha256": "8e1ff11ed3ad2f4d0a116adf8c399db3050f3911598aa55c62f9efa515cdcc6b",
-      "sha256": "e275801f11567ccb59d65823e610fa37a671effd5d6e617e06475fd6d154403c",
-      "selection": "ESRP primary Low/Mid/High and modeled_R_candidate by policy_id; learning rows from <aggregate_reporting_assets>/primary_action_known_counts.csv; stable public column names",
+      "sha256": "2be1e9ef02159e305ea51644a628bb7775d6d14c8bd59946bbc4a1c4cde6d3ba",
+      "selection": "ESRP primary Low/Mid/High and modeled_R_candidate by policy_id; learning rows from <aggregate_reporting_assets>/primary_action_known_counts.csv; stable public column names; validation counts for fixed threshold 28 from the threshold exchange analysis, cross-checked against the workload analysis",
       "role": "current manuscript aggregate result",
       "additional_source_sha256": {
-        "primary_action_known_counts.csv": "1ca42146715edf68f9ee1e29001cf4e69a25f94834346a4ac6a945688c66efdf"
+        "primary_action_known_counts.csv": "1ca42146715edf68f9ee1e29001cf4e69a25f94834346a4ac6a945688c66efdf",
+        "<source_bundle>/workload_bound_and_threshold_exchanges/tables/fixed_policy_counts.csv": "7d0760daf78bf524769a1ca674e1e93c689095d9b97cad3e944a75a6f54d7c3d",
+        "<source_bundle>/workload_and_action_sensitivity/tables/R_bound_fixed_evaluation_points.csv": "72de42f2c62f30708eed938666faa987b35a5a9b948642593bbe06ad2eebc683"
       }
     },
     "learning_R_selection.csv": {

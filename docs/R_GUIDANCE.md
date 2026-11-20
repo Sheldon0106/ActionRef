@@ -99,11 +99,18 @@ These inputs do not redefine Low, Mid or High.
 
 ## Study example
 
-The sepsis scenario uses R = 11,299/804 for a proposed diagnostic and short-course
-antibiotic workflow. The Low-reference workload ceiling is 116,236 alerts in
-314,658 derivation encounters. Threshold 34 minimizes derivation-set weighted
-loss at this R both with and without that ceiling. The recorded-action composite
-used to estimate references has a separate definition.
+In the sepsis study, Scenario A uses R = 11,299/804 for a proposed diagnostic
+and short-course antibiotic workflow. The Low-reference workload ceiling is
+116,236 alerts in 314,658 derivation encounters. Threshold 34 minimizes
+derivation-set weighted loss at this R both with and without that ceiling.
+The recorded-action composite used to estimate references has a separate
+definition.
+
+Scenario B adds the modeled mortality consequence of an assumed four-hour
+treatment delay for unflagged sepsis-positive encounters. The central ratio is
+R = 29.78 (rounded), which selects 28 under the same workload bound. The
+[saved scenario results](https://github.com/Sheldon0106/ActionRef/tree/main/results/sepsis_primary/consequence_scenarios)
+provide the inputs, one-way variations, and separate fixed-threshold evaluations.
 
 The fixed 34-versus-27 loss comparison crosses at R approximately 20.77 in MIMIC
 internal validation and 26.28 at Stanford. [Study materials](paper-reproduction.md)
