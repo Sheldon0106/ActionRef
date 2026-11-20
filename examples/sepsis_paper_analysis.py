@@ -46,6 +46,7 @@ def prepare_stanford(frame):
     validate_columns(frame, fields)
     out = frame.copy()
     fluid = pd.to_numeric(out.fluid_6h, errors='coerce')
+    # Components belong to the same source cohort.
     out['response'] = missing_aware_or(out, ['lactate_flag', 'fluid_component', 'vasopressor_flag', 'steroid_flag'])
     out['score'] = pd.to_numeric(out.score_corrected, errors='coerce').replace([np.inf, -np.inf], np.nan)
     out['outcome'] = binary_series(out.sepsis3_new, 'sepsis3_new')
